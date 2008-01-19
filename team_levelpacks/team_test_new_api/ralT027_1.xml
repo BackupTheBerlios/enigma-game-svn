@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Blocker new API" el:subtitle="" el:id="20080118ral328"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 46 $" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2006 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["b"] = ti[" "] .. {"it_blocker"}
+ti["n"] = ti[" "] .. {"it_blocker_new"}
+ti["B"] = ti[" "] .. {"st_blocker"}
+ti["N"] = ti[" "] .. {"st_blocker_new"}
+
+ti["W"] = ti[" "] .. {"st_boulder_w"}
+ti["w"] = ti["n"] .. {"st_boulder_w"}
+ti["v"] = ti["b"] .. {"st_boulder_w"}
+ti["E"] = ti[" "] .. {"st_boulder_e"}
+
+ti["a"] = ti[" "] .. {"it_blocker", autoclose=true}
+ti["A"] = ti[" "] .. {"st_blocker", target="laser", action="onoff"}
+ti["L"] = ti[" "] .. {"st-laser-s", "laser"}
+
+ti["S"] = ti[" "] .. {"st_switch", target="blocker"}
+ti["s"] = ti[" "] .. {"it_blocker", "blocker"}
+ti["H"] = ti[" "] .. {"st-wood"}
+
+
+
+ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it-magicwand"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"    BBBBnwbbbbb     ",
+"    bbbbbvNBBBB     ",
+"                    ",
+"                    ",
+"                    ",
+"        Ss         E",
+"         H          ",
+"           1        ",
+"                    ",
+"                    ",
+"L                   ",
+"     A       a     E"
+})
+
+
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

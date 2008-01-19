@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Horse new API" el:subtitle="" el:id="20080116ral551"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 46 $" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2006 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["1"] = {"fl-rock", name="d1"}
+ti["2"] = {"fl-rock", name="d2"}
+ti["3"] = {"fl-rock", name="d3"}
+ti["4"] = {"fl-rock", name="d4"}
+ti["5"] = {"fl-rock", name="d5"}
+ti["6"] = {"fl-rock", name="d6"}
+ti["h"] = ti[" "] .. {"ac-horse", name="horse", destination={"d1","d2","d3","d4","d5","d6"}}
+ti["i"] = {"fl-rock", name="i1"}
+ti["j"] = {"fl-rock", name="i2"}
+ti["k"] = {"fl-rock", name="i3"}
+ti["l"] = {"fl-rock", name="i4"}
+ti["s"] = ti[" "] .. {"st_switch", target="innercircle"}
+
+
+ti["a"] = ti[" "] .. {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"                    ",
+"     6        1     ",
+"                    ",
+"       i    l       ",
+"                    ",
+" 5       sh      2  ",
+"         a          ",
+"                    ",
+"       j    k       ",
+"                    ",
+"     4        3     ",
+"                    "
+})
+
+function innercircle(value, sender)
+    -- demo mixture string tokens with a group
+    circle = grp(no["i1"],no["i2"],no["i3"],no["i4"])
+    horse = no["horse"]
+    dest = horse["destination"]
+    if value then
+        table.insert(dest, circle)
+    else
+        dest[#dest]=nil
+    end
+    horse["destination"] = dest
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
