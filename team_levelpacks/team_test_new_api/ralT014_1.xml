@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test New API" el:subtitle="" el:id="200709021ral604"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+wo["ConserveLevel"] = true
+wo["ShowMoves"] = false
+
+
+ti[" "] = {"fl-sahara"}
+ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
+ti["c"] = ti[" "] .. {"it-cherry", name="cherry#"}
+ti["5"] = ti[" "] .. {"it-coin2", name="money", target={"otto", "emil*"}}
+ti["S"] = ti[" "] .. {"st-coinslot"}
+ti["m"] = ti[" "] .. {"#ac-blackball"}
+ti["x"] = {"fl-rough-blue"} .. {"it-banana"} .. ti({"ac-bug", 0.7})
+ti["y"] = (ti({"fl-rough-blue"}) .. {"it-banana"}) .. {"ac-bug", name="buggy"}
+ti["s"] = ti[" "] .. {"st_switch", action="callback", target="doit"}
+ti["b"] = ti[" "] .. {"st_blocker", name="blocker"}
+ti["d"] = ti[" "] .. {"st-door_b", name="door#"}
+ti["h"] = ti[" "] .. {"st-chess_black", name="chess#"}
+ti["o"] = ti[" "] .. {"st-oxyd"}
+ti["B"] = ti[" "] .. {"it-bag"}
+ti["T"] = ti[" "] .. {"st-thief"}
+ti["t"] = {"fl-thief"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"         ",                  -- oops a line too short
+"  m          5    BB",
+"                    ",
+"  c          S    d ",
+"  c     x         d ",
+"  c         h     d ",
+"  c         h     d ",
+"t           h       ",
+"   y                ",
+"T          s ..  b  ",
+"             ....   ",
+"o o o      ........."
+})
+
+wo[{w-2, h-2}] = {"it-magicwand"}
+p1 = po(12.3, 3.2)
+p2 = p1:grid()
+wo[p2] = {"ac-bug"}
+
+no["money"]:set({value=12})
+no["money"]["action"] = {"anna#*","x",no["cherry#*"],no["blocker"]}
+
+tokens = no["money"]["action"]
+
+if (tokens[4] == no["blocker"]) then
+    wo[{1, 1}] = {"it-magicwand"}
+end
+--tokens[3]:kill()
+wo[tokens[3]] = {"fl-rough-blue"}
+
+blocker_pos = po(no["blocker"])
+
+
+-- wo:shuffleOxyd()
+
+function doit(value, sender)
+    obj = no["cherry#3"]
+--    obj:kill()
+    wo[obj] = {"it_nil"}
+
+    mygrp = no["cherry#*"]
+    obj = mygrp[#mygrp - 1]
+    if (-obj) then
+        wo[obj] = {"it-banana"}
+    end
+
+    
+    door_grp = no["door#*"]
+    chess_grp = no["chess#*"]
+    if -obj then
+    end
+    join = door_grp + chess_grp
+--    join:kill()
+    
+    if value then
+        st(blocker_pos):message("open")
+        not_all_doors = door_grp - no["door#2"]
+        for obj in not_all_doors do
+            obj:open()
+        end
+--        not_all_doors:open()
+        no.buggy["opendoors"] = not_all_doors + no["money"] + fl(3,4)
+        no.buggy["mypos"] = po(no.money)
+        chess_grp["color"] = 1
+        wo[mygrp] = {"st-wood"}
+    else
+        it(blocker_pos):close()
+        --door_grp:message("close")
+        crazy_group = no.buggy["opendoors"]
+        --crazy_group:kill()
+        crazy_group:close()
+        wo[no.buggy["mypos"]] = {"it-hollow"}
+        chess_grp2 = grp({no.money, no["chess#1"], no.money})
+        chess_special = chess_grp * chess_grp2
+        chess_special:kill()
+    end
+    
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

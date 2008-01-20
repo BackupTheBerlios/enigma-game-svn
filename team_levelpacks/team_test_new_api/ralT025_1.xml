@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test FourSwitch new API" el:subtitle="" el:id="20080102ral142"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2006 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = ti[" "] .. {"st-rock1"}
+ti["y"] = ti[" "] .. {"it-magicwand"}
+
+ti["s"] = ti[" "] .. {"st_switch", name="swo#", state=1}
+ti["S"] = ti[" "] .. {"st_switch", name="sw#"}
+ti["T"] = ti[" "] .. {"st_switch", name="swt#"}
+ti["D"] = ti[" "] .. {"st-door-v", name="do#"}
+ti["R"] = ti[" "] .. {"st_boulder_n", name="boulder"}
+ti["L"] = ti[" "] .. {"st-laserswitch", target="door1", action="signal"}
+
+ti["f"] = ti[" "] .. {"st_fourswitch", target="swo#1", action="signal"}
+ti["F"] = ti[" "] .. {"st_fourswitch", target="sw#1", action="signal", inverse=true}
+ti["g"] = ti[" "] .. {"st_fourswitch", name="fourstate", target_3="swt#1", target_2="swt#2", target_1="swt#3", target_0="swt#4", action="signal"}
+ti["G"] = ti[" "] .. {"st_fourswitch", target="boulder", action="orientate"}
+
+ti["h"] = ti[" "] .. {"st_fourswitch", name="f#"}
+ti["u"] = ti[" "] .. {"st_switch", target="f#1", action="signal"}
+ti["U"] = ti[" "] .. {"st_switch", target="f#2", action="toggle"}
+
+-- the bolder on fourswitch trigger will work after the reengineering of boulder
+ti["B"] = ti[" "] .. {"st_boulder_w"}
+ti["W"] = ti[" "] .. {"st-wood"}
+
+
+-- 4 switches to set state of fourswitch that switches 4 others
+ti["t"] = ti[" "] .. {"st_switch", target="setstate"}
+
+ti["H"] = ti[" "] .. {"st_fourswitch", counterclock=true, name="anticlock"}
+
+
+ti["1"] = ti[" "] .. {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"            f  s    ",
+"            F  S    ",
+"        t   g  T    ",
+"H       t      T    ",
+"        t      T    ",
+"        t      T    ",
+"            G  R    ",
+"        1           ",
+"        y           ",
+"h u                 ",
+"h U                 ",
+"h    WB             ",
+"                    "
+})
+
+function setstate(value, sender)
+    no["fourstate"]["state"] = sender.y - 2
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

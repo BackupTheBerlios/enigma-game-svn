@@ -2,7 +2,7 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Test Horse new API" el:subtitle="" el:id="20080116ral551"/>
+      <el:identity el:title="Test Vortex" el:subtitle="" el:id="20071219ral361"/>
       <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2006 Ronald Lamprecht</el:copyright>
@@ -20,49 +20,37 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["1"] = {"fl-rock", name="d1"}
-ti["2"] = {"fl-rock", name="d2"}
-ti["3"] = {"fl-rock", name="d3"}
-ti["4"] = {"fl-rock", name="d4"}
-ti["5"] = {"fl-rock", name="d5"}
-ti["6"] = {"fl-rock", name="d6"}
-ti["h"] = ti[" "] .. {"ac-horse", name="horse", destination={"d1","d2","d3","d4","d5","d6"}}
-ti["i"] = {"fl-rock", name="i1"}
-ti["j"] = {"fl-rock", name="i2"}
-ti["k"] = {"fl-rock", name="i3"}
-ti["l"] = {"fl-rock", name="i4"}
-ti["s"] = ti[" "] .. {"st_switch", target="innercircle"}
+ti["#"] = ti[" "] .. {"st-rock1"}
 
+ti["A"] = ti[" "] .. {"it-vortex-open", name="v1", destination="v2", scissor=true}
+ti["B"] = ti[" "] .. {"it-vortex-open", name="v2", destination="v3"}
+ti["C"] = ti[" "] .. {"it-vortex-open", name="v3", destination={"v1","v2","v4"}}
+ti["D"] = ti[" "] .. {"it-vortex-open", name="v4", destination=po(3.1,7.7)}
+ti["R"] = ti[" "] .. {"st-rubberband"}
+ti["W"] = ti[" "] .. {"st-wood"}
+ti["S"] = ti[" "] .. {"st_switch", target="autoclose"}
 
-ti["a"] = ti[" "] .. {"#ac-blackball"}
+ti["1"] = ti[" "] .. {"#ac-blackball"}
 
 w, h = wo(ti, " ", {
+"   R                ",
 "                    ",
 "                    ",
-"     6        1     ",
+"   A  B  C  D       ",
 "                    ",
-"       i    l       ",
+"  W       W    W    ",
 "                    ",
-" 5       sh      2  ",
-"         a          ",
+"      1             ",
+"   S                ",
 "                    ",
-"       j    k       ",
 "                    ",
-"     4        3     ",
+"                    ",
 "                    "
 })
 
-function innercircle(value, sender)
-    -- demo mixture string tokens with a group
-    circle = grp(no["i1"],no["i2"],no["i3"],no["i4"])
-    horse = no["horse"]
-    dest = horse["destination"]
-    if value then
-        table.insert(dest, circle)
-    else
-        dest[#dest]=nil
-    end
-    horse["destination"] = dest
+
+function autoclose(value, sender)
+    no["v1"]:set({autoclose=value})
 end
 
   ]]></el:luamain>

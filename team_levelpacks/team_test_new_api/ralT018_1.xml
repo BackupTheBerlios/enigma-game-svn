@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Oxyd Shuffle 2" el:subtitle="" el:id="20071108ral711"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="test"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+wo["AllowSingleOxyds"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = ti[" "] .. {"st-rock1"}
+
+ti["O"] = ti[" "] .. {"st-oxyd", name="o#", flavor="d"}
+ti["P"] = ti[" "] .. {"st-oxyd", name="p#"}
+ti["Q"] = ti[" "] .. {"st-oxyd", name="q1", color=5}
+--ti["S"] = ti[" "] .. {"st_switch", action="shuffle", target="o#1"}
+ti["S"] = ti[" "] .. {"st_switch", action="callback", target="newflavor"}
+ti["1"] = ti[" "] .. {"#ac-blackball"}
+ti["B"] = ti[" "] .. {"st-oxyd", color=-4, flavor="d", noshuffle=false}
+ti["F"] = ti[" "] .. {"st-oxyd", color=-3, flavor="a", noshuffle=false}
+ti["K"] = ti[" "] .. {"st-oxyd", color=-2, flavor="c", noshuffle=false}
+
+
+w, h = wo(ti, " ", {
+"B  OOOOOOOOPPPPPPK F",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"      1             ",
+"                    ",
+"                    ",
+"       S            ",
+"                    ",
+"                    "
+})
+
+--wo:shuffleOxyd()
+--wo:shuffleOxyd({"o#1", "o#2", max=2, log="count"})
+--wo:shuffleOxyd({no["o#*"], min=3, log="solution"})
+wo:shuffleOxyd({no["o#*"], no["p#*"], min=3, log="solution"})
+function newflavor(value, sender)
+    no["o#1"]["flavor"] = "b"
+--    no["o#1"]:kill()
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
