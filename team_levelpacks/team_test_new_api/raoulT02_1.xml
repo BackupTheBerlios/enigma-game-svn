@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test KeySwitch new API" el:subtitle="" el:id="testkeyswitch_raoul"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti["0"] = ti[" "] .. {"#ac-blackball"}
+
+ti["A"] = ti[" "] .. {"st_switch", name="da1", target="la5", action="onoff"}
+ti["B"] = ti[" "] .. {"st_switch", name="da2", target="la6", action="onoff"}
+ti["C"] = ti[" "] .. {"st_switch", name="da3", target="la7", action="onoff"}
+ti["D"] = ti[" "] .. {"st_switch", name="da4", target="la8", action="onoff"}
+
+ti["F"] = ti[" "] .. {"st_key", name="stk1", target="da1", action="toggle"}
+ti["G"] = ti[" "] .. {"st_key", name="stk2", target="da2", action="signal"}
+ti["H"] = ti[" "] .. {"st_key", name="stk3", target="da3", action="on"}
+ti["I"] = ti[" "] .. {"st_key", name="stk4", target="da4", action="off"}
+
+ti["1"] = ti[" "] .. {"st_key", keycode=1}
+ti["2"] = ti[" "] .. {"st_key", keycode=2}
+ti["3"] = ti[" "] .. {"st_key", keycode=3}
+ti["4"] = ti[" "] .. {"st_key", keycode=4}
+ti["5"] = ti[" "] .. {"st_key", keycode=5}
+
+ti["W"] = ti[" "] .. {"st-laser-e", name="la5"}
+ti["X"] = ti[" "] .. {"st-laser-e", name="la6"}
+ti["Y"] = ti[" "] .. {"st-laser-e", name="la7"}
+ti["Z"] = ti[" "] .. {"st-laser-e", name="la8"}
+
+ti["J"] = ti[" "] .. {"st_key", name="la5", target="da5", action="toggle", inverse=true}
+ti["K"] = ti[" "] .. {"st_key", name="la6", target="da6", action="signal", inverse=true}
+ti["L"] = ti[" "] .. {"st_key", name="la7", target="da7", action="on", inverse=true}
+ti["M"] = ti[" "] .. {"st_key", name="la8", target="da8", action="off", inverse=true}
+
+ti["a"] = ti[" "] .. {"it-key"}
+ti["b"] = ti[" "] .. {"it-key", keycode=1}
+ti["c"] = ti[" "] .. {"it-key", keycode=2}
+ti["d"] = ti[" "] .. {"it-key", keycode=3}
+ti["e"] = ti[" "] .. {"it-key", keycode=4}
+ti["f"] = ti[" "] .. {"it-key", keycode=5}
+
+w, h = wo(ti, " ", {
+"0  a   F      A     ",
+"   a   G      B     ",
+"   a   H      C     ",
+"   a   I      D     ",
+"                    ",
+"                    ",
+"   bcdef    12345   ",
+"                    ",
+"                    ",
+"   a   J      W     ",
+"   a   K      X     ",
+"   a   L      Y     ",
+"   a   M      Z     "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

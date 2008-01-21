@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test FloppySwitch new API" el:subtitle="" el:id="testfloppyswitch_raoul"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti["0"] = ti[" "] .. {"#ac-blackball"}
+
+ti["5"] = ti[" "] .. {"st_switch", target="stfl1", action="signal"}
+ti["6"] = ti[" "] .. {"st_switch", target="stfl1", action="on"}
+ti["7"] = ti[" "] .. {"st_switch", target="stfl1", action="off"}
+ti["8"] = ti[" "] .. {"st_switch", target="stfl1", action="toggle"}
+
+ti["A"] = ti[" "] .. {"st_switch", name="da1"}
+ti["B"] = ti[" "] .. {"st_switch", name="da2"}
+ti["C"] = ti[" "] .. {"st_switch", name="da3"}
+ti["D"] = ti[" "] .. {"st_switch", name="da4"}
+ti["W"] = ti[" "] .. {"st_switch", name="da5"}
+ti["X"] = ti[" "] .. {"st_switch", name="da6"}
+ti["Y"] = ti[" "] .. {"st_switch", name="da7"}
+ti["Z"] = ti[" "] .. {"st_switch", name="da8"}
+
+ti["F"] = ti[" "] .. {"st_floppy", name="stfl1", target="da1", action="toggle"}
+ti["G"] = ti[" "] .. {"st_floppy", name="stfl2", target="da2", action="signal"}
+ti["H"] = ti[" "] .. {"st_floppy", name="stfl3", target="da3", action="on"}
+ti["I"] = ti[" "] .. {"st_floppy", name="stfl4", target="da4", action="off"}
+
+ti["J"] = ti[" "] .. {"st_floppy", name="stfl5", target="da5", action="toggle", inverse=true}
+ti["K"] = ti[" "] .. {"st_floppy", name="stfl6", target="da6", action="signal", inverse=true}
+ti["L"] = ti[" "] .. {"st_floppy", name="stfl7", target="da7", action="on", inverse=true}
+ti["M"] = ti[" "] .. {"st_floppy", name="stfl8", target="da8", action="off", inverse=true}
+
+ti["f"] = ti[" "] .. {"it-floppy"}
+
+w, h = wo(ti, " ", {
+"0  f   F      A    5",
+"   f   G      B    6",
+"   f   H      C    7",
+"   f   I      D    8",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"   f   J      W     ",
+"   f   K      X     ",
+"   f   L      Y     ",
+"   f   M      Z     "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
