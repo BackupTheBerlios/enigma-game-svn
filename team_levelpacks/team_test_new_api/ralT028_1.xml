@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Oxyd new API" el:subtitle="" el:id="20080123ral771"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = ti[" "] .. {"st-rock1"}
+
+ti["O"] = ti[" "] .. {"st_oxyd", "o#", target="enlighten"}
+ti["F"] = ti[" "] .. {"st_oxyd", oxydcolor=-3, noshuffle=true}
+ti["B"] = ti[" "] .. {"st_oxyd", "bold", oxydcolor=-4, noshuffle=true}
+ti["S"] = ti[" "] .. {"st_switch", target="o#1"}
+ti["T"] = ti[" "] .. {"st_switch", target="o#2", action="open"}
+ti["U"] = ti[" "] .. {"st_switch", target="o#2", action="close"}
+ti["V"] = ti[" "] .. {"st_switch", target="o#3", action="signal"}
+ti["W"] = ti[" "] .. {"st_switch", target="statetest"}
+ti["C"] = ti[" "] .. {"st_switch", target="bold", action="signal"}
+ti["L"] = ti[" "] .. {"st-laser-n", "Laser#"}
+ti["l"] = ti[" "] .. {"st-laser-n", "laser#"}
+ti["b"] = ti[" "] .. {"st_boulder_s"}
+ti["X"] = ti[" "] .. {"st_switch", target="o#1", action="shuffle"}
+ti["Y"] = ti[" "] .. {"st_switch", target="o#1", action="closeall"}
+ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"  Ll Ll Ll Ll Ll Ll ",
+"                    ",
+"  O  O  O  O  O  O  ",
+"                    ",
+"  S  TU V  W        ",
+"                    ",
+"      1             ",
+"                    ",
+"                    ",
+"                    ",
+"    F      C B      ",
+"      Y  X       b  "
+})
+
+wo:shuffleOxyd()
+
+function statetest(value)
+    local newstate = 0
+    if value then newstate = 1 end
+    (no["o#4"])["state"] = newstate
+end
+
+function enlighten(value, sender)
+    -- the single opened oxyd
+    no["Laser" .. string.sub(sender["name"],2)]:onoff()
+    
+    -- all pair opened oxyds with the second laser
+    for i=1,6 do
+        if no["o#"..i]["state"] == 2 then
+            no["laser#"..i]["on"] = 1   -- laser not yet new API!
+        else
+            no["laser#"..i]:off()
+        end
+    end
+end
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

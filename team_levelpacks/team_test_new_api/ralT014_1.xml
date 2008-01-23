@@ -32,7 +32,7 @@ ti["s"] = ti[" "] .. {"st_switch", action="callback", target="doit"}
 ti["b"] = ti[" "] .. {"st_blocker", name="blocker"}
 ti["d"] = ti[" "] .. {"st-door_b", name="door#"}
 ti["h"] = ti[" "] .. {"st-chess_black", name="chess#"}
-ti["o"] = ti[" "] .. {"st-oxyd"}
+ti["o"] = ti[" "] .. {"st_oxyd"}
 ti["B"] = ti[" "] .. {"it-bag"}
 ti["T"] = ti[" "] .. {"st-thief"}
 ti["t"] = {"fl-thief"}

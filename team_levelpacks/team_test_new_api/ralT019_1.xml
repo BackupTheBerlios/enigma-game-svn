@@ -22,12 +22,12 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
-ti["O"] = ti[" "] .. {"st-oxyd", name="o#"}
-ti["P"] = ti[" "] .. {"st-oxyd", name="p#"}
-ti["Q"] = ti[" "] .. {"st-oxyd", name="q#"}
-ti["R"] = ti[" "] .. {"st-oxyd", name="r#"}
-ti["S"] = ti[" "] .. {"st-oxyd", name="s#"}
-ti["T"] = ti[" "] .. {"st-oxyd", name="t#"}
+ti["O"] = ti[" "] .. {"st_oxyd", name="o#"}
+ti["P"] = ti[" "] .. {"st_oxyd", name="p#"}
+ti["Q"] = ti[" "] .. {"st_oxyd", name="q#"}
+ti["R"] = ti[" "] .. {"st_oxyd", name="r#"}
+ti["S"] = ti[" "] .. {"st_oxyd", name="s#"}
+ti["T"] = ti[" "] .. {"st_oxyd", name="t#"}
 ti["1"] = ti[" "] .. {"#ac-blackball"}
 
 w, h = wo(ti, " ", {

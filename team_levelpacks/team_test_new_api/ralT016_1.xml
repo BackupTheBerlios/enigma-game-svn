@@ -49,7 +49,7 @@ ti["F"] = ti["c"] .. {"st_boulder_w"}
 ti["G"] = ti[" "] .. {"st_boulder_e"}
 
 
-ti["X"] = ti[" "] .. {"st-oxyd"}
+ti["X"] = ti[" "] .. {"st_oxyd"}
 ti["1"] = ti[" "] .. {"#ac-blackball"}
 
 w, h = wo(ti, " ", {

@@ -23,15 +23,15 @@ wo["AllowSingleOxyds"] = true
 ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
-ti["O"] = ti[" "] .. {"st-oxyd", name="o#", flavor="d"}
-ti["P"] = ti[" "] .. {"st-oxyd", name="p#"}
-ti["Q"] = ti[" "] .. {"st-oxyd", name="q1", color=5}
+ti["O"] = ti[" "] .. {"st_oxyd", name="o#", flavor="d"}
+ti["P"] = ti[" "] .. {"st_oxyd", name="p#"}
+ti["Q"] = ti[" "] .. {"st_oxyd", name="q1", oxydcolor=5}
 --ti["S"] = ti[" "] .. {"st_switch", action="shuffle", target="o#1"}
 ti["S"] = ti[" "] .. {"st_switch", action="callback", target="newflavor"}
 ti["1"] = ti[" "] .. {"#ac-blackball"}
-ti["B"] = ti[" "] .. {"st-oxyd", color=-4, flavor="d", noshuffle=false}
-ti["F"] = ti[" "] .. {"st-oxyd", color=-3, flavor="a", noshuffle=false}
-ti["K"] = ti[" "] .. {"st-oxyd", color=-2, flavor="c", noshuffle=false}
+ti["B"] = ti[" "] .. {"st_oxyd", oxydcolor=-4, flavor="d", noshuffle=false}
+ti["F"] = ti[" "] .. {"st_oxyd", oxydcolor=-3, flavor="a", noshuffle=false}
+ti["K"] = ti[" "] .. {"st_oxyd", oxydcolor=-2, flavor="c", noshuffle=false}
 
 
 w, h = wo(ti, " ", {
