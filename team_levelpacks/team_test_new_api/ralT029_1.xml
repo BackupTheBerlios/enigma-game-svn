@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Cluster new API" el:subtitle="" el:id="20080124ral491"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = ti[" "] .. {"st-rock1"}
+
+ti["1"] = ti[" "] .. {"st_panel", cluster=1}
+ti["2"] = ti[" "] .. {"st_panel", cluster=2}
+ti["3"] = ti[" "] .. {"st_panel", cluster=3}
+
+ti["5"] = ti[" "] .. {"st_bluesand", cluster=5}
+ti["6"] = ti[" "] .. {"st_bluesand", cluster=6}
+
+ti["8"] = ti[" "] .. {"st_brick", cluster=8}
+ti["9"] = ti[" "] .. {"st_brick", cluster=9}
+
+ti["P"] = ti[" "] .. {"st_panel"}
+ti["Q"] = ti[" "] .. {"st_panel_n"}
+ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
+ti["S"] = ti[" "] .. {"st_panel", faces=""}
+ti["|"] = ti[" "] .. {"st_panel", connections="sn"}
+ti["s"] = ti[" "] .. {"st-swap"}
+
+ti["x"] = ti[" "] .. {"st_panel", "dynamic", connections=""}
+ti["a"] = ti[" "] .. {"st_switch", "north", target="change"}
+ti["b"] = ti[" "] .. {"st_switch", "east", target="change"}
+ti["c"] = ti[" "] .. {"st_switch", "south", target="change"}
+ti["d"] = ti[" "] .. {"st_switch", "west", target="change"}
+
+ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"1111233         5555",
+"11 22            566",
+"1                 66",
+"                    ",
+"    P Q R S         ",
+"    s               ",
+"       A       a    ",
+"              d b   ",
+" 8             c    ",
+"889          11111  ",
+"8999  222    11x21  ",
+"889   1|1     1221  ",
+"999   111     1111  "
+})
+
+
+function change(value, sender)
+    local newcon = ""
+    if no["north"].state == 1 then newcon = newcon .."n" end
+    if no["east"]["state"] == 1 then newcon = newcon .."e" end
+    if no["south"].state == 1 then newcon = newcon .."s" end
+    if no["west"].state  == 1 then newcon = newcon .."w" end
+    no["dynamic"]["connections"] = newcon
+    
+    -- another variation by replacing - a brutal engine test
+--    wo[no["dynamic"]] = {"st_panel", connections = newcon, "dynamic"}
+end
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
