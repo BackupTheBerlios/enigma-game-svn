@@ -23,6 +23,7 @@ ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
 ti["O"] = ti[" "] .. {"st_oxyd", "o#", target="enlighten"}
+ti["D"] = ti[" "] .. {"st_oxyd_d", "o#", target="enlighten"}
 ti["F"] = ti[" "] .. {"st_oxyd", oxydcolor=-3, noshuffle=true}
 ti["B"] = ti[" "] .. {"st_oxyd", "bold", oxydcolor=-4, noshuffle=true}
 ti["S"] = ti[" "] .. {"st_switch", target="o#1"}
@@ -42,7 +43,7 @@ w, h = wo(ti, " ", {
 "                    ",
 "  Ll Ll Ll Ll Ll Ll ",
 "                    ",
-"  O  O  O  O  O  O  ",
+"  O  O  O  O  D  O  ",
 "                    ",
 "  S  TU V  W        ",
 "                    ",
@@ -59,7 +60,7 @@ wo:shuffleOxyd()
 function statetest(value)
     local newstate = 0
     if value then newstate = 1 end
-    (no["o#4"])["state"] = newstate
+    no["o#4"]["state"] = newstate
 end
 
 function enlighten(value, sender)

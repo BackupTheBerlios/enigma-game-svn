@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Windowstone new API" el:subtitle="" el:id="testwindow_raoul"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["."] = {"fl-space"}
+
+ti["0"] = ti[" "] .. {"#ac-blackball"}
+
+ti["#"] = ti[" "] .. {"st-glass"}
+ti["+"] = ti[" "] .. {"st_window_nesw"}
+ti["a"] = ti[" "] .. {"st_window_nes"}
+ti["b"] = ti[" "] .. {"st_window_esw"}
+ti["c"] = ti[" "] .. {"st_window_nsw"}
+ti["d"] = ti[" "] .. {"st_window_new"}
+ti["A"] = ti[" "] .. {"st_window_n"}
+ti["B"] = ti[" "] .. {"st_window_e"}
+ti["C"] = ti[" "] .. {"st_window_s"}
+ti["D"] = ti[" "] .. {"st_window_w"}
+ti["1"] = ti[" "] .. {"st_window_sw"}
+ti["2"] = ti[" "] .. {"st_window_nw"}
+ti["3"] = ti[" "] .. {"st_window_ne"}
+ti["4"] = ti[" "] .. {"st_window_es"}
+ti["h"] = ti[" "] .. {"st_window_ns"}
+ti["v"] = ti[" "] .. {"st_window_ew"}
+
+ti["V"] = ti["."] .. {"st_window", faces="we"}
+ti["*"] = ti["."] .. {"st_window", faces="esw"}
+
+ti["w"] = ti[" "] .. {"it-wrench"}
+ti["I"] = ti[" "] .. {"st-stoneimpulse"}
+ti["W"] = ti[" "] .. {"it-puller-w"}
+ti["E"] = ti[" "] .. {"it-puller-e"}
+ti["F"] = ti[" "] .. {"st_fourswitch", target="pullwindow", action="inner_pull"}
+ti["G"] = ti[" "] .. {"st_window", faces="ws", "pullwindow"}
+
+w, h = wo(ti, " ", {
+"###23 232323##14####",
+"#  14  1414   23   #",
+"#               BD #",
+"BAD B   a b c d BD #",
+" BCCB   a b c d BDv#",
+"  B     a b c d   v#",
+"#               G v#",
+"# 2AAAA3 B + D FV v#",
+"#IDWE0wB B   D  V v#",
+"# 1CCCC4 B + D  V v#",
+"#I              V v#",
+"# hhhhhhhhhhhh  V  #",
+"################*###"
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

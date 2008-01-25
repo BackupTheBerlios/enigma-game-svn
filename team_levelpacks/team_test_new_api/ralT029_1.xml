@@ -21,6 +21,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
+ti["."] = ti({"fl-rough-blue"}) .. {"st-chameleon"}
 
 ti["1"] = ti[" "] .. {"st_panel", cluster=1}
 ti["2"] = ti[" "] .. {"st_panel", cluster=2}
@@ -49,14 +50,15 @@ ti["d"] = ti[" "] .. {"st_switch", "west", target="change"}
 ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
 
 ti["D"] = ti[" "] .. {"st_switch", target="deletion"}
+ti["E"] = ti[" "] .. {"st_switch", target="recluster"}
 
 w, h = wo(ti, " ", {
 "1111233         5555",
 "11 22            566",
 "1   sT            66",
 "                    ",
-"    P Q R S         ",
-"D   s               ",
+"    P Q R S        E",
+"D  .s               ",
 "       A       a    ",
 "              d b   ",
 " 8             c    ",
@@ -82,6 +84,12 @@ end
 function deletion(value, sender)
     wo[{1,1}] = {"st_nil"}
     wo[{0,3}] = {"st_panel", cluster=1}
+end
+
+function recluster(value, sender)
+    local newcluster = 6
+    if value then newcluster = 5 end
+    wo:st(sender - {1, 3})["cluster"] = newcluster
 end
   
   ]]></el:luamain>
