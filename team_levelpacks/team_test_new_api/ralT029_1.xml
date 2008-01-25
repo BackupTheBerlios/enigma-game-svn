@@ -36,6 +36,7 @@ ti["P"] = ti[" "] .. {"st_panel"}
 ti["Q"] = ti[" "] .. {"st_panel_n"}
 ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
 ti["S"] = ti[" "] .. {"st_panel", faces=""}
+ti["T"] = ti[" "] .. {"st_panel", cluster=2}
 ti["|"] = ti[" "] .. {"st_panel", connections="sn"}
 ti["s"] = ti[" "] .. {"st-swap"}
 
@@ -47,13 +48,15 @@ ti["d"] = ti[" "] .. {"st_switch", "west", target="change"}
 
 ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
 
+ti["D"] = ti[" "] .. {"st_switch", target="deletion"}
+
 w, h = wo(ti, " ", {
 "1111233         5555",
 "11 22            566",
-"1                 66",
+"1   sT            66",
 "                    ",
 "    P Q R S         ",
-"    s               ",
+"D   s               ",
 "       A       a    ",
 "              d b   ",
 " 8             c    ",
@@ -75,6 +78,12 @@ function change(value, sender)
     -- another variation by replacing - a brutal engine test
 --    wo[no["dynamic"]] = {"st_panel", connections = newcon, "dynamic"}
 end
+
+function deletion(value, sender)
+    wo[{1,1}] = {"st_nil"}
+    wo[{0,3}] = {"st_panel", cluster=1}
+end
+  
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">
