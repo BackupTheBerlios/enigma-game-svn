@@ -35,9 +35,13 @@ ti["C"] = ti[" "] .. {"st_switch", target="bold", action="signal"}
 ti["L"] = ti[" "] .. {"st-laser-n", "Laser#"}
 ti["l"] = ti[" "] .. {"st-laser-n", "laser#"}
 ti["b"] = ti[" "] .. {"st_boulder_s"}
+ti["s"] = ti[" "] .. {"st-swap"}
 ti["X"] = ti[" "] .. {"st_switch", target="o#1", action="shuffle"}
 ti["Y"] = ti[" "] .. {"st_switch", target="o#1", action="closeall"}
 ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
+
+ti["w"] = ti[" "] .. {"st_switch", target="Laser#7", action="onoff"}
+ti["f"] = ti[" "] .. {"st-fart"}
 
 w, h = wo(ti, " ", {
 "                    ",
@@ -48,11 +52,11 @@ w, h = wo(ti, " ", {
 "  S  TU V  W        ",
 "                    ",
 "      1             ",
+"f                   ",
 "                    ",
 "                    ",
-"                    ",
-"    F      C B      ",
-"      Y  X       b  "
+"  F      C Bs       ",
+"    Y  X     wL  b  "
 })
 
 wo:shuffleOxyd()

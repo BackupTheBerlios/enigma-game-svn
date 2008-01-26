@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Swap new API" el:subtitle="" el:id="20080126ral299"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = ti[" "] .. {"st-rock1"}
+ti["~"] = ti({"fl-rough-blue"}) .. {"st-chameleon"}
+
+ti["s"] = ti[" "] .. {"st-swap"}
+
+ti["2"] = ti[" "] .. {"st_panel", cluster=2}
+
+ti["P"] = ti[" "] .. {"st_panel"}
+ti["Q"] = ti[" "] .. {"st_panel_n"}
+ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
+
+
+ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
+
+
+ti["w"] = ti[" "] .. {"st_switch", target="Laser", action="onoff"}
+ti["k"] = ti[" "] .. {"st-laserswitch"}
+ti["L"] = ti[" "] .. {"st-laser-n", "Laser"}
+
+ti["+"] = ti[" "] .. {"st-grate1"}
+ti["."] = ti[" "] .. {"it-seed"}
+
+
+w, h = wo(ti, " ", {
+"    2               ",
+"   22           sk  ",
+"    s2              ",
+"                wL  ",
+"    P Q             ",
+"   ~s               ",
+"       A            ",
+"                    ",
+"                    ",
+"  #+s.              ",
+"                    ",
+"                    ",
+"                    "
+})
+
+
+  
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

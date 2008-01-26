@@ -21,7 +21,6 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
-ti["."] = ti({"fl-rough-blue"}) .. {"st-chameleon"}
 
 ti["1"] = ti[" "] .. {"st_panel", cluster=1}
 ti["2"] = ti[" "] .. {"st_panel", cluster=2}
@@ -58,7 +57,7 @@ w, h = wo(ti, " ", {
 "1   sT            66",
 "                    ",
 "    P Q R S        E",
-"D  .s               ",
+"D   s               ",
 "       A       a    ",
 "              d b   ",
 " 8             c    ",
