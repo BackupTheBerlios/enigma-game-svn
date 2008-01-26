@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Coinslot new API" el:subtitle="" el:id="testcoinswitch_raoul"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1007 $" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti["0"] = ti[" "] .. {"#ac-blackball"}
+
+ti["A"] = ti[" "] .. {"st_coinslot", name="cs1", target="la1", action="onoff"}
+ti["B"] = ti[" "] .. {"st_coinslot", name="cs2", target="la2", action="signal"}
+ti["C"] = ti[" "] .. {"st_coinslot", name="cs3", target="la3", action="on"}
+ti["D"] = ti[" "] .. {"st_coinslot", name="cs4", target="la4", action="off"}
+
+ti["L"] = ti[" "] .. {"st-laser-e", name="la1"}
+ti["M"] = ti[" "] .. {"st-laser-e", name="la2"}
+ti["N"] = ti[" "] .. {"st-laser-e", name="la3"}
+ti["O"] = ti[" "] .. {"st-laser-e", name="la4"}
+
+ti["R"] = ti[" "] .. {"st_switch", name="la1", target="la1", action="onoff"}
+ti["S"] = ti[" "] .. {"st_switch", name="la2", target="la2", action="onoff"}
+ti["T"] = ti[" "] .. {"st_switch", name="la3", target="la3", action="onoff"}
+ti["U"] = ti[" "] .. {"st_switch", name="la4", target="la4", action="onoff"}
+
+ti["X"] = ti[" "] .. {"it-coin1"}
+ti["Y"] = ti[" "] .. {"it-coin2"}
+ti["Z"] = ti[" "] .. {"it-coin4"}
+
+w, h = wo(ti, " ", {
+"0      A     RL     ",
+"       B     SM     ",
+"       C     TN     ",
+"       D     UO     ",
+"                    ",
+"XXXXXXXXXX          ",
+"     YYYYYYYYYY     ",
+"          ZZZZZZZZZZ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
