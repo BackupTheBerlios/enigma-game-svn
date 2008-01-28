@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Trigger new API" el:subtitle="" el:id="20080127ral564"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["."] = {"fl-water"}
+ti["~"] = {"fl-abyss"}
+ti["!"] = {"fl-wood", ignitable=true}
+ti["#"] = ti[" "] .. {"st-rock1"}
+
+ti["A"] = ti[" "] .. {"it_trigger", target="lasera", action="onoff", "triggerA"}
+ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"onoff", "on"}}
+ti["C"] = ti["."] .. {"it_trigger", target={"laserc","lasercon"}, action={"onoff", "on"}}
+ti["O"] = ti["!"] .. {"it_trigger", target={"lasero","laseroon"}, action={"onoff", "on"}}
+
+ti["a"] = ti[" "] .. {"st-laser-s", "lasera"}
+ti["b"] = ti[" "] .. {"st-laser-s", "laserb"}
+ti["c"] = ti[" "] .. {"st-laser-s", "laserc"}
+ti["d"] = ti[" "] .. {"st-laser-s", "laserbon"}
+ti["e"] = ti[" "] .. {"st-laser-s", "lasercon"}
+ti["f"] = ti[" "] .. {"st-laser-s", "laserf"}
+ti["g"] = ti[" "] .. {"st-laser-s", "laserfon"}
+ti["h"] = ti[" "] .. {"st-laser-n", "laserh"}
+ti["i"] = ti[" "] .. {"st-laser-n", "laserhon"}
+ti["j"] = ti[" "] .. {"st-laser-n", "laserj"}
+ti["k"] = ti[" "] .. {"st-laser-n", "laserjon"}
+ti["l"] = ti[" "] .. {"st-laser-n", "laserl"}
+ti["n"] = ti[" "] .. {"st-laser-n", "laserlon"}
+ti["o"] = ti[" "] .. {"st-laser-n", "lasero"}
+ti["p"] = ti[" "] .. {"st-laser-n", "laseroon"}
+
+
+ti["W"] = ti[" "] .. {"st-wood"}
+ti["U"] = ti[" "] .. {"st-block"}
+ti["V"] = ti[" "] .. {"st-brownie"}
+ti["u"] = ti[" "] .. {"it-spring1"}
+ti["v"] = ti[" "] .. {"it-brake"}
+ti["Y"] = ti[" "] .. {"st-death"}
+ti["z"] = ti[" "] .. {"it-dynamite"}
+
+ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}
+ti["m"] = ti[" "] .. {"st_switch", target="makeactor"}
+ti["X"] = ti[" "] .. {"it-wormhole", destination="triggerA", range=1}
+
+ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it-ring"}
+ti["2"] = ti[" "] .. {"#ac-whiteball-small", player=nil, controllers=0}
+
+ti["3"] = (ti[" "]  .. {"#ac-whiteball-small", controllers=0})
+                .. {"it_trigger", target={"laserh","laserhon"}, action={"onoff", "on"}}
+ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"onoff", "on"}})
+                .. {"#ac-whiteball-small", controllers=0}
+ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"onoff", "on"}})
+                .. {"st-wood"}
+ti["6"] = (ti[" "]  .. {"it_trigger", "killtrigger", target="killstone"})
+
+
+w, h = wo(ti, " ", {
+"                    ",
+" op   ln   jk   hi  ",
+" O    5    4    3   ",
+" !   V              ",
+" !                  ",
+"     2 2 2      6W  ",
+"X                   ",
+"     1uvz  U    V   ",
+"     W     W    W   ",
+"M    A     B    C   ",
+"    Y      ~    .   ",
+"fg   am    bd   ce  ",
+"                    "
+})
+
+function maketrigger(value, sender)
+    wo[sender + {1,0}] = {"it_trigger", target={"laserf","laserfon"}, action={"onoff", "on"}}
+end
+  
+function makeactor(value, sender)
+    wo[no["triggerA"]] = {"#ac-whiteball-small", plazer=nil, controllers=0}
+end
+
+function killstone(value, sender)
+    wo[sender] = {"st_nil"}
+end
+  
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
