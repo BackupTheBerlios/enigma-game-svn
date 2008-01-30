@@ -40,6 +40,18 @@ ti["X"] = ti[" "] .. {"it-coin1"}
 ti["Y"] = ti[" "] .. {"it-coin2"}
 ti["Z"] = ti[" "] .. {"it-coin4"}
 
+ti["x"] = ti[" "] .. {"it-coin1", value=6}
+ti["y"] = ti[" "] .. {"it-coin2", value=6}
+ti["z"] = ti[" "] .. {"it-coin4", value=6}
+
+ti["l"] = ti[" "] .. {"st-laser-e", name="la5"}
+ti["m"] = ti[" "] .. {"st-laser-e", name="la6"}
+ti["n"] = ti[" "] .. {"st-laser-e", name="la7"}
+
+ti["E"] = ti[" "] .. {"st_coinslot", name="csx", target="la5", action="onoff"}
+ti["F"] = ti[" "] .. {"st_coinslot", name="csy", target="la6", action="onoff"}
+ti["G"] = ti[" "] .. {"st_coinslot", name="csz", target="la7", action="onoff"}
+
 w, h = wo(ti, " ", {
 "0      A     RL     ",
 "       B     SM     ",
@@ -50,9 +62,9 @@ w, h = wo(ti, " ", {
 "     YYYYYYYYYY     ",
 "          ZZZZZZZZZZ",
 "                    ",
-"                    ",
-"                    ",
-"                    ",
+" xyz     El         ",
+" yzx     Fm         ",
+" zxy     Gn         ",
 "                    "
 })
 
