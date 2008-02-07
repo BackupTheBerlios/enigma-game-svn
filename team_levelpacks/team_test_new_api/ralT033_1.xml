@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Validator new API" el:subtitle="" el:id="20080131ral378"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = ti[" "] .. {"st-rock1"}
+
+ti["T"] = ti[" "] .. {"st_switch", target="dotoggle"}
+ti["t"] = ti[" "] .. {"st_switch", target="sw", action="toggle"}
+ti["U"] = ti[" "] .. {"st_switch", target="doopen"}
+ti["V"] = ti[" "] .. {"st_switch", target="sw", action="close"}  -- unknown action
+ti["S"] = ti[" "] .. {"st_switch_black", "sw"}
+ti["R"] = ti[" "] .. {"st_switch", target="dorecolor"}
+ti["r"] = ti[" "] .. {"st_switch", target="dorecolor", inverse=true}
+ti["L"] = ti[" "] .. {"st-laser-s", "laser#"}
+ti["l"] = ti[" "] .. {"st-laser-s", "laserI#"}
+ti["K"] = ti[" "] .. {"st_switch", target="getkind"}
+ti["I"] = ti[" "] .. {"st_switch", target="iskind"}
+
+
+ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
+
+
+w, h = wo(ti, " ", {
+"                    ",
+"    S               ",
+"                    ",
+"                    ",
+"                    ",
+" Rr T  U  t  V      ",
+"                    ",
+"      1             ",
+"                    ",
+" K    I             ",
+"                    ",
+" LLL  lllll         ",
+"                    "
+})
+
+function dotoggle(value, sender)
+    no["sw"]:toggle()
+end
+
+function doopen(value, sender)
+    no["sw"]:open()  -- unknown message
+end
+
+function dorecolor(value, sender)
+    if sender["inverse"] then
+        no["sw"]["color"] = nil
+    else
+        no["sw"]["color"] = 1
+    end
+end
+
+function getkind(value, sender)
+    local kind = no["sw"]:kind()
+    print (kind)
+    no["laser#*"]:off()
+    if kind == "st_switch" then
+        no["laser#1"]:on()
+    elseif kind == "st_switch_black" then
+        no["laser#2"]:on()
+    elseif kind == "st_switch_white" then
+        no["laser#3"]:on()
+    end
+end
+
+function iskind(value, sender)
+    no["laserI#*"]:off()
+    if no["sw"]:is("st") then
+        no["laserI#1"]:on()
+    end
+    if no["sw"]:is("st_switch") then
+        no["laserI#2"]:on()
+    end
+    if no["sw"]:is("st_switch_black") then
+        no["laserI#3"]:on()
+    end
+    if no["sw"]:is("st_fourswitch") then
+        no["laserI#4"]:on()
+    end
+    if no["sw"]:is("st_switch_white") then
+        no["laserI#5"]:on()
+    end
+  
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
