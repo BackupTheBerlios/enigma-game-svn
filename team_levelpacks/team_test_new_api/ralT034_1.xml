@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test default floor new API" el:subtitle="" el:id="20080206ral636"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="true" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti["r"] = {"fl-rough-red"}
+ti["b"] = {"fl-rough-blue"}
+ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
+
+ti[" "] = ti["."] .. {"it_blocker"}
+ti["w"] = {"st-wood"}
+ti["s"] = {"st_switch", target="rmfloor"}
+ti["i"] = {"st_switch", target="icefloor"}
+
+ti["1"] = ti["b"] .. {"#ac-blackball"}
+ti["2"] = ti["b"] .. {"#ac-bug", "mybug"}
+
+function myresolver(key, x, y)
+    if key == " " then
+        if math.random() >= 0.5 then
+            return ti["b"]
+        else
+            return ti["r"]
+        end
+    else
+        return ti[key]
+    end
+end
+
+resolver = ti
+if wo["IsDifficult"] then
+    resolver = myresolver
+end
+
+w, h = wo(resolver, " ", {
+"                    ",
+" w     bbbbb        ",
+" w  bbbrrrrrbbb  ",
+"   bbrr.....rrbb ",
+"   br.........rb    ",
+"  br...........rb   ",
+"  br...........rb   ",
+"  br...........rb   ",
+"   br.........rb    ",
+"   bbrr.....rrbb    ",
+"    b2brrrrrb1b     ",
+"       bbbbb        ",
+"si                  "
+})
+
+function icefloor(value, sender)
+    wo[no["mybug"]] = {"fl-ice"}
+end
+
+function rmfloor(value, sender)
+    wo[no["mybug"]] = {"fl_nil"}
+end
+  
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

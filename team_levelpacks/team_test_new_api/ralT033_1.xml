@@ -20,22 +20,22 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["#"] = ti[" "] .. {"st-rock1"}
+ti["#"] = {"st-rock1"}
 
-ti["T"] = ti[" "] .. {"st_switch", target="dotoggle"}
-ti["t"] = ti[" "] .. {"st_switch", target="sw", action="toggle"}
-ti["U"] = ti[" "] .. {"st_switch", target="doopen"}
-ti["V"] = ti[" "] .. {"st_switch", target="sw", action="close"}  -- unknown action
-ti["S"] = ti[" "] .. {"st_switch_black", "sw"}
-ti["R"] = ti[" "] .. {"st_switch", target="dorecolor"}
-ti["r"] = ti[" "] .. {"st_switch", target="dorecolor", inverse=true}
-ti["L"] = ti[" "] .. {"st-laser-s", "laser#"}
-ti["l"] = ti[" "] .. {"st-laser-s", "laserI#"}
-ti["K"] = ti[" "] .. {"st_switch", target="getkind"}
-ti["I"] = ti[" "] .. {"st_switch", target="iskind"}
+ti["T"] = {"st_switch", target="dotoggle"}
+ti["t"] = {"st_switch", target="sw", action="toggle"}
+ti["U"] = {"st_switch", target="doopen"}
+ti["V"] = {"st_switch", target="sw", action="close"}  -- unknown action
+ti["S"] = {"st_switch_black", "sw"}
+ti["R"] = {"st_switch", target="dorecolor"}
+ti["r"] = {"st_switch", target="dorecolor", inverse=true}
+ti["L"] = {"st-laser-s", "laser#"}
+ti["l"] = {"st-laser-s", "laserI#"}
+ti["K"] = {"st_switch", target="getkind"}
+ti["I"] = {"st_switch", target="iskind"}
 
 
-ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
+ti["1"] = ti({"it-magicwand"}) .. {"#ac-blackball"}
 
 
 w, h = wo(ti, " ", {
