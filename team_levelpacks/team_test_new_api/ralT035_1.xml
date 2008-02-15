@@ -16,16 +16,15 @@
     </el:info>
     <el:luamain><![CDATA[
 
-
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
-ti["1"] = ti[" "] .. {"#ac-blackball"}
+ti["  "] = {"fl-sahara"}
+ti[" 1"] = ti["  "] .. {"#ac-blackball"}
 
 -- sample of create world without a given map - just default floors
-w, h = wo(ti, " ", 20, 13)
+w, h = wo(ti, "  ", 20, 13)
 
-wo[{14, 7}] = ti["1"]
+wo[{14, 7}] = ti[" 1"]
 
 -- sample of registry of a world lib function and its usage
 function hurra(world, pos)
@@ -36,21 +35,37 @@ wo:_register("hurra", hurra)
 
 wo:hurra(po({2,3}))
 
--- first version of a general draw map
--- TODO distinguish resolver ti/function, call function
--- TODO accept key length greater 1 (detect on ignore string length)
--- TODO check behaviour on errors and add usable reports
+-- second version of a general draw map
+-- TODO argument check with error on faults
 
-ti["#"] = {"it_blocker"}
+ti[".."] = {"it_blocker"}
+ti["::"] = {"it-cross"}
 
-function drawmap(world, origin, resolver, ignore, map)
+function myresolver(key, x, y)
+    if key == "##" then
+        if math.random() >= 0.5 then
+            return ti[".."]
+        else
+            return ti["::"]
+        end
+    else
+        return ti[key]
+    end
+end
+
+function drawmap(world, resolver, origin, ignore, map)
     local len = string.len(ignore)
     for y=1, #map do
         local linelen = string.len(map[y])
-        for x = 1, linelen do
-            local key = string.sub(map[y], x, x)
+        if math.fmod(linelen, len) ~= 0 then
+            error("drawmap map line ".. y .. " with odd length", 2)
+        end
+        for x = 1, linelen/len do
+            local key = string.sub(map[y], len*(x-1)+1, len*x)
             if key ~= ignore then
-                world[origin + {x-1, y-1}] = resolver[key]
+                world[origin + {x-1, y-1}] =  
+                        world:_evaluate(resolver, key, origin.x + x - 1, 
+                                origin.y + y-1)
             end
         end
     end
@@ -58,10 +73,10 @@ end
 
 wo:_register("drawmap", drawmap)
 
-wo:drawmap(po({wo.Width-10, wo.Height-5}), ti, "-", {
-  "--###",
-  "###--###",
-  "---###"
+wo:drawmap(myresolver, po({wo.Width-10, wo.Height-5}), "--", {
+  "----######",
+  "######----######",
+  "------######"
 })
 
   ]]></el:luamain>

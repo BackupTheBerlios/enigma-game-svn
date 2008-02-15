@@ -19,11 +19,13 @@
 
 wo["ConserveLevel"] = true
 
+ti["_"] = {"fl-sahara"}
 ti["r"] = {"fl-rough-red"}
 ti["b"] = {"fl-rough-blue"}
 ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
 
 ti[" "] = ti["."] .. {"it_blocker"}
+ti["n"] = {}       -- just nothing
 ti["w"] = {"st-wood"}
 ti["s"] = {"st_switch", target="rmfloor"}
 ti["i"] = {"st_switch", target="icefloor"}
@@ -33,7 +35,7 @@ ti["2"] = ti["b"] .. {"#ac-bug", "mybug"}
 
 function myresolver(key, x, y)
     if key == " " then
-        if math.random() >= 0.5 then
+        if math.random() >= 0.3 then
             return ti["b"]
         else
             return ti["r"]
@@ -43,9 +45,97 @@ function myresolver(key, x, y)
     end
 end
 
+res = {}
+
+function res.random_implementation(context, evaluator, key, x, y)
+    for hit_itr, hit_pair in ipairs(context[3]) do
+        if key == hit_pair[1] then
+            local super = nil
+            if hit_pair[2] ~= nil then
+                super = evaluator(context[2], hit_pair[2], x, y)
+            end
+            local repl_key
+            -- dummy test implementation with 2 keys
+            local r = math.random(context[5])
+            local i = 1
+            local s = context[4][i][2]
+            while s < r do
+                i = i + 1
+                s = s + context[4][i][2]
+            end
+            repl_key = context[4][i][1]
+            local replacement = evaluator(context[2], repl_key, x, y)
+            if super == nil then
+                return replacement
+            elseif type(super) == "table" then
+                return ti(super) .. replacement
+            else
+                return super .. replacement
+            end
+        end
+    end
+    -- key not found
+    return evaluator(context[2], key, x, y)
+end
+
+function res.random(subresolver, hits, replacements)
+    -- syntax: hits = key | {key, [key]*, [{key, superkey}]*}
+    --         replacements = {key, [key]*, [{key, frequency}]*}
+    -- TODO check args!
+    
+    local hit_table = {}
+    if type(hits) == "string" then
+        hit_table[1] = {hits, nil}
+    else
+        for i, v in ipairs(hits) do
+            if type(v) == "string" then
+                hit_table[i] = {v, nil}
+            elseif type(v) == "table" then
+                hit_table[i] = v
+            end
+        end
+    end
+    
+    local repl_table = {}
+    for i, v in ipairs(replacements) do
+        if type(v) == "string" then
+            repl_table[i] = {v, 1}
+        elseif type(v) == "table" then
+            repl_table[i] = v
+        end
+    end
+    local repl_sum = 0
+    for i, v in ipairs(repl_table) do
+        repl_sum = repl_sum + v[2]
+    end
+    local context = {res.random_implementation, subresolver, hit_table, 
+                      repl_table, repl_sum}
+    return context
+end
+
+
+function fullresolver_implementation(context, evaluator, key, x, y)
+    if key == "b" then
+        return ti["r"]
+    elseif key == "r" then
+        return ti["b"]
+    else
+        return evaluator(context[2], key, x, y)
+    end
+end
+
+function fullresolver(subresolver)
+    local context = {fullresolver_implementation, subresolver}
+    return context
+end
+
 resolver = ti
 if wo["IsDifficult"] then
-    resolver = myresolver
+--    resolver = fullresolver(myresolver)
+--    resolver = res.random(ti, " ", {"r","b"})
+--    resolver = res.random(ti, " ", {"r",{"b", 4},"_"})
+--    resolver = res.random(ti, {" ","w"}, {"r",{"b", 4},"_"})
+    resolver = res.random(ti, {" ",{"w","w"}}, {"r",{"b", 2},{"_",4}})
 end
 
 w, h = wo(resolver, " ", {
@@ -61,7 +151,7 @@ w, h = wo(resolver, " ", {
 "   bbrr.....rrbb    ",
 "    b2brrrrrb1b     ",
 "       bbbbb        ",
-"si                  "
+"si             n    "
 })
 
 function icefloor(value, sender)
