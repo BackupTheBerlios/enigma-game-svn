@@ -32,12 +32,13 @@ ti["E"] = {"st-laser", "laser"}
 ti["M"] = {"st-mirror-p|"}
 ti["e"] = {"st_switch", target="laser", action="onoff"}
 ti["F"] = {"st-laser", "laser2"}
-ti["f"] = {"st_switch_black_instant", state=1, inverse=true, target="laser2", action="signal"}
+ti["f"] = {"st_switch_black", instant=true, state=1, inverse=true, target="laser2", action="signal"}
 ti["G"] = {"st-laser", "laser3"}
 ti["g"] = {"st_switch_black", target="laser3", action="signal", name="colorswitch"}
 ti["H"] = {"st-laser", "laser4"}
 ti["h"] = {"st_switch_white", state=1, target="laser4", action="signal"}
 ti["s"] = {"st_switch", target="recolor"}
+ti["w"] = {"it-hammer"}
 
 ti["1"] = ti["y"] .. {"#ac-blackball"}
 ti["2"] = ti["y"] .. {"#ac-whiteball"}
@@ -53,7 +54,7 @@ w, h = wo(ti, " ", {
 "       1 2   g  h   ",
 "             G  H   ",
 "f                   ",
-"F                   ",
+"F         w         ",
 "                    ",
 "                    "
 })

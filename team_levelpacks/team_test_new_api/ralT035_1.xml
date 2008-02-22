@@ -53,26 +53,6 @@ function myresolver(key, x, y)
     end
 end
 
-function drawmap(world, resolver, origin, ignore, map)
-    local len = string.len(ignore)
-    for y=1, #map do
-        local linelen = string.len(map[y])
-        if math.fmod(linelen, len) ~= 0 then
-            error("drawmap map line ".. y .. " with odd length", 2)
-        end
-        for x = 1, linelen/len do
-            local key = string.sub(map[y], len*(x-1)+1, len*x)
-            if key ~= ignore then
-                world[origin + {x-1, y-1}] =  
-                        world:_evaluate(resolver, key, origin.x + x - 1, 
-                                origin.y + y-1)
-            end
-        end
-    end
-end
-
-wo:_register("drawmap", drawmap)
-
 wo:drawmap(myresolver, po({wo.Width-10, wo.Height-5}), "--", {
   "----######",
   "######----######",
