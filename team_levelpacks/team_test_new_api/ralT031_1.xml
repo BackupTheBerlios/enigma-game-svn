@@ -25,26 +25,26 @@ ti["~"] = {"fl-abyss"}
 ti["!"] = {"fl-wood", ignitable=true}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
-ti["A"] = ti[" "] .. {"it_trigger", target="lasera", action="onoff", "triggerA"}
-ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"onoff", "on"}}
-ti["C"] = ti["."] .. {"it_trigger", target={"laserc","lasercon"}, action={"onoff", "on"}}
-ti["O"] = ti["!"] .. {"it_trigger", target={"lasero","laseroon"}, action={"onoff", "on"}}
+ti["A"] = ti[" "] .. {"it_trigger", target="lasera", action="toggle", "triggerA"}
+ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"toggle", "on"}}
+ti["C"] = ti["."] .. {"it_trigger", target={"laserc","lasercon"}, action={"toggle", "on"}}
+ti["O"] = ti["!"] .. {"it_trigger", target={"lasero","laseroon"}, action={"toggle", "on"}}
 
-ti["a"] = ti[" "] .. {"st-laser-s", "lasera"}
-ti["b"] = ti[" "] .. {"st-laser-s", "laserb"}
-ti["c"] = ti[" "] .. {"st-laser-s", "laserc"}
-ti["d"] = ti[" "] .. {"st-laser-s", "laserbon"}
-ti["e"] = ti[" "] .. {"st-laser-s", "lasercon"}
-ti["f"] = ti[" "] .. {"st-laser-s", "laserf"}
-ti["g"] = ti[" "] .. {"st-laser-s", "laserfon"}
-ti["h"] = ti[" "] .. {"st-laser-n", "laserh"}
-ti["i"] = ti[" "] .. {"st-laser-n", "laserhon"}
-ti["j"] = ti[" "] .. {"st-laser-n", "laserj"}
-ti["k"] = ti[" "] .. {"st-laser-n", "laserjon"}
-ti["l"] = ti[" "] .. {"st-laser-n", "laserl"}
-ti["n"] = ti[" "] .. {"st-laser-n", "laserlon"}
-ti["o"] = ti[" "] .. {"st-laser-n", "lasero"}
-ti["p"] = ti[" "] .. {"st-laser-n", "laseroon"}
+ti["a"] = ti[" "] .. {"st_laser_s", "lasera"}
+ti["b"] = ti[" "] .. {"st_laser_s", "laserb"}
+ti["c"] = ti[" "] .. {"st_laser_s", "laserc"}
+ti["d"] = ti[" "] .. {"st_laser_s", "laserbon"}
+ti["e"] = ti[" "] .. {"st_laser_s", "lasercon"}
+ti["f"] = ti[" "] .. {"st_laser_s", "laserf"}
+ti["g"] = ti[" "] .. {"st_laser_s", "laserfon"}
+ti["h"] = ti[" "] .. {"st_laser_n", "laserh"}
+ti["i"] = ti[" "] .. {"st_laser_n", "laserhon"}
+ti["j"] = ti[" "] .. {"st_laser_n", "laserj"}
+ti["k"] = ti[" "] .. {"st_laser_n", "laserjon"}
+ti["l"] = ti[" "] .. {"st_laser_n", "laserl"}
+ti["n"] = ti[" "] .. {"st_laser_n", "laserlon"}
+ti["o"] = ti[" "] .. {"st_laser_n", "lasero"}
+ti["p"] = ti[" "] .. {"st_laser_n", "laseroon"}
 
 
 ti["W"] = ti[" "] .. {"st-wood"}
@@ -57,16 +57,16 @@ ti["z"] = ti[" "] .. {"it-dynamite"}
 
 ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}
 ti["m"] = ti[" "] .. {"st_switch", target="makeactor"}
-ti["X"] = ti[" "] .. {"it-wormhole", destination="triggerA", range=1}
+ti["X"] = ti[" "] .. {"it_wormhole", destination="triggerA", range=1}
 
 ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it-ring"}
 ti["2"] = ti[" "] .. {"#ac-whiteball-small", player=nil, controllers=0}
 
 ti["3"] = (ti[" "]  .. {"#ac-whiteball-small", controllers=0})
-                .. {"it_trigger", target={"laserh","laserhon"}, action={"onoff", "on"}}
-ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"onoff", "on"}})
+                .. {"it_trigger", target={"laserh","laserhon"}, action={"toggle", "on"}}
+ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"toggle", "on"}})
                 .. {"#ac-whiteball-small", controllers=0}
-ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"onoff", "on"}})
+ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"toggle", "on"}})
                 .. {"st-wood"}
 ti["6"] = (ti[" "]  .. {"it_trigger", "killtrigger", target="killstone"})
 
@@ -88,7 +88,7 @@ w, h = wo(ti, " ", {
 })
 
 function maketrigger(value, sender)
-    wo[sender + {1,0}] = {"it_trigger", target={"laserf","laserfon"}, action={"onoff", "on"}}
+    wo[sender + {1,0}] = {"it_trigger", target={"laserf","laserfon"}, action={"toggle", "on"}}
 end
   
 function makeactor(value, sender)

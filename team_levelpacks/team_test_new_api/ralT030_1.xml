@@ -35,9 +35,9 @@ ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
 ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
 
 
-ti["w"] = ti[" "] .. {"st_switch", target="Laser", action="onoff"}
+ti["w"] = ti[" "] .. {"st_switch", target="Laser", action="toggle"}
 ti["k"] = ti[" "] .. {"st-laserswitch"}
-ti["L"] = ti[" "] .. {"st-laser-n", "Laser"}
+ti["L"] = ti[" "] .. {"st_laser_n", "Laser"}
 
 ti["+"] = ti[" "] .. {"st-grate1"}
 ti["."] = ti[" "] .. {"it-seed"}

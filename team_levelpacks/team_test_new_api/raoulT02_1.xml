@@ -21,10 +21,10 @@ ti[" "] = {"fl-sahara"}
 
 ti["0"] = ti[" "] .. {"#ac-blackball"}
 
-ti["A"] = ti[" "] .. {"st_switch", name="da1", target="la5", action="onoff"}
-ti["B"] = ti[" "] .. {"st_switch", name="da2", target="la6", action="onoff"}
-ti["C"] = ti[" "] .. {"st_switch", name="da3", target="la7", action="onoff"}
-ti["D"] = ti[" "] .. {"st_switch", name="da4", target="la8", action="onoff"}
+ti["A"] = ti[" "] .. {"st_switch", name="da1", target="la5", action="toggle"}
+ti["B"] = ti[" "] .. {"st_switch", name="da2", target="la6", action="toggle"}
+ti["C"] = ti[" "] .. {"st_switch", name="da3", target="la7", action="toggle"}
+ti["D"] = ti[" "] .. {"st_switch", name="da4", target="la8", action="toggle"}
 
 ti["F"] = ti[" "] .. {"st_key", name="stk1", target="da1", action="toggle"}
 ti["G"] = ti[" "] .. {"st_key", name="stk2", target="da2", action="signal"}
@@ -37,10 +37,10 @@ ti["3"] = ti[" "] .. {"st_key", keycode=3}
 ti["4"] = ti[" "] .. {"st_key", keycode=4}
 ti["5"] = ti[" "] .. {"st_key", keycode=5}
 
-ti["W"] = ti[" "] .. {"st-laser-e", name="la5"}
-ti["X"] = ti[" "] .. {"st-laser-e", name="la6"}
-ti["Y"] = ti[" "] .. {"st-laser-e", name="la7"}
-ti["Z"] = ti[" "] .. {"st-laser-e", name="la8"}
+ti["W"] = ti[" "] .. {"st_laser_e", name="la5"}
+ti["X"] = ti[" "] .. {"st_laser_e", name="la6"}
+ti["Y"] = ti[" "] .. {"st_laser_e", name="la7"}
+ti["Z"] = ti[" "] .. {"st_laser_e", name="la8"}
 
 ti["J"] = ti[" "] .. {"st_key", name="la5", target="da5", action="toggle", inverse=true}
 ti["K"] = ti[" "] .. {"st_key", name="la6", target="da6", action="signal", inverse=true}

@@ -31,8 +31,8 @@ ti["v"] = ti["b"] .. {"st_boulder_w"}
 ti["E"] = ti[" "] .. {"st_boulder_e"}
 
 ti["a"] = ti[" "] .. {"it_blocker", autoclose=true}
-ti["A"] = ti[" "] .. {"st_blocker", target="laser", action="onoff"}
-ti["L"] = ti[" "] .. {"st-laser-s", "laser"}
+ti["A"] = ti[" "] .. {"st_blocker", target="laser", action="toggle"}
+ti["L"] = ti[" "] .. {"st_laser_s", "laser"}
 
 ti["S"] = ti[" "] .. {"st_switch", target="blocker"}
 ti["s"] = ti[" "] .. {"it_blocker", "blocker"}

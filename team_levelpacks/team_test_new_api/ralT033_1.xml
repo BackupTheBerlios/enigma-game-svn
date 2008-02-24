@@ -29,8 +29,8 @@ ti["V"] = {"st_switch", target="sw", action="close"}  -- unknown action
 ti["S"] = {"st_switch_black", "sw"}
 ti["R"] = {"st_switch", target="dorecolor"}
 ti["r"] = {"st_switch", target="dorecolor", inverse=true}
-ti["L"] = {"st-laser-s", "laser#"}
-ti["l"] = {"st-laser-s", "laserI#"}
+ti["L"] = {"st_laser_s", "laser#"}
+ti["l"] = {"st_laser_s", "laserI#"}
 ti["K"] = {"st_switch", target="getkind"}
 ti["I"] = {"st_switch", target="iskind"}
 

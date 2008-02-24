@@ -28,14 +28,14 @@ ti["d"] = {"st-door-v", "door2"}
 
 ti["L"] = {"st-laserswitch", target="door1", action="signal"}
 ti["I"] = {"st-laserswitch", inverse=true, target="door2", action="signal"}
-ti["E"] = {"st-laser", "laser"}
+ti["E"] = {"st_laser", "laser"}
 ti["M"] = {"st-mirror-p|"}
-ti["e"] = {"st_switch", target="laser", action="onoff"}
-ti["F"] = {"st-laser", "laser2"}
+ti["e"] = {"st_switch", target="laser", action="toggle"}
+ti["F"] = {"st_laser", "laser2"}
 ti["f"] = {"st_switch_black", instant=true, state=1, inverse=true, target="laser2", action="signal"}
-ti["G"] = {"st-laser", "laser3"}
+ti["G"] = {"st_laser", "laser3"}
 ti["g"] = {"st_switch_black", target="laser3", action="signal", name="colorswitch"}
-ti["H"] = {"st-laser", "laser4"}
+ti["H"] = {"st_laser", "laser4"}
 ti["h"] = {"st_switch_white", state=1, target="laser4", action="signal"}
 ti["s"] = {"st_switch", target="recolor"}
 ti["w"] = {"it-hammer"}

@@ -29,8 +29,8 @@ ti["B"] = ti[" "] .. {"st_boulder_n"}
 ti["W"] = ti[" "] .. {"st-white1"}
 ti["P"] = ti[" "] .. {"st-plain"}
 ti["p"] = ti[" "] .. {"st-polarswitch"}
-ti["E"] = ti[" "] .. {"st-laser-e", on=1}
-ti["e"] = ti[" "] .. {"st-laser-n", on=1}
+ti["E"] = ti[" "] .. {"st_laser_e", state = ON}
+ti["e"] = ti[" "] .. {"st_laser_n", state = ON}
 ti["m"] = ti[" "] .. {"st-pmirror", movable=1, transparent=true, orientation=2}
 ti["w"] = ti[" "] .. {"it-magicwand"}
 ti["V"] = ti[" "] .. {"st-volcano_inactive"}

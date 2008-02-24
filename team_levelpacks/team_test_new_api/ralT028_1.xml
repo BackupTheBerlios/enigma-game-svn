@@ -32,15 +32,15 @@ ti["U"] = ti[" "] .. {"st_switch", target="o#2", action="close"}
 ti["V"] = ti[" "] .. {"st_switch", target="o#3", action="signal"}
 ti["W"] = ti[" "] .. {"st_switch", target="statetest"}
 ti["C"] = ti[" "] .. {"st_switch", target="bold", action="signal"}
-ti["L"] = ti[" "] .. {"st-laser-n", "Laser#"}
-ti["l"] = ti[" "] .. {"st-laser-n", "laser#"}
+ti["L"] = ti[" "] .. {"st_laser_n", "Laser#"}
+ti["l"] = ti[" "] .. {"st_laser_n", "laser#"}
 ti["b"] = ti[" "] .. {"st_boulder_s"}
 ti["s"] = ti[" "] .. {"st-swap"}
 ti["X"] = ti[" "] .. {"st_switch", target="o#1", action="shuffle"}
 ti["Y"] = ti[" "] .. {"st_switch", target="o#1", action="closeall"}
 ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
 
-ti["w"] = ti[" "] .. {"st_switch", target="Laser#7", action="onoff"}
+ti["w"] = ti[" "] .. {"st_switch", target="Laser#7", action="toggle"}
 ti["f"] = ti[" "] .. {"st-fart"}
 
 w, h = wo(ti, " ", {
@@ -69,7 +69,7 @@ end
 
 function enlighten(value, sender)
     -- the single opened oxyd
-    no["Laser" .. string.sub(sender["name"],2)]:onoff()
+    no["Laser" .. string.sub(sender["name"],2)]:toggle()
     
     -- all pair opened oxyds with the second laser
     for i=1,6 do
