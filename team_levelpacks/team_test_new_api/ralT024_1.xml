@@ -38,7 +38,7 @@ ti["g"] = {"st_switch_black", target="laser3", action="signal", name="colorswitc
 ti["H"] = {"st_laser", "laser4"}
 ti["h"] = {"st_switch_white", state=1, target="laser4", action="signal"}
 ti["s"] = {"st_switch", target="recolor"}
-ti["w"] = {"it-hammer"}
+ti["w"] = {"it_hammer"}
 
 ti["1"] = ti["y"] .. {"#ac-blackball"}
 ti["2"] = ti["y"] .. {"#ac-whiteball"}

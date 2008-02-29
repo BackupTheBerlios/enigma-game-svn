@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test photo objects new API" el:subtitle="" el:id="20080227ral229"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["x"] = {"fl-sahara", "center"}
+ti["L"] = {"st_laser_n", "laser"}
+ti["l"] = {"st_switch", target="laser"}
+ti["N"] = {"st_laser_n", "lasern"}
+ti["n"] = {"st_switch", target="lasern"}
+ti["E"] = {"st_laser_e", "lasere"}
+ti["e"] = {"st_switch", target="lasere"}
+ti["S"] = {"st_laser_s", "lasers"}
+ti["s"] = {"st_switch", target="lasers"}
+ti["W"] = {"st_laser_w", "laserw"}
+ti["w"] = {"st_switch", target="laserw"}
+ti["m"] = {"st_switch", target="pol#*", action="onoff"}
+ti["p"] = {"st-polarswitch", "pol#"}
+
+ti["a"] = {"st_switch", target="sethammer"}
+ti["A"] = {"st_switch", target="sethammernew"}
+ti["b"] = {"st_switch", target="setsword"}
+ti["B"] = {"st_switch", target="setswordnew"}
+
+ti["I"] = {"st_laser_s", state=ON}
+
+ti["h"] = {"it_hammer"}
+ti["H"] = {"it_hammer_new"}
+ti["d"] = {"it_sword"}
+ti["D"] = {"it_sword_new"}
+ti["1"] = {"it-coin1"}
+ti["2"] = {"it-coin2"}
+ti["4"] = {"it-coin4"}
+ti["0"] = {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"      Ss          lL",
+"                    ",
+"      p m     a hh A",
+"              b dd B",
+" E  p x p W     11  ",
+" e        w     22  ",
+"      p         44  ",
+"           0        ",
+"      Nn            ",
+"                  II",
+"                    ",
+"                  hd"
+})
+
+function sethammer() 
+    wo[no["center"]] = ti["h"]
+end
+
+function sethammernew() 
+    wo[no["center"]] = ti["H"]
+end
+
+function setsword() 
+    wo[no["center"]] = ti["d"]
+    no["lasern"]:on()
+end
+
+function setswordnew() 
+    wo[no["center"]] = ti["D"]
+    no["lasern"]:on()
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
