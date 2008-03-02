@@ -29,8 +29,8 @@ ti["S"] = {"st_laser_s", "lasers"}
 ti["s"] = {"st_switch", target="lasers"}
 ti["W"] = {"st_laser_w", "laserw"}
 ti["w"] = {"st_switch", target="laserw"}
-ti["m"] = {"st_switch", target="pol#*", action="onoff"}
-ti["p"] = {"st-polarswitch", "pol#"}
+ti["m"] = {"st_switch", target="pol#*"}
+ti["p"] = {"st_polarswitch", "pol#"}
 
 ti["a"] = {"st_switch", target="sethammer"}
 ti["A"] = {"st_switch", target="sethammernew"}
