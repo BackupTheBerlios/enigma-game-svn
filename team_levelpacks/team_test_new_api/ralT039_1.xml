@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Laserswitcy new API" el:subtitle="" el:id="20080309ral277"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti["s"] = {"st-swap"}
+ti["W"] = {"st-wood"}
+
+ti["A"] = {"#ac-blackball"}
+
+ti["k"] = {"st_laserswitch", target="LaserK"}
+ti["L"] = {"st_laser_n", "LaserL"}
+ti["w"] = {"st_switch", target="LaserL"}
+ti["K"] = {"st_laser_n", "LaserK"}
+
+ti["m"] = {"st_laserswitch", target="LaserM"}
+ti["M"] = {"st_laser_w", "LaserM", state=ON}
+
+ti["n"] = {"st_laserswitch", target="LaserN"}
+ti["N"] = {"st_laser_w", "LaserN", state=OFF}
+ti["o"] = {"st_switch", target="LaserN",action_1="on", action_0="off"}
+
+ti["P"] = {"st_laser_e", "LaserP"}
+ti["Q"] = {"st_switch", target="LaserP"}
+ti["p"] = {"st_laserswitch", "newlaserswitch", target="LaserR"}
+ti["q"] = {"st_switch", target="setlaserswitch"}
+ti["R"] = {"st_laser_e", "LaserR"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"              sk   K",
+"     W              ",
+"  m     M     wL    ",
+"                    ",
+"          A         ",
+"        o           ",
+"  n     N           ",
+"                    ",
+"                    ",
+"                    ",
+"           Qq     R ",
+"           P        "
+})
+
+function setlaserswitch()
+    wo[no["LaserP"] + {4,0}] = ti["p"]
+    -- the new laserswitch will not cause an action if directly illuminated
+    -- do it manually if we have need of
+    if (no["newlaserswitch"]["state"] == ON) then
+        no["LaserR"]:on()
+    else
+        no["LaserR"]:off()
+    end
+end
+
+function postinit()
+    no["LaserN"]:on()
+end
+  
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

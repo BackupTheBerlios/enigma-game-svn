@@ -36,7 +36,7 @@ ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
 
 
 ti["w"] = ti[" "] .. {"st_switch", target="Laser", action="toggle"}
-ti["k"] = ti[" "] .. {"st-laserswitch"}
+ti["k"] = ti[" "] .. {"st_laserswitch"}
 ti["L"] = ti[" "] .. {"st_laser_n", "Laser"}
 
 ti["+"] = ti[" "] .. {"st-grate1"}
