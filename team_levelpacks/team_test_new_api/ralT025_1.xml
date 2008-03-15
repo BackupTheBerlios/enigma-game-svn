@@ -28,7 +28,7 @@ ti["S"] = ti[" "] .. {"st_switch", name="sw#"}
 ti["T"] = ti[" "] .. {"st_switch", name="swt#"}
 ti["D"] = ti[" "] .. {"st-door-v", name="do#"}
 ti["R"] = ti[" "] .. {"st_boulder_n", name="boulder"}
-ti["L"] = ti[" "] .. {"st-laserswitch", target="door1", action="signal"}
+ti["L"] = ti[" "] .. {"st_laserswitch", target="door1", action="signal"}
 
 ti["f"] = ti[" "] .. {"st_fourswitch", target="swo#1", action="signal"}
 ti["F"] = ti[" "] .. {"st_fourswitch", target="sw#1", action="signal", inverse=true}

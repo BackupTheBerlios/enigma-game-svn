@@ -92,7 +92,7 @@ function maketrigger(value, sender)
 end
   
 function makeactor(value, sender)
-    wo[no["triggerA"]] = {"#ac-whiteball-small", plazer=nil, controllers=0}
+    wo[no["triggerA"]] = {"#ac-whiteball-small", player=nil, controllers=0}
 end
 
 function killstone(value, sender)

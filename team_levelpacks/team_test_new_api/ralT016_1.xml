@@ -28,7 +28,7 @@ ti["l"] = ti[" "] .. {"st-lightpassenger_off"}
 ti["B"] = ti[" "] .. {"st_boulder_n"}
 ti["W"] = ti[" "] .. {"st-white1"}
 ti["P"] = ti[" "] .. {"st-plain"}
-ti["p"] = ti[" "] .. {"st-polarswitch"}
+ti["p"] = ti[" "] .. {"st_polarswitch"}
 ti["E"] = ti[" "] .. {"st_laser_e", state = ON}
 ti["e"] = ti[" "] .. {"st_laser_n", state = ON}
 ti["m"] = ti[" "] .. {"st-pmirror", movable=1, transparent=true, orientation=2}
