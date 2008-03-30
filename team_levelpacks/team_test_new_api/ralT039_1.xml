@@ -31,6 +31,13 @@ ti["L"] = {"st_laser_n", "LaserL"}
 ti["w"] = {"st_switch", target="LaserL"}
 ti["K"] = {"st_laser_n", "LaserK"}
 
+ti["d"] = {"st_laserflop", target="LaserD"}
+ti["E"] = {"st_laser_n", "LaserE"}
+ti["e"] = {"st_switch", target="LaserE"}
+ti["D"] = {"st_laser_n", "LaserD"}
+
+ti["f"] = {"st_monoflop"}
+
 ti["m"] = {"st_laserswitch", target="LaserM"}
 ti["M"] = {"st_laser_w", "LaserM", state=ON}
 
@@ -46,14 +53,14 @@ ti["R"] = {"st_laser_e", "LaserR"}
 
 w, h = wo(ti, " ", {
 "                    ",
-"              sk   K",
+"             K   D  ",
 "     W              ",
-"  m     M     wL    ",
+"  m     M   sk  sd  ",
 "                    ",
-"          A         ",
+"          A wL  eE  ",
 "        o           ",
 "  n     N           ",
-"                    ",
+"               sf   ",
 "                    ",
 "                    ",
 "           Qq     R ",

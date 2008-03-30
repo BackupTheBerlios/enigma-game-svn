@@ -26,8 +26,8 @@ ti["y"] = {"it-yinyang"}
 ti["D"] = {"st-door-v", "door1"}
 ti["d"] = {"st-door-v", "door2"}
 
-ti["L"] = {"st-laserswitch", target="door1", action="signal"}
-ti["I"] = {"st-laserswitch", inverse=true, target="door2", action="signal"}
+ti["L"] = {"st_laserswitch", target="door1", action="signal"}
+ti["I"] = {"st_laserswitch", inverse=true, target="door2", action="signal"}
 ti["E"] = {"st_laser", "laser"}
 ti["M"] = {"st-mirror-p|"}
 ti["e"] = {"st_switch", target="laser", action="toggle"}
