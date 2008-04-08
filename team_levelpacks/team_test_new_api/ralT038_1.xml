@@ -43,9 +43,9 @@ ti["h"] = {"it_hammer"}
 ti["H"] = {"it_hammer_new"}
 ti["d"] = {"it_sword"}
 ti["D"] = {"it_sword_new"}
-ti["1"] = {"it-coin1"}
-ti["2"] = {"it-coin2"}
-ti["4"] = {"it-coin4"}
+ti["1"] = {"it_coin_s"}
+ti["2"] = {"it_coin_m"}
+ti["4"] = {"it_coin_l"}
 ti["0"] = {"#ac-blackball"}
 
 w, h = wo(ti, " ", {

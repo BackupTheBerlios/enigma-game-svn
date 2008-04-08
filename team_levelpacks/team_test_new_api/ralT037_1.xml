@@ -16,6 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
+wo["MagnetRange"] = 3
 
 ti[" "] = {"fl-sahara"}
 ti["~"] = {"fl-water"}
@@ -27,6 +28,7 @@ ti["T"] = {"st-turnstile"}
 ti["t"] = {"st-turnstile-n","it"}
 ti["R"] = {"it-rubberband", target="it", length=4}
 ti["p"] = {"st-swap", "you"}
+ti["m"] = {"it_magnet_on", strength=-40}
 ti["1"] = {"#ac-blackball", "me"}
 
 w, h = wo(ti, " ", {
@@ -34,13 +36,13 @@ w, h = wo(ti, " ", {
 "               t    ",
 "           R   T    ",
 "                    ",
-"        ~           ",
+"     m  ~           ",
 "                    ",
 "     S pw  s        ",
 "                    ",
 "        r  1        ",
 "                    ",
-"                    ",
+"        m           ",
 "                    ",
 "                    "
 })
@@ -50,6 +52,8 @@ enigma.AddRubberBand(no["me"], no["him"], 5, 4)
 function killwood()
     no["you"]:kill()
 end
+
+
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

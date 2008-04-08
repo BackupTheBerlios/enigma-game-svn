@@ -36,27 +36,29 @@ ti["S"] = ti[" "] .. {"st_switch", name="la2", target="la2", action="toggle"}
 ti["T"] = ti[" "] .. {"st_switch", name="la3", target="la3", action="toggle"}
 ti["U"] = ti[" "] .. {"st_switch", name="la4", target="la4", action="toggle"}
 
-ti["X"] = ti[" "] .. {"it-coin1"}
-ti["Y"] = ti[" "] .. {"it-coin2"}
-ti["Z"] = ti[" "] .. {"it-coin4"}
+ti["X"] = ti[" "] .. {"it_coin_s"}
+ti["Y"] = ti[" "] .. {"it_coin_m"}
+ti["Z"] = ti[" "] .. {"it_coin_l"}
 
-ti["x"] = ti[" "] .. {"it-coin1", value=6}
-ti["y"] = ti[" "] .. {"it-coin2", value=6}
-ti["z"] = ti[" "] .. {"it-coin4", value=6}
+ti["x"] = ti[" "] .. {"it_coin_s", coin_value=6}
+ti["y"] = ti[" "] .. {"it_coin_m", coin_value=6}
+ti["z"] = ti[" "] .. {"it_coin_l", coin_value=6}
 
 ti["l"] = ti[" "] .. {"st_laser_e", name="la5"}
 ti["m"] = ti[" "] .. {"st_laser_e", name="la6"}
 ti["n"] = ti[" "] .. {"st_laser_e", name="la7"}
 
-ti["E"] = ti[" "] .. {"st_coinslot", name="csx", target="la5", action="toggle"}
-ti["F"] = ti[" "] .. {"st_coinslot", name="csy", target="la6", action="toggle"}
-ti["G"] = ti[" "] .. {"st_coinslot", name="csz", target="la7", action="toggle"}
+ti["E"] = ti[" "] .. {"st_coinslot", name="csx", interval_s=1, target="la5", action="toggle"}
+ti["F"] = ti[" "] .. {"st_coinslot", name="csy", interval_m=1, target="la6", action="toggle"}
+ti["G"] = ti[" "] .. {"st_coinslot", name="csz", interval_l=1, target="la7", action="toggle"}
+
+ti["W"] = {"st-wood"}
 
 w, h = wo(ti, " ", {
 "0      A     RL     ",
 "       B     SM     ",
 "       C     TN     ",
-"       D     UO     ",
+" W     D     UO     ",
 "                    ",
 "XXXXXXXXXX          ",
 "     YYYYYYYYYY     ",
