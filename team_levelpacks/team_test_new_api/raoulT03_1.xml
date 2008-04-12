@@ -42,7 +42,7 @@ ti["v"] = ti[" "] .. {"st_window_ew"}
 ti["V"] = ti["."] .. {"st_window", faces="we"}
 ti["*"] = ti["."] .. {"st_window", faces="esw"}
 
-ti["w"] = ti[" "] .. {"it-wrench"}
+ti["w"] = ti[" "] .. {"it_wrench"}
 ti["I"] = ti[" "] .. {"st-stoneimpulse"}
 ti["W"] = ti[" "] .. {"it-puller-w"}
 ti["E"] = ti[" "] .. {"it-puller-e"}

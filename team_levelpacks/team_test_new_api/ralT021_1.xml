@@ -22,15 +22,15 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
-ti["A"] = ti[" "] .. {"it-vortex-open", name="v1", destination="v2", scissor=true}
-ti["B"] = ti[" "] .. {"it-vortex-open", name="v2", destination="v3"}
-ti["C"] = ti[" "] .. {"it-vortex-open", name="v3", destination={"v1","v2","v4"}}
-ti["D"] = ti[" "] .. {"it-vortex-open", name="v4", destination=po(3.1,7.7)}
-ti["R"] = ti[" "] .. {"st-rubberband"}
-ti["W"] = ti[" "] .. {"st-wood"}
-ti["S"] = ti[" "] .. {"st_switch", target="autoclose"}
+ti["A"] = {"it_vortex", name="v1", destination="v2", scissor=true}
+ti["B"] = {"it_vortex", name="v2", destination="v3"}
+ti["C"] = {"it_vortex", name="v3", destination={"v1","v2","v4"}}
+ti["D"] = {"it_vortex", name="v4", destination=po(3.1,7.7)}
+ti["R"] = {"st-rubberband"}
+ti["W"] = {"st-wood"}
+ti["S"] = {"st_switch", target="autoclose"}
 
-ti["1"] = ti[" "] .. {"#ac-blackball"}
+ti["1"] = {"#ac-blackball"}
 
 w, h = wo(ti, " ", {
 "   R                ",

@@ -45,7 +45,7 @@ ti["K"] = ti[" "] .. {"st_floppy", name="stfl6", target="da6", action="signal", 
 ti["L"] = ti[" "] .. {"st_floppy", name="stfl7", target="da7", action="on", inverse=true}
 ti["M"] = ti[" "] .. {"st_floppy", name="stfl8", target="da8", action="off", inverse=true}
 
-ti["f"] = ti[" "] .. {"it-floppy"}
+ti["f"] = ti[" "] .. {"it_floppy"}
 
 w, h = wo(ti, " ", {
 "0  f   F      A    5",

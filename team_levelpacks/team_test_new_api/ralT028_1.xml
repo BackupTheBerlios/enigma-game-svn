@@ -20,46 +20,49 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["#"] = ti[" "] .. {"st-rock1"}
+ti["#"] = {"st-rock1"}
 
-ti["O"] = ti[" "] .. {"st_oxyd", "o#", target="enlighten"}
-ti["D"] = ti[" "] .. {"st_oxyd_d", "o#", target="enlighten"}
-ti["F"] = ti[" "] .. {"st_oxyd", oxydcolor=-3, noshuffle=true}
-ti["B"] = ti[" "] .. {"st_oxyd", "bold", oxydcolor=-4, noshuffle=true}
-ti["S"] = ti[" "] .. {"st_switch", target="o#1"}
-ti["T"] = ti[" "] .. {"st_switch", target="o#2", action="open"}
-ti["U"] = ti[" "] .. {"st_switch", target="o#2", action="close"}
-ti["V"] = ti[" "] .. {"st_switch", target="o#3", action="signal"}
-ti["W"] = ti[" "] .. {"st_switch", target="statetest"}
-ti["C"] = ti[" "] .. {"st_switch", target="bold", action="signal"}
-ti["L"] = ti[" "] .. {"st_laser_n", "Laser#"}
-ti["l"] = ti[" "] .. {"st_laser_n", "laser#"}
-ti["b"] = ti[" "] .. {"st_boulder_s"}
-ti["s"] = ti[" "] .. {"st-swap"}
-ti["X"] = ti[" "] .. {"st_switch", target="o#1", action="shuffle"}
-ti["Y"] = ti[" "] .. {"st_switch", target="o#1", action="closeall"}
+ti["o"] = {"st_oxyd"}
+ti["O"] = {"st_oxyd", "o#", target="enlighten"}
+ti["D"] = {"st_oxyd_d", "o#", target="enlighten"}
+ti["F"] = {"st_oxyd", oxydcolor=-3, noshuffle=true}
+ti["B"] = {"st_oxyd", "bold", oxydcolor=-4, noshuffle=true}
+ti["S"] = {"st_switch", target="o#1"}
+ti["T"] = {"st_switch", target="o#2", action="open"}
+ti["U"] = {"st_switch", target="o#2", action="close"}
+ti["V"] = {"st_switch", target="o#3", action="signal"}
+ti["W"] = {"st_switch", target="statetest"}
+ti["C"] = {"st_switch", target="bold", action="signal"}
+ti["L"] = {"st_laser_n", "Laser#"}
+ti["l"] = {"st_laser_n", "laser#"}
+ti["b"] = {"st_boulder_s"}
+ti["s"] = {"st-swap"}
+ti["X"] = {"st_switch", target="o#1", action="shuffle"}
+ti["Y"] = {"st_switch", target="o#1", action="closeall"}
 ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
 
-ti["w"] = ti[" "] .. {"st_switch", target="Laser#7", action="toggle"}
-ti["f"] = ti[" "] .. {"st-fart"}
+ti["w"] = {"st_switch", target="Laser#7", action="toggle"}
+ti["f"] = {"st-fart"}
+
+ti["p"] = {"st_oxyd", "p#"}
 
 w, h = wo(ti, " ", {
 "                    ",
 "  Ll Ll Ll Ll Ll Ll ",
 "                    ",
-"  O  O  O  O  D  O  ",
+"  O  O  O  O  sD O  ",
 "                    ",
 "  S  TU V  W        ",
 "                    ",
-"      1             ",
+"  o   1             ",
 "f                   ",
-"                    ",
-"                    ",
+"  os   ps           ",
+"    f    p          ",
 "  F      C Bs       ",
-"    Y  X     wL  b  "
+"    Y  X      wL b  "
 })
 
-wo:shuffleOxyd()
+wo:shuffleOxyd({no["p#*"],min=1})
 
 function statetest(value)
     local newstate = 0
@@ -74,7 +77,7 @@ function enlighten(value, sender)
     -- all pair opened oxyds with the second laser
     for i=1,6 do
         if no["o#"..i]["state"] == 2 then
-            no["laser#"..i]["on"] = 1   -- laser not yet new API!
+            no["laser#"..i]:on()
         else
             no["laser#"..i]:off()
         end

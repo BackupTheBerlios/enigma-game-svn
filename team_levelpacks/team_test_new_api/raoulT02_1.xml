@@ -47,12 +47,12 @@ ti["K"] = ti[" "] .. {"st_key", name="la6", target="da6", action="signal", inver
 ti["L"] = ti[" "] .. {"st_key", name="la7", target="da7", action="on", inverse=true}
 ti["M"] = ti[" "] .. {"st_key", name="la8", target="da8", action="off", inverse=true}
 
-ti["a"] = ti[" "] .. {"it-key"}
-ti["b"] = ti[" "] .. {"it-key", keycode=1}
-ti["c"] = ti[" "] .. {"it-key", keycode=2}
-ti["d"] = ti[" "] .. {"it-key", keycode=3}
-ti["e"] = ti[" "] .. {"it-key", keycode=4}
-ti["f"] = ti[" "] .. {"it-key", keycode=5}
+ti["a"] = ti[" "] .. {"it_key"}
+ti["b"] = ti[" "] .. {"it_key", keycode=1}
+ti["c"] = ti[" "] .. {"it_key", keycode=2}
+ti["d"] = ti[" "] .. {"it_key", keycode=3}
+ti["e"] = ti[" "] .. {"it_key", keycode=4}
+ti["f"] = ti[" "] .. {"it_key", keycode=5}
 
 w, h = wo(ti, " ", {
 "0  a   F      A     ",

@@ -32,7 +32,7 @@ ti["T"] = {"st-turnstile"}
 ti["e"] = {"st-turnstile-e"}
 
 ti["G"] = {"st-turnstile-green"}
-ti["w"] = {"it-wrench"}
+ti["w"] = {"it_wrench"}
 
 
 
