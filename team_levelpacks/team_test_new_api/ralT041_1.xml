@@ -2,8 +2,8 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Test Oxyd Shuffle 3" el:subtitle="" el:id="20071108ral459"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:identity el:title="Test Sensor new API" el:subtitle="" el:id="20080420ral550"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1011 $" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -20,38 +20,46 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["#"] = {"st-rock1"}
+ti["y"] = ti[" "] .. {"it-yinyang"}
+ti["b"] = ti[" "] .. {"it_brush"}
 
-ti["O"] = {"st_oxyd", name="o#"}
-ti["P"] = {"st_oxyd", name="p#"}
-ti["Q"] = {"st_oxyd", name="q#"}
-ti["R"] = {"st_oxyd", name="r#"}
-ti["S"] = {"st_oxyd", name="s#"}
-ti["T"] = {"st_oxyd", name="t#"}
-ti["1"] = {"#ac-blackball"}
+ti["e"] = {"it_sensor", invisible=true, target="sensorlaseri", action="signal"}
+ti["f"] = {"it_sensor", invisible=true, inverse=true, target="sensorlaseri", action="signal"}
+ti["l"] = {"st_laser_n", "sensorlaseri"}
+
+ti["E"] = {"it_sensor", target="sensorlaser", action="signal"}
+ti["F"] = {"it_sensor", inverse=true, target="sensorlaser", action="signal"}
+ti["L"] = {"st_laser_n", "sensorlaser"}
+
+ti["C"] = {"it_cross", target="crosslaser1"}
+ti["M"] = {"st_laser_n", "crosslaser1"}
+
+ti["c"] = {"it_cross", interval=3, target="crosslaser2"}
+ti["m"] = {"st_laser_n", "crosslaser2"}
+
+
+
+ti["1"] = ti["y"] .. {"#ac-blackball"} 
+ti["2"] = ti["y"] .. {"#ac-whiteball"}
+
 
 w, h = wo(ti, " ", {
-"S  OOO              ",
 "                    ",
-"         QQQQ  RRRR ",
+" l   L     M   m    ",
 "                    ",
-"T  PPP              ",
-"                    ",
-"                    ",
-"      1             ",
+" e   E     C   c    ",
+" f   F              ",
 "                    ",
 "                    ",
 "                    ",
+"                    ",
+"                    ",
+"        1 2      b  ",
 "                    ",
 "                    "
 })
 
-wo:shuffleOxyd({no["o#*"] + no["s#1"], no["p#*"] + no["t#1"], min=2, log="solution"},
-        {no["o#*"] + no["p#*"], no["r#*"], min=3})
---wo:shuffleOxyd({no["o#*"] + no["s#1"], no["p#*"] + no["t#1"], min=2, log="count"},
---        {no["o#*"] + no["p#*"], no["r#*"], min=3})
--- function door(value, sender)
-
+  
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">
