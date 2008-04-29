@@ -20,8 +20,9 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["y"] = ti[" "] .. {"it-yinyang"}
-ti["b"] = ti[" "] .. {"it_brush"}
+ti["y"] = {"it-yinyang"}
+ti["b"] = {"it_brush"}
+ti["w"] = {"it_wrench"}
 
 ti["e"] = {"it_sensor", invisible=true, target="sensorlaseri", action="signal"}
 ti["f"] = {"it_sensor", invisible=true, inverse=true, target="sensorlaseri", action="signal"}
@@ -38,6 +39,21 @@ ti["c"] = {"it_cross", interval=3, target="crosslaser2"}
 ti["m"] = {"st_laser_n", "crosslaser2"}
 
 
+ti["r"] = {"st_rotator_cw", movable=true}
+ti["R"] = {"st_rotator_ccw", movable=false}
+ti["W"] = {"st-wood"}
+ti["s"] = {"st-swap"}
+ti["g"] = {"st-glass1"}
+ti["S"] = {"st_switch", target="addrot"}
+
+ti["X"] = {"st_laser_s", "rotlaser", state=ON}
+ti["x"] = {"st_laser_e", "rotlasere"}
+ti["Z"] = {"st_laser_n", "rotlasern1"}
+ti["Y"] = {"st_laser_n", "rotlasern2"}
+ti["t"] = {"st_switch", target="rotlasere"}
+ti["u"] = {"st_switch", target="rotlasern1"}
+ti["U"] = {"st_switch", target="rotlasern2"}
+
 
 ti["1"] = ti["y"] .. {"#ac-blackball"} 
 ti["2"] = ti["y"] .. {"#ac-whiteball"}
@@ -49,17 +65,19 @@ w, h = wo(ti, " ", {
 "                    ",
 " e   E     C   c    ",
 " f   F              ",
+"          1 2  b w  ",
+"S   X               ",
+"t         W         ",
+"x           r       ",
 "                    ",
+"   sr            R  ",
 "                    ",
-"                    ",
-"                    ",
-"                    ",
-"        1 2      b  ",
-"                    ",
-"                    "
+"  uZYU              "
 })
 
-  
+function addrot()
+    wo[no["rotlaser"] + {0, 2}] = ti["r"]
+end
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

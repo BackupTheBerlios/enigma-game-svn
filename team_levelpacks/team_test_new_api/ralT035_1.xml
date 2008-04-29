@@ -39,7 +39,7 @@ wo:hurra(po({2,3}))
 -- TODO argument check with error on faults
 
 ti[".."] = {"it_blocker"}
-ti["::"] = {"it-cross"}
+ti["::"] = {"it_cross"}
 
 function myresolver(key, x, y)
     if key == "##" then

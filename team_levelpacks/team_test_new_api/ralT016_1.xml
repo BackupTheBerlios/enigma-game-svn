@@ -23,34 +23,34 @@ wo["SwampSinkSpeed"] = 2
 
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl-abyss"}
-ti["#"] = ti[" "] .. {"st-rock1"}
-ti["l"] = ti[" "] .. {"st-lightpassenger_off"}
-ti["B"] = ti[" "] .. {"st_boulder_n"}
-ti["W"] = ti[" "] .. {"st-white1"}
-ti["P"] = ti[" "] .. {"st-plain"}
-ti["p"] = ti[" "] .. {"st_polarswitch"}
-ti["E"] = ti[" "] .. {"st_laser_e", state = ON}
-ti["e"] = ti[" "] .. {"st_laser_n", state = ON}
-ti["m"] = ti[" "] .. {"st-pmirror", movable=1, transparent=true, orientation=2}
-ti["w"] = ti[" "] .. {"it-magicwand"}
-ti["V"] = ti[" "] .. {"st-volcano_inactive"}
-ti["I"] = ti[" "] .. {"st-stoneimpulse"}
-ti["i"] = ti[" "] .. {"st-stoneimpulse_movable"}
-ti["L"] = ti[" "] .. {"st-rotator-left"}
-ti["R"] = ti[" "] .. {"st-rotator-right"}
-ti["b"] = ti[" "] .. {"st_blocker"}
-ti["H"] = ti[" "] .. {"st-wood"}
-ti["A"] = ti[" "] .. {"st_blocker"}
-ti["a"] = ti[" "] .. {"it_blocker"}
-ti["c"] = ti[" "] .. {"it_blocker_new"}
+ti["#"] = {"st-rock1"}
+ti["l"] = {"st-lightpassenger_off"}
+ti["B"] = {"st_boulder_n"}
+ti["W"] = {"st-white1"}
+ti["P"] = {"st-plain"}
+ti["p"] = {"st_polarswitch"}
+ti["E"] = {"st_laser_e", state = ON}
+ti["e"] = {"st_laser_n", state = ON}
+ti["m"] = {"st-pmirror", movable=1, transparent=true, orientation=2}
+ti["w"] = {"it-magicwand"}
+ti["V"] = {"st-volcano_inactive"}
+ti["I"] = {"st-stoneimpulse"}
+ti["i"] = {"st-stoneimpulse_movable"}
+ti["L"] = {"st_rotator_ccw"}
+ti["R"] = {"st_rotator_cw"}
+ti["b"] = {"st_blocker"}
+ti["H"] = {"st-wood"}
+ti["A"] = {"st_blocker"}
+ti["a"] = {"it_blocker"}
+ti["c"] = {"it_blocker_new"}
 ti["C"] = ti[" "] .. {"st_boulder_w"}
 ti["D"] = ti["a"] .. {"st_boulder_w"}
 ti["F"] = ti["c"] .. {"st_boulder_w"}
-ti["G"] = ti[" "] .. {"st_boulder_e"}
+ti["G"] = {"st_boulder_e"}
 
 
-ti["X"] = ti[" "] .. {"st_oxyd"}
-ti["1"] = ti[" "] .. {"#ac-blackball"}
+ti["X"] = {"st_oxyd"}
+ti["1"] = {"#ac-blackball"}
 
 w, h = wo(ti, " ", {
 "###X##########X#####",
