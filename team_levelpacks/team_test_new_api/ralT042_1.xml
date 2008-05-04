@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Lightpassenger new API" el:subtitle="" el:id="20080502ral681"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1100 $" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["."] = {"fl-ice"}
+
+ti["A"] = {"#ac-blackball"}
+
+ti["l"] = {"st_lightpassenger"}
+ti["L"] = {"st_lightpassenger", friction=1}
+ti["P"] = {"st_lightpassenger_off"}
+
+ti["N"] = {"st_laser_n", state=ON}
+ti["E"] = {"st_laser_e", state=ON}
+ti["S"] = {"st_laser_s", state=ON}
+ti["W"] = {"st_laser_w", state=ON}
+ti["t"] = {"st_switch", target="Laser", action="turn"}
+ti["b"] = {"st_switch", target="Laser", action="turnback"}
+
+ti["T"] = {"st-turnstile"}
+ti["e"] = {"st-turnstile-e"}
+
+ti["s"] = {"st-swap"}
+ti["i"] = {"st-stoneimpulse_movable"}
+ti["w"] = {"st-wood"}
+ti["h"] = {"it_hammer"}
+ti["m"] = {"it-magicwand"}
+
+ti["B"] = {"st_boulder_s"}
+
+
+w, h = wo(ti, " ", {
+"                    ",
+"            E   l  W",
+"                s   ",
+"E     w    lW       ",
+"    il              ",
+"          Ahm       ",
+" ww     S           ",
+"E        w          ",
+"E    w              ",
+"        Ls    EP    ",
+"  N                 ",
+"  .......W          ",
+" N             B    "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
