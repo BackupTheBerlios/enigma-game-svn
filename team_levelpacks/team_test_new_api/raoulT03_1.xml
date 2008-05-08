@@ -20,49 +20,78 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl-space"}
 
-ti["0"] = ti[" "] .. {"#ac-blackball"}
+ti["0"] = {"#ac-blackball"}
+ti["'"] = {"#ac-whiteball"}
 
-ti["#"] = ti[" "] .. {"st-glass"}
-ti["+"] = ti[" "] .. {"st_window_nesw"}
-ti["a"] = ti[" "] .. {"st_window_nes"}
-ti["b"] = ti[" "] .. {"st_window_esw"}
-ti["c"] = ti[" "] .. {"st_window_nsw"}
-ti["d"] = ti[" "] .. {"st_window_new"}
-ti["A"] = ti[" "] .. {"st_window_n"}
-ti["B"] = ti[" "] .. {"st_window_e"}
-ti["C"] = ti[" "] .. {"st_window_s"}
-ti["D"] = ti[" "] .. {"st_window_w"}
-ti["1"] = ti[" "] .. {"st_window_sw"}
-ti["2"] = ti[" "] .. {"st_window_nw"}
-ti["3"] = ti[" "] .. {"st_window_ne"}
-ti["4"] = ti[" "] .. {"st_window_es"}
-ti["h"] = ti[" "] .. {"st_window_ns"}
-ti["v"] = ti[" "] .. {"st_window_ew"}
+ti["#"] = {"st-glass"}
+ti["+"] = {"st_window_nesw"}
+ti["-"] = {"st_window_nesw", secure=true}
+ti["a"] = {"st_window_nes"}
+ti["b"] = {"st_window_esw"}
+ti["c"] = {"st_window_nsw"}
+ti["d"] = {"st_window_new"}
+ti["e"] = {"st_window_new", secure=true}
+ti["A"] = {"st_window_n"}
+ti["B"] = {"st_window_e"}
+ti["C"] = {"st_window_s"}
+ti["D"] = {"st_window_w"}
+ti["1"] = {"st_window_sw"}
+ti["2"] = {"st_window_nw"}
+ti["3"] = {"st_window_ne"}
+ti["4"] = {"st_window_es"}
+ti["h"] = {"st_window_ns"}
+ti["H"] = {"st_window_ns", secure=true}
+ti["v"] = {"st_window_ew"}
 
 ti["V"] = ti["."] .. {"st_window", faces="we"}
 ti["*"] = ti["."] .. {"st_window", faces="esw"}
 
-ti["w"] = ti[" "] .. {"it_wrench"}
-ti["I"] = ti[" "] .. {"st-stoneimpulse"}
-ti["W"] = ti[" "] .. {"it-puller-w"}
-ti["E"] = ti[" "] .. {"it-puller-e"}
-ti["F"] = ti[" "] .. {"st_fourswitch", target="pullwindow", action="inner_pull"}
-ti["G"] = ti[" "] .. {"st_window", faces="ws", "pullwindow"}
+ti["w"] = {"it_wrench"}
+ti["i"] = {"it_hammer"}
+ti["r"] = {"it-ring"}
+ti["s"] = {"it-seed"}
+ti["k"] = {"it-coffee"}
+ti["K"] = {"it-cherry"}
+ti[":"] = {"it-dynamite"}
+ti["I"] = {"st-stoneimpulse"}
+ti["&"] = {"st-bombs"}
+ti["W"] = {"it-puller-w"}
+ti["E"] = {"it-puller-e"}
+ti["F"] = {"st_fourswitch", target="pullwindow", action="inner_pull"}
+ti["G"] = {"st_window", faces="ws", "pullwindow"}
+ti["L"] = {"st_laser_w", "laser"}
+ti["S"] = {"st_switch", target="laser"}
+
+
+ti["x"] = ti["C"] .. {"it_vortex", "vortexx", destination="vortexy"}
+ti["y"] = ti["4"] .. {"it_vortex", "vortexy", destination="vortexx"}
 
 w, h = wo(ti, " ", {
 "###23 232323##14####",
-"#  14  1414   23   #",
+"#  1y  1414   23   #",
 "#               BD #",
-"BAD B   a b c d BD #",
-" BCCB   a b c d BDv#",
+"BAD B   a b c e BD S",
+" BCCB   a b c e BDvL",
 "  B     a b c d   v#",
 "#               G v#",
 "# 2AAAA3 B + D FV v#",
 "#IDWE0wB B   D  V v#",
-"# 1CCCC4 B + D  V v#",
-"#I              V v#",
-"# hhhhhhhhhhhh  V  #",
-"################*###"
+"# 1CxCC4 B - D  V v#",
+"#I    KK        V v#",
+"# hhhhhhhhHHHH  V  #",
+"##########&### #*###",
+"#  sssssssssi    rk#",
+"#  :::::          k#",
+"#                ' #",
+"#  a     d     e   #",
+"#                  #",
+"#  a     b     -   #",
+"#                  #",
+"#  a     +     H   #",
+"#                  #",
+"#                  #",
+"#                  #",
+"####################"
 })
 
   ]]></el:luamain>
