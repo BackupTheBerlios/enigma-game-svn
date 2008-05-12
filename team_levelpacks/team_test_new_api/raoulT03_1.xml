@@ -32,6 +32,7 @@ ti["c"] = {"st_window_nsw"}
 ti["d"] = {"st_window_new"}
 ti["e"] = {"st_window_new", secure=true}
 ti["A"] = {"st_window_n"}
+ti["@"] = {"st_window_n", scratches="n"}
 ti["B"] = {"st_window_e"}
 ti["C"] = {"st_window_s"}
 ti["D"] = {"st_window_w"}
@@ -45,6 +46,7 @@ ti["v"] = {"st_window_ew"}
 
 ti["V"] = ti["."] .. {"st_window", faces="we"}
 ti["*"] = ti["."] .. {"st_window", faces="esw"}
+ti["%"] = {"st_window", faces=""}
 
 ti["w"] = {"it_wrench"}
 ti["i"] = {"it_hammer"}
@@ -74,10 +76,10 @@ w, h = wo(ti, " ", {
 " BCCB   a b c e BDvL",
 "  B     a b c d   v#",
 "#               G v#",
-"# 2AAAA3 B + D FV v#",
+"# 2A@AA3 B + D FV v#",
 "#IDWE0wB B   D  V v#",
 "# 1CxCC4 B - D  V v#",
-"#I    KK        V v#",
+"#I    KK     %  V v#",
 "# hhhhhhhhHHHH  V  #",
 "##########&### #*###",
 "#  sssssssssi    rk#",
