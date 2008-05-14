@@ -46,6 +46,7 @@ ti["m"] = {"it-magicwand"}
 
 ti["B"] = {"st_boulder_s"}
 
+ti["g"] = {"it-glasses"}
 
 w, h = wo(ti, " ", {
 "                    ",
@@ -54,14 +55,14 @@ w, h = wo(ti, " ", {
 "E     w    lW       ",
 "    il              ",
 "          Ahm       ",
-" ww     S           ",
+" ww     S       g   ",
 "E        w          ",
 "E    w              ",
-"        Ls    EP    ",
+"        Ls    EP   w",
 "  N                 ",
-"  .......W          ",
-" N             B    ",
-"        w      w    ",
+"  .......W     B  B ",
+" N             w  w ",
+"        w           ",
 "                    ",
 "                    ",
 "    w               ",
