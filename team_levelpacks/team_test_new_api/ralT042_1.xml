@@ -33,7 +33,6 @@ ti["E"] = {"st_laser_e", state=ON}
 ti["S"] = {"st_laser_s", state=ON}
 ti["W"] = {"st_laser_w", state=ON}
 ti["t"] = {"st_switch", target="Laser", action="turn"}
-ti["b"] = {"st_switch", target="Laser", action="turnback"}
 
 ti["T"] = {"st-turnstile"}
 ti["e"] = {"st-turnstile-e"}
@@ -43,6 +42,8 @@ ti["i"] = {"st-stoneimpulse_movable"}
 ti["w"] = {"st-wood"}
 ti["h"] = {"it_hammer"}
 ti["m"] = {"it-magicwand"}
+ti["b"] = {"it_brush"}
+ti["p"] = {"it-pencil"}
 
 ti["B"] = {"st_boulder_s"}
 
@@ -54,7 +55,7 @@ w, h = wo(ti, " ", {
 "                s   ",
 "E     w    lW       ",
 "    il              ",
-"          Ahm       ",
+"          Ahmbppp   ",
 " ww     S       g   ",
 "E        w          ",
 "E    w              ",

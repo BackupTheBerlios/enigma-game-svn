@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test autotile 2 new API" el:subtitle="" el:id="20080514ral541"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti["  "] = {"fl-sahara"}
+
+ti["ff"] = {"it_floppy"}
+ti["template_a"] = {"st_floppy", target={"door%%#*","laser%%"}}
+ti["template_A"] = {"st_blocker", "door%%#"}
+ti["template_L"] = {"st_laser_s", "laser%%"}
+
+ti["xx"] = ti["ff"] .. {"#ac-blackball"} 
+
+local resolver = res.autotile(ti, {"a0", "a5", "template_a"}, 
+--local resolver = res.autotile(ti, {"a", "template_a"}, 
+    {"A", "template_A"}, {"L", "template_L"})
+
+w, h = wo(resolver, "  ", {
+"                                        ",
+"                                        ",
+"      a1      A4A2      a5      A2A3    ",
+"                                        ",
+"      A3A4    a2      A1A5      a3      ",
+"                                        ",
+"      a4      A5A1                      ",
+"                                        ",
+"            xx                          ",
+"                                        ",
+"                                        ",
+"      L4    L2    L5    L1    L3        ",
+"                                        "
+})
+
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
