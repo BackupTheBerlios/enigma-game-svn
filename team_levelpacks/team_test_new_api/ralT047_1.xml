@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test composer 3 new API" el:subtitle="" el:id="20080517ral601"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti["   "] = {"fl-sahara"}
+ti["  ="] = {"fl-tigris"}
+ti["  ."] = {"fl-abyss"}
+ti["  ~"] = {"fl-water"}
+ti["  ;"] = {"fl-leaves"}
+
+ti["#  "] = {"st-rock1"}
+ti["W  "] = {"st-wood"}
+ti["X  "] = {"st_oxyd"}
+ti["G  "] = {"st-grate1"}
+
+ti[" 2 "] = {"it_coin_s"}
+ti[" s "] = {"it-seed"}
+ti[" c "] = {"it-cherry"}
+ti[" h "] = {"it_hammer"}
+
+ti[" k "] = {"it_key"} 
+
+ti["#2 "] = {"it_sword"}
+ti["# ~"] = {"fl-hay"}
+ti[" 2~"] = {"fl-gray"}
+
+ti["xxx"] = {"#ac-blackball"} 
+
+local resolver = res.composer(ti)
+
+w, h = wo(resolver, "   ", {
+"                                                            ",
+"    h=  ;W ; 2; c G ~  ~#  # . 2.X  X ~Gk=Gk;   Gc          ",
+"                                                Gh          ",
+"    2; s;       2. s.       2= s=               #2=         ",
+"    c; h;       c. h.       c= h=      xxx      #k~         ",
+"                                                G2~         "
+})
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
