@@ -28,7 +28,7 @@ ti["template_L"] = {"st_laser_s", "laser%%"}
 
 ti["xx"] = ti["ff"] .. {"#ac-blackball"} 
 
-local resolver = res.autotile(ti, {"a0", "a5", "template_a"}, 
+local resolver = res.autotile(ti, {"a1", "a5", "template_a"}, 
 --local resolver = res.autotile(ti, {"a", "template_a"}, 
     {"A", "template_A"}, {"L", "template_L"})
 

@@ -24,10 +24,13 @@ ti["#"] = {"st-rock1"}
 
 ti["f"] = {"it_floppy"}
 ti["F"] = {"st_floppy", target="@door#*", action="toggle"}
+ti["G"] = {"st_floppy", target="@@door#*", action="toggle"}
+ti["H"] = {"st_fourswitch", target_2="door#1", target_1="@@door#*", target_3="@door#*"}
 ti["B"] = {"st_blocker", "door#"}
 
 ti["c"] = {"it_coin_s", "coin#"}
 ti["V"] = {"it_vortex", destination="@coin#*"}
+ti["v"] = {"it_vortex", destination="@@coin#*"}
 
 
 ti["1"] = ti["f"] .. {"#ac-blackball"} 
@@ -39,10 +42,10 @@ w, h = wo(ti, " ", {
 "BF #####            ",
 "   F   FB##BFB##B##F",
 "   B                ",
-"   #           r    ",
-"   #                ",
+"   #      H    r    ",
+"   # v              ",
 "   B      1         ",
-"   F   c            ",
+"   G   c            ",
 "   B                ",
 "   #            c   ",
 "   #        V       ",
