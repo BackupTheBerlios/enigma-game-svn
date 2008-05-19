@@ -59,10 +59,28 @@ w, h = wo(ti, " ", {
 "  os   ps           ",
 "    f    p          ",
 "  F      C Bs       ",
-"    Y  X      wL b  "
+"    Y  X      wL b  ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    "
 })
 
 wo:shuffleOxyd({no["p#*"],min=1})
+
+for col = 0, 11 do
+  for j, fla in pairs({"a", "b", "c", "d"}) do
+    wo[{col + 2, 2*j + 14}] = {"st_oxyd", oxydcolor = col, flavor = fla}
+  end
+end
 
 function statetest(value)
     local newstate = 0
