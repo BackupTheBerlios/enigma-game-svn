@@ -24,7 +24,7 @@ ti["y"] = {"it-yinyang"}
 ti["b"] = {"it_brush"}
 ti["w"] = {"it_wrench"}
 
-ti["e"] = {"it_sensor", invisible=true, target="sensorlaseri", action="signal"}
+ti["e"] = {"it_sensor", "sensorinvisible", invisible=true, target="sensorlaseri", action="signal"}
 ti["f"] = {"it_sensor", invisible=true, inverse=true, target="sensorlaseri", action="signal"}
 ti["l"] = {"st_laser_n", "sensorlaseri"}
 
@@ -54,6 +54,7 @@ ti["t"] = {"st_switch", target="rotlasere"}
 ti["u"] = {"st_switch", target="rotlasern1"}
 ti["U"] = {"st_switch", target="rotlasern2"}
 
+ti["I"] = {"st_switch", target="switchsensor"}
 
 ti["1"] = ti["y"] .. {"#ac-blackball"} 
 ti["2"] = ti["y"] .. {"#ac-whiteball"}
@@ -63,7 +64,7 @@ w, h = wo(ti, " ", {
 "                    ",
 " l   L     M   m    ",
 "                    ",
-" e   E     C   c    ",
+"Ie   E     C   c    ",
 " f   F              ",
 "          1 2  b w  ",
 "S   X               ",
@@ -77,6 +78,10 @@ w, h = wo(ti, " ", {
 
 function addrot()
     wo[no["rotlaser"] + {0, 2}] = ti["r"]
+end
+
+function switchsensor()
+    no["sensorinvisible"]["invisible"] = not no["sensorinvisible"]["invisible"]
 end
   ]]></el:luamain>
     <el:i18n>

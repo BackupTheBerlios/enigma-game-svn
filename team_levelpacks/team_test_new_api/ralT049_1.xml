@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Glasses new API" el:subtitle="" el:id="20080524ral097"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+wo["ExtralifeGlasses"] = SPOT_DEATH + SPOT_LIGHTPASSENGER
+
+ti[" "] = {"fl-sahara"}
+ti["!"] = {"st-death_invisible"}
+ti["H"] = {"st-camouflage_hole"}
+ti["L"] = {"st_lightpassenger", state=OFF}
+ti["l"] = {"st_switch", target="newlp"}
+ti["A"] = {"st-actorimpulse_invisible"}
+ti["S"] = {"it_sensor", invisible=true}
+ti["#"] = {"st-wood"}
+ti["N"] = {"st_laser_n", "laser", state=OFF}
+ti["n"] = {"st_switch", target="laser"}
+
+
+ti["G"] = {"it_glasses"}
+ti["g"] = {"it_glasses", state=SPOT_HOLLOW}
+ti["f"] = {"it_glasses", state=SPOT_DEATH}
+ti["h"] = {"it_glasses", state=SPOT_LIGHTPASSENGER}
+ti["s"] = {"it_glasses", state=SPOT_SENSOR}
+ti["a"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
+
+ti["b"] = {"it-bag"}
+ti["y"] = {"it-yinyang"}
+ti["1"] = ti["y"] .. {"#ac-blackball"} 
+ti["2"] = ti["y"] .. {"#ac-whiteball"} 
+
+w, h = wo(ti, " ", {
+"!!!             HHHH",
+"                    ",
+" f       Nn       g ",
+"                    ",
+"                    ",
+"         G          ",
+"     b  1  2  b     ",
+"                    ",
+"                    ",
+"                    ",
+"hh       s       a  ",
+"                    ",
+"LLL l   SSS      AAA"
+})
+
+function newlp(value, sender)
+    wo[sender - {1,0}] = ti["L"]
+end
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

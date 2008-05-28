@@ -21,6 +21,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl-ice"}
+ti["c"] = {"it_cross"}
 
 ti["A"] = {"#ac-blackball"}
 
@@ -33,6 +34,7 @@ ti["E"] = {"st_laser_e", state=ON}
 ti["S"] = {"st_laser_s", state=ON}
 ti["W"] = {"st_laser_w", state=ON}
 ti["t"] = {"st_switch", target="Laser", action="turn"}
+ti["M"] = ti["c"] .. ti["l"]
 
 ti["T"] = {"st-turnstile"}
 ti["e"] = {"st-turnstile-e"}
@@ -47,14 +49,14 @@ ti["p"] = {"it-pencil"}
 
 ti["B"] = {"st_boulder_s"}
 
-ti["g"] = {"it-glasses"}
+ti["g"] = {"it_glasses"}
 
 w, h = wo(ti, " ", {
 "                    ",
 "            E   l  W",
 "                s   ",
 "E     w    lW       ",
-"    il              ",
+"    iM              ",
 "          Ahmbppp   ",
 " ww     S       g   ",
 "E        w          ",
