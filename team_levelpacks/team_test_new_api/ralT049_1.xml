@@ -25,7 +25,7 @@ ti["!"] = {"st-death_invisible"}
 ti["H"] = {"st-camouflage_hole"}
 ti["L"] = {"st_lightpassenger", state=OFF}
 ti["l"] = {"st_switch", target="newlp"}
-ti["A"] = {"st-actorimpulse_invisible"}
+ti["A"] = {"st_actorimpulse_invisible"}
 ti["S"] = {"it_sensor", invisible=true}
 ti["#"] = {"st-wood"}
 ti["N"] = {"st_laser_n", "laser", state=OFF}
@@ -39,6 +39,10 @@ ti["h"] = {"it_glasses", state=SPOT_LIGHTPASSENGER}
 ti["s"] = {"it_glasses", state=SPOT_SENSOR}
 ti["a"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 
+
+ti["x"] = {"it_glasses", "myglasses"}
+ti["X"] = {"st_switch", target="breakglasses"}
+
 ti["b"] = {"it-bag"}
 ti["y"] = {"it-yinyang"}
 ti["1"] = ti["y"] .. {"#ac-blackball"} 
@@ -50,8 +54,8 @@ w, h = wo(ti, " ", {
 " f       Nn       g ",
 "                    ",
 "                    ",
-"         G          ",
-"     b  1  2  b     ",
+"         G         x",
+"#    b  1  2  b    X",
 "                    ",
 "                    ",
 "                    ",
@@ -62,6 +66,10 @@ w, h = wo(ti, " ", {
 
 function newlp(value, sender)
     wo[sender - {1,0}] = ti["L"]
+end
+
+function breakglasses(value, sender)
+    no["myglasses"]["state"] = SPOT_NOTHING
 end
   ]]></el:luamain>
     <el:i18n>

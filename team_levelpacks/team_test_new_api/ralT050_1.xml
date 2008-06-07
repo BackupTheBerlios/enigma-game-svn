@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Actorimpulse new API" el:subtitle="" el:id="20080605ral607"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["A"] = {"st_actorimpulse"}
+ti["a"] = {"st_actorimpulse_invisible"}
+
+ti["B"] = {"st_boulder_e"}
+ti["C"] = {"st_actorimpulse", strength=1000}
+ti["D"] = {"st_actorimpulse", strength=600, hit_distortion_xx=0, hit_distortion_xy=1, hit_distortion_yx=-1, hit_distortion_yy=0}
+
+ti["b"] = {"it_brush"}
+ti["G"] = {"it_glasses"}
+ti["g"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
+
+
+ti["1"] = {"#ac-blackball"} 
+
+
+ti["w"] = {"it-magicwand"}
+ti["c"] = {"st-chess_black"}
+ti["3"] = {"#ac-blackball", player=DEFAULT, controllers=0}
+ti["4"] = {"#ac-whiteball", player=DEFAULT, controllers=0}
+
+
+w, h = wo(ti, " ", {
+"A    B   Aa    B   a",
+"                    ",
+"A      g 1 b       a",
+"A                  a",
+"A    C       D     a",
+"   3                ",
+"c    w              ",
+"   4                ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

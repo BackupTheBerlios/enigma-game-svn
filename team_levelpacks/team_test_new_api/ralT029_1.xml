@@ -31,6 +31,7 @@ ti["6"] = ti[" "] .. {"st_bluesand", cluster=6}
 
 ti["8"] = ti[" "] .. {"st_brick", cluster=8}
 ti["9"] = ti[" "] .. {"st_brick", cluster=9}
+ti["0"] = ti[" "] .. {"st_panel", cluster=9}
 
 ti["P"] = ti[" "] .. {"st_panel"}
 ti["Q"] = ti[" "] .. {"st_panel_n"}
@@ -63,8 +64,8 @@ w, h = wo(ti, " ", {
 " 8             c    ",
 "889          11111  ",
 "8999  222    11x21  ",
-"889   1|1     1221  ",
-"999   111     1111  "
+"8890  1|1     1221  ",
+"9990  111     1111  "
 })
 
 
