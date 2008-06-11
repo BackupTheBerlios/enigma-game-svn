@@ -19,6 +19,9 @@
 wo["ConserveLevel"] = true
 
 ti["  "] = {"fl-sahara"}
+ti["~~"] = {"fl-water"}
+ti["##"] = {"st-rock1"}
+ti["++"] = {"st-wood"}
 ti[" 1"] = ti["  "] .. {"#ac-blackball"}
 
 -- sample of create world without a given map - just default floors
@@ -53,11 +56,16 @@ function myresolver(key, x, y)
     end
 end
 
-wo:drawmap(myresolver, po({wo.Width-10, wo.Height-5}), "--", {
+wo:drawMap(myresolver, po({wo.Width-10, wo.Height-5}), "--", {
   "----######",
   "######----######",
   "------######"
 })
+
+wo:drawBorder(po(0,0), w, h, ti["##"])
+wo:drawBorder(po(3,3), po(6,5), ti["++"])
+
+wo:drawRect(po(10,2), 5, 3, ti["~~"])
 
   ]]></el:luamain>
     <el:i18n>
