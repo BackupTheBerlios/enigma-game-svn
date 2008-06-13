@@ -30,7 +30,6 @@ ti["b"] = {"it_brush"}
 ti["G"] = {"it_glasses"}
 ti["g"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 
-
 ti["1"] = {"#ac-blackball"} 
 
 
