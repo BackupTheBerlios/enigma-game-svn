@@ -160,7 +160,7 @@ lotm_rating(      "Block its way!",  8.00,  16,  "<b>(newcomer)</b>")
 
 -- Don't forget to adjust the archive dates:
 
-lotm_archive_data_from = { month = 3, year = 2008 }
+lotm_archive_data_from = { month = 5, year = 2008 }
 
 lotm_current = lotm_archive_data[table.getn(lotm_archive_data)]
 
