@@ -22,6 +22,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl-ice"}
 ti["c"] = {"it_cross"}
+ti["v"] = {"it-cherry"}
 
 ti["A"] = {"#ac-blackball"}
 
@@ -57,7 +58,7 @@ w, h = wo(ti, " ", {
 "                s   ",
 "E     w    lW       ",
 "    iM              ",
-"          Ahmbppp   ",
+"          Ahmbpppv  ",
 " ww     S       g   ",
 "E        w          ",
 "E    w              ",
