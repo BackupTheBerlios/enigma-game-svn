@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Follower" el:subtitle="" el:id="20080622ral708"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+-- old API   FOLLOW_SCREEN
+--wo["FollowGrid"] = true
+--wo["FollowMethod"] = FOLLOW_FLIP
+
+-- old API   FOLLOW_SCROLLING (halfscreen scroll)
+wo["FollowGrid"] = true
+wo["FollowMethod"] = FOLLOW_SCROLL
+
+-- old API   FOLLOW_SCREENSCROLLING
+--wo["FollowGrid"] = true
+--wo["FollowMethod"] = FOLLOW_SCROLL
+--wo["FollowAction"] = 0
+
+-- old API   FOLLOW_SMOOTH
+--wo["FollowGrid"] = false
+--wo["FollowMethod"] = FOLLOW_SCROLL
+
+
+-- new API no scroll at all
+--wo["FollowMethod"] = FOLLOW_NO
+
+-- new API flip screen with boundary
+--wo["FollowGrid"] = true
+--wo["FollowMethod"] = FOLLOW_FLIP
+--wo["FollowThreshold"] = 1.5
+--wo["FollowThreshold"] = po(2.5, 1.5)
+
+
+-- new API scroll screen with boundary
+--wo["FollowGrid"] = true
+--wo["FollowMethod"] = FOLLOW_SCROLL
+--wo["FollowThreshold"] = 1.5
+--wo["FollowThreshold"] = po(2.5, 1.5)
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = {"st-grate1"}
+
+ti["V"] = {"it_vortex_open", "vortex1", destination="vortex2"}
+ti["v"] = {"it_vortex_open", "vortex2", destination="vortex1"}
+
+ti["s"] = {"st_switch", target="doit"}
+ti["1"] = {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"##########################################################",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"# # # # # # # # #  # # # # # # # # #  # # # # # # # # #  #",
+"#     1            #                  #                  #",
+"#          V       #                  #                  #",
+"#                  #                  #                  #",
+"#      s           #                  #                  #",
+"#                  #                  #                  #",
+"##########################################################",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"# # # # # # # # #  # # # # # # # # #  # # # # # # # # #  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #               v  #                  #",
+"#                  #                  #                  #",
+"##########################################################",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"# # # # # # # # #  # # # # # # # # #  # # # # # # # # #  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"#                  #                  #                  #",
+"##########################################################"
+})
+
+function doit(value, sender)
+    if value then
+        wo["FollowGrid"] = false
+        wo["FollowMethod"] = FOLLOW_SCROLL
+    else
+        wo["FollowGrid"] = true
+        wo["FollowMethod"] = FOLLOW_SCROLL
+        wo["FollowThreshold"] = po(2.5, 1.5)
+    end
+end
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
