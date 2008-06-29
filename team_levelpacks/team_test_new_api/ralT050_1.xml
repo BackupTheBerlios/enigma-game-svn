@@ -34,7 +34,7 @@ ti["1"] = {"#ac-blackball"}
 
 
 ti["w"] = {"it-magicwand"}
-ti["c"] = {"st-chess_black"}
+ti["c"] = {"st_chess_black"}
 ti["3"] = {"#ac-blackball", player=DEFAULT, controllers=0}
 ti["4"] = {"#ac-whiteball", player=DEFAULT, controllers=0}
 

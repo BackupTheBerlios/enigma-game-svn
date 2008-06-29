@@ -52,7 +52,7 @@ ti["U"] = ti[" "] .. {"st-block"}
 ti["V"] = ti[" "] .. {"st-brownie"}
 ti["u"] = ti[" "] .. {"it-spring1"}
 ti["v"] = ti[" "] .. {"it-brake"}
-ti["Y"] = ti[" "] .. {"st-death"}
+ti["Y"] = ti[" "] .. {"st_death"}
 ti["z"] = ti[" "] .. {"it-dynamite"}
 
 ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}

@@ -21,7 +21,7 @@ wo["ConserveLevel"] = true
 wo["ExtralifeGlasses"] = SPOT_DEATH + SPOT_LIGHTPASSENGER
 
 ti[" "] = {"fl-sahara"}
-ti["!"] = {"st-death_invisible"}
+ti["!"] = {"st_death_invisible"}
 ti["H"] = {"st-camouflage_hole"}
 ti["L"] = {"st_lightpassenger", state=OFF}
 ti["l"] = {"st_switch", target="newlp"}

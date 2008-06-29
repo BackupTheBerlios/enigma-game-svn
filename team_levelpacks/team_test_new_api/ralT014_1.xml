@@ -31,7 +31,7 @@ ti["y"] = (ti({"fl-rough-blue"}) .. {"it-banana"}) .. {"ac-bug", name="buggy"}
 ti["s"] = ti[" "] .. {"st_switch", action="callback", target="doit"}
 ti["b"] = ti[" "] .. {"st_blocker", name="blocker"}
 ti["d"] = ti[" "] .. {"st-door_b", name="door#"}
-ti["h"] = ti[" "] .. {"st-chess_black", name="chess#"}
+ti["h"] = ti[" "] .. {"st_chess_black", name="chess#"}
 ti["o"] = ti[" "] .. {"st_oxyd"}
 ti["B"] = ti[" "] .. {"it-bag"}
 ti["T"] = ti[" "] .. {"st-thief"}
@@ -103,6 +103,7 @@ function doit(value, sender)
         no.buggy["opendoors"] = not_all_doors + no["money"] + fl(3,4)
         no.buggy["mypos"] = po(no.money)
         chess_grp["color"] = 1
+        chess_grp:move(po(-2,-1))
         wo[mygrp] = {"st-wood"}
     else
         it(blocker_pos):close()

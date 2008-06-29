@@ -24,6 +24,7 @@ ti[" "] = {"fl-sahara"}
 ti["."] = {"it_trap"}
 
 ti["@"] = {"#ac-blackball"}
+ti["0"] = {"#ac-bug"}
 
 ti["l"] = {"st_laser", state = ON, orientation = SOUTH}
 ti["p"] = {"st_polarswitch", state = OFF}
@@ -31,36 +32,38 @@ ti["e"] = {"it_extralife"}
 ti["g"] = {"it_glasses", state = SPOT_TRAP}
 ti["h"] = {"it_glasses", state = SPOT_SENSOR}
 ti["u"] = {"it_umbrella"}
-ti["d"] = {"st-death_invisible"}
+ti["d"] = {"st_death_invisible"}
 ti["b"] = {"it-blackbomb"}
 ti["y"] = {"it-dynamite"}
 ti["w"] = ti["."] .. {"st_window", faces="e"}
 ti["r"] = {"it_wrench"}
+ti["t"] = {"it-spring1"}
+ti["m"] = {"it_landmine"}
 ti["s"] = {"it_sensor", invisible = true} --{"it-spring2"}
 
 ti["A"] = ti["."] .. {"fl-leaves"}
-ti["B"] = ti["."] .. {"fl-swamp"}
+ti["B"] = ti["."] .. {"fl-water"}
 ti["C"] = ti["."] .. {"fl-metal"}
 ti["D"] = ti["."] .. {"fl-black"}
 ti["E"] = ti["."] .. {"fl-inverse"}
 ti["F"] = ti["."] .. {"fl-rough-blue"}
-ti["G"] = ti["."] .. {"fl-rough"}
+ti["G"] = ti["."] .. {"fl-abyss"}
 ti["H"] = ti["."] .. {"fl-floor_001"}
 
 w, h = wo(ti, " ", {
 "@                   ",
 "   uuuu  CCCC  DDDD ",
 "g  uuuu  CCCC  DDDD ",
-"h                   ",
+"h             0     ",
 "   AAAA  BBBB  EEEE ",
-"   AAAA  BBBB  EEEE ",
+"t  AAAA  BBBB  EEEE ",
 "s                   ",
 "   FFFF  GGGG  HHHH ",
 "   FFFF  GGGG  HHHH ",
 "l    b              ",
 "p    y    wr        ",
 "                    ",
-"e                  d"
+"e    mm            d"
 })
 
   ]]></el:luamain>
