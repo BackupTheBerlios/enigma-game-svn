@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Wirecontrol new API" el:subtitle="" el:id="20080701ral670"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = {"st-rock1"}
+ti["+"] = {"st-rock1", "rock"}
+ti["~"] = {"fl-water"}
+
+ti["p"] = {"it-puller-w"}
+ti["m"] = {"it-magicwand"}
+
+ti["w"] = {"st-wood"}
+ti["template_w"] = {"st-wood", "w%%"}
+ti["template_b"] = {"st-brownie", "b%%"}
+ti["S"] = {"st-swap"}
+ti["R"] = {"st_rotator_cw", movable=true}
+
+
+ti["r"] = {"st-rubberband", "rubber"}
+ti["i"] = {"st-stoneimpulse_movable", "impulse"}
+ti["I"] = {"st-stoneimpulse"}
+ti["B"] = {"st_boulder_e", "boulder"}
+ti["L"] = {"st_lightpassenger", "lp"}
+ti["l"] = {"st_laser_e", state=ON}
+ti["P"] = {"st_polarswitch"}
+
+
+ti["@"] = {"#ac-blackball"} 
+
+resolver = res.autotile(ti, {"1","9","template_w"}, {"a","h","template_b"})
+
+w, h = wo(resolver, " ", {
+"                    ",
+"                    ",
+"                    ",
+"           2#   3   ",
+"                    ",
+"              ~~    ",
+"   a         b~~w   ",
+"             #      ",
+"                    ",
+"     1  @   mpppppp ",
+"   R   S            ",
+"                    ",
+"              4     ",
+"                    ",
+"                 +  ",
+"       5            ",
+"IIIi                ",
+"                    ",
+"                    ",
+"                    ",
+"     6              ",
+"B                   ",
+"                    ",
+"       7            ",
+"lPL                 "
+})
+
+
+wo:add({"ot_wirecontrol", anchor1="w%1", anchor2="b%1"})
+wo:add({"ot_wirecontrol", anchor1="w%2", anchor2="w%3"})
+wo:add({"ot_wirecontrol", anchor1="w%2", anchor2="b%2"})
+wo:add({"ot_wirecontrol", anchor1="w%4", anchor2="rock"})
+wo:add({"ot_wirecontrol", anchor1="w%5", anchor2="impulse"})
+wo:add({"ot_wirecontrol", anchor1="w%6", anchor2="boulder"})
+wo:add({"ot_wirecontrol", anchor1="w%7", anchor2="lp"})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>

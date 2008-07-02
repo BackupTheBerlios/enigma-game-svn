@@ -104,6 +104,7 @@ function doit(value, sender)
         no.buggy["mypos"] = po(no.money)
         chess_grp["color"] = 1
         chess_grp:move(po(-2,-1))
+--        chess_grp:message("move",po(-2,-1))
         wo[mygrp] = {"st-wood"}
     else
         it(blocker_pos):close()
