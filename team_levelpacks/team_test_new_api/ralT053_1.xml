@@ -23,9 +23,9 @@ ti["#"] = {"st-rock1"}
 ti["y"] = {"it-yinyang"}
 ti["."] = {"st-wood"}
 ti["w"] = {"st-wood", "w"}
-ti["s"] = {"st-scissors"}
+ti["s"] = {"st_scissors"}
 ti["S"] = {"st-swap"}
-ti["r"] = {"st-rubberband"}
+ti["r"] = {"st_rubberband"}
 
 ti["1"] = ti["y"] .. {"#ac-blackball", "a1"} 
 ti["2"] = ti["y"] .. {"#ac-whiteball", "a2"} 

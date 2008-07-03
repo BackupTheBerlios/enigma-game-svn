@@ -29,7 +29,7 @@ ti["t"] = {"it_wrench"}
 ti["w"] = {"st-wood"}
 ti["template_w"] = {"st-wood", "w%%"}
 ti["template_b"] = {"st-brownie", "b%%"}
-ti["s"] = {"st-scissors"}
+ti["s"] = {"st_scissors"}
 ti["S"] = {"st-swap"}
 ti["U"] = {"st-pull", "pull"}
 ti["R"] = {"st_rotator_cw", movable=true}
@@ -37,7 +37,7 @@ ti["Q"] = {"st_rotator_cw", "rotcw", movable=true}
 ti["q"] = {"st_rotator_ccw", "rotccw", movable=true}
 
 
-ti["r"] = {"st-rubberband", "rubber"}
+ti["r"] = {"st_rubberband", "rubber"}
 ti["i"] = {"st-stoneimpulse_movable", "impulse"}
 ti["I"] = {"st-stoneimpulse"}
 ti["B"] = {"st_boulder_e", "boulder"}
@@ -68,7 +68,7 @@ w, h = wo(resolver, " ", {
 "                 +  ",
 "       5            ",
 "IIIi             8  ",
-"         #          s",
+"         #         s",
 "      q   #      r  ",
 "  Q                 ",
 "     6              ",
