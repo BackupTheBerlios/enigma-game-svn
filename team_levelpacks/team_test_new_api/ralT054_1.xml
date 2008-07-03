@@ -24,12 +24,17 @@ ti["~"] = {"fl-water"}
 
 ti["p"] = {"it-puller-w"}
 ti["m"] = {"it-magicwand"}
+ti["t"] = {"it_wrench"}
 
 ti["w"] = {"st-wood"}
 ti["template_w"] = {"st-wood", "w%%"}
 ti["template_b"] = {"st-brownie", "b%%"}
+ti["s"] = {"st-scissors"}
 ti["S"] = {"st-swap"}
+ti["U"] = {"st-pull", "pull"}
 ti["R"] = {"st_rotator_cw", movable=true}
+ti["Q"] = {"st_rotator_cw", "rotcw", movable=true}
+ti["q"] = {"st_rotator_ccw", "rotccw", movable=true}
 
 
 ti["r"] = {"st-rubberband", "rubber"}
@@ -56,20 +61,20 @@ w, h = wo(resolver, " ", {
 "             #      ",
 "                    ",
 "     1  @   mpppppp ",
-"   R   S            ",
+"   R   S    t       ",
 "                    ",
 "              4     ",
 "                    ",
 "                 +  ",
 "       5            ",
-"IIIi                ",
-"                    ",
-"                    ",
-"                    ",
+"IIIi             8  ",
+"         #          s",
+"      q   #      r  ",
+"  Q                 ",
 "     6              ",
 "B                   ",
-"                    ",
-"       7            ",
+"             U      ",
+"       7        9   ",
 "lPL                 "
 })
 
@@ -81,6 +86,9 @@ wo:add({"ot_wirecontrol", anchor1="w%4", anchor2="rock"})
 wo:add({"ot_wirecontrol", anchor1="w%5", anchor2="impulse"})
 wo:add({"ot_wirecontrol", anchor1="w%6", anchor2="boulder"})
 wo:add({"ot_wirecontrol", anchor1="w%7", anchor2="lp"})
+wo:add({"ot_wirecontrol", anchor1="rotcw", anchor2="rotccw"})
+wo:add({"ot_wirecontrol", anchor1="w%8", anchor2="rubber"})
+wo:add({"ot_wirecontrol", anchor1="w%9", anchor2="pull"})
 
   ]]></el:luamain>
     <el:i18n>
