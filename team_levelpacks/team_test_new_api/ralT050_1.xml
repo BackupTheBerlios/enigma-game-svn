@@ -32,6 +32,9 @@ ti["g"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 
 ti["1"] = {"#ac-blackball"} 
 
+ti["s"] = {"it_sword"}
+ti["K"] = {"st_knight"}
+
 
 ti["w"] = {"it-magicwand"}
 ti["c"] = {"st_chess_black"}
@@ -46,7 +49,7 @@ w, h = wo(ti, " ", {
 "A                  a",
 "A    C       D     a",
 "   3                ",
-"c    w              ",
+"c    w       s KK   ",
 "   4                ",
 "                    ",
 "                    ",

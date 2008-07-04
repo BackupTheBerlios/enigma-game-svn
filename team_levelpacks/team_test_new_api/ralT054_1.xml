@@ -79,16 +79,16 @@ w, h = wo(resolver, " ", {
 })
 
 
-wo:add({"ot_wirecontrol", anchor1="w%1", anchor2="b%1"})
-wo:add({"ot_wirecontrol", anchor1="w%2", anchor2="w%3"})
-wo:add({"ot_wirecontrol", anchor1="w%2", anchor2="b%2"})
-wo:add({"ot_wirecontrol", anchor1="w%4", anchor2="rock"})
-wo:add({"ot_wirecontrol", anchor1="w%5", anchor2="impulse"})
-wo:add({"ot_wirecontrol", anchor1="w%6", anchor2="boulder"})
-wo:add({"ot_wirecontrol", anchor1="w%7", anchor2="lp"})
-wo:add({"ot_wirecontrol", anchor1="rotcw", anchor2="rotccw"})
-wo:add({"ot_wirecontrol", anchor1="w%8", anchor2="rubber"})
-wo:add({"ot_wirecontrol", anchor1="w%9", anchor2="pull"})
+wo:add({"ot_wire", anchor1="w%1", anchor2="b%1"})
+wo:add({"ot_wire", anchor1="w%2", anchor2="w%3"})
+wo:add({"ot_wire", anchor1="w%2", anchor2="b%2"})
+wo:add({"ot_wire", anchor1="w%4", anchor2="rock"})
+wo:add({"ot_wire", anchor1="w%5", anchor2="impulse"})
+wo:add({"ot_wire", anchor1="w%6", anchor2="boulder"})
+wo:add({"ot_wire", anchor1="w%7", anchor2="lp"})
+wo:add({"ot_wire", anchor1="rotcw", anchor2="rotccw"})
+wo:add({"ot_wire", anchor1="w%8", anchor2="rubber"})
+wo:add({"ot_wire", anchor1="w%9", anchor2="pull"})
 
   ]]></el:luamain>
     <el:i18n>

@@ -22,11 +22,11 @@ ti[" "] = {"fl-sahara"}
 ti["~"] = {"fl-water"}
 ti["s"] = {"st-shogun", "him"}
 ti["w"] = {"st-wood", "you"}
-ti["r"] = {"it-rubberband", target="you", length=4}
+ti["r"] = {"it_rubberband", anchor2="you", length=4}
 ti["S"] = {"st_switch", target="killwood"}
 ti["T"] = {"st-turnstile"}
 ti["t"] = {"st-turnstile-n","it"}
-ti["R"] = {"it-rubberband", target="it", length=4}
+ti["R"] = {"it_rubberband", anchor2="it", length=4}
 ti["p"] = {"st-swap", "you"}
 ti["m"] = {"it_magnet_on", strength=-40}
 ti["1"] = {"#ac-blackball", "me"}
