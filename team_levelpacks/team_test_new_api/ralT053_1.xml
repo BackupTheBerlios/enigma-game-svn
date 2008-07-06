@@ -27,6 +27,9 @@ ti["s"] = {"st_scissors"}
 ti["S"] = {"st-swap"}
 ti["r"] = {"st_rubberband"}
 ti["R"] = {"it_rubberband", anchor2="a3", length=3, strength=50, threshold=1.5}
+ti["p"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=4, min=4}
+ti["P"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=5, min=2}
+ti["Q"] = {"it_rubberband", anchor2="w", length=3, strength=10, threshold=2.5, max=5, min=2}
 
 ti["1"] = ti["y"] .. {"#ac-blackball", "a1"} 
 ti["2"] = ti["y"] .. {"#ac-whiteball", "a2"} 
@@ -35,23 +38,24 @@ ti["3"] = {"#ac-horse", "a3"}
 w, h = wo(ti, " ", {
 "       r  r  r      ",
 "                    ",
+"    1               ",
 "                    ",
-"     1              ",
 "             2      ",
-"RR                  ",
+"R                   ",
+"p                   ",
+"P       3       S   ",
+"Q           w      ",
 "                    ",
-"        3       S   ",
-"            w      ",
-"                    ",
-"               #    ",
+"         s     #    ",
 "          ~~        ",
 "s         ~~.       "
 })
 
 --wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=2, strength=80, threshold=0, max=2.4})
---wo:add({"ot_rubberband", anchor1="a1", anchor2="a2", length=1, strength=8000, threshold=0, max=1})
-wo:add({"ot_rubberband", anchor1="a1", anchor2="a2", length=4, strength=10, threshold=2})
-wo:add({"ot_rubberband", anchor1="a3", anchor2="w", length=3, strength=20})
+--wo:add({"ot_rubberband", anchor1="a1", anchor2="a2", length=4, strength=10, threshold=2})
+--wo:add({"ot_rubberband", anchor1="a1", anchor2="a2", length=3, strength=10, threshold=2, max=5, min=5})
+--wo:add({"ot_rubberband", anchor1="a3", anchor2="w", length=3, strength=20})
+wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=3, strength=10, threshold=2, max=4, min=4})
 
 
   ]]></el:luamain>
