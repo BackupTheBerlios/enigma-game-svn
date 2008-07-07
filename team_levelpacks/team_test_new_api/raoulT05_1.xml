@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Testlevel Strips" el:subtitle="" el:id="raoult05"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Roual Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+ti[" "] = {"fl-swamp"}
+ti["A"] = {"#ac-blackball"}
+
+ti["a"] = {"it_strip"}
+
+ti["b"] = {"it_strip_w"}
+ti["c"] = {"it_strip_s"}
+ti["d"] = {"it_strip_e"}
+ti["e"] = {"it_strip_n"}
+
+ti["f"] = {"it_strip_sw"}
+ti["g"] = {"it_strip_ew"}
+ti["h"] = {"it_strip_es"}
+ti["i"] = {"it_strip_nw"}
+ti["j"] = {"it_strip_ns"}
+ti["k"] = {"it_strip_ne"}
+
+ti["m"] = {"it_strip_esw"}
+ti["n"] = {"it_strip_nsw"}
+ti["o"] = {"it_strip_new"}
+ti["p"] = {"it_strip_nes"}
+
+ti["q"] = {"it_strip_nesw"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"        c           ",
+"       dqb          ",
+"        e           ",
+"                    ",
+"       hgf        A ",
+"       jaj          ",
+"       kgi          ",
+"                    ",
+"       hmf          ",
+"       pqn          ",
+"       koi          ",
+"                    "
+})
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
