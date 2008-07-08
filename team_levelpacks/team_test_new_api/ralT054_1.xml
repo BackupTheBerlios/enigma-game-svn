@@ -23,7 +23,7 @@ ti["+"] = {"st-rock1", "rock"}
 ti["~"] = {"fl-water"}
 
 ti["p"] = {"it-puller-w"}
-ti["m"] = {"it-magicwand"}
+ti["m"] = {"it_magicwand"}
 ti["t"] = {"it_wrench"}
 
 ti["w"] = {"st-wood"}

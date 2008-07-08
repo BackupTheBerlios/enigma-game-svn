@@ -16,7 +16,6 @@
     </el:info>
     <el:luamain><![CDATA[
 ti[" "] = {"fl-swamp"}
-ti["A"] = {"#ac-blackball"}
 
 ti["a"] = {"it_strip"}
 
@@ -39,14 +38,18 @@ ti["p"] = {"it_strip_nes"}
 
 ti["q"] = {"it_strip_nesw"}
 
+ti["w"] = {"st-wood"}
+
+ti["A"] = {"#ac-blackball"} .. ti["a"]
+
 w, h = wo(ti, " ", {
 "                    ",
 "        c           ",
 "       dqb          ",
 "        e           ",
-"                    ",
-"       hgf        A ",
-"       jaj          ",
+"                w   ",
+"       hgf     wAw  ",
+"       jaj      w   ",
 "       kgi          ",
 "                    ",
 "       hmf          ",

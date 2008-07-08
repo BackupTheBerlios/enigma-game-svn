@@ -31,7 +31,7 @@ wo[{14, 7}] = ti[" 1"]
 
 -- sample of registry of a world lib function and its usage
 function hurra(world, pos)
-    world[pos] = {"it-magicwand"}
+    world[pos] = {"it_magicwand"}
 end
 
 wo:_register("hurra", hurra)

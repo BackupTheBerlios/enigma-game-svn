@@ -44,7 +44,7 @@ ti["s"] = {"st-swap"}
 ti["i"] = {"st-stoneimpulse_movable"}
 ti["w"] = {"st-wood"}
 ti["h"] = {"it_hammer"}
-ti["m"] = {"it-magicwand"}
+ti["m"] = {"it_magicwand"}
 ti["b"] = {"it_brush"}
 ti["p"] = {"it-pencil"}
 

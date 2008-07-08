@@ -21,7 +21,7 @@ ti[" "] = {"fl-sahara"}
 ti["B"] = {"st-brownie"}
 ti["b"] = {"st_boulder_n"}
 ti["W"] = {"it_wrench"}
-ti["w"] = {"it-magicwand"}
+ti["w"] = {"it_magicwand"}
 
 ti["M"] = {"st_mirror", "mymir", flavor="triangle", transparent=true}
 ti["m"] = {"st_mirror", flavor="triangle", counterclock=true}

@@ -20,37 +20,37 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["#"] = ti[" "] .. {"st-rock1"}
-ti["y"] = ti[" "] .. {"it-magicwand"}
+ti["#"] = {"st-rock1"}
+ti["y"] = {"it_magicwand"}
 
-ti["s"] = ti[" "] .. {"st_switch", name="swo#", state=1}
-ti["S"] = ti[" "] .. {"st_switch", name="sw#"}
-ti["T"] = ti[" "] .. {"st_switch", name="swt#"}
-ti["D"] = ti[" "] .. {"st-door-v", name="do#"}
-ti["R"] = ti[" "] .. {"st_boulder_n", name="boulder"}
-ti["L"] = ti[" "] .. {"st_laserswitch", target="door1", action="signal"}
+ti["s"] = {"st_switch", name="swo#", state=1}
+ti["S"] = {"st_switch", name="sw#"}
+ti["T"] = {"st_switch", name="swt#"}
+ti["D"] = {"st-door-v", name="do#"}
+ti["R"] = {"st_boulder_n", name="boulder"}
+ti["L"] = {"st_laserswitch", target="door1", action="signal"}
 
-ti["f"] = ti[" "] .. {"st_fourswitch", target="swo#1", action="signal"}
-ti["F"] = ti[" "] .. {"st_fourswitch", target="sw#1", action="signal", inverse=true}
-ti["g"] = ti[" "] .. {"st_fourswitch", name="fourstate", target_3="swt#1", target_2="swt#2", target_1="swt#3", target_0="swt#4", action="signal"}
-ti["G"] = ti[" "] .. {"st_fourswitch", target="boulder", action="orientate"}
+ti["f"] = {"st_fourswitch", target="swo#1", action="signal"}
+ti["F"] = {"st_fourswitch", target="sw#1", action="signal", inverse=true}
+ti["g"] = {"st_fourswitch", name="fourstate", target_3="swt#1", target_2="swt#2", target_1="swt#3", target_0="swt#4", action="signal"}
+ti["G"] = {"st_fourswitch", target="boulder", action="orientate"}
 
-ti["h"] = ti[" "] .. {"st_fourswitch", name="f#"}
-ti["u"] = ti[" "] .. {"st_switch", target="f#1", action="signal"}
-ti["U"] = ti[" "] .. {"st_switch", target="f#2", action="toggle"}
+ti["h"] = {"st_fourswitch", name="f#"}
+ti["u"] = {"st_switch", target="f#1", action="signal"}
+ti["U"] = {"st_switch", target="f#2", action="toggle"}
 
 -- the bolder on fourswitch trigger will work after the reengineering of boulder
-ti["B"] = ti[" "] .. {"st_boulder_w"}
-ti["W"] = ti[" "] .. {"st-wood"}
+ti["B"] = {"st_boulder_w"}
+ti["W"] = {"st-wood"}
 
 
 -- 4 switches to set state of fourswitch that switches 4 others
-ti["t"] = ti[" "] .. {"st_switch", target="setstate"}
+ti["t"] = {"st_switch", target="setstate"}
 
-ti["H"] = ti[" "] .. {"st_fourswitch", counterclock=true, name="anticlock"}
+ti["H"] = {"st_fourswitch", counterclock=true, name="anticlock"}
 
 
-ti["1"] = ti[" "] .. {"#ac-blackball"}
+ti["1"] = {"#ac-blackball"}
 
 w, h = wo(ti, " ", {
 "            f  s    ",

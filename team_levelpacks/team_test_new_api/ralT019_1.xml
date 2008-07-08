@@ -26,8 +26,8 @@ ti["O"] = {"st_oxyd", name="o#"}
 ti["P"] = {"st_oxyd", name="p#"}
 ti["Q"] = {"st_oxyd", name="q#"}
 ti["R"] = {"st_oxyd", name="r#"}
-ti["S"] = {"st_oxyd", name="s#"}
-ti["T"] = {"st_oxyd", name="t#"}
+ti["S"] = {"st_oxyd", name="s#1"}
+ti["T"] = {"st_oxyd", name="t#1"}
 ti["1"] = {"#ac-blackball"}
 
 w, h = wo(ti, " ", {

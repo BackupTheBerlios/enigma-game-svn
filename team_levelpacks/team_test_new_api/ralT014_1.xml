@@ -22,25 +22,26 @@ wo["ShowMoves"] = false
 
 ti[" "] = {"fl-sahara"}
 ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
-ti["c"] = ti[" "] .. {"it-cherry", name="cherry#"}
-ti["5"] = ti[" "] .. {"it_coin_m", name="money", target={"otto", "emil*"}}
-ti["S"] = ti[" "] .. {"st_coinslot"}
-ti["m"] = ti[" "] .. {"#ac-blackball"}
+ti["*"] = ti({"st_chess_black", checkerboard=0}) .. {"st_chess_white", checkerboard=1}
+ti["c"] = {"it-cherry", name="cherry#"}
+ti["5"] = {"it_coin_m", name="money", target={"otto", "emil*"}}
+ti["S"] = {"st_coinslot"}
+ti["m"] = {"#ac-blackball"}
 ti["x"] = {"fl-rough-blue"} .. {"it-banana"} .. ti({"ac-bug", 0.7})
 ti["y"] = (ti({"fl-rough-blue"}) .. {"it-banana"}) .. {"ac-bug", name="buggy"}
-ti["s"] = ti[" "] .. {"st_switch", action="callback", target="doit"}
-ti["b"] = ti[" "] .. {"st_blocker", name="blocker"}
-ti["d"] = ti[" "] .. {"st-door_b", name="door#"}
-ti["h"] = ti[" "] .. {"st_chess_black", name="chess#"}
-ti["o"] = ti[" "] .. {"st_oxyd"}
-ti["B"] = ti[" "] .. {"it-bag"}
-ti["T"] = ti[" "] .. {"st-thief"}
+ti["s"] = {"st_switch", action="callback", target="doit"}
+ti["b"] = {"st_blocker", name="blocker"}
+ti["d"] = {"st-door_b", name="door#"}
+ti["h"] = {"st_chess_black", name="chess#"}
+ti["o"] = {"st_oxyd"}
+ti["B"] = {"it-bag"}
+ti["T"] = {"st-thief"}
 ti["t"] = {"fl-thief"}
 
 w, h = wo(ti, " ", {
-"                    ",
-"         ",                  -- oops a line too short
-"  m          5    BB",
+"** ***              ",
+"***      ",                  -- oops a line too short
+"* m          5    BB",
 "                    ",
 "  c          S    d ",
 "  c     x         d ",
@@ -53,7 +54,7 @@ w, h = wo(ti, " ", {
 "o o o      ........."
 })
 
-wo[{w-2, h-2}] = {"it-magicwand"}
+wo[{w-2, h-2}] = {"it_magicwand"}
 p1 = po(12.3, 3.2)
 p2 = p1:grid()
 wo[p2] = {"ac-bug"}

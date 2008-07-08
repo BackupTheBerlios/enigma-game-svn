@@ -20,27 +20,27 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["b"] = ti[" "] .. {"it_blocker"}
-ti["n"] = ti[" "] .. {"it_blocker_new"}
-ti["B"] = ti[" "] .. {"st_blocker"}
-ti["N"] = ti[" "] .. {"st_blocker_new"}
+ti["b"] = {"it_blocker"}
+ti["n"] = {"it_blocker_new"}
+ti["B"] = {"st_blocker"}
+ti["N"] = {"st_blocker_new"}
 
-ti["W"] = ti[" "] .. {"st_boulder_w"}
+ti["W"] = {"st_boulder_w"}
 ti["w"] = ti["n"] .. {"st_boulder_w"}
 ti["v"] = ti["b"] .. {"st_boulder_w"}
-ti["E"] = ti[" "] .. {"st_boulder_e"}
+ti["E"] = {"st_boulder_e"}
 
-ti["a"] = ti[" "] .. {"it_blocker", autoclose=true}
-ti["A"] = ti[" "] .. {"st_blocker", target="laser", action="toggle"}
-ti["L"] = ti[" "] .. {"st_laser_s", "laser"}
+ti["a"] = {"it_blocker", autoclose=true}
+ti["A"] = {"st_blocker", target="laser", action="toggle"}
+ti["L"] = {"st_laser_s", "laser"}
 
-ti["S"] = ti[" "] .. {"st_switch", target="blocker"}
-ti["s"] = ti[" "] .. {"it_blocker", "blocker"}
-ti["H"] = ti[" "] .. {"st-wood"}
+ti["S"] = {"st_switch", target="blocker"}
+ti["s"] = {"it_blocker", "blocker"}
+ti["H"] = {"st-wood"}
 
 
 
-ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it-magicwand"}
+ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it_magicwand"}
 
 w, h = wo(ti, " ", {
 "                    ",

@@ -30,15 +30,17 @@ ti["R"] = {"it_rubberband", anchor2="a3", length=3, strength=50, threshold=1.5}
 ti["p"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=4, min=4}
 ti["P"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=5, min=2}
 ti["Q"] = {"it_rubberband", anchor2="w", length=3, strength=10, threshold=2.5, max=5, min=2}
+ti["q"] = {"it_rubberband", anchor2="@@s#*", length=3, strength=10, threshold=2.5}
 
 ti["1"] = ti["y"] .. {"#ac-blackball", "a1"} 
 ti["2"] = ti["y"] .. {"#ac-whiteball", "a2"} 
 ti["3"] = {"#ac-horse", "a3"} 
+ti["*"] = {"#ac-whiteball-small", "s#", controllers=0} 
 
 w, h = wo(ti, " ", {
-"       r  r  r      ",
+"*      r  r  r     *",
 "                    ",
-"    1               ",
+"qq  1               ",
 "                    ",
 "             2      ",
 "R                   ",
@@ -48,7 +50,7 @@ w, h = wo(ti, " ", {
 "                    ",
 "         s     #    ",
 "          ~~        ",
-"s         ~~.       "
+"s         ~~.      *"
 })
 
 --wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=2, strength=80, threshold=0, max=2.4})

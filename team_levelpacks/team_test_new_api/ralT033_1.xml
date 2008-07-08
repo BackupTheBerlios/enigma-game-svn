@@ -35,7 +35,7 @@ ti["K"] = {"st_switch", target="getkind"}
 ti["I"] = {"st_switch", target="iskind"}
 
 
-ti["1"] = ti({"it-magicwand"}) .. {"#ac-blackball"}
+ti["1"] = ti({"it_magicwand"}) .. {"#ac-blackball"}
 
 
 w, h = wo(ti, " ", {

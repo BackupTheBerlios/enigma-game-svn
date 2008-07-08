@@ -39,7 +39,7 @@ ti["b"] = {"st_boulder_s"}
 ti["s"] = {"st-swap"}
 ti["X"] = {"st_switch", target="o#1", action="shuffle"}
 ti["Y"] = {"st_switch", target="o#1", action="closeall"}
-ti["1"] = (ti[" "] .. {"it-magicwand"}) .. {"#ac-blackball"}
+ti["1"] = (ti[" "] .. {"it_magicwand"}) .. {"#ac-blackball"}
 
 ti["w"] = {"st_switch", target="Laser#7", action="toggle"}
 ti["f"] = {"st-fart"}
