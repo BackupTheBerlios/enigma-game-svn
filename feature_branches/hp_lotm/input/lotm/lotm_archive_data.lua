@@ -139,6 +139,15 @@ lotm_archive_data[15] = {
   position_num   = "3066"
 }
 
+lotm_archive_data[16] = {
+  date           = { month = 7, year = 2008 },
+  chronological  = 16,
+  name           = "Gods of Enigma II",
+  author         = "moonpearl",
+  position       = "V/69",
+  position_num   = "5069"
+}
+
 -- LotM variable data
 -- format: Level Title, current_rating, current_votes, additional text
 
@@ -156,7 +165,8 @@ lotm_rating(      "Puzzle Puzzles",  8.83,   6,  "")
 lotm_rating(      "Psycho Pushing",  8.18,  11,  "")
 lotm_rating(  "Turnstiles for Two",  9.00,   5,  "")
 lotm_rating(     "Pleasure Garden",  8.43,  14,  "")
-lotm_rating(      "Block its way!",  8.00,  16,  "<b>(newcomer)</b>")
+lotm_rating(      "Block its way!",  8.00,  16,  "")
+lotm_rating(   "Gods of Enigma II",  8.31,  16,  "<b>(newcomer)</b>")
 
 -- Don't forget to adjust the archive dates:
 
