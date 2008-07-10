@@ -3,9 +3,9 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Testlevel Strips" el:subtitle="" el:id="raoult05"/>
-      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
       <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
-      <el:copyright>Copyright © 2008 Roual Bourquin</el:copyright>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
       <el:compatibility el:enigma="1.10">
       </el:compatibility>
@@ -39,23 +39,24 @@ ti["p"] = {"it_strip_nes"}
 ti["q"] = {"it_strip_nesw"}
 
 ti["w"] = {"st-wood"}
+ti["v"] = {"st-plain_move"}
 
 ti["A"] = {"#ac-blackball"} .. ti["a"]
 
 w, h = wo(ti, " ", {
-"                    ",
-"        c           ",
-"       dqb          ",
-"        e           ",
-"                w   ",
-"       hgf     wAw  ",
-"       jaj      w   ",
-"       kgi          ",
-"                    ",
-"       hmf          ",
-"       pqn          ",
-"       koi          ",
-"                    "
+"hggggggwgggggvgggwww",
+"j c   wcw   vcv  wAw",
+"jdqb wdqbw vdqbv www",
+"j e   wew   vev    j",
+"j    wwwww vvvvv   j",
+"jhgf whgfw vhgfv   j",
+"jjaj wjajw vjajv   j",
+"jkgi wkgiw vkgiv   j",
+"j    wwwww vvvvv   j",
+"jhmf whmfw vhmfv   j",
+"jpqn wpqnw vpqnv   j",
+"jkoi wkoiw vkoiv   j",
+"kggggwwwwwgvvvvvgggi"
 })
   ]]></el:luamain>
     <el:i18n>
