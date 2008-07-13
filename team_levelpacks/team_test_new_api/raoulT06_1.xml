@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Spacestrips" el:subtitle="" el:id="raoult06"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+ti[" "] = {"fl-space"}
+ti["*"] = {"fl-wood"}
+
+ti["a"] = {"it_strip", friction=1, mousefactor=1}
+
+ti["b"] = {"it_strip_w", friction=1, mousefactor=1}
+ti["c"] = {"it_strip_s", friction=1, mousefactor=1}
+ti["d"] = {"it_strip_e", friction=1, mousefactor=1}
+ti["e"] = {"it_strip_n", friction=1, mousefactor=1}
+
+ti["f"] = {"it_strip_sw", friction=1, mousefactor=1}
+ti["g"] = {"it_strip_ew", friction=1, mousefactor=1}
+ti["h"] = {"it_strip_es", friction=1, mousefactor=1}
+ti["i"] = {"it_strip_nw", friction=1, mousefactor=1}
+ti["j"] = {"it_strip_ns", friction=1, mousefactor=1}
+ti["k"] = {"it_strip_ne", friction=1, mousefactor=1}
+
+ti["m"] = {"it_strip_esw", friction=1, mousefactor=1}
+ti["n"] = {"it_strip_nsw", friction=1, mousefactor=1}
+ti["o"] = {"it_strip_new", friction=1, mousefactor=1}
+ti["p"] = {"it_strip_nes", friction=1, mousefactor=1}
+
+ti["q"] = {"it_strip_nesw", friction=1, mousefactor=1}
+
+ti["w"] = {"st-wood"}
+ti["v"] = {"st-plain_move"}
+
+ti["A"] = {"#ac-blackball"} .. ti["*"]
+
+w, h = wo(ti, " ", {
+"hggggggggggggggggggf",
+"j  c     c     c  Aj",
+"j dqb   dqb   dqb  j",
+"j  e     e     e   j",
+"j                  j",
+"j hgf   hgf   hgf  j",
+"j jaj   jaj   jaj  j",
+"j kgi   kgi   kgi  j",
+"j                  j",
+"j hmf   hmf   hmf  j",
+"j pqn   pqn   pqn  j",
+"j koi   koi   koi  j",
+"kggggggggggggggggggi"
+})
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
