@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Turnstile new API" el:subtitle="" el:id="20080713ral612"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["y"] = {"it-yinyang"}
+ti["m"] = {"it_wrench"}
+
+
+ti["R"] = {"st_turnstile_red"}
+ti["G"] = {"st_turnstile_green"}
+ti["n"] = {"st_turnstilearm_n"}
+ti["e"] = {"st_turnstilearm_e"}
+ti["s"] = {"st_turnstilearm_s"}
+ti["w"] = {"st_turnstilearm_w"}
+
+ti["B"] = {"st-brownie"}
+ti["O"] = {"st_rotator_cw", movable=true}
+ti["I"] = {"st-stoneimpulse_movable"}
+
+ti["N"] = {"st_turnstilearm_n","arm"}
+ti["S"] = {"st_scissors"}
+ti["r"] = {"it_rubberband", anchor2="arm"}
+
+ti["E"] = {"st_turnstilearm_e","east"}
+ti["b"] = {"st-brownie", "brownie"}
+
+ti["a"] = {"st_turnstilearm_n","couple1"}
+ti["A"] = {"st_turnstilearm_n","couple2"}
+
+ti["T"] = {"st_turnstile_red", "turnsensor"}
+ti["t"] = {"it_sensor", target="turnsensor", action="turn"}
+
+ti["U"] = {"st_turnstile_green", "signaltrigger"}
+ti["u"] = {"it_trigger", target="signaltrigger", action="signal"}
+
+ti["c"] = {"st_turnstilearm_n","singlearm"}
+ti["C"] = {"st_fourswitch", target="singlearm", action="orientate"}
+
+ti["V"] = {"st_turnstile_green", "receiver"}
+ti["v"] = {"st_turnstile_green", target ="receiver", action="signal"}
+
+ti["W"] = {"st_turnstile_red", "orientationTurnstile"}
+ti["F"] = {"st_fourswitch", "orientationFourswitch"}
+ti["f"] = {"st_switch", target="doSync"}
+
+ti["h"] = {"it-tinyhollow"}
+ti["H"] = {"it-hollow"}
+
+
+ti["1"] = ti["y"] .. {"#ac-blackball"}
+ti["2"] = ti["y"] .. {"#ac-whiteball"}
+ti["3"] = {"#ac-whiteball-small", controllers=0}
+
+w, h = wo(ti, " ", {
+"                    ",
+"    nesw     nesw   ",
+"          N         ",
+"          r       O ",
+"     R    S   G     ",
+"                  I ",
+"  b  E    B         ",
+"          m    333  ",
+"       1   2        ",
+"   a           n    ",
+"   Re    A    wTe t ",
+"   s    wGe         ",
+"               n    ",
+" c  C         wUe u ",
+"                    ",
+"     n      n   n   ",
+"Ff   W      ve  Ve  ",
+"            s   s   ",
+"   H                ",
+"    Ge              ",
+"       3        Ge  ",
+"   h   3       n3   ",
+"    Ge 3            ",
+"                    ",
+"                    "
+})
+
+wo:add({"ot_wire", anchor1="east", anchor2="brownie"})
+wo:add({"ot_wire", anchor1="couple1", anchor2="couple2"})
+
+function doSync(value, sender)
+    no["orientationFourswitch"]["state"]=no["orientationTurnstile"]["orientation"]
+end
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

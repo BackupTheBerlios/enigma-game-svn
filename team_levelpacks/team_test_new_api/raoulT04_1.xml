@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Coinslot new API" el:subtitle="" el:id="testcoinswitch_raoul"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision: 1007 $" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
       <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
