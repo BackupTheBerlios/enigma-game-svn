@@ -16,6 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 ti[" "] = {"fl-swamp"}
+ti["."] = {"fl-abyss"}
 
 ti["a"] = {"it_strip"}
 
@@ -38,6 +39,12 @@ ti["p"] = {"it_strip_nes"}
 
 ti["q"] = {"it_strip_nesw"}
 
+ti["B"] = ti["."] .. {"it_strip_w"}
+ti["C"] = ti["."] .. {"it_strip_s"}
+ti["D"] = ti["."] .. {"it_strip_e"}
+ti["E"] = ti["."] .. {"it_strip_n"}
+
+
 ti["w"] = {"st-wood"}
 ti["v"] = {"st-plain_move"}
 
@@ -56,7 +63,20 @@ w, h = wo(ti, " ", {
 "jhmf whmfw vhmfv   j",
 "jpqn wpqnw vpqnv   j",
 "jkoi wkoiw vkoiv   j",
-"kggggwwwwwgvvvvvgggi"
+"kggggwwwwwgvvvvvgggi",
+"                    ",
+"     w w w w w      ",
+"     C C C C C      ",
+" wDqqqqqqqqqqqqqBw  ",
+"   qqqqqqqqqqqqq    ",
+" wDqqqqqqqqqqqqqBw  ",
+"   qqqqqqqqqqqqq    ",
+" wDqqqqqqqqqqqqqBw  ",
+"   qqqqqqqqqqqqq    ",
+" wDqqqqqqqqqqqqqBw  ",
+"     E E E E E     ",
+"     w w w w w      ",
+"                    "
 })
   ]]></el:luamain>
     <el:i18n>
