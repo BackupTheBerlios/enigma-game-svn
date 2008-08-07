@@ -18,26 +18,26 @@
 ti[" "] = {"fl-space"}
 ti["*"] = {"fl-wood"}
 
-ti["a"] = {"it_strip", friction=1, mousefactor=1}
+ti["a"] = {"it_strip", friction=1, adhesion=1}
 
-ti["b"] = {"it_strip_w", friction=1, mousefactor=1}
-ti["c"] = {"it_strip_s", friction=1, mousefactor=1}
-ti["d"] = {"it_strip_e", friction=1, mousefactor=1}
-ti["e"] = {"it_strip_n", friction=1, mousefactor=1}
+ti["b"] = {"it_strip_w", friction=1, adhesion=1}
+ti["c"] = {"it_strip_s", friction=1, adhesion=1}
+ti["d"] = {"it_strip_e", friction=1, adhesion=1}
+ti["e"] = {"it_strip_n", friction=1, adhesion=1}
 
-ti["f"] = {"it_strip_sw", friction=1, mousefactor=1}
-ti["g"] = {"it_strip_ew", friction=1, mousefactor=1}
-ti["h"] = {"it_strip_es", friction=1, mousefactor=1}
-ti["i"] = {"it_strip_nw", friction=1, mousefactor=1}
-ti["j"] = {"it_strip_ns", friction=1, mousefactor=1}
-ti["k"] = {"it_strip_ne", friction=1, mousefactor=1}
+ti["f"] = {"it_strip_sw", friction=1, adhesion=1}
+ti["g"] = {"it_strip_ew", friction=1, adhesion=1}
+ti["h"] = {"it_strip_es", friction=1, adhesion=1}
+ti["i"] = {"it_strip_nw", friction=1, adhesion=1}
+ti["j"] = {"it_strip_ns", friction=1, adhesion=1}
+ti["k"] = {"it_strip_ne", friction=1, adhesion=1}
 
-ti["m"] = {"it_strip_esw", friction=1, mousefactor=1}
-ti["n"] = {"it_strip_nsw", friction=1, mousefactor=1}
-ti["o"] = {"it_strip_new", friction=1, mousefactor=1}
-ti["p"] = {"it_strip_nes", friction=1, mousefactor=1}
+ti["m"] = {"it_strip_esw", friction=1, adhesion=1}
+ti["n"] = {"it_strip_nsw", friction=1, adhesion=1}
+ti["o"] = {"it_strip_new", friction=1, adhesion=1}
+ti["p"] = {"it_strip_nes", friction=1, adhesion=1}
 
-ti["q"] = {"it_strip_nesw", friction=1, mousefactor=1}
+ti["q"] = {"it_strip_nesw", friction=1, adhesion=1}
 
 ti["w"] = {"st-wood"}
 ti["v"] = {"st-plain_move"}
