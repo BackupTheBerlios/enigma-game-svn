@@ -28,10 +28,10 @@ ti["F"] = {"st_fourswitch", target="Laser", action="orientate"}
 ti["t"] = {"st_switch", target="Laser", action="turn"}
 ti["b"] = {"st_switch", target="Laser", action="turnback"}
 
-ti["T"] = {"st-turnstile"}
-ti["e"] = {"st-turnstile-e"}
+ti["T"] = {"st_turnstile"}
+ti["e"] = {"st_turnstilearm_e"}
 
-ti["G"] = {"st-turnstile-green"}
+ti["G"] = {"st_turnstile_green"}
 ti["w"] = {"it_wrench"}
 
 

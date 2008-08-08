@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Rubberband new API" el:subtitle="" el:id="20080211ral151"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision: 1035 $" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1036 $" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2007 Ronald Lamprecht</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -24,8 +24,8 @@ ti["s"] = {"st-shogun", "him"}
 ti["w"] = {"st-wood", "you"}
 ti["r"] = {"it_rubberband", anchor2="you", length=4}
 ti["S"] = {"st_switch", target="killwood"}
-ti["T"] = {"st-turnstile"}
-ti["t"] = {"st-turnstile-n","it"}
+ti["T"] = {"st_turnstile"}
+ti["t"] = {"st_turnstilearm_n","it"}
 ti["R"] = {"it_rubberband", anchor2="it", length=4}
 ti["p"] = {"st-swap", "you"}
 ti["m"] = {"it_magnet_on", strength=-40}

@@ -20,7 +20,7 @@ wo["ConserveLevel"] = false
 ti["~"] = {"fl-water"}
 ti[" "] = {"fl-plank"}
 ti["c"] = {"it-crack3", brittleness=0}
-ti["^"] = {"st-oneway-n"}
+ti["^"] = {"st_oneway_n"}
 ti["1"] = {"ac-blackball", 0, 0.5}
 
 ti["x"] = {"st_oxyd", "island#"}
