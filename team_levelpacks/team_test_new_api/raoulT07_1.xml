@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Door 2 new API" el:subtitle="" el:id="raoult07"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email=""/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+ti[" "] = {"fl-plank"}
+ti["#"] = {"st-glass"}
+
+ti["A"] = {"st_door", flavor="a"}
+ti["B"] = {"st_door", flavor="b"}
+ti["C"] = {"st_door", flavor="c"}
+ti["D"] = {"st_door", flavor="d"}
+
+ti["a"] = {"st_door_a"}
+ti["b"] = {"st_door_b"}
+ti["c"] = {"st_door_c"}
+ti["d"] = {"st_door_d"}
+
+ti["1"] = {"st_door", flavor="a", name="doora"}
+ti["2"] = {"st_door", flavor="b", name="doorb"}
+ti["3"] = {"st_door", flavor="c", name="doorc"}
+ti["4"] = {"st_door", flavor="d", faces="ns", name="doord"}
+ti["5"] = {"st_door", flavor="d", faces="ew", name="doore"}
+
+ti["R"] = {"it_trigger", target="doora"}
+ti["S"] = {"it_trigger", target="doorb"}
+ti["T"] = {"it_trigger", target="doorc"}
+ti["U"] = {"it_trigger", target="doord"}
+ti["V"] = {"it_trigger", target="doore"}
+
+ti["r"] = {"it_sensor", target="doora", action="toggle"}
+ti["s"] = {"it_sensor", target="doorb", action="toggle"}
+ti["t"] = {"it_sensor", target="doorc", action="toggle"}
+ti["u"] = {"it_sensor", target="doord", action="toggle"}
+ti["v"] = {"it_sensor", target="doore", action="toggle"}
+
+ti["e"] = {"st_switch", target="doora", action="open"}
+ti["f"] = {"st_switch", target="doorb", action="open"}
+ti["g"] = {"st_switch", target="doorc", action="open"}
+ti["h"] = {"st_switch", target="doord", action="open"}
+ti["i"] = {"st_switch", target="doore", action="open"}
+
+ti["E"] = {"st_switch", target="doora", action="close"}
+ti["F"] = {"st_switch", target="doorb", action="close"}
+ti["G"] = {"st_switch", target="doorc", action="close"}
+ti["H"] = {"st_switch", target="doord", action="close"}
+ti["I"] = {"st_switch", target="doore", action="close"}
+
+ti["*"] = {"st_fourswitch", target="doora"}
+
+ti["O"] = {"st-blackballs"}
+
+ti["@"] = {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"                   e",
+" A  B  C  D        f",
+"                   g",
+" a  b  c  d        h",
+"                   i",
+"                    ",
+"         @         *",
+"                    ",
+" r  s  t  u  v     E",
+"                   F",
+" R  S  T  U  V     G",
+"                   H",
+" 1  2  3  4  5     I"
+})
+
+wo:shuffleOxyd()
+]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>
