@@ -31,15 +31,19 @@ ti["x"] = {"fl-rough-blue"} .. {"it-banana"} .. ti({"ac-bug", 0.7})
 ti["y"] = (ti({"fl-rough-blue"}) .. {"it-banana"}) .. {"ac-bug", name="buggy"}
 ti["s"] = {"st_switch", action="callback", target="doit"}
 ti["b"] = {"st_blocker", name="blocker"}
-ti["d"] = {"st-door_b", name="door#"}
+ti["d"] = {"st_door_b", name="door#"}
 ti["h"] = {"st_chess_black", name="chess#"}
 ti["o"] = {"st_oxyd"}
 ti["B"] = {"it-bag"}
 ti["T"] = {"st-thief"}
 ti["t"] = {"fl-thief"}
+ti["1"] = {"it-coffee", "coffee1"}
+ti["2"] = {"it-coffee", "coffee2"}
+ti["3"] = {"it-coffee", "coffee3"}
+ti["4"] = {"st_switch", target="lesscoffee"}
 
 w, h = wo(ti, " ", {
-"** ***              ",
+"** ***      123  4  ",
 "***      ",                  -- oops a line too short
 "* m          5    BB",
 "                    ",
@@ -59,7 +63,7 @@ p1 = po(12.3, 3.2)
 p2 = p1:grid()
 wo[p2] = {"ac-bug"}
 
-no["money"]:set({value=12})
+--no["money"]:set({value=12})
 no["money"]["action"] = {"anna#*","x",no["cherry#*"],no["blocker"]}
 
 tokens = no["money"]["action"]
@@ -121,6 +125,12 @@ function doit(value, sender)
     
 end
 
+coffeecount=1
+coffeegroup = grp(no["coffee1"],no["coffee2"],no["coffee3"]):shuffle()
+function lesscoffee()
+    coffeegroup[coffeecount]:kill()
+    coffeecount = coffeecount + 1
+end
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

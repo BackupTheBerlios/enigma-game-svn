@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Shogun new API" el:subtitle="" el:id="20080811ral258"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+wo["ShowMoves"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti["1"] = {"st_shogun_s"}
+ti["2"] = {"st_shogun_m", "medium"}
+ti["4"] = {"st_shogun_l"}
+ti["6"] = {"st_shogun_ml"}
+ti["7"] = {"st_shogun_sml", "sml_l", name_m="sml_m", name_s="sml_s"}
+ti["5"] = {"st_shogun_sl"}
+ti["3"] = {"st_shogun_sm"}
+
+ti["d"] = {"it_shogun_s", target="door_s"}
+ti["e"] = {"it_shogun_m", target="door_m"}
+ti["f"] = {"it_shogun_l", target="door_l"}
+
+ti["x"] = {"it_shogun_m", target="door_mx"} .. ti["3"]
+ti["y"] = {"it_shogun_l", target="door_ly"} .. ti["6"]
+
+ti["D"] = {"st_door_a", "door_s"}
+ti["E"] = {"st_door_a", "door_m"}
+ti["F"] = {"st_door_a", "door_l"}
+ti["X"] = {"st_door_a", "door_mx", state=OPEN}
+ti["Y"] = {"st_door_a", "door_ly"}
+
+ti["w"] = {"st-wood", "wood"}
+ti["v"] = {"st-wood", "wood2"}
+ti["u"] = {"st-wood", "wood3"}
+ti["r"] = {"st-rock1"}
+ti["s"] = {"st-swap"}
+ti["c"] = {"it-cherry"}
+
+ti["S"] = {"st_switch", target="kill_l"}
+ti["T"] = {"st_switch", target="kill_m"}
+ti["U"] = {"st_switch", target="kill_s"}
+
+
+
+ti["@"] = {"#ac-blackball"} 
+ti["."] = {"#ac-whiteball", "white"} 
+
+
+w, h = wo(ti, " ", {
+"                    ",
+"                x  X",
+"    c   r           ",
+"                y  Y",
+"    1   2   4       ",
+"                    ",
+" v u        s       ",
+"        w           ",
+"   7     f        F ",
+"    6    @          ",
+"     5   e        E ",
+"      3  d        D ",
+" .           STU    "
+})
+
+wo:add({"ot_wire", anchor1="wood", anchor2="medium"})
+wo:add({"ot_wire", anchor1="wood2", anchor2="sml_l"})
+wo:add({"ot_wire", anchor1="wood3", anchor2="sml_m"})
+wo:add({"ot_rubberband", anchor1="white", anchor2="sml_s"})
+
+function kill_l()
+    no["sml_l"]:message("kill")
+end
+function kill_m()
+    no["sml_m"]:message("kill")
+end
+function kill_s()
+    no["sml_s"]:message("kill")
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>

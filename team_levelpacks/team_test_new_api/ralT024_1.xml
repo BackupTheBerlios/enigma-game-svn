@@ -23,8 +23,8 @@ ti[" "] = {"fl-sahara"}
 ti["#"] = {"st-rock1"}
 ti["y"] = {"it-yinyang"}
 
-ti["D"] = {"st-door-v", "door1"}
-ti["d"] = {"st-door-v", "door2"}
+ti["D"] = {"st_door_d", "door1", faces="ew"}
+ti["d"] = {"st_door_d", "door2", faces="ew"}
 
 ti["L"] = {"st_laserswitch", target="door1", action="signal"}
 ti["I"] = {"st_laserswitch", inverse=true, target="door2", action="signal"}

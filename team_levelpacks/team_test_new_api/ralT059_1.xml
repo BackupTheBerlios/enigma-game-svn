@@ -23,7 +23,7 @@ ti["="] = {"st_door_d", "door#", faces="ns"}
 ti["|"] = {"st_door_d", "door#", faces="ew"}
 ti["-"] = {"st_door_d", "door#", faces="ns", state=OPEN}
 ti[":"] = {"st_door_d", "door#", faces="ew", state=OPEN}
-ti["A"] = {"st_door_a", "door#"}
+ti["A"] = {"st_door", "door#", flavor="a"}
 ti["a"] = {"st_door_a", "door#", state=OPEN}
 ti["B"] = {"st_door_b", "door#"}
 ti["b"] = {"st_door_b", "door#", state=OPEN}

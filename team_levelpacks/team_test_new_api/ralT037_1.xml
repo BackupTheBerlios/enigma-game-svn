@@ -20,7 +20,7 @@ wo["MagnetRange"] = 3
 
 ti[" "] = {"fl-sahara"}
 ti["~"] = {"fl-water"}
-ti["s"] = {"st-shogun", "him"}
+ti["s"] = {"st_shogun", "him"}
 ti["w"] = {"st-wood", "you"}
 ti["r"] = {"it_rubberband", anchor2="you", length=4}
 ti["S"] = {"st_switch", target="killwood"}
@@ -30,13 +30,14 @@ ti["R"] = {"it_rubberband", anchor2="it", length=4}
 ti["p"] = {"st-swap", "you"}
 ti["m"] = {"it_magnet_on", strength=-40}
 ti["1"] = {"#ac-blackball", "me"}
+ti["2"] = {"#ac-whiteball"}
 
 w, h = wo(ti, " ", {
 "                    ",
 "               t    ",
 "           R   T    ",
 "                    ",
-"     m  ~           ",
+"     m  ~  2        ",
 "                    ",
 "     S pw  s        ",
 "                    ",

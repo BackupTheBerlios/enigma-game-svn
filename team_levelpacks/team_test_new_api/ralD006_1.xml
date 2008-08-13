@@ -30,7 +30,7 @@ ti["T"] = {"it_trigger", target="polar"}
 ti["^"] = {"st_boulder", "boulder", orientation=NORTH}
 ti["F"] = {"st_fourswitch", target="boulder", action="orientate"}
 
-ti["D"] = {"st-door-v", "door"}
+ti["D"] = {"st_door_d", "door", faces="ew"}
 ti["B"] = {"it_blocker", "wall#"}
 ti["S"] = {"st_switch", target={"door", "wall#*"}}
 
