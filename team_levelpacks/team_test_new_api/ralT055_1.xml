@@ -33,6 +33,8 @@ ti["B"] = ti["~"] .. {"st-block"}
 ti["F"] = ti["~"] .. {"st-firebreak_move"}
 ti["P"] = ti["~"] .. {"st-plain_move"}
 
+ti["S"] = ti["~"] .. {"st_swap"}
+
 ti["1"] = {"#ac-blackball"} 
 
 
@@ -45,11 +47,11 @@ w, h = wo(ti, " ", {
 " s ~~~           .  ",
 "   ~~~           .  ",
 "   ~~W              ",
-"   ~~B              ",
-"   ~~F              ",
-"   ~~P              ",
-"   ~~~              ",
-"                    "
+"   ~~B         Sw   ",
+"   ~~F         Sb   ",
+"   ~~P         Sf   ",
+"   ~~~         Sp   ",
+"               ~    "
 })
 
 function flood(value, sender)

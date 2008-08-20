@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Pull,Swap,Brake new API" el:subtitle="" el:id="20080818ral371"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1267 $" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+wo["ShowMoves"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["#"] = {"st-rock1"}
+
+ti["P"] = {"st_pull"}
+ti["p"] = {"st_pull", "pull"}
+
+ti["S"] = {"st_swap"}
+ti["s"] = {"st_swap", "swap"}
+
+ti["B"] = {"st-brake"}
+ti["R"] = {"st_rotator", movable=true}
+ti["w"] = {"st-wood", "wood1"}
+ti["W"] = {"st-wood", "wood2"}
+ti["c"] = {"it_coin_s"}
+
+ti["g"] = {"st-grate1"}
+
+ti["L"] = {"st_laser_e", state=ON}
+ti["l"] = {"st_polarswitch"}
+
+ti["f"] = {"st_polarswitch", "pol1"}
+ti["F"] = {"st_polarswitch", "pol2"}
+
+ti["t"] = {"it_trigger", target="pol1"}
+ti["T"] = {"it_trigger", target="pol2"}
+
+ti["@"] = {"#ac-blackball"} 
+ti["."] = {"#ac-whiteball", "white"} 
+
+
+w, h = wo(ti, " ", {
+"              L fF c",
+"Ll                  ",
+"     P      S   tT  ",
+"                    ",
+"  #     PB    S  g  ",
+"  #                 ",
+"  #                 ",
+"          R         ",
+"   s   @       p    ",
+"        cc          ",
+"   W           w    ",
+"                    ",
+" .                  "
+})
+
+wo:add({"ot_wire", anchor1="pull", anchor2="wood1"})
+wo:add({"ot_wire", anchor1="swap", anchor2="wood2"})
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>

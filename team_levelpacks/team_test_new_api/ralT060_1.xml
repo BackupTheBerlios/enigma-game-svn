@@ -57,7 +57,6 @@ ti["U"] = {"st_switch", target="kill_s"}
 ti["@"] = {"#ac-blackball"} 
 ti["."] = {"#ac-whiteball", "white"} 
 
-
 w, h = wo(ti, " ", {
 "                    ",
 "                x  X",
