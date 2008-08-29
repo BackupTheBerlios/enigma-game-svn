@@ -21,7 +21,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 
-ti["s"] = {"st-swap"}
+ti["s"] = {"st_swap"}
 ti["W"] = {"st-wood"}
 
 ti["A"] = {"#ac-blackball"}

@@ -39,7 +39,7 @@ ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
 ti["S"] = ti[" "] .. {"st_panel", faces=""}
 ti["T"] = ti[" "] .. {"st_panel", cluster=2}
 ti["|"] = ti[" "] .. {"st_panel", connections="sn"}
-ti["s"] = ti[" "] .. {"st-swap"}
+ti["s"] = ti[" "] .. {"st_swap"}
 
 ti["x"] = ti[" "] .. {"st_panel", "dynamic", connections=""}
 ti["a"] = ti[" "] .. {"st_switch", "north", target="change"}
@@ -47,7 +47,7 @@ ti["b"] = ti[" "] .. {"st_switch", "east", target="change"}
 ti["c"] = ti[" "] .. {"st_switch", "south", target="change"}
 ti["d"] = ti[" "] .. {"st_switch", "west", target="change"}
 
-ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
+ti["A"] = (ti[" "] .. {"st_brake"}) .. {"#ac-blackball"}
 
 ti["D"] = ti[" "] .. {"st_switch", target="deletion"}
 ti["E"] = ti[" "] .. {"st_switch", target="recluster"}

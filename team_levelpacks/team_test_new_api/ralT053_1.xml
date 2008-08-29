@@ -24,7 +24,7 @@ ti["y"] = {"it-yinyang"}
 ti["."] = {"st-wood"}
 ti["w"] = {"st-wood", "w"}
 ti["s"] = {"st_scissors"}
-ti["S"] = {"st-swap"}
+ti["S"] = {"st_swap"}
 ti["r"] = {"st_rubberband"}
 ti["R"] = {"it_rubberband", anchor2="a3", length=3, strength=50, threshold=1.5}
 ti["p"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=4, min=4}

@@ -29,7 +29,7 @@ ti["X "] = {"st_oxyd"}
 ti["G "] = {"st-grate1"}
 
 ti["2 "] = {"it_coin_s"}
-ti["s "] = {"it-seed"}
+ti["s "] = {"it_seed"}
 ti["c "] = {"it-cherry"}
 ti["h "] = {"it_hammer"}
 

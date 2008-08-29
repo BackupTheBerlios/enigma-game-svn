@@ -52,6 +52,22 @@ ti["E"] = ti[" "] .. {"st_coinslot", name="csx", interval_s=1, target="la5", act
 ti["F"] = ti[" "] .. {"st_coinslot", name="csy", interval_m=1, target="la6", action="toggle"}
 ti["G"] = ti[" "] .. {"st_coinslot", name="csz", interval_l=1, target="la7", action="toggle"}
 
+ti["H"] = ti[" "] .. {"st_coinslot", interval_s=COIN_IGNORE , target="la8", action="toggle"}
+ti["I"] = ti[" "] .. {"st_coinslot", interval_m=COIN_IGNORE , target="la9", action="toggle"}
+ti["J"] = ti[" "] .. {"st_coinslot", interval_l=COIN_IGNORE , target="la10", action="toggle"}
+
+ti["h"] = ti[" "] .. {"st_laser_e", name="la8"}
+ti["i"] = ti[" "] .. {"st_laser_e", name="la9"}
+ti["j"] = ti[" "] .. {"st_laser_e", name="la10"}
+
+ti["1"] = ti[" "] .. {"st_coinslot", interval_s=COIN_REJECT , target="la11", action="toggle"}
+ti["2"] = ti[" "] .. {"st_coinslot", interval_m=COIN_REJECT , target="la12", action="toggle"}
+ti["3"] = ti[" "] .. {"st_coinslot", interval_l=COIN_REJECT , target="la13", action="toggle"}
+
+ti["4"] = ti[" "] .. {"st_laser_w", name="la11"}
+ti["5"] = ti[" "] .. {"st_laser_w", name="la12"}
+ti["6"] = ti[" "] .. {"st_laser_w", name="la13"}
+
 ti["W"] = {"st-wood"}
 
 w, h = wo(ti, " ", {
@@ -64,9 +80,9 @@ w, h = wo(ti, " ", {
 "     YYYYYYYYYY     ",
 "          ZZZZZZZZZZ",
 "                    ",
-" xyz     El         ",
-" yzx     Fm         ",
-" zxy     Gn         ",
+" xyz     El  41  Hh ",
+" yzx     Fm  52  Ii ",
+" zxy     Gn  63  Jj ",
 "                    "
 })
 

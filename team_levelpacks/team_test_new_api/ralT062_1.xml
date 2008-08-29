@@ -29,7 +29,7 @@ ti["L"] = {"st_laser_n", "laser"}
 
 ti["V"] = {"st_volcano"}
 ti["v"] = {"st_volcano_active"}
-ti["u"] = {"st_volcano_inactive", "volcano", secure=true}
+ti["u"] = {"st_volcano_idle", "volcano", secure=true}
 ti["S"] = {"st_switch", target="volcano"}
 
 ti["B"] = {"st_boulder_s"}

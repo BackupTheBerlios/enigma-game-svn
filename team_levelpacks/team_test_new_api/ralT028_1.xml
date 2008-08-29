@@ -22,44 +22,49 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["#"] = {"st-rock1"}
 
-ti["o"] = {"st_oxyd"}
-ti["O"] = {"st_oxyd", "o#", target="enlighten"}
-ti["D"] = {"st_oxyd_d", "o#", target="enlighten"}
+ti["z"] = {"st_oxyd"}
+ti["Z"] = {"st_oxyd", "o%%", target="enlighten"}
+--ti["D"] = {"st_oxyd_d", "o#", target="enlighten"}
 ti["F"] = {"st_oxyd", oxydcolor=-3, noshuffle=true}
 ti["B"] = {"st_oxyd", "bold", oxydcolor=-4, noshuffle=true}
-ti["S"] = {"st_switch", target="o#1"}
-ti["T"] = {"st_switch", target="o#2", action="open"}
-ti["U"] = {"st_switch", target="o#2", action="close"}
-ti["V"] = {"st_switch", target="o#3", action="signal"}
+ti["J"] = {"st_switch", target="o%1"}
+ti["T"] = {"st_switch", target="o%2", action="open"}
+ti["U"] = {"st_switch", target="o%2", action="close"}
+ti["V"] = {"st_switch", target="o%3", action="signal"}
 ti["W"] = {"st_switch", target="statetest"}
 ti["C"] = {"st_switch", target="bold", action="signal"}
-ti["L"] = {"st_laser_n", "Laser#"}
-ti["l"] = {"st_laser_n", "laser#"}
+ti["K"] = {"st_laser_n", "Laser%%"}
+ti["k"] = {"st_laser_n", "laser%%"}
 ti["b"] = {"st_boulder_s"}
-ti["s"] = {"st-swap"}
-ti["X"] = {"st_switch", target="o#1", action="shuffle"}
-ti["Y"] = {"st_switch", target="o#1", action="closeall"}
-ti["1"] = (ti[" "] .. {"it_magicwand"}) .. {"#ac-blackball"}
+ti["s"] = {"st_swap"}
+ti["X"] = {"st_switch", target="o%1", action="shuffle"}
+ti["Y"] = {"st_switch", target="o%1", action="closeall"}
+ti["@"] = (ti[" "] .. {"it_magicwand"}) .. {"#ac-blackball"}
 
-ti["w"] = {"st_switch", target="Laser#7", action="toggle"}
-ti["f"] = {"st-fart"}
+ti["w"] = {"st_switch", target="Laser%7", action="toggle"}
+ti["f"] = {"st_fart"}
+ti["h"] = {"it_hammer"}
+ti["d"] = {"it-dynamite"}
+ti["E"] = {"st-bombs"}
 
-ti["p"] = {"st_oxyd", "p#"}
+ti["t"] = {"st_oxyd", "t#"}
 
-w, h = wo(ti, " ", {
+myresolver = res.autotile(ti, {"L", "R", "K"}, {"l", "q", "k"},
+    {"1","6", "Z"})
+w, h = wo(myresolver, " ", {
 "                    ",
-"  Ll Ll Ll Ll Ll Ll ",
+"  Ll Mm Nn Oo Pp Qq ",
 "                    ",
-"  O  O  O  O  sD O  ",
+"  1  2  3  4  s5 6  ",
 "                    ",
-"  S  TU V  W        ",
+"  J  TU V  W        ",
 "                    ",
-"  o   1             ",
+"  z   @ hd     f    ",
 "f                   ",
-"  os   ps           ",
-"    f    p          ",
+"  zs   ts      f    ",
+"E   f    t          ",
 "  F      C Bs       ",
-"    Y  X      wL b  ",
+"    Y  X      wR  b  ",
 "                    ",
 "                    ",
 "                    ",
@@ -74,7 +79,7 @@ w, h = wo(ti, " ", {
 "                    "
 })
 
-wo:shuffleOxyd({no["p#*"],min=1})
+wo:shuffleOxyd({no["t#*"],min=1})
 
 for col = 0, 11 do
   for j, fla in pairs({"a", "b", "c", "d"}) do
@@ -85,7 +90,7 @@ end
 function statetest(value)
     local newstate = 0
     if value then newstate = 1 end
-    no["o#4"]["state"] = newstate
+    no["o%4"]["state"] = newstate
 end
 
 function enlighten(value, sender)
@@ -94,10 +99,10 @@ function enlighten(value, sender)
     
     -- all pair opened oxyds with the second laser
     for i=1,6 do
-        if no["o#"..i]["state"] == 2 then
-            no["laser#"..i]:on()
+        if no["o%"..i]["state"] == 2 then
+            no["laser%"..i]:on()
         else
-            no["laser#"..i]:off()
+            no["laser%"..i]:off()
         end
     end
 end

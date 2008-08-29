@@ -2,8 +2,8 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Test Pull,Swap,Brake new API" el:subtitle="" el:id="20080818ral371"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision: 1267 $" el:status="experimental"/>
+      <el:identity el:title="Test Mail new API" el:subtitle="" el:id="20080827ral227"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -16,59 +16,47 @@
     </el:info>
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
-wo["ShowMoves"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["#"] = {"st-rock1"}
 
-ti["P"] = {"st_pull"}
-ti["p"] = {"st_pull", "pull"}
+ti["-"] = {"it_pipe_ew"}
+ti["|"] = {"it_pipe_ns"}
+ti["1"] = {"it_pipe_sw"}
+ti["2"] = {"it_pipe_es"}
+ti["3"] = {"it_pipe_ne"}
+ti["4"] = {"it_pipe_nw"}
+ti["p"] = {"it_pipe"}
+ti["w"] = {"it_pipe", connections="w"}
 
-ti["S"] = {"st_swap"}
-ti["s"] = {"st_swap", "swap"}
+ti["N"] = {"st_mail_n"}
+ti["W"] = {"st_mail_w"}
 
-ti["B"] = {"st_brake"}
-ti["R"] = {"st_rotator", movable=true}
-ti["w"] = {"st-wood", "wood1"}
-ti["W"] = {"st-wood", "wood2"}
-ti["c"] = {"it_coin_s"}
-
-ti["g"] = {"st-grate1"}
-
-ti["L"] = {"st_laser_e", state=ON}
-ti["l"] = {"st_polarswitch"}
-
-ti["f"] = {"st_polarswitch", "pol1"}
-ti["F"] = {"st_polarswitch", "pol2"}
-
-ti["t"] = {"it_trigger", target="pol1"}
-ti["T"] = {"it_trigger", target="pol2"}
-
+ti["h"] = {"it_hammer"}
+ti["m"] = {"it_magicwand"}
+ti["b"] = {"st_brake"}
 ti["d"] = {"it-dynamite"}
 ti["E"] = {"st-bombs"}
 
 ti["@"] = {"#ac-blackball"} 
 ti["."] = {"#ac-whiteball", "white"} 
 
-
 w, h = wo(ti, " ", {
-"              L fF c",
-"Ll                  ",
-"     P      S   tT  ",
+"E ddd               ",
 "                    ",
-"  #     PB    S  g  ",
-"  #                 ",
-"  #                E",
-"          R        d",
-"   s   @       p   d",
-"        cc         d",
-"   W           w   d",
+"                    ",
+"     W     N        ",
+"                    ",
+"                    ",
+"   |- 1234 pw       ",
+"                    ",
+"          @         ",
+"                    ",
+"      hmb           ",
 "                    ",
 " .                  "
 })
 
-wo:add({"ot_wire", anchor1="pull", anchor2="wood1"})
-wo:add({"ot_wire", anchor1="swap", anchor2="wood2"})
+
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

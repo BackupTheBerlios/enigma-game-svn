@@ -35,7 +35,7 @@ ti["v"] = {"it_vortex", destination="@@coin#*"}
 
 ti["1"] = ti["f"] .. {"#ac-blackball"} 
 
-ti["r"] = {"st-brake"}
+ti["r"] = {"st_brake"}
 
 w, h = wo(ti, " ", {
 " B #        c       ",

@@ -40,7 +40,7 @@ ti["M"] = ti["c"] .. ti["l"]
 ti["T"] = {"st-turnstile"}
 ti["e"] = {"st-turnstile-e"}
 
-ti["s"] = {"st-swap"}
+ti["s"] = {"st_swap"}
 ti["i"] = {"st-stoneimpulse_movable"}
 ti["w"] = {"st-wood"}
 ti["h"] = {"it_hammer"}

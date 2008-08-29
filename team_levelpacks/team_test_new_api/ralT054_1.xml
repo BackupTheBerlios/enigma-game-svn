@@ -30,8 +30,8 @@ ti["w"] = {"st-wood"}
 ti["template_w"] = {"st-wood", "w%%"}
 ti["template_b"] = {"st-brownie", "b%%"}
 ti["s"] = {"st_scissors"}
-ti["S"] = {"st-swap"}
-ti["U"] = {"st-pull", "pull"}
+ti["S"] = {"st_swap"}
+ti["U"] = {"st_pull", "pull"}
 ti["R"] = {"st_rotator_cw", movable=true}
 ti["Q"] = {"st_rotator_cw", "rotcw", movable=true}
 ti["q"] = {"st_rotator_ccw", "rotccw", movable=true}

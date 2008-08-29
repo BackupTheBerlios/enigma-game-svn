@@ -27,7 +27,7 @@ ti["S"] = {"st_switch", target="killwood"}
 ti["T"] = {"st_turnstile"}
 ti["t"] = {"st_turnstilearm_n","it"}
 ti["R"] = {"it_rubberband", anchor2="it", length=4}
-ti["p"] = {"st-swap", "you"}
+ti["p"] = {"st_swap", "you"}
 ti["m"] = {"it_magnet_on", strength=-40}
 ti["1"] = {"#ac-blackball", "me"}
 ti["2"] = {"#ac-whiteball"}

@@ -51,7 +51,7 @@ ti["%"] = {"st_window", faces=""}
 ti["w"] = {"it_wrench"}
 ti["i"] = {"it_hammer"}
 ti["r"] = {"it-ring"}
-ti["s"] = {"it-seed"}
+ti["s"] = {"it_seed"}
 ti["k"] = {"it-coffee"}
 ti["K"] = {"it-cherry"}
 ti[":"] = {"it-dynamite"}

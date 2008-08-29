@@ -23,7 +23,7 @@ ti[" "] = {"fl-sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 ti["~"] = ti({"fl-rough-blue"}) .. {"st-chameleon"}
 
-ti["s"] = ti[" "] .. {"st-swap"}
+ti["s"] = ti[" "] .. {"st_swap"}
 
 ti["2"] = ti[" "] .. {"st_panel", cluster=2}
 
@@ -32,7 +32,7 @@ ti["Q"] = ti[" "] .. {"st_panel_n"}
 ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
 
 
-ti["A"] = (ti[" "] .. {"it-brake"}) .. {"#ac-blackball"}
+ti["A"] = (ti[" "] .. {"st_brake"}) .. {"#ac-blackball"}
 
 
 ti["w"] = ti[" "] .. {"st_switch", target="Laser", action="toggle"}
@@ -40,7 +40,7 @@ ti["k"] = ti[" "] .. {"st_laserswitch"}
 ti["L"] = ti[" "] .. {"st_laser_n", "Laser"}
 
 ti["+"] = ti[" "] .. {"st-grate1"}
-ti["."] = ti[" "] .. {"it-seed"}
+ti["."] = ti[" "] .. {"it_seed"}
 
 
 w, h = wo(ti, " ", {

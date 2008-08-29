@@ -51,7 +51,7 @@ ti["W"] = ti[" "] .. {"st-wood"}
 ti["U"] = ti[" "] .. {"st-block"}
 ti["V"] = ti[" "] .. {"st-brownie"}
 ti["u"] = ti[" "] .. {"it-spring1"}
-ti["v"] = ti[" "] .. {"it-brake"}
+ti["v"] = ti[" "] .. {"st_brake"}
 ti["Y"] = ti[" "] .. {"st_death"}
 ti["z"] = ti[" "] .. {"it-dynamite"}
 
