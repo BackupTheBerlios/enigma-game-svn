@@ -59,8 +59,8 @@ ti["W"] = {"st_turnstile_red", "orientationTurnstile"}
 ti["F"] = {"st_fourswitch", "orientationFourswitch"}
 ti["f"] = {"st_switch", target="doSync"}
 
-ti["h"] = {"it-tinyhollow"}
-ti["H"] = {"it-hollow"}
+ti["h"] = {"it_meditation_dent"}
+ti["H"] = {"it_meditation"}
 
 
 ti["1"] = ti["y"] .. {"#ac-blackball"}

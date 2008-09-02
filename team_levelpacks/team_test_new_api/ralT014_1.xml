@@ -117,7 +117,7 @@ function doit(value, sender)
         crazy_group = no.buggy["opendoors"]
         --crazy_group:kill()
         crazy_group:close()
-        wo[no.buggy["mypos"]] = {"it-hollow"}
+        wo[no.buggy["mypos"]] = {"it_meditation"}
         chess_grp2 = grp({no.money, no["chess#1"], no.money})
         chess_special = chess_grp * chess_grp2
         chess_special:kill()

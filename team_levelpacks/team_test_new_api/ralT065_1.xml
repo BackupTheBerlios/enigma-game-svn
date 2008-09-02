@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Meditation new API" el:subtitle="" el:id="20080829ral370"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1278 $" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+wo["MeditationForce"] = 2.0
+
+ti[" "] = {"fl-sahara"}
+
+ti["."] = {"it_meditation", essential=INDISPENSIBLE}
+ti[";"] = {"it_meditation", essential=DISPENSIBLE}
+
+ti["-"] = {"it_meditation_hill", "hilli#", essential=INDISPENSIBLE}
+ti["="] = {"it_meditation_bump", "bumpd#", essential=DISPENSIBLE}
+
+ti["w"] = {"st-wood"}
+ti["d"] = {"it-dynamite"}
+ti["?"] = {"it-spade"}
+ti["S"] = {"st_switch", target="hilli#*", action="flip"}
+ti["s"] = {"st_switch", target="bumpd#*", action="signal"}
+
+ti["@"] = {"#ac-whiteball-small", player=0} 
+ti["1"] = {"#ac-blackball"} 
+
+w, h = wo(ti, " ", {
+"                    ",
+"                    ",
+"                    ",
+"     .    ;    ;    ",
+"                    ",
+"                    ",
+"       @  ?  @      ",
+"                -   ",
+"    @     @       S ",
+"    .w    d     -   ",
+"                    ",
+"         s  =  =  s ",
+"                    "
+})
+
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
