@@ -2,13 +2,13 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Map Handling Luatools" el:subtitle="" el:id="maphandling_andreas"/>
-      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:identity el:title="Test libmap" el:subtitle="" el:id="test_libmap"/>
+      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
       <el:author  el:name="Andreas Lochmann" el:email=""/>
       <el:copyright>Copyright © 2008 Andreas Lochmann</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
       <el:compatibility el:enigma="1.10">
-        <el:dependency el:path="lib/libluatools" el:id="lib/libluatools" el:release="1" el:preload="true"/>
+        <el:dependency el:path="lib/libmap" el:id="lib/libmap" el:release="1" el:preload="true"/>
       </el:compatibility>
       <el:modes el:easy="false" el:single="true" el:network="false"/>
       <el:comments>
@@ -28,12 +28,32 @@ ti["E "] = {"fl-inverse"}
 ti["F "] = {"fl-rough-blue"}
 ti["G "] = {"fl-rough"}
 ti["H "] = {"fl-floor_001"}
+ti["I "] = {"fl-abyss"}
+ti["J "] = {"fl-water"}
 
-ti[" @"] = {"#ac-blackball"}
-ti[" d"] = {"st_death"}
+ti[" "] = {"fl-sahara"}
+ti["A"] = {"fl-leaves"}
+ti["B"] = {"fl-swamp"}
+ti["C"] = {"fl-metal"}
+ti["D"] = {"fl-black"}
+ti["E"] = {"fl-inverse"}
+ti["F"] = {"fl-rough-blue"}
+ti["G"] = {"fl-rough"}
+ti["H"] = {"fl-floor_001"}
+ti["R"] = {"fl-red"}
+
+ti[" @"] = {"#ac-blackball", "marble"}
+ti[" d"] = {"st_death", "death#"}
 ti[" 1"] = {"it_wrench"}
+ti[" S"] = {"st_switch", target = "call_switch1"}
+ti[" T"] = {"st_switch", target = "call_switch2"}
+ti[" U"] = {"st_switch", target = "call_switch3"}
 
-floor = {
+ti["@"] = {"#ac-blackball", "marble"}
+ti["d"] = {"st_death", "death#"}
+ti["1"] = {"it_wrench", "wrench#"}
+
+map1 = wo:newMap(" ", {
 "                    ",
 "         CCCC  DDDD ",
 "         CCCC  DDDD ",
@@ -46,45 +66,74 @@ floor = {
 "                    ",
 "                    ",
 "                    ",
-"                    "}
+"                    "})
 
-rest = {
-"                    ",
+map2a = wo:newMap(" ", {
+"1",
+" ",
+"   ",
+"",
+"",
+"     @"})
+
+map2b = wo:newMap(" ", {
+"",
+"          1   ",
+"          1",
+"     d    1",
+"          1   ",
+"          1   "})
+
+map2c = wo:newMap(" ", {
 "                1   ",
-"         d      1   ",
-"                1   ",
-"                1   ",
-"     @          1   ",
-"          d     1   ",
-"                1   ",
+"   d            1   ",
 "                1   ",
 "                1   ",
 "           d    1",
 "                1   ",
-"                    "}
+"1                  d"})
 
-new_map = luatools.fuse_map_layers(floor, rest)
+map2 = (map2a .. map2b) + map2c
+map3 = map1 * map2
+map3[{0,0}] = "BS"
+map3[{0, map3.height-1}] = "BT"
+map3[{map3.width-1, 0}] = "BU"
 
-luatools.print_map(floor, "|")
-print("")
-luatools.print_map(rest, "|")
-print("")
-luatools.print_map(new_map, "|")
-print("")
+with_bars = map3 * "|"
+with_bars:print(true, "|")
 
-layers = luatools.split_map_layers(2, new_map)
+levelw, levelh = wo(res.composer(ti), map3)
 
-for _, layer in pairs(layers) do
-  luatools.print_map(layer, "|")
-  print("")
+rect_map = wo:newMap("-", map1)
+function call_switch1()
+  wo:drawMap(ti, {0, 0}, "-", wo:newMap(" ", levelw, levelh))
+  if (rect_map.width > 3) and (rect_map.height > 3) then
+    local sub_map = rect_map:sub({1,1}, rect_map.width-3, rect_map.height-3)
+    rect_map = wo:newMap("R", rect_map.width - 1, rect_map.height - 1)
+    rect_map.defaultkey = "-"
+    rect_map:paste(sub_map, {1, 1})
+  end
+  wo:drawMap(ti, no["marble"], rect_map)
 end
 
-concatted = luatools.concat_maps_vertically(floor, rest)
-luatools.print_map(concatted, "|")
-print("")
+count = 0
+decomap = wo:newMap("-", {"I--J", "I--J", "I--I"}) * " "
+alldirs = {MAP_IDENT,MAP_ROT_CW,MAP_ROT_180,MAP_ROT_CCW,MAP_MIRROR_BACKSLASH,
+           MAP_MIRROR_HORIZONTAL,MAP_MIRROR_SLASH,MAP_MIRROR_VERTICAL}
+function call_switch2()
+  dir = alldirs[count % #alldirs + 1]
+  wo:drawMap(res.composer(ti), {0, 0}, "-", map1)
+  for obj in no["death#*"] do
+    wo:drawMap(res.composer(ti), obj - {1,1}, decomap^dir)
+  end
+  count = count + 1
+end
 
-w, h = wo(res.composer(ti), "  ", new_map)
-
+function call_switch3()
+  map1:replace("G", "A")
+  wo:drawMap(res.composer(ti), {0,0}, map1)
+end
+  
   ]]></el:luamain>
     <el:i18n>
      <el:string el:key="title">
