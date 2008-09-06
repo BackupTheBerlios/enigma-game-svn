@@ -27,6 +27,9 @@ ti[";"] = {"it_meditation", essential=DISPENSIBLE}
 ti["-"] = {"it_meditation_hill", "hilli#", essential=INDISPENSIBLE}
 ti["="] = {"it_meditation_bump", "bumpd#", essential=DISPENSIBLE}
 
+ti["("] = {"it_meditation_volcano"}
+ti[")"] = {"it_meditation_caldera"}
+
 ti["w"] = {"st-wood"}
 ti["d"] = {"it-dynamite"}
 ti["?"] = {"it-spade"}
@@ -38,7 +41,7 @@ ti["1"] = {"#ac-blackball"}
 
 w, h = wo(ti, " ", {
 "                    ",
-"                    ",
+" (  )   (  )   (  ) ",
 "                    ",
 "     .    ;    ;    ",
 "                    ",
