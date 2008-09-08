@@ -148,25 +148,130 @@ lotm_archive_data[16] = {
   position_num   = "5069"
 }
 
+lotm_archive_data[17] = {
+  date           = { month = 9, year = 2008 },
+  chronological  = 17,
+  name           = "River of Challenges",
+  author         = "Lukas Sch&uuml;ller",
+  position       = "VI/61",
+  position_num   = "6061"
+}
+
+-- Further levels standing data
+-- (no need to change these)
+
+level_archive_data = {}
+
+level_archive_data[1] = {
+  link = "$$eoya_2007$$#best_onescreener",
+  occasion = "Best Onescreener 2007",
+  name = "Doors Galore",
+  author = "Ray Wick",
+  position = "IV/9",
+  position_num = "4009"
+}
+
+level_archive_data[2] = {
+  link = "$$eoya_2007$$#best_levelseries",
+  occasion = "Best Levelseries 2007",
+  name = "Gods of Enigma",
+  author = "moonpearl",
+  position = "V/67",
+  position_num = "5067"
+}
+
+level_archive_data[3] = {
+  link = "$$eoya_2007$$#best_levelseries",
+  occasion = "Best Levelseries 2007",
+  name = "Gods of Enigma II",
+  author = "moonpearl",
+  position = "V/69",
+  position_num = "5069"
+}
+
+level_archive_data[4] = {
+  link = "$$eoya_2007$$#best_design",
+  occasion = "Best Design 2007",
+  name = "The Aztec Temple",
+  author = "Dominik Lehmann",
+  position = "VI/100",
+  position_num = "6100"
+}
+
+level_archive_data[5] = {
+  link = "$$eoya_2007$$#funniest_level",
+  occasion = "Funniest Level 2007",
+  name = "Advancing",
+  author = "Joseph Dunne",
+  position = "VII/23",
+  position_num = "7023"
+}
+
+level_archive_data[6] = {
+  link = "$$eoya_2007$$#funniest_level",
+  occasion = "Funniest Level 2007",
+  name = "Mountain Climbing",
+  author = "Joseph Dunne",
+  position = "VII/22",
+  position_num = "7022"
+}
+
+level_archive_data[7] = {
+  link = "$$eoya_2007$$#best_yinyang",
+  occasion = "Best Yin-Yang Level 2007",
+  name = "Teamwork",
+  author = "Jacob Scott",
+  position = "III/18",
+  position_num = "3018"
+}
+
+level_archive_data[8] = {
+  link = "$$eoya_2007$$#loty",
+  occasion = "Level of the Year 2007",
+  name = "Island Labyrinth",
+  author = "Jacob Scott",
+  position = "V/100",
+  position_num = "5100"
+}
+
+level_archive_data[9] = {
+  link = "$$april_2008$$",
+  occasion = "April Fool's Day Joke 2008",
+  name = "The Three Clouds",
+  author = "Kate Lever",
+  position = "VII+/25",
+  position_num = "7925"
+}
+
+level_archive_data[10] = {
+  link = "$$level_andreas11$$",
+  occasion = "Independent Level Article 8/2008",
+  name = "Patterns of Impulse",
+  author = "Andreas Lochmann",
+  position = "IV/44",
+  position_num = "4044"
+}
+
 -- LotM variable data
 -- format: Level Title, current_rating, current_votes, additional text
 
-lotm_rating(    "Island Labyrinth",  9.31,  13,  "(1 down)")
-lotm_rating(  "Pneumatic Delivery",  8.19,  16,  "(1 up)")
-lotm_rating(    "The Aztec Temple",  9.00,  11,  "")
-lotm_rating("Labyrinth of Puzzles",  8.82,  17,  "(1 up)")
-lotm_rating(           "Elaborate",  8.64,  11,  "(2 up)")
-lotm_rating(             "Houdini",  9.28,   8,  "")
-lotm_rating(           "Tool Time",  8.17,  23,  "(5 down)")
-lotm_rating(         "Quadropolis",  9.20,  10,  "")
-lotm_rating(      "Big Adventures",  8.42,  24,  "(1 up)")
-lotm_rating(      "Temple of Gold",  9.38,   8,  "(1 up)")
-lotm_rating(      "Puzzle Puzzles",  8.63,   8,  "(2 down)")
-lotm_rating(      "Psycho Pushing",  8.18,  11,  "(1 up)")
-lotm_rating(  "Turnstiles for Two",  9.00,   5,  "")
-lotm_rating(     "Pleasure Garden",  8.43,  14,  "(1 up)")
-lotm_rating(      "Block its way!",  8.00,  17,  "")
-lotm_rating(   "Gods of Enigma II",  8.35,  17,  "<b>(newcomer)</b>")
+lotm_rating(    "Island Labyrinth",  9.29,  14,  "")
+lotm_rating(  "Pneumatic Delivery",  8.18,  17,  "(1 down)")
+lotm_rating(    "The Aztec Temple",  9.08,  13,  "")
+lotm_rating("Labyrinth of Puzzles",  8.78,  18,  "(1 up)")
+lotm_rating(           "Elaborate",  8.62,  13,  "(1 up)")
+lotm_rating(             "Houdini",  9.24,   9,  "")
+lotm_rating(           "Tool Time",  8.21,  24,  "(2 up)")
+lotm_rating(         "Quadropolis",  9.18,  11,  "")
+lotm_rating(      "Big Adventures",  8.40,  25,  "(1 up)")
+lotm_rating(      "Temple of Gold",  9.30,  10,  "")
+lotm_rating(      "Puzzle Puzzles",  8.56,   9,  "(2 down)")
+lotm_rating(      "Psycho Pushing",  8.17,  12,  "(1 down)")
+lotm_rating(  "Turnstiles for Two",  8.83,   6,  "(1 down)")
+lotm_rating(     "Pleasure Garden",  8.38,  16,  "(2 down)")
+lotm_rating(      "Block its way!",  8.00,  18,  "")
+lotm_rating(   "Gods of Enigma II",  8.39,  18,  "(1 up)")
+lotm_rating( "River of Challenges",  8.36,  11,  "<b>(newcomer)</b>")
 
 -- Don't forget to adjust the archive dates:
 
