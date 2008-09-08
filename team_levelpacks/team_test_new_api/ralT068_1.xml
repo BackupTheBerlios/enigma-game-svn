@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Bridges new API" el:subtitle="" el:id="20080907ral929"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti["-"] = {"fl_bridge_bw", "bridge#"}
+ti["|"] = {"fl_bridge_bn", "bridge#"}
+ti["."] = {"fl_bridge_gc", "bridge#"}
+
+ti["="] = {"fl_bridge_bw", "closed", state=CLOSED}
+ti["!"] = {"fl_bridge", state=CLOSED, flavor="bn"}
+ti[":"] = {"fl_bridge_gc", state=CLOSED}
+
+ti["S"] = {"st_switch", target="@bridge#*"}
+ti["T"] = {"st_switch", target="closed", action_1="open", action_0="close"}
+
+ti["w"] = {"st-wood"}
+ti["g"] = {"st-glass_move"}
+ti["c"] = {"it-cherry"}
+ti["s"] = {"it-spring1"}
+ti["p"] = {"st_pull"}
+ti["W"] = {"st_window_ew", secure=true}
+ti["h"] = {"st-puzzle-hollow"}
+ti["H"] = {"st-puzzle-ew"}
+
+ti[";"] = ti["."] .. ti["g"]
+
+ti["b"] = {"st_brake"}
+
+ti["@"] = {"#ac-blackball"} 
+
+w, h = wo(ti, " ", {
+"    S    S     S    ",
+"                    ",
+"    -    |     .    ",
+"                    ",
+"    p  w   hhH      ",
+"    W    g     g    ",
+"                    ",
+"  s    b    ccc   ; ",
+"          @         ",
+"                    ",
+"    =     !    :    ",
+"                    ",
+"    T               "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>

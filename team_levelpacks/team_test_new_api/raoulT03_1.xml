@@ -63,6 +63,7 @@ ti["F"] = {"st_fourswitch", target="pullwindow", action="inner_pull"}
 ti["G"] = {"st_window", faces="ws", "pullwindow"}
 ti["L"] = {"st_laser_w", "laser"}
 ti["S"] = {"st_switch", target="laser"}
+ti["M"] = {"st-wood"}
 
 
 ti["x"] = ti["C"] .. {"it_vortex", "vortexx", destination="vortexy"}
@@ -85,11 +86,11 @@ w, h = wo(ti, " ", {
 "#  sssssssssi    rk#",
 "#  :::::          k#",
 "#                ' #",
-"#  a     d     e   #",
-"#                  #",
-"#  a     b     -   #",
-"#                  #",
-"#  a     +     H   #",
+"#  a   d       e   #",
+"#          v       #",
+"#  a   b  h2h  -   #",
+"#          v       #",
+"#  a   +     M H   #",
 "#                  #",
 "#                  #",
 "#                  #",

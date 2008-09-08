@@ -46,6 +46,7 @@ ti["T"] = {"it_trigger", target="pol2"}
 
 ti["d"] = {"it-dynamite"}
 ti["E"] = {"st-bombs"}
+ti["|"] = {"it-spring1"}
 
 ti["@"] = {"#ac-blackball"} 
 ti["."] = {"#ac-whiteball", "white"} 
@@ -58,7 +59,7 @@ w, h = wo(ti, " ", {
 "                    ",
 "  #     PB    S  g  ",
 "  #                 ",
-"  #                E",
+"  #   |            E",
 "          R        d",
 "   s   @       p   d",
 "        cc         d",
