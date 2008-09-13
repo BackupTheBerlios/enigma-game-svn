@@ -27,20 +27,22 @@ ti[";"] = {"it_meditation", essential=DISPENSIBLE}
 ti["-"] = {"it_meditation_hill", "hilli#", essential=INDISPENSIBLE}
 ti["="] = {"it_meditation_bump", "bumpd#", essential=DISPENSIBLE}
 
-ti["("] = {"it_meditation_volcano"}
-ti[")"] = {"it_meditation_caldera"}
+ti["("] = {"it_meditation_volcano", "vol#"}
+ti[")"] = {"it_meditation_caldera", "vol#"}
 
 ti["w"] = {"st-wood"}
 ti["d"] = {"it-dynamite"}
 ti["?"] = {"it-spade"}
 ti["S"] = {"st_switch", target="hilli#*", action="flip"}
 ti["s"] = {"st_switch", target="bumpd#*", action="signal"}
+ti["T"] = {"st_switch", target="@vol#*", action="toggle"}
+ti["F"] = {"st_fourswitch", target="@vol#*", action_0="flip", action_2="flip"}
 
 ti["@"] = {"#ac-whiteball-small", player=0} 
 ti["1"] = {"#ac-blackball"} 
 
 w, h = wo(ti, " ", {
-"                    ",
+"F             T    T",
 " (  )   (  )   (  ) ",
 "                    ",
 "     .    ;    ;    ",
