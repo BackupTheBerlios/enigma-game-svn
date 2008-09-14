@@ -23,6 +23,7 @@ ti["  "] = {"fl-sahara"}
 ti[".."] = {"fl-sahara", push_directions="nesw"}
 ti["++"] = {"fl-sahara", push_directions="w"} .. ti{"st_window_s", secure=true}
 ti["##"] = {"st-rock1"}
+ti["S#"] = {"st_switch", target="newpuz"}
 
 ti["P"] = {"st_puzzle_blue"}
 ti["H"] = {"st_puzzle_blue", hollow=true}
@@ -35,20 +36,41 @@ ti["@@"] = {"#ac-blackball"}  ..ti({"it_magicwand"})
 puzz = res.puzzle(ti, "P","H", "S", "M", "C")
 
 w, h = wo(puzz, "  ", {
-"              P7P7P7          ..  ",
-"  P1P1    @@  P7P7P7    M1M1  M1  ",
-"  P1P1        P7P7P7  ..M1M1M1M1  ",
-"                                  ",
-"            P1P1                  ",
-"      Pj    PjP2  ##########      ",
-"            P2P2  ##C1C1C1##      ",
-"P3P3P3            ##C1C1C1++      ",
-"P3P3P3            ##C1C1C1C1##..  ",
-"P3H3P3      S1      ..####C1##C1##",
-"P3P3P3      S1S1        ..C1C1C1##",
-"          S1S1S1          ####C1##",
-"                              ####"
+"              P7P7P7          ..    ",
+"  P1P1        P7P7P7    M1M1  M1M1..",
+"  P1P1        P7P7P7  ..M1M1M1H1M1..",
+"                              M1M1..",
+"            P1P1                ..  ",
+"      Pj    PjP2  ##########        ",
+"            P2P2  ##C1C1C1##        ",
+"P3P3P3            ##C1C1C1++        ",
+"P3P3P3            ##C1C1C1C1##..    ",
+"P3H3P3      S1      ..####C1##C1##  ",
+"P3P3P3      S1S1        ..C1C1C1##  ",
+"          S1S1S1          ####C1##  ",
+"                  @@          ####  ",
+"                                    ",
+"    P3P3P3            P3P3P3P3P3    ",
+"    P3H3P3            HoP3H3P3P3    ",
+"    P3H3P3P3P3        P3P3P3P3P3    ",
+"    P3P3P3P3P3        P3P3HoP3P3    ",
+"    P3P3P3P3P3                      ",
+"                                    ",
+"S#                                  ",
+"                                    ",
+"                                    ",
+"                                    ",
+"                                    ",
+"                                    "
 })
+
+function newpuz(value, sender)
+    wo:drawMap(puzz, sender, "  ", {
+        "      P3P3P3P3P3",
+        "    P3P3P3P3"
+    })
+end
+
 
     ]]></el:luamain>
     <el:i18n>
