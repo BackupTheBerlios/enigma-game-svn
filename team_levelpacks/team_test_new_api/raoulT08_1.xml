@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Puzzle Pieces new API" el:subtitle="" el:id="raoul08"/>
+      <el:version el:score="1" el:release="1" el:revision="0" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti["  "] = {"fl-sahara"}
+
+ti["B0"] = {"st_puzzle_blue"}
+ti["B1"] = {"st_puzzle_blue", connections="w"}
+ti["B2"] = {"st_puzzle_blue", connections="s"}
+ti["B3"] = {"st_puzzle_blue", connections="sw"}
+
+ti["B4"] = {"st_puzzle_blue", connections="e"}
+ti["B5"] = {"st_puzzle_blue", connections="ew"}
+ti["B6"] = {"st_puzzle_blue", connections="es"}
+ti["B7"] = {"st_puzzle_blue", connections="esw"}
+
+ti["B8"] = {"st_puzzle_blue", connections="n"}
+ti["B9"] = {"st_puzzle_blue", connections="wn"}
+ti["Ba"] = {"st_puzzle_blue", connections="ns"}
+ti["Bb"] = {"st_puzzle_blue", connections="nsw"}
+
+ti["Bc"] = {"st_puzzle_blue", connections="ne"}
+ti["Bd"] = {"st_puzzle_blue", connections="new"}
+ti["Be"] = {"st_puzzle_blue", connections="nes"}
+ti["Bf"] = {"st_puzzle_blue", connections="nesw"}
+
+
+ti["b0"] = {"st_puzzle_blue", hollow=true}
+ti["b1"] = {"st_puzzle_blue", connections="w", hollow=true}
+ti["b2"] = {"st_puzzle_blue", connections="s", hollow=true}
+ti["b3"] = {"st_puzzle_blue", connections="sw", hollow=true}
+
+ti["b4"] = {"st_puzzle_blue", connections="e", hollow=true}
+ti["b5"] = {"st_puzzle_blue", connections="ew", hollow=true}
+ti["b6"] = {"st_puzzle_blue", connections="es", hollow=true}
+ti["b7"] = {"st_puzzle_blue", connections="esw", hollow=true}
+
+ti["b8"] = {"st_puzzle_blue", connections="n", hollow=true}
+ti["b9"] = {"st_puzzle_blue", connections="wn", hollow=true}
+ti["ba"] = {"st_puzzle_blue", connections="ns", hollow=true}
+ti["bb"] = {"st_puzzle_blue", connections="nsw", hollow=true}
+
+ti["bc"] = {"st_puzzle_blue", connections="ne", hollow=true}
+ti["bd"] = {"st_puzzle_blue", connections="new", hollow=true}
+ti["be"] = {"st_puzzle_blue", connections="nes", hollow=true}
+ti["bf"] = {"st_puzzle_blue", connections="nesw", hollow=true}
+
+
+ti["Y0"] = {"st_puzzle_yellow"}
+ti["Y1"] = {"st_puzzle_yellow", connections="w"}
+ti["Y2"] = {"st_puzzle_yellow", connections="s"}
+ti["Y3"] = {"st_puzzle_yellow", connections="sw"}
+
+ti["Y4"] = {"st_puzzle_yellow", connections="e"}
+ti["Y5"] = {"st_puzzle_yellow", connections="ew"}
+ti["Y6"] = {"st_puzzle_yellow", connections="es"}
+ti["Y7"] = {"st_puzzle_yellow", connections="esw"}
+
+ti["Y8"] = {"st_puzzle_yellow", connections="n"}
+ti["Y9"] = {"st_puzzle_yellow", connections="wn"}
+ti["Ya"] = {"st_puzzle_yellow", connections="ns"}
+ti["Yb"] = {"st_puzzle_yellow", connections="nsw"}
+
+ti["Yc"] = {"st_puzzle_yellow", connections="ne"}
+ti["Yd"] = {"st_puzzle_yellow", connections="new"}
+ti["Ye"] = {"st_puzzle_yellow", connections="nes"}
+ti["Yf"] = {"st_puzzle_yellow", connections="nesw"}
+
+
+ti["y0"] = {"st_puzzle_yellow", hollow=true}
+ti["y1"] = {"st_puzzle_yellow", connections="w", hollow=true}
+ti["y2"] = {"st_puzzle_yellow", connections="s", hollow=true}
+ti["y3"] = {"st_puzzle_yellow", connections="sw", hollow=true}
+
+ti["y4"] = {"st_puzzle_yellow", connections="e", hollow=true}
+ti["y5"] = {"st_puzzle_yellow", connections="ew", hollow=true}
+ti["y6"] = {"st_puzzle_yellow", connections="es", hollow=true}
+ti["y7"] = {"st_puzzle_yellow", connections="esw", hollow=true}
+
+ti["y8"] = {"st_puzzle_yellow", connections="n", hollow=true}
+ti["y9"] = {"st_puzzle_yellow", connections="wn", hollow=true}
+ti["ya"] = {"st_puzzle_yellow", connections="ns", hollow=true}
+ti["yb"] = {"st_puzzle_yellow", connections="nsw", hollow=true}
+
+ti["yc"] = {"st_puzzle_yellow", connections="ne", hollow=true}
+ti["yd"] = {"st_puzzle_yellow", connections="new", hollow=true}
+ti["ye"] = {"st_puzzle_yellow", connections="nes", hollow=true}
+ti["yf"] = {"st_puzzle_yellow", connections="nesw", hollow=true}
+
+
+ti["@ "] = {"#ac-blackball"}  ..ti({"it_magicwand"})
+
+w, h = wo(ti, "  ", {
+"                                                                              ",
+"  @                                                                           ",
+"                                                                              ",
+"  B0      b0      Y0      y0                                                  ",
+"  B1      b1      Y1      y1                                                  ",
+"  B2      b2      Y2      y2                                                  ",
+"  B3      b3      Y3      y3                                                  ",
+"  B4      b4      Y4      y4                                                  ",
+"  B5      b5      Y5      y5                                                  ",
+"  B6      b6      Y6      y6                                                  ",
+"  B7      b7      Y7      y7                                                  ",
+"  B8      b8      Y8      y8                                                  ",
+"  B9      b9      Y9      y9                                                  ",
+"  Ba      ba      Ya      ya                                                  ",
+"  Bb      bb      Yb      yb                                                  ",
+"  Bc      bc      Yc      yc                                                  ",
+"  Bd      bd      Yd      yd                                                  ",
+"  Be      be      Ye      ye                                                  ",
+"  Bf      bf      Yf      yf                                                  ",
+"                                                                              ",
+"                                                                              ",
+"                                                                              "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
