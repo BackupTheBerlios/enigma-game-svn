@@ -36,8 +36,8 @@ ti["c"] = {"it-cherry"}
 ti["s"] = {"it-spring1"}
 ti["p"] = {"st_pull"}
 ti["W"] = {"st_window_ew", secure=true}
-ti["h"] = {"st-puzzle-hollow"}
-ti["H"] = {"st-puzzle-ew"}
+ti["h"] = {"st_puzzle", hollow=true, connections="nesw"}
+ti["H"] = {"st_puzzle", connections="ew"}
 
 ti[";"] = ti["."] .. ti["g"]
 

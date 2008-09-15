@@ -2,7 +2,7 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Test Puzzle Pieces new API" el:subtitle="" el:id="raoul08"/>
+      <el:identity el:title="Test Puzzle Pieces new API" el:subtitle="" el:id="raoult08"/>
       <el:version el:score="1" el:release="1" el:revision="0" el:status="experimental"/>
       <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
@@ -102,6 +102,8 @@ ti["yd"] = {"st_puzzle_yellow", connections="new", hollow=true}
 ti["ye"] = {"st_puzzle_yellow", connections="nes", hollow=true}
 ti["yf"] = {"st_puzzle_yellow", connections="nesw", hollow=true}
 
+ti["LL"] = {"st_laser", orientation="w", state=ON}
+ti["PP"] = {"st_polarswitch", state=OFF}
 
 ti["@ "] = {"#ac-blackball"}  ..ti({"it_magicwand"})
 
@@ -109,22 +111,22 @@ w, h = wo(ti, "  ", {
 "                                                                              ",
 "  @                                                                           ",
 "                                                                              ",
-"  B0      b0      Y0      y0                                                  ",
-"  B1      b1      Y1      y1                                                  ",
-"  B2      b2      Y2      y2                                                  ",
-"  B3      b3      Y3      y3                                                  ",
-"  B4      b4      Y4      y4                                                  ",
-"  B5      b5      Y5      y5                                                  ",
-"  B6      b6      Y6      y6                                                  ",
-"  B7      b7      Y7      y7                                                  ",
-"  B8      b8      Y8      y8                                                  ",
-"  B9      b9      Y9      y9                                                  ",
-"  Ba      ba      Ya      ya                                                  ",
-"  Bb      bb      Yb      yb                                                  ",
-"  Bc      bc      Yc      yc                                                  ",
-"  Bd      bd      Yd      yd                                                  ",
-"  Be      be      Ye      ye                                                  ",
-"  Bf      bf      Yf      yf                                                  ",
+"  B0      Y0      b0      y0        PPLL                                      ",
+"  B1      Y1      b1      y1        PPLL                                      ",
+"  B2      Y2      b2      y2        PPLL                                      ",
+"  B3      Y3      b3      y3        PPLL                                      ",
+"  B4      Y4      b4      y4        PPLL                                      ",
+"  B5      Y5      b5      y5        PPLL                                      ",
+"  B6      Y6      b6      y6        PPLL                                      ",
+"  B7      Y7      b7      y7        PPLL                                      ",
+"  B8      Y8      b8      y8        PPLL                                      ",
+"  B9      Y9      b9      y9        PPLL                                      ",
+"  Ba      Ya      ba      ya        PPLL                                      ",
+"  Bb      Yb      bb      yb        PPLL                                      ",
+"  Bc      Yc      bc      yc        PPLL                                      ",
+"  Bd      Yd      bd      yd        PPLL                                      ",
+"  Be      Ye      be      ye        PPLL                                      ",
+"  Bf      Yf      bf      yf        PPLL                                      ",
 "                                                                              ",
 "                                                                              ",
 "                                                                              "

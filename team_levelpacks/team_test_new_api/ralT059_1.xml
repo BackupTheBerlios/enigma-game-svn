@@ -36,7 +36,7 @@ ti["s"] = {"it-spring1"}
 ti["L"] = {"st_laser_n", "laser#", state=ON}
 ti["P"] = {"st_polarswitch"}
 
-ti["*"] = {"fl-bridge-open", type="x"} .. ti({"st_door_a", state=OPEN})
+ti["*"] = {"fl_bridge_gc", state=OPEN} .. ti({"st_door_a", state=OPEN})
 
 ti["k"] = {"st_door_d", target="laser#*"}
 
