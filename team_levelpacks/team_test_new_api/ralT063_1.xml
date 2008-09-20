@@ -25,14 +25,16 @@ ti["s"] = {"st_swap"}
 
 ti["1"] = {"st_puzzle_blue", cluster=1, hollow=false}
 ti["2"] = {"st_puzzle_blue", cluster=2}
+ti["3"] = {"st_puzzle_blue", cluster=3} .. ti["~"]
 ti["|"] = {"st_puzzle_blue", connections="ns"}
 ti["+"] = {"st_puzzle_blue", connections="nesw", hollow=true}
 --ti["+"] = {"st_puzzle_blue", connections="nesw", hollow=false}
 
+ti["7"] = {"st_puzzle_yellow", cluster=1} .. ti["~"]
 ti["8"] = {"st_puzzle_yellow", cluster=1}
 ti["9"] = {"st_puzzle_yellow", cluster=2}
 ti["-"] = {"st_puzzle_yellow", connections="ew"}
-ti["o"] = {"st_puzzle_blue", color=YELLOW, hollow=true}
+ti["o"] = {"st_puzzle_blue", color=YELLOW, connections="nesw", hollow=true}
 
 ti["A"] = {"st_puzzle", connections="w"}
 ti["B"] = {"st_puzzle", connections="s"}
@@ -50,9 +52,16 @@ ti["!"] = {"st_puzzle_yellow", "puz2", connections="w"}
 ti["W"] = {"st-wood", "wood1"}
 ti["V"] = {"st-wood", "wood2"}
 
+ti["n"] = {"st_puzzle_blue", "puz3", connections="n"}
+ti["m"] = {"st_puzzle_blue", "puz4", connections="s"}
+ti["v"] = {"st-wood", "wood3"}
+
+
 ti["l"] = {"st_laser_w", state = ON}
 ti["L"] = {"st_laser_n", state = ON}
+ti["e"] = {"st_laser_e", state = ON}
 ti["="] = {"st_polarswitch"}
+ti[":"] = {"st_polarswitch", state=ON}
 ti["."] = {"st-stoneimpulse_movable"}
 ti["*"] = {"it-cherry"}
 
@@ -60,35 +69,49 @@ ti["@"] = {"#ac-blackball"}  ..ti({"it_magicwand"})
 
 w, h = wo(ti, " ", {
 "                                       ",
-"                               ~~~~~   ",
+"                               ~~~33   ",
 "                               ~~~~~   ",
 "  111       888        111     ~~~~~   ",
 "  2|2      18-9         21             ",
 "  222       999   8     222    _____   ",
 "                               _____   ",
 "   +         o          |      _____   ",
-"1         @     988-    |              ",
+"1               988-    |              ",
 "   1111      -         8       _____   ",
 "                      888      _____   ",
 "                      898      ~~~~~   ",
-"                      888              ",
-"   1B    =l   B+B =l                   ",
-"   1     =l                    Ds   =l  ",
+"                      888        ~77   ",
+"   1B    =l   B+B =l               .   ",
+"   1     =l                    Ds   =l ",
 "    H                           A   =l ",
 "     8b  =l   bob =l                   ",
 "     8   =l                     =      ",
-"      h                         L      ",
+"      h                 @       L      ",
+"                             8         ",
+"     D+A.      doa.         88         ",
+"      *         *    e:  8o8888  =l    ",
+"                            8          ",
+"   +'    W   do!  V         =:         ",
+"             ~~~~           LL         ",
+"             ~~~~                      ",
+"       v                               ",
+"  ~~                                   ",
+"  ~~  m                                ",
+"  ~~  n                                ",
+"  ~~                                   ",
+"   ~                                   ",
+"   ~                                   ",
 "                                       ",
-"     D+A.      doa.                    ",
-"      *         *                      ",
 "                                       ",
-"    +'    W   do!  V                   ",
+"                                       ",
 "                                       "
 })
 
 
 wo:add({"ot_wire", anchor1="puz1", anchor2="wood1"})
 wo:add({"ot_wire", anchor1="puz2", anchor2="wood2"})
+wo:add({"ot_wire", anchor1="puz3", anchor2="wood3"})
+wo:add({"ot_wire", anchor1="puz4", anchor2="wood3"})
 
   ]]></el:luamain>
     <el:i18n>

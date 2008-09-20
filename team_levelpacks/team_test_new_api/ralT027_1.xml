@@ -36,7 +36,8 @@ ti["L"] = {"st_laser_s", "laser"}
 
 ti["S"] = {"st_switch", target="blocker"}
 ti["s"] = {"it_blocker", "blocker"}
-ti["H"] = {"st-wood"}
+ti["H"] = {"st-wood", "wood1"}
+ti["t"] = {"it_trigger", target="blocker"} .. ti({"st-wood", "wood2"})
 
 
 
@@ -50,7 +51,7 @@ w, h = wo(ti, " ", {
 "                    ",
 "                    ",
 "        Ss         E",
-"         H          ",
+"         Ht         ",
 "           1        ",
 "                    ",
 "                    ",
@@ -58,7 +59,7 @@ w, h = wo(ti, " ", {
 "     A       a     E"
 })
 
-
+wo:add({"ot_wire", anchor1 = "wood1", anchor2 = "wood2"})
 
   ]]></el:luamain>
     <el:i18n>

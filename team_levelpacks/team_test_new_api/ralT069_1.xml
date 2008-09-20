@@ -25,7 +25,7 @@ ti["++"] = {"fl-sahara", push_directions="w"} .. ti{"st_window_s", secure=true}
 ti["##"] = {"st-rock1"}
 ti["S#"] = {"st_switch", target="newpuz"}
 
-ti["P"] = {"st_puzzle_blue"}
+ti["P"] = {"st_puzzle_blue", intensity= 2/12}
 ti["H"] = {"st_puzzle_blue", hollow=true}
 ti["S"] = {"st_puzzle_yellow", intensity=2/6}
 ti["M"] = {"st_puzzle_blue", algorithm="marked"}
@@ -55,11 +55,12 @@ w, h = wo(puzz, "  ", {
 "    P3H3P3P3P3        P3P3P3P3P3    ",
 "    P3P3P3P3P3        P3P3HoP3P3    ",
 "    P3P3P3P3P3                      ",
+"                        P#P#P#P#    ",
+"S#                      P#PAP#P#    ",
 "                                    ",
-"S#                                  ",
-"                                    ",
-"                                    ",
-"                                    ",
+"                        P$P$P$P$    ",
+"                        P$P4P$P$    ",
+"                        P$P$P$P$    ",
 "                                    ",
 "                                    "
 })
