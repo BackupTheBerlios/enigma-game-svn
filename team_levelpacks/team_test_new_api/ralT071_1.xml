@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test StoneImpulse new API" el:subtitle="" el:id="20080928ral709"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+
+ti[";"] = {"st_stoneimpulse"}
+ti["*"] = {"st_stoneimpulse_steady"}
+ti["^"] = {"st_stoneimpulse_hollow"}
+ti["."] = {"st_stoneimpulse_movable"}
+ti[">"] = {"st_stoneimpulse_new", orientation = EAST, hollow = true}
+
+ti["m"] = {"it_magicwand"}
+ti["w"] = {"st-wood"}
+ti["s"] = {"st_swap"}
+ti["p"] = {"st_polarswitch"}
+ti["n"] = {"st_laser_n",state=ON}
+ti["r"] = {"st_boulder_w"}
+
+ti["W"] = {"st-wood", "w1"}
+ti["V"] = {"st-wood", "w2"}
+ti["U"] = {"st-wood", "w3"}
+
+ti["a"] = {"st_stoneimpulse_hollow", "a1"}
+ti["A"] = {"st_stoneimpulse_hollow", "a2"}
+ti["b"] = {"st_stoneimpulse_hollow", "b1"}
+ti["B"] = {"st_stoneimpulse_hollow", "b2"}
+
+ti[":"] = {"st_stoneimpulse", "s1"}
+ti["-"] = {"st_stoneimpulse_movable","s2"}
+ti["1"] = {"st_stoneimpulse", "s3"}
+ti["2"] = {"st_stoneimpulse", "s4"}
+
+
+ti["@"] = {"#ac-blackball"} 
+
+w, h = wo(ti, " ", {
+"                    ",
+"                    ",
+";   ;   .   *   ^  ;",
+";                  ;",
+";r                 ;",
+";  ;   V   -    ;  ;",
+"   ;            ^  ;",
+"   ;            ^   ",
+"                    ",
+"   ;;;;             ",
+"   ;;;;    W   :    ",
+"   ;;;;             ",
+"                    ",
+"  1  2         .    ",
+"  ;  ;              ",
+"        @m     pp   ",
+" ^^>^^         nn   ",
+" ^   ^              ",
+" ^^^^^    *     ;   ",
+"          *     ;   ",
+"   ^>^    *s    ;s  ",
+"   b ^              ",
+" ^a A^ *           ;",
+" ^ B      p     pp  ",
+" ^^^   n  n     nn n"
+})
+
+wo:add({"ot_wire", anchor1="w1", anchor2="s1"})
+wo:add({"ot_wire", anchor1="w2", anchor2="s2"})
+wo:add({"ot_wire", anchor1="s3", anchor2="s4"})
+wo:add({"ot_wire", anchor1="a1", anchor2="a2"})
+wo:add({"ot_wire", anchor1="b1", anchor2="b2"})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
