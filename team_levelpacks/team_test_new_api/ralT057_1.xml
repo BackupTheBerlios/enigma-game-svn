@@ -31,7 +31,7 @@ ti["w"] = {"st_turnstilearm_w"}
 
 ti["B"] = {"st-brownie"}
 ti["O"] = {"st_rotator_cw", movable=true}
-ti["I"] = {"st-stoneimpulse_movable"}
+ti["I"] = {"st_stoneimpulse_movable"}
 
 ti["N"] = {"st_turnstilearm_n","arm"}
 ti["S"] = {"st_scissors"}

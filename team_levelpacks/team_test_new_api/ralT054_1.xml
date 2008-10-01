@@ -38,8 +38,8 @@ ti["q"] = {"st_rotator_ccw", "rotccw", movable=true}
 
 
 ti["r"] = {"st_rubberband", "rubber"}
-ti["i"] = {"st-stoneimpulse_movable", "impulse"}
-ti["I"] = {"st-stoneimpulse"}
+ti["i"] = {"st_stoneimpulse_movable", "impulse"}
+ti["I"] = {"st_stoneimpulse"}
 ti["B"] = {"st_boulder_e", "boulder"}
 ti["L"] = {"st_lightpassenger", "lp"}
 ti["l"] = {"st_laser_e", state=ON}

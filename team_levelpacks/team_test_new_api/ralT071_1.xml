@@ -24,8 +24,10 @@ ti["*"] = {"st_stoneimpulse_steady"}
 ti["^"] = {"st_stoneimpulse_hollow"}
 ti["."] = {"st_stoneimpulse_movable"}
 ti[">"] = {"st_stoneimpulse_new", orientation = EAST, hollow = true}
+ti[","] = {"st_stoneimpulse_movable", steady = true}
 
 ti["m"] = {"it_magicwand"}
+ti["d"] = {"it-dynamite"}
 ti["w"] = {"st-wood"}
 ti["s"] = {"st_swap"}
 ti["p"] = {"st_polarswitch"}
@@ -62,8 +64,8 @@ w, h = wo(ti, " ", {
 "   ;;;;             ",
 "   ;;;;    W   :    ",
 "   ;;;;             ",
-"                    ",
-"  1  2         .    ",
+"               ,    ",
+"  1  2  dd     .    ",
 "  ;  ;              ",
 "        @m     pp   ",
 " ^^>^^         nn   ",

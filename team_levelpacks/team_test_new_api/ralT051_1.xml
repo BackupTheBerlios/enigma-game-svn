@@ -43,7 +43,7 @@ ti["l"] = {"st_laser_w", "laser", state=ON}
 ti["F"] = {"st_fourswitch", target="mymir", action="orientate"}
 ti["G"] = {"it_trigger", target="mymir", action="signal"}
 ti["g"] = {"it_trigger", target="mymir", action_1="turn", action_0="turnback"}
-ti["i"] = {"st-stoneimpulse_movable"}
+ti["i"] = {"st_stoneimpulse_movable"}
 
 ti["1"] = {"#ac-blackball"} 
 

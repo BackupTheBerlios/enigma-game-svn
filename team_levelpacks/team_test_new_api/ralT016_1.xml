@@ -34,8 +34,8 @@ ti["e"] = {"st_laser_n", state = ON}
 ti["m"] = {"st_mirror", movable=true, transparent=true, orientation=1}
 ti["w"] = {"it_magicwand"}
 ti["V"] = {"st_volcano"}
-ti["I"] = {"st-stoneimpulse"}
-ti["i"] = {"st-stoneimpulse_movable"}
+ti["I"] = {"st_stoneimpulse"}
+ti["i"] = {"st_stoneimpulse_movable"}
 ti["L"] = {"st_rotator_ccw"}
 ti["R"] = {"st_rotator_cw"}
 ti["b"] = {"st_blocker"}
