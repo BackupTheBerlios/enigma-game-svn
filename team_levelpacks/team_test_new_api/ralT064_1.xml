@@ -19,41 +19,46 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 
+ti["p"] = {"it_pipe"}
 ti["-"] = {"it_pipe_ew"}
 ti["|"] = {"it_pipe_ns"}
 ti["1"] = {"it_pipe_sw"}
 ti["2"] = {"it_pipe_es"}
 ti["3"] = {"it_pipe_ne"}
 ti["4"] = {"it_pipe_nw"}
-ti["p"] = {"it_pipe"}
+ti["n"] = {"it_pipe", connections="n"}
+ti["e"] = {"it_pipe", connections="e"}
+ti["s"] = {"it_pipe", connections="s"}
 ti["w"] = {"it_pipe", connections="w"}
 
 ti["N"] = {"st_mail_n"}
+ti["E"] = {"st_mail_e"}
+ti["S"] = {"st_mail_s"}
 ti["W"] = {"st_mail_w"}
 
 ti["h"] = {"it_hammer"}
 ti["m"] = {"it_magicwand"}
 ti["b"] = {"st_brake"}
 ti["d"] = {"it-dynamite"}
-ti["E"] = {"st-bombs"}
+ti["B"] = {"st-bombs"}
 
 ti["@"] = {"#ac-blackball"} 
 ti["."] = {"#ac-whiteball", "white"} 
 
 w, h = wo(ti, " ", {
-"E ddd               ",
-"                    ",
-"                    ",
-"     W     N        ",
-"                    ",
-"                    ",
-"   |- 1234 pw       ",
-"                    ",
-"          @         ",
-"                    ",
-"      hmb           ",
-"                    ",
-" .                  "
+"B ddd           1234",
+"                1234",
+"     S          1234",
+"                1234",
+"     E     W    ||||",
+"                ||||",
+"     pw    N    ||||",
+"                ----",
+"          @     ----",
+"                ----",
+"      hmb       nesw",
+"                nesw",
+" .              nesw"
 })
 
 

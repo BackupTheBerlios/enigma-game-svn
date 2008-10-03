@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Glasstones new API" el:subtitle="" el:id="raoult09"/>
+      <el:version el:score="1" el:release="1" el:revision="0" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+ti[" "] = {"fl-sahara"}
+ti["#"] = {"st-glass"}
+ti["a"] = {"st-glass1"}
+ti["b"] = {"st-glass2"}
+ti["c"] = {"st-glass3"}
+ti["M"] = {"st-glass_move"}
+ti["1"] = {"st-glass1_move"}
+ti["2"] = {"st-glass2_move"}
+ti["h"] = {"st-glass1_hole"}
+ti["H"] = {"st-glass2_hole"}
+ti["B"] = {"st-beads"}
+ti["w"] = {"st_window", faces="nesw"}
+ti["P"] = {"st_polarswitch", state=ON}
+ti["L"] = {"st_laser", orientation=EAST, state=ON}
+ti["R"] = {"st_laser", orientation=WEST, state=ON}
+ti["C"] = {"it-cherry"}
+ti["U"] = {"it_umbrella"}
+ti["@"] = {"#ac-blackball"}
+
+w, h = wo(ti, " ", {
+"####################",
+"#                  #",
+"LP BBB hhh HHH wwwPR",
+"#                  #",
+"#                  #",
+"LP MMM 111 222 PPPPR",
+"#                  #",
+"#                  #",
+"LP ### aaa bbb cccPR",
+"#                  #",
+"#@CCCCCCCCCCCCCCCC #",
+"# UUUUUUUUUUUUUUUU #",
+"####################"
+})
+
+wo:shuffleOxyd()
+]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>
