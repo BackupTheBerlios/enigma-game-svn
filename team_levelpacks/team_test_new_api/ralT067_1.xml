@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Position List new API" el:subtitle="" el:id="20080905ral615"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl-sahara"}
+ti["~"] = {"fl-water", "water"}
+ti["_"] = {"fl-abyss", "ab#"}
+ti["."] = {"fl-water", "pw#"}
+
+ti["w"] = {"st-wood"}
+ti["b"] = {"it_brush"}
+ti["T"] = {"st_switch", target="dopos"}
+ti["U"] = {"st_switch", target="doabyss"}
+ti["V"] = {"st_switch", target="doitem"}
+ti["W"] = {"st_switch", target="dopw"}
+ti["X"] = {"st_switch", target="dojoin"}
+
+ti["D"] = {"st_disco_light", "other#"}
+ti["A"] = {"st_disco_dark", "anchor"}
+ti["s"] = {"st_switch", target="anchor", action="lighten"}
+ti["S"] = {"st_switch", target="other#*", action="darken"}
+
+
+
+ti["@"] = {"#ac-blackball"} 
+
+w, h = wo(ti, " ", {
+"DD S V___U    ~ b  T",
+"AD    ___     w     ",
+"                    ",
+"s   wwwwww          ",
+"                    ",
+"                    ",
+"       @            ",
+"                    ",
+"                    ",
+"      wwwww         ",
+"                    ",
+"      .....         ",
+"    W .....  X      "
+})
+
+aby = no["ab#*"]
+abypos = po(aby)
+
+function doabyss()
+    for i = 1, #abypos do
+       wo[abypos[i]] = {"it-cherry"}
+    end
+end
+
+function doitem()
+    it(abypos):kill()
+    wo[abypos] = {"st_brake"}
+end
+
+function dopos()
+    p = po["water"]
+    if p == nil then
+       print "water is nil"
+    else
+       print ("water is not nil but type " .. type(p) .. " usertype ".. usertype(p))
+    end
+    print("water at "..p.x.." - "..p.y)
+    wo[po["water"]] = {"it-cherry"}
+end
+
+function dopw()
+    print ("number of pws "..#po["pw#*"])
+    wo[po["pw#*"]] = {"it-cherry"}
+end
+
+po["emil"] = po(2, 10)
+wo[po["emil"]] = {"it-cherry"}
+
+function dojoin()
+    wo[abypos .. po["pw#*"]] = {"it-banana"}
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
