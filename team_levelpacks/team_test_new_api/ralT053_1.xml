@@ -16,6 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
+wo["RubberViolationStrength"] = 50
 
 ti[" "] = {"fl-sahara"}
 ti["~"] = {"fl-water"}
@@ -31,6 +32,11 @@ ti["p"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, 
 ti["P"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=5, min=2}
 ti["Q"] = {"it_rubberband", anchor2="w", length=3, strength=10, threshold=2.5, max=5, min=2}
 ti["q"] = {"it_rubberband", anchor2="@@s#*", length=3, strength=10, threshold=2.5}
+ti["U"] = {"it_rubberband", anchor2="w", length=3, strength=10, threshold=2.5, max=9, min=3, target="cutme"}
+ti["u"] = {"it_rubberband", anchor2="a2", length=4, strength=10, threshold=2.5, max=6, min=3, target="shatter"}
+
+ti["a"] = {"it_wormhole", "wa", range=0.5, scissor=false}
+ti["b"] = {"it_wormhole", "wb", destination="wa", range=0.5,  scissor=false}
 
 ti["1"] = ti["y"] .. {"#ac-blackball", "a1"} 
 ti["2"] = ti["y"] .. {"#ac-whiteball", "a2"} 
@@ -38,19 +44,19 @@ ti["3"] = {"#ac-horse", "a3"}
 ti["*"] = {"#ac-whiteball-small", "s#", controllers=0} 
 
 w, h = wo(ti, " ", {
-"*      r  r  r     *",
-"                    ",
+"*   #  r  r  r  a  *",
+"   ##               ",
 "qq  1               ",
 "                    ",
 "             2      ",
-"R                   ",
-"p                   ",
+"R                  U",
+"p                  u",
 "P       3       S   ",
-"Q           w      ",
-"                    ",
-"         s     #    ",
+"Q           w       ",
+"                ##  ",
+"         s      #   ",
 "          ~~        ",
-"s         ~~.      *"
+"s      b  ~~.      *"
 })
 
 --wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=2, strength=80, threshold=0, max=2.4})
@@ -59,6 +65,16 @@ w, h = wo(ti, " ", {
 --wo:add({"ot_rubberband", anchor1="a3", anchor2="w", length=3, strength=20})
 wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=3, strength=10, threshold=2, max=4, min=4})
 
+function cutme(value, sender)
+    wo[{19, 5}] = {"it_extralife"}
+    sender:kill()
+end
+function shatter(value, sender)
+    if value == 0 then
+        sender["anchor1"]:shatter()
+        sender["anchor2"]:shatter()
+    end
+end
 
   ]]></el:luamain>
     <el:i18n>

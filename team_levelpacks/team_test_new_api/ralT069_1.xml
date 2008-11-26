@@ -55,12 +55,12 @@ w, h = wo(puzz, "  ", {
 "    P3H3P3P3P3        P3P3P3P3P3    ",
 "    P3P3P3P3P3        P3P3HoP3P3    ",
 "    P3P3P3P3P3                      ",
-"                        P#P#P#P#    ",
-"S#                      P#PAP#P#    ",
+"                        P8P8P8P8    ",
+"S#                      P8PAP8P8    ",
 "                                    ",
-"                        P$P$P$P$    ",
-"                        P$P4P$P$    ",
-"                        P$P$P$P$    ",
+"                        P9P9P9P9    ",
+"                        P9P4P9P9    ",
+"                        P9P9P9P9    ",
 "                                    ",
 "                                    "
 })
