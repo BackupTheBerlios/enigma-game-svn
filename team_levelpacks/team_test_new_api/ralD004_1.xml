@@ -15,7 +15,7 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-ti["~"] = {"fl-water"}
+ti["~"] = {"fl_water"}
 ti["s"] = {"fl-sahara"}
 ti["t"] = {"fl-tigris"}
 ti["i"] = {"fl-inverse2"}

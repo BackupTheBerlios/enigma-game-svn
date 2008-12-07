@@ -15,7 +15,7 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-ti[" "] = {"fl-space"}
+ti[" "] = {"fl_space"}
 ti["*"] = {"fl-wood"}
 
 ti["a"] = {"it_strip", friction=1, adhesion=1}

@@ -18,7 +18,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["."] = {"fl-space"}
+ti["."] = {"fl_space"}
 
 ti["0"] = {"#ac-blackball"}
 ti["'"] = {"#ac-whiteball"}
@@ -63,7 +63,7 @@ ti["F"] = {"st_fourswitch", target="pullwindow", action="inner_pull"}
 ti["G"] = {"st_window", faces="ws", "pullwindow"}
 ti["L"] = {"st_laser_w", "laser"}
 ti["S"] = {"st_switch", target="laser"}
-ti["M"] = {"st-wood"}
+ti["M"] = {"st_wood"}
 
 
 ti["x"] = ti["C"] .. {"it_vortex", "vortexx", destination="vortexy"}

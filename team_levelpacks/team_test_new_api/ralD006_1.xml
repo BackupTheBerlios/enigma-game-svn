@@ -16,8 +16,8 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-samba"}
-ti["."] = {"fl-abyss"}
-ti["~"] = {"fl-water"}
+ti["."] = {"fl_abyss"}
+ti["~"] = {"fl_water"}
 ti["#"] = {"st-rock1"}
 ti["X"] = {"st_oxyd"}
 

@@ -20,7 +20,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["."] = {"fl-ice"}
+ti["."] = {"fl_ice"}
 ti["c"] = {"it_cross"}
 ti["v"] = {"it-cherry"}
 
@@ -42,7 +42,7 @@ ti["e"] = {"st-turnstile-e"}
 
 ti["s"] = {"st_swap"}
 ti["i"] = {"st_stoneimpulse_movable"}
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["h"] = {"it_hammer"}
 ti["m"] = {"it_magicwand"}
 ti["b"] = {"it_brush"}

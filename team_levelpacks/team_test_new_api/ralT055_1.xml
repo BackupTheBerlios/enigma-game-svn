@@ -18,44 +18,75 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["~"] = {"fl-water"}
-ti["."] = {"fl-abyss"}
+ti["~"] = {"fl_water"}
+ti["."] = {"fl_abyss"}
 
-ti["w"] = {"st-wood"}
+ti[","] = {"it_seed"}
+
+
+ti["w"] = {"st_wood"}
+ti["h"] = {"st_flhay"}
+ti["r"] = {"st_flrock"}
 ti["b"] = {"st-block"}
 ti["f"] = {"st-firebreak_move"}
 ti["p"] = {"st-plain_move"}
 
 ti["s"] = {"st_switch", target="flood"}
 
-ti["W"] = ti["~"] .. {"st-wood"}
+ti["W"] = ti["~"] .. {"st_wood"}
+ti["H"] = ti["~"] .. {"st_flhay"}
+ti["R"] = ti["~"] .. {"st_flrock"}
 ti["B"] = ti["~"] .. {"st-block"}
 ti["F"] = ti["~"] .. {"st-firebreak_move"}
 ti["P"] = ti["~"] .. {"st-plain_move"}
 
 ti["S"] = ti["~"] .. {"st_swap"}
 
+ti["v"] = {"st_wood", "woody"}
+ti["V"] = {"st_swap", "buddy"}
+
+ti["i"] = {"st_stoneimpulse", "i2"}
+ti["I"] = {"st_stoneimpulse", "i1"}
+ti["k"] = {"st_stoneimpulse", "k2"}
+ti["K"] = {"st_stoneimpulse", "k1"}
+ti["J"] = {"st_switch", target="push"}
+
 ti["1"] = {"#ac-blackball"} 
 
 
 w, h = wo(ti, " ", {
-"   ~~~              ",
+" h ~~~ h  ,,   h .  ",
 " w ~~~ w       w .  ",
 " b ~~~ b 1     b .  ",
 " f ~~~ f       f .  ",
 " p ~~~ p       p .  ",
-" s ~~~           .  ",
-"   ~~~           .  ",
-"   ~~W              ",
+" r ~~~ r       r .  ",
+" s ~~H              ",
+"   ~~W         Sh   ",
 "   ~~B         Sw   ",
 "   ~~F         Sb   ",
 "   ~~P         Sf   ",
-"   ~~~         Sp   ",
-"               ~    "
+"   ~~R         Sp   ",
+"               Sr   ",
+" ~~~~  v V          ",
+"i~~~ k              ",
+" w  w               ",
+" IJ K               ",
+"                    ",
 })
 
+wo:add({"ot_wire", anchor1="woody", anchor2="buddy"})
+wo:add({"ot_wire", anchor1="woody", anchor2="buddy"})  -- this should autodelete the first wire
+
+function push(value, sender)   -- test for block on moves on falling
+    no["i1"]:signal(1)
+    no["i2"]:signal(1)
+    no["k1"]:signal(1)
+    no["k2"]:signal(1)
+end
+
 function flood(value, sender)
-    for i = 1, 4 do
+    for i = 1, 6 do
         wo[sender - i*po(0,1)] = {"fl-water"}
     end
 end

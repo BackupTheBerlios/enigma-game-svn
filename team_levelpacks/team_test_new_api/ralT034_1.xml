@@ -26,7 +26,7 @@ ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard
 
 ti[" "] = ti["."] .. {"it_blocker"}
 ti["n"] = {}       -- just nothing
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["s"] = {"st_switch", target="rmfloor"}
 ti["i"] = {"st_switch", target="icefloor"}
 

@@ -68,7 +68,7 @@ ti["4"] = ti[" "] .. {"st_laser_w", name="la11"}
 ti["5"] = ti[" "] .. {"st_laser_w", name="la12"}
 ti["6"] = ti[" "] .. {"st_laser_w", name="la13"}
 
-ti["W"] = {"st-wood"}
+ti["W"] = {"st_wood"}
 
 w, h = wo(ti, " ", {
 "0      A     RL     ",

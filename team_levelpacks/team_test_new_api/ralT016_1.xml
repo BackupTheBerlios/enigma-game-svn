@@ -22,7 +22,7 @@ wo["ShowMoves"] = false
 wo["SwampSinkSpeed"] = 2
 
 ti[" "] = {"fl-sahara"}
-ti["."] = {"fl-abyss"}
+ti["."] = {"fl_abyss"}
 ti["#"] = {"st-rock1"}
 ti["l"] = {"st_lightpassenger_off"}
 ti["B"] = {"st_boulder_n"}
@@ -39,7 +39,7 @@ ti["i"] = {"st_stoneimpulse_movable"}
 ti["L"] = {"st_rotator_ccw"}
 ti["R"] = {"st_rotator_cw"}
 ti["b"] = {"st_blocker"}
-ti["H"] = {"st-wood"}
+ti["H"] = {"st_wood"}
 ti["A"] = {"st_blocker"}
 ti["a"] = {"it_blocker"}
 ti["c"] = {"it_blocker_new"}

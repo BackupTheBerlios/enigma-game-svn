@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = false
 
-ti["~"] = {"fl-water"}
+ti["~"] = {"fl_water"}
 ti[" "] = {"fl-plank"}
 ti["c"] = {"it-crack3", brittleness=0}
 ti["^"] = {"st_oneway_n"}

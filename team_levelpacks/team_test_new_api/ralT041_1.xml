@@ -41,7 +41,7 @@ ti["m"] = {"st_laser_n", "crosslaser2"}
 
 ti["r"] = {"st_rotator_cw", movable=true}
 ti["R"] = {"st_rotator_ccw", movable=false}
-ti["W"] = {"st-wood"}
+ti["W"] = {"st_wood"}
 ti["s"] = {"st_swap"}
 ti["g"] = {"st-glass1"}
 ti["S"] = {"st_switch", target="addrot"}

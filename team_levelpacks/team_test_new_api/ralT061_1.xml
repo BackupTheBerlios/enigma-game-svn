@@ -29,8 +29,8 @@ ti["s"] = {"st_swap", "swap"}
 
 ti["B"] = {"st_brake"}
 ti["R"] = {"st_rotator", movable=true}
-ti["w"] = {"st-wood", "wood1"}
-ti["W"] = {"st-wood", "wood2"}
+ti["w"] = {"st_wood", "wood1"}
+ti["W"] = {"st_wood", "wood2"}
 ti["c"] = {"it_coin_s"}
 
 ti["g"] = {"st-grate1"}

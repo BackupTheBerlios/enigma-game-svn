@@ -19,11 +19,11 @@ wo["ConserveLevel"] = true
 wo["RubberViolationStrength"] = 50
 
 ti[" "] = {"fl-sahara"}
-ti["~"] = {"fl-water"}
+ti["~"] = {"fl_water"}
 ti["#"] = {"st-rock1"}
 ti["y"] = {"it-yinyang"}
-ti["."] = {"st-wood"}
-ti["w"] = {"st-wood", "w"}
+ti["."] = {"st_wood"}
+ti["w"] = {"st_wood", "w"}
 ti["s"] = {"st_scissors"}
 ti["S"] = {"st_swap"}
 ti["r"] = {"st_rubberband"}
@@ -66,11 +66,13 @@ w, h = wo(ti, " ", {
 wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=3, strength=10, threshold=2, max=4, min=4})
 
 function cutme(value, sender)
-    wo[{19, 5}] = {"it_extralife"}
-    sender:kill()
+    if not value then
+        wo[{19, 5}] = {"it_extralife"}
+        sender:kill()
+    end
 end
 function shatter(value, sender)
-    if value == 0 then
+    if not value then
         sender["anchor1"]:shatter()
         sender["anchor2"]:shatter()
     end

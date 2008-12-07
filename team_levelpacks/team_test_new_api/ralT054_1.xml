@@ -20,14 +20,14 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["#"] = {"st-rock1"}
 ti["+"] = {"st-rock1", "rock"}
-ti["~"] = {"fl-water"}
+ti["~"] = {"fl_water"}
 
 ti["p"] = {"it-puller-w"}
 ti["m"] = {"it_magicwand"}
 ti["t"] = {"it_wrench"}
 
-ti["w"] = {"st-wood"}
-ti["template_w"] = {"st-wood", "w%%"}
+ti["w"] = {"st_wood"}
+ti["template_w"] = {"st_wood", "w%%"}
 ti["template_b"] = {"st-brownie", "b%%"}
 ti["s"] = {"st_scissors"}
 ti["S"] = {"st_swap"}

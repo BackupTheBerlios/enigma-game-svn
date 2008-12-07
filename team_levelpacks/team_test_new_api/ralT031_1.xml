@@ -20,8 +20,8 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["."] = {"fl-water"}
-ti["~"] = {"fl-abyss"}
+ti["."] = {"fl_water"}
+ti["~"] = {"fl_abyss"}
 ti["!"] = {"fl-wood", ignitable=true}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
@@ -47,7 +47,7 @@ ti["o"] = ti[" "] .. {"st_laser_n", "lasero"}
 ti["p"] = ti[" "] .. {"st_laser_n", "laseroon"}
 
 
-ti["W"] = ti[" "] .. {"st-wood"}
+ti["W"] = ti[" "] .. {"st_wood"}
 ti["U"] = ti[" "] .. {"st-block"}
 ti["V"] = ti[" "] .. {"st-brownie"}
 ti["u"] = ti[" "] .. {"it-spring1"}
@@ -67,7 +67,7 @@ ti["3"] = (ti[" "]  .. {"#ac-whiteball-small", controllers=0})
 ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"toggle", "on"}})
                 .. {"#ac-whiteball-small", controllers=0}
 ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"toggle", "on"}})
-                .. {"st-wood"}
+                .. {"st_wood"}
 ti["6"] = (ti[" "]  .. {"it_trigger", "killtrigger", target="killstone"})
 
 

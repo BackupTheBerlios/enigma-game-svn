@@ -19,9 +19,9 @@
 wo["ConserveLevel"] = true
 
 ti["  "] = {"fl-sahara"}
-ti["~~"] = {"fl-water"}
+ti["~~"] = {"fl_water"}
 ti["##"] = {"st-rock1"}
-ti["++"] = {"st-wood"}
+ti["++"] = {"st_wood"}
 ti[" 1"] = ti["  "] .. {"#ac-blackball"}
 
 -- sample of create world without a given map - just default floors

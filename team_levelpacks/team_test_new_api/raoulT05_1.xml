@@ -15,8 +15,8 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-ti[" "] = {"fl-swamp"}
-ti["."] = {"fl-abyss"}
+ti[" "] = {"fl_swamp"}
+ti["."] = {"fl_abyss"}
 
 ti["a"] = {"it_strip"}
 
@@ -45,7 +45,7 @@ ti["D"] = ti["."] .. {"it_strip_e"}
 ti["E"] = ti["."] .. {"it_strip_n"}
 
 
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["v"] = {"st-plain_move"}
 
 ti["A"] = {"#ac-blackball"} .. ti["a"]

@@ -27,7 +27,7 @@ ti["L"] = {"st_lightpassenger", state=OFF}
 ti["l"] = {"st_switch", target="newlp"}
 ti["A"] = {"st_actorimpulse_invisible"}
 ti["S"] = {"it_sensor", invisible=true}
-ti["#"] = {"st-wood"}
+ti["#"] = {"st_wood"}
 ti["N"] = {"st_laser_n", "laser", state=OFF}
 ti["n"] = {"st_switch", target="laser"}
 

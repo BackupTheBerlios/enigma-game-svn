@@ -19,12 +19,12 @@ wo["ConserveLevel"] = true
 
 ti["   "] = {"fl-sahara"}
 ti["  ="] = {"fl-tigris"}
-ti["  ."] = {"fl-abyss"}
-ti["  ~"] = {"fl-water"}
+ti["  ."] = {"fl_abyss"}
+ti["  ~"] = {"fl_water"}
 ti["  ;"] = {"fl-leaves"}
 
 ti["#  "] = {"st-rock1"}
-ti["W  "] = {"st-wood"}
+ti["W  "] = {"st_wood"}
 ti["X  "] = {"st_oxyd"}
 ti["G  "] = {"st-grate1"}
 

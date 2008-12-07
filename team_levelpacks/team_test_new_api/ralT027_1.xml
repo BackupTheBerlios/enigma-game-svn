@@ -36,8 +36,8 @@ ti["L"] = {"st_laser_s", "laser"}
 
 ti["S"] = {"st_switch", target="blocker"}
 ti["s"] = {"it_blocker", "blocker"}
-ti["H"] = {"st-wood", "wood1"}
-ti["t"] = {"it_trigger", target="blocker"} .. ti({"st-wood", "wood2"})
+ti["H"] = {"st_wood", "wood1"}
+ti["t"] = {"it_trigger", target="blocker"} .. ti({"st_wood", "wood2"})
 
 
 

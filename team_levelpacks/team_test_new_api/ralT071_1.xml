@@ -28,15 +28,15 @@ ti[","] = {"st_stoneimpulse_movable", steady = true}
 
 ti["m"] = {"it_magicwand"}
 ti["d"] = {"it-dynamite"}
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["s"] = {"st_swap"}
 ti["p"] = {"st_polarswitch"}
 ti["n"] = {"st_laser_n",state=ON}
 ti["r"] = {"st_boulder_w"}
 
-ti["W"] = {"st-wood", "w1"}
-ti["V"] = {"st-wood", "w2"}
-ti["U"] = {"st-wood", "w3"}
+ti["W"] = {"st_wood", "w1"}
+ti["V"] = {"st_wood", "w2"}
+ti["U"] = {"st_wood", "w3"}
 
 ti["a"] = {"st_stoneimpulse_hollow", "a1"}
 ti["A"] = {"st_stoneimpulse_hollow", "a2"}

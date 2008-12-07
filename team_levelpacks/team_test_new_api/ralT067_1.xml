@@ -18,11 +18,11 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["~"] = {"fl-water", "water"}
-ti["_"] = {"fl-abyss", "ab#"}
-ti["."] = {"fl-water", "pw#"}
+ti["~"] = {"fl_water", "water"}
+ti["_"] = {"fl_abyss", "ab#"}
+ti["."] = {"fl_water", "pw#"}
 
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["b"] = {"it_brush"}
 ti["T"] = {"st_switch", target="dopos"}
 ti["U"] = {"st_switch", target="doabyss"}

@@ -30,7 +30,7 @@ ti[":"] = {"fl_bridge_gc", state=CLOSED}
 ti["S"] = {"st_switch", target="@bridge#*"}
 ti["T"] = {"st_switch", target="closed", action_1="open", action_0="close"}
 
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["g"] = {"st-glass_move"}
 ti["c"] = {"it-cherry"}
 ti["s"] = {"it-spring1"}
