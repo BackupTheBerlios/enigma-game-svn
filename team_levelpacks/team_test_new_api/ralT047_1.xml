@@ -36,7 +36,7 @@ ti[" h "] = {"it_hammer"}
 ti[" k "] = {"it_key"} 
 
 ti["#2 "] = {"it_sword"}
-ti["# ~"] = {"fl-hay"}
+ti["# ~"] = {"fl_hay"}
 ti[" 2~"] = {"fl-gray"}
 
 ti["xxx"] = {"#ac-blackball"} 

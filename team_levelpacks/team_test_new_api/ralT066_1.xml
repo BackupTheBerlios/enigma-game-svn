@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-wood", burnable=true, ignitable=true, secure=true}
+ti[" "] = {"fl_wood", burnable=true, ignitable=true, secure=true}
 
 ti["w"] = {"st_window_nesw"}
 ti["v"] = {"st_window_ne"}

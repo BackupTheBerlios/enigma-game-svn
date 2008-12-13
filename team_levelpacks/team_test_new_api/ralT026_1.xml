@@ -20,17 +20,17 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["1"] = {"fl-rock", name="d1"}
-ti["2"] = {"fl-rock", name="d2"}
-ti["3"] = {"fl-rock", name="d3"}
-ti["4"] = {"fl-rock", name="d4"}
-ti["5"] = {"fl-rock", name="d5"}
-ti["6"] = {"fl-rock", name="d6"}
+ti["1"] = {"fl_rock", name="d1"}
+ti["2"] = {"fl_rock", name="d2"}
+ti["3"] = {"fl_rock", name="d3"}
+ti["4"] = {"fl_rock", name="d4"}
+ti["5"] = {"fl_rock", name="d5"}
+ti["6"] = {"fl_rock", name="d6"}
 ti["h"] = ti[" "] .. {"ac-horse", name="horse", destination={"d1","d2","d3","d4","d5","d6"}}
-ti["i"] = {"fl-rock", name="i1"}
-ti["j"] = {"fl-rock", name="i2"}
-ti["k"] = {"fl-rock", name="i3"}
-ti["l"] = {"fl-rock", name="i4"}
+ti["i"] = {"fl_rock", name="i1"}
+ti["j"] = {"fl_rock", name="i2"}
+ti["k"] = {"fl_rock", name="i3"}
+ti["l"] = {"fl_rock", name="i4"}
 ti["s"] = ti[" "] .. {"st_switch", target="innercircle"}
 
 

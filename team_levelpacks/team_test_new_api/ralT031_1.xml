@@ -22,7 +22,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl_water"}
 ti["~"] = {"fl_abyss"}
-ti["!"] = {"fl-wood", ignitable=true}
+ti["!"] = {"fl_wood", ignitable=true}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
 ti["A"] = ti[" "] .. {"it_trigger", target="lasera", action="toggle", "triggerA"}

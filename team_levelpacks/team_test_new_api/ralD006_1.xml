@@ -41,7 +41,7 @@ ti["O"] = {"st_turnstile", flavor="red"}
 ti["E"] = {"st_turnstilearm", orientation=EAST}
 ti["N"] = ti["."] .. {"st_turnstilearm_n"}
 
-ti["+"] = {"fl-samba", checkerboard=0} .. ti({"fl-wood", checkerboard=1})
+ti["+"] = {"fl-samba", checkerboard=0} .. ti({"fl_wood", checkerboard=1})
 
 ti["1"] = {"#ac-blackball"}
 

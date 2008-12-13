@@ -87,7 +87,7 @@ end
 
 function flood(value, sender)
     for i = 1, 6 do
-        wo[sender - i*po(0,1)] = {"fl-water"}
+        wo[sender - i*po(0,1)] = {"fl_water"}
     end
 end
   ]]></el:luamain>

@@ -16,7 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 ti[" "] = {"fl_space"}
-ti["*"] = {"fl-wood"}
+ti["*"] = {"fl_wood"}
 
 ti["a"] = {"it_strip", friction=1, adhesion=1}
 
@@ -39,7 +39,7 @@ ti["p"] = {"it_strip_nes", friction=1, adhesion=1}
 
 ti["q"] = {"it_strip_nesw", friction=1, adhesion=1}
 
-ti["w"] = {"st-wood"}
+ti["w"] = {"st_wood"}
 ti["v"] = {"st-plain_move"}
 
 ti["A"] = {"#ac-blackball"} .. ti["*"]
