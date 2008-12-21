@@ -26,7 +26,7 @@ ti["."] = {"fl_abyss"}
 ti["#"] = {"st-rock1"}
 ti["l"] = {"st_lightpassenger_off"}
 ti["B"] = {"st_boulder_n"}
-ti["W"] = {"st-white1"}
+ti["W"] = {"st_passage_white"}
 ti["P"] = {"st-plain"}
 ti["p"] = {"st_polarswitch"}
 ti["E"] = {"st_laser_e", state = ON}

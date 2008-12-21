@@ -21,17 +21,32 @@ wo["ConserveLevel"] = true
 wo["AllowSingleOxyds"] = true
 
 ti[" "] = {"fl-sahara"}
-ti["#"] = ti[" "] .. {"st-rock1"}
+ti["#"] = {"st-rock1"}
 
-ti["O"] = ti[" "] .. {"st_oxyd", name="o#", flavor="d"}
-ti["P"] = ti[" "] .. {"st_oxyd", name="p#"}
-ti["Q"] = ti[" "] .. {"st_oxyd", name="q1", oxydcolor=5}
+ti["O"] = {"st_oxyd", name="o#", flavor="d"}
+ti["P"] = {"st_oxyd", name="p#"}
+ti["Q"] = {"st_oxyd", name="q1", oxydcolor=5}
 --ti["S"] = ti[" "] .. {"st_switch", action="shuffle", target="o#1"}
-ti["S"] = ti[" "] .. {"st_switch", action="callback", target="newflavor"}
-ti["1"] = ti[" "] .. {"#ac-blackball"}
-ti["B"] = ti[" "] .. {"st_oxyd", oxydcolor=-4, flavor="d", noshuffle=false}
-ti["F"] = ti[" "] .. {"st_oxyd", oxydcolor=-3, flavor="a", noshuffle=false}
-ti["K"] = ti[" "] .. {"st_oxyd", oxydcolor=-2, flavor="c", noshuffle=false}
+ti["S"] = {"st_switch", action="callback", target="newflavor"}
+ti["1"] = {"#ac-blackball"}
+ti["B"] = {"st_oxyd", oxydcolor=OXYD_BOLD, flavor="d", noshuffle=false}
+ti["F"] = {"st_oxyd", oxydcolor=OXYD_QUAKE, flavor="a", noshuffle=false}
+ti["K"] = {"st_oxyd", oxydcolor=OXYD_FAKE, flavor="c", noshuffle=false}
+
+ti["q"] = {"st_fake_quake", "quake"}
+ti["a"] = {"st_fake_oxyda"}
+ti["b"] = {"st_fake_oxydb"}
+ti["c"] = {"st_fake_oxydc"}
+ti["d"] = {"st_fake_oxydd"}
+ti["e"] = {"st_fake_oxyde"}
+ti["f"] = {"st_fake_oxyda", state=OPEN}
+ti["g"] = {"st_fake_oxydb", state=OPEN}
+ti["h"] = {"st_fake_oxydc", state=OPEN}
+ti["i"] = {"st_fake_oxydd", state=OPEN}
+ti["j"] = {"st_fake_oxyde", state=OPEN}
+ti["s"] = {"st_switch", target="quake"}
+
+
 
 
 w, h = wo(ti, " ", {
@@ -39,14 +54,14 @@ w, h = wo(ti, " ", {
 "                    ",
 "                    ",
 "                    ",
+"                 s  ",
+"                 q  ",
 "                    ",
-"                    ",
-"                    ",
-"      1             ",
-"                    ",
-"                    ",
-"       S            ",
-"                    ",
+"      1          af ",
+"                 bg ",
+"                 ch ",
+"       S         di ",
+"                 ej ",
 "                    "
 })
 

@@ -23,12 +23,12 @@ wo["ShowMoves"] = false
 ti[" "] = {"fl-sahara"}
 ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
 ti["*"] = ti({"st_chess_black", checkerboard=0}) .. {"st_chess_white", checkerboard=1}
-ti["c"] = {"it-cherry", name="cherry#"}
+ti["c"] = {"it_cherry", name="cherry#"}
 ti["5"] = {"it_coin_m", name="money", target={"otto", "emil*"}}
 ti["S"] = {"st_coinslot"}
 ti["m"] = {"#ac-blackball"}
-ti["x"] = {"fl-rough-blue"} .. {"it-banana"} .. ti({"ac-bug", 0.7})
-ti["y"] = (ti({"fl-rough-blue"}) .. {"it-banana"}) .. {"ac-bug", name="buggy"}
+ti["x"] = {"fl-rough-blue"} .. {"it_banana"} .. ti({"ac-bug", 0.7})
+ti["y"] = (ti({"fl-rough-blue"}) .. {"it_banana"}) .. {"ac-bug", name="buggy"}
 ti["s"] = {"st_switch", action="callback", target="doit"}
 ti["b"] = {"st_blocker", name="blocker"}
 ti["d"] = {"st_door_b", name="door#"}
@@ -69,7 +69,7 @@ no["money"]["action"] = {"anna#*","x",no["cherry#*"],no["blocker"]}
 tokens = no["money"]["action"]
 
 if (tokens[4] == no["blocker"]) then
-    wo[{1, 1}] = {"it-magicwand"}
+    wo[{1, 1}] = {"it_magicwand"}
 end
 --tokens[3]:kill()
 wo[tokens[3]] = {"fl-rough-blue"}
@@ -87,7 +87,7 @@ function doit(value, sender)
     mygrp = no["cherry#*"]
     obj = mygrp[#mygrp - 1]
     if (-obj) then
-        wo[obj] = {"it-banana"}
+        wo[obj] = {"it_banana"}
     end
 
     
@@ -110,7 +110,7 @@ function doit(value, sender)
         chess_grp["color"] = 1
         chess_grp:move(po(-2,-1))
 --        chess_grp:message("move",po(-2,-1))
-        wo[mygrp] = {"st-wood"}
+        wo[mygrp] = {"st_wood"}
     else
         it(blocker_pos):close()
         --door_grp:message("close")

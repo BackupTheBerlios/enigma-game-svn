@@ -60,7 +60,7 @@ abypos = po(aby)
 
 function doabyss()
     for i = 1, #abypos do
-       wo[abypos[i]] = {"it-cherry"}
+       wo[abypos[i]] = {"it_cherry"}
     end
 end
 
@@ -77,19 +77,19 @@ function dopos()
        print ("water is not nil but type " .. type(p) .. " usertype ".. usertype(p))
     end
     print("water at "..p.x.." - "..p.y)
-    wo[po["water"]] = {"it-cherry"}
+    wo[po["water"]] = {"it_cherry"}
 end
 
 function dopw()
     print ("number of pws "..#po["pw#*"])
-    wo[po["pw#*"]] = {"it-cherry"}
+    wo[po["pw#*"]] = {"it_cherry"}
 end
 
 po["emil"] = po(2, 10)
-wo[po["emil"]] = {"it-cherry"}
+wo[po["emil"]] = {"it_cherry"}
 
 function dojoin()
-    wo[abypos .. po["pw#*"]] = {"it-banana"}
+    wo[abypos .. po["pw#*"]] = {"it_banana"}
 end
 
   ]]></el:luamain>

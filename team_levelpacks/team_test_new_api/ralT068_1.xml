@@ -32,7 +32,7 @@ ti["T"] = {"st_switch", target="closed", action_1="open", action_0="close"}
 
 ti["w"] = {"st_wood"}
 ti["g"] = {"st-glass_move"}
-ti["c"] = {"it-cherry"}
+ti["c"] = {"it_cherry"}
 ti["s"] = {"it-spring1"}
 ti["p"] = {"st_pull"}
 ti["W"] = {"st_window_ew", secure=true}

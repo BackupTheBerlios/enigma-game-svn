@@ -46,7 +46,7 @@ ti["v"] = {"st_wood", "wood2"}
 ti["u"] = {"st_wood", "wood3"}
 ti["r"] = {"st-rock1"}
 ti["s"] = {"st_swap"}
-ti["c"] = {"it-cherry"}
+ti["c"] = {"it_cherry"}
 
 ti["S"] = {"st_switch", target="kill_l"}
 ti["T"] = {"st_switch", target="kill_m"}

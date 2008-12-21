@@ -42,7 +42,7 @@ ti["Y"] = {"st_switch", target="o%1", action="closeall"}
 ti["@"] = (ti[" "] .. {"it_magicwand"}) .. {"#ac-blackball"}
 
 ti["w"] = {"st_switch", target="Laser%7", action="toggle"}
-ti["f"] = {"st_fart"}
+ti["f"] = {"st_quake"}
 ti["h"] = {"it_hammer"}
 ti["d"] = {"it-dynamite"}
 ti["E"] = {"st-bombs"}

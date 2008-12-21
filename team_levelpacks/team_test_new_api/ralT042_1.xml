@@ -22,7 +22,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl_ice"}
 ti["c"] = {"it_cross"}
-ti["v"] = {"it-cherry"}
+ti["v"] = {"it_cherry"}
 
 ti["A"] = {"#ac-blackball"}
 

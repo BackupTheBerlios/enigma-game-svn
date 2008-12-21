@@ -36,6 +36,15 @@ ti["s"] = {"it_sword"}
 ti["K"] = {"st_knight"}
 ti["L"] = {"st_laser_e", state=ON}
 
+ti["F"] = {"st_flash"}
+
+ti["Z"] = {"st_charge_zero"}
+ti["P"] = {"st_charge_plus"}
+ti["M"] = {"st_charge_minus", charge=-4}
+
+ti["p"] = {"st_charge_plus", "cp"}
+ti["q"] = {"st_switch", target="togglecharge"}
+ti["Q"] = {"st_switch", target="togglestrength"}
 
 ti["w"] = {"it_magicwand"}
 ti["c"] = {"st_chess_black"}
@@ -54,11 +63,18 @@ w, h = wo(ti, " ", {
 "   4             K  ",
 "                    ",
 "                    ",
+"   F                ",
 "                    ",
-"                    ",
-"                    "
+"    Q   P  Z  M   pq"
 })
 
+function togglecharge()
+    no["cp"]["charge"] = - no["cp"]["charge"]
+end
+
+function togglestrength()
+    wo["ElectricStrength"] = - wo["ElectricStrength"]
+end
   ]]></el:luamain>
     <el:i18n>
       <el:string el:key="title">

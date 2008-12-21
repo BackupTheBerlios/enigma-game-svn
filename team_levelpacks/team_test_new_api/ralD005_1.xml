@@ -17,8 +17,8 @@
     <el:luamain><![CDATA[
 ti[" "] = {"fl-plank"}
 ti["X"] = {"st_oxyd"}
-ti["B"] = {"st-black3"}
-ti["W"] = {"st-white3"}
+ti["B"] = {"st_passage_black", flavor="cross"}
+ti["W"] = {"st_passage_white", flavor="cross"}
 
 ti["y"] = {"it-yinyang"}
 ti["1"] = ti["y"] .. {"#ac-blackball"}

@@ -30,7 +30,7 @@ ti["w"] = {"st_window", faces="nesw"}
 ti["P"] = {"st_polarswitch", state=ON}
 ti["L"] = {"st_laser", orientation=EAST, state=ON}
 ti["R"] = {"st_laser", orientation=WEST, state=ON}
-ti["C"] = {"it-cherry"}
+ti["C"] = {"it_cherry"}
 ti["U"] = {"it_umbrella"}
 ti["@"] = {"#ac-blackball"}
 

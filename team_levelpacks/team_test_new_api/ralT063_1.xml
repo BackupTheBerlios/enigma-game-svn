@@ -66,7 +66,7 @@ ti["e"] = {"st_laser_e", state = ON}
 ti["="] = {"st_polarswitch"}
 ti[":"] = {"st_polarswitch", state=ON}
 ti["."] = {"st_stoneimpulse_movable"}
-ti["*"] = {"it-cherry"}
+ti["*"] = {"it_cherry"}
 
 ti["x"] = {"st_wood", "wood4"}
 ti["X"] = {"st_wood", "wood5"}
