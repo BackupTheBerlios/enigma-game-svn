@@ -71,7 +71,7 @@ ti["*"] = {"it_cherry"}
 ti["x"] = {"st_wood", "wood4"}
 ti["X"] = {"st_wood", "wood5"}
 
-ti["@"] = {"#ac-blackball"}  ..ti({"it_magicwand"})
+ti["@"] = {"#ac_marble"}  ..ti({"it_magicwand"})
 
 w, h = wo(ti, " ", {
 "                                       ",

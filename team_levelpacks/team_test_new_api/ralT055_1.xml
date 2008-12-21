@@ -51,7 +51,7 @@ ti["k"] = {"st_stoneimpulse", "k2"}
 ti["K"] = {"st_stoneimpulse", "k1"}
 ti["J"] = {"st_switch", target="push"}
 
-ti["1"] = {"#ac-blackball"} 
+ti["1"] = {"#ac_marble"} 
 
 
 w, h = wo(ti, " ", {

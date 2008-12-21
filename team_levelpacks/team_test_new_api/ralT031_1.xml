@@ -59,13 +59,13 @@ ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}
 ti["m"] = ti[" "] .. {"st_switch", target="makeactor"}
 ti["X"] = ti[" "] .. {"it_wormhole", destination="triggerA", range=1}
 
-ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it-ring"}
-ti["2"] = ti[" "] .. {"#ac-whiteball-small", player=nil, controllers=0}
+ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it-ring"}
+ti["2"] = ti[" "] .. {"#ac_pearl", player=DEFAULT, controllers=0}
 
-ti["3"] = (ti[" "]  .. {"#ac-whiteball-small", controllers=0})
+ti["3"] = (ti[" "]  .. {"#ac_pearl", controllers=0})
                 .. {"it_trigger", target={"laserh","laserhon"}, action={"toggle", "on"}}
 ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"toggle", "on"}})
-                .. {"#ac-whiteball-small", controllers=0}
+                .. {"#ac_pearl", controllers=0}
 ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"toggle", "on"}})
                 .. {"st_wood"}
 ti["6"] = (ti[" "]  .. {"it_trigger", "killtrigger", target="killstone"})

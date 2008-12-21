@@ -31,8 +31,8 @@ ti["S"] = {"it-springboard"}
 
 
 
-ti["@"] = {"#ac-blackball"} 
-ti["2"] = {"#ac-whiteball"} 
+ti["@"] = {"#ac_marble_black"} 
+ti["2"] = {"#ac_marble_white"} 
 ti["3"] = {"#ac-rotor"} 
 ti["4"] = {"#ac-bug"} 
 ti["5"] = {"#ac-horse"} 

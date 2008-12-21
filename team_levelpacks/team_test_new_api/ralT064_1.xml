@@ -42,8 +42,8 @@ ti["b"] = {"st_brake"}
 ti["d"] = {"it-dynamite"}
 ti["B"] = {"st-bombs"}
 
-ti["@"] = {"#ac-blackball"} 
-ti["."] = {"#ac-whiteball", "white"} 
+ti["@"] = {"#ac_marble_black"} 
+ti["."] = {"#ac_marble_white", "white"} 
 
 w, h = wo(ti, " ", {
 "B ddd           1234",

@@ -21,7 +21,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 
-ti["A"] = {"#ac-blackball"}
+ti["A"] = {"#ac_marble"}
 
 ti["L"] = {"st_laser_n", "Laser", state=ON}
 ti["F"] = {"st_fourswitch", target="Laser", action="orientate"}

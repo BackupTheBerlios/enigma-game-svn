@@ -23,7 +23,7 @@ ti[" "] = {"fl-sahara"}
 
 ti["."] = {"it_trap"}
 
-ti["@"] = {"#ac-blackball"}
+ti["@"] = {"#ac_marble"}
 ti["0"] = {"#ac-bug"}
 
 ti["l"] = {"st_laser", state = ON, orientation = SOUTH}

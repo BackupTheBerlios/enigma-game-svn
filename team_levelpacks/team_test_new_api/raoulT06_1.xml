@@ -42,7 +42,7 @@ ti["q"] = {"it_strip_nesw", friction=1, adhesion=1}
 ti["w"] = {"st_wood"}
 ti["v"] = {"st-plain_move"}
 
-ti["A"] = {"#ac-blackball"} .. ti["*"]
+ti["A"] = {"#ac_marble"} .. ti["*"]
 
 w, h = wo(ti, " ", {
 "hggggggggggggggggggf",

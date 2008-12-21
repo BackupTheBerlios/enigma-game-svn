@@ -22,7 +22,7 @@ wo["MaxOxydColor"] = OXYD_BROWN
 
 ti[" "] = {"fl-sahara"}
 
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 ti["x"] = {"st_oxyd_e"}
 ti["y"] = {"st_oxyd_e", "oo", oxydcolor=OXYD_BOLD}

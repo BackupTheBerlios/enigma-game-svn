@@ -48,7 +48,7 @@ ti["E"] = ti["."] .. {"it_strip_n"}
 ti["w"] = {"st_wood"}
 ti["v"] = {"st-plain_move"}
 
-ti["A"] = {"#ac-blackball"} .. ti["a"]
+ti["A"] = {"#ac_marble"} .. ti["a"]
 
 w, h = wo(ti, " ", {
 "hggggggwgggggvgggwww",

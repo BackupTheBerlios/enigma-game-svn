@@ -44,7 +44,7 @@ ti["K"] = {"st_door_d", target="bb", action="hit"}
 ti["j"] = {"st_door_d", target="bb", action="hit", faces="ew"}
 ti["J"] = {"st-blackballs", "bb"}
 
-ti["@"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_marble"} 
 
 
 w, h = wo(ti, " ", {

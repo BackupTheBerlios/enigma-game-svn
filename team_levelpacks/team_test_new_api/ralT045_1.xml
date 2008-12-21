@@ -26,7 +26,7 @@ ti["template_a"] = {"st_floppy", target={"door%%#*","laser%%"}}
 ti["template_A"] = {"st_blocker", "door%%#"}
 ti["template_L"] = {"st_laser_s", "laser%%"}
 
-ti["xx"] = ti["ff"] .. {"#ac-blackball"} 
+ti["xx"] = ti["ff"] .. {"#ac_marble"} 
 
 local resolver = res.autotile(ti, {"a1", "a5", "template_a"}, 
 --local resolver = res.autotile(ti, {"a", "template_a"}, 

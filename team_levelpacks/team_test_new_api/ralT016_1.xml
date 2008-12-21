@@ -50,7 +50,7 @@ ti["G"] = {"st_boulder_e"}
 
 
 ti["X"] = {"st_oxyd"}
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "###X##########X#####",

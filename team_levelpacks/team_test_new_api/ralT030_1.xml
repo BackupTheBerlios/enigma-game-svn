@@ -32,7 +32,7 @@ ti["Q"] = ti[" "] .. {"st_panel_n"}
 ti["R"] = ti[" "] .. {"st_panel", faces="ne"}
 
 
-ti["A"] = (ti[" "] .. {"st_brake"}) .. {"#ac-blackball"}
+ti["A"] = (ti[" "] .. {"st_brake"}) .. {"#ac_marble"}
 
 
 ti["w"] = ti[" "] .. {"st_switch", target="Laser", action="toggle"}

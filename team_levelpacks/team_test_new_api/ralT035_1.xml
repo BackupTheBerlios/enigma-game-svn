@@ -22,7 +22,7 @@ ti["  "] = {"fl-sahara"}
 ti["~~"] = {"fl_water"}
 ti["##"] = {"st-rock1"}
 ti["++"] = {"st_wood"}
-ti[" 1"] = ti["  "] .. {"#ac-blackball"}
+ti[" 1"] = ti["  "] .. {"#ac_marble"}
 
 -- sample of create world without a given map - just default floors
 w, h = wo(ti, "  ", 20, 13)

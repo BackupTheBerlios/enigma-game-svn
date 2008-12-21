@@ -24,7 +24,7 @@ ti[" "] = {"fl-sahara"}
 ti["s"] = {"st_swap"}
 ti["W"] = {"st_wood"}
 
-ti["A"] = {"#ac-blackball"}
+ti["A"] = {"#ac_marble"}
 
 ti["k"] = {"st_laserswitch", target="LaserK"}
 ti["L"] = {"st_laser_n", "LaserL"}

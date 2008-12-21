@@ -30,7 +30,7 @@ ti["b"] = {"it_brush"}
 ti["G"] = {"it_glasses"}
 ti["g"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 
-ti["1"] = {"#ac-blackball"} 
+ti["1"] = {"#ac_marble_black"} 
 
 ti["s"] = {"it_sword"}
 ti["K"] = {"st_knight"}
@@ -48,8 +48,8 @@ ti["Q"] = {"st_switch", target="togglestrength"}
 
 ti["w"] = {"it_magicwand"}
 ti["c"] = {"st_chess_black"}
-ti["3"] = {"#ac-blackball", player=DEFAULT, controllers=0}
-ti["4"] = {"#ac-whiteball", player=DEFAULT, controllers=0}
+ti["3"] = {"#ac_marble_black", player=DEFAULT, controllers=0}
+ti["4"] = {"#ac_marble_white", player=DEFAULT, controllers=0}
 
 
 w, h = wo(ti, " ", {

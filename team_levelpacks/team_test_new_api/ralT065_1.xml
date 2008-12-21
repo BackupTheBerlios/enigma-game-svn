@@ -38,8 +38,8 @@ ti["s"] = {"st_switch", target="bumpd#*", action="signal"}
 ti["T"] = {"st_switch", target="@vol#*", action="toggle"}
 ti["F"] = {"st_fourswitch", target="@vol#*", action_0="flip", action_2="flip"}
 
-ti["@"] = {"#ac-whiteball-small", player=0} 
-ti["1"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_pearl"} 
+ti["1"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
 "F             T    T",

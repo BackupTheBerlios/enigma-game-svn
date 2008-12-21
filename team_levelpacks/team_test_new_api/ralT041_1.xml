@@ -56,8 +56,8 @@ ti["U"] = {"st_switch", target="rotlasern2"}
 
 ti["I"] = {"st_switch", target="switchsensor"}
 
-ti["1"] = ti["y"] .. {"#ac-blackball"} 
-ti["2"] = ti["y"] .. {"#ac-whiteball"}
+ti["1"] = ti["y"] .. {"#ac_marble_black"} 
+ti["2"] = ti["y"] .. {"#ac_marble_white"}
 
 
 w, h = wo(ti, " ", {

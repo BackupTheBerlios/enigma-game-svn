@@ -46,7 +46,7 @@ ti["l"] = {"st_laser_e", state=ON}
 ti["P"] = {"st_polarswitch"}
 
 
-ti["@"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_marble"} 
 
 resolver = res.autotile(ti, {"1","9","template_w"}, {"a","h","template_b"})
 

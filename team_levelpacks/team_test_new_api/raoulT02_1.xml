@@ -19,7 +19,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 
-ti["0"] = ti[" "] .. {"#ac-blackball"}
+ti["0"] = ti[" "] .. {"#ac_marble"}
 
 ti["A"] = ti[" "] .. {"st_switch", name="da1", target="la5", action="toggle"}
 ti["B"] = ti[" "] .. {"st_switch", name="da2", target="la6", action="toggle"}

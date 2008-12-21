@@ -40,7 +40,7 @@ ti["g"] = {"st-glass_move"}
 ti["x"] = {"st-grate1"} .. ti["."]
 ti["^"] = {"st_oneway_n"} .. ti["."]
 
-ti["@"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
 " *.............     ",

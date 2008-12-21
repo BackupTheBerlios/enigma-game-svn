@@ -37,7 +37,7 @@ ti["S"] = {"st_switch", target="other#*", action="darken"}
 
 
 
-ti["@"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
 "DD S V___U    ~ b  T",

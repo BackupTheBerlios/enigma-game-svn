@@ -47,7 +47,7 @@ ti["b"] = ti[" "] .. {"st_switch", "east", target="change"}
 ti["c"] = ti[" "] .. {"st_switch", "south", target="change"}
 ti["d"] = ti[" "] .. {"st_switch", "west", target="change"}
 
-ti["A"] = (ti[" "] .. {"st_brake"}) .. {"#ac-blackball"}
+ti["A"] = (ti[" "] .. {"st_brake"}) .. {"#ac_marble"}
 
 ti["D"] = ti[" "] .. {"st_switch", target="deletion"}
 ti["E"] = ti[" "] .. {"st_switch", target="recluster"}

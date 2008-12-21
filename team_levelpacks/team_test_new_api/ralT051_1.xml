@@ -45,7 +45,7 @@ ti["G"] = {"it_trigger", target="mymir", action="signal"}
 ti["g"] = {"it_trigger", target="mymir", action_1="turn", action_0="turnback"}
 ti["i"] = {"st_stoneimpulse_movable"}
 
-ti["1"] = {"#ac-blackball"} 
+ti["1"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
 "         s         l",

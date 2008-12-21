@@ -40,8 +40,8 @@ ti["h"] = {"st_switch_white", state=1, target="laser4", action="signal"}
 ti["s"] = {"st_switch", target="recolor"}
 ti["w"] = {"it_hammer"}
 
-ti["1"] = ti["y"] .. {"#ac-blackball"}
-ti["2"] = ti["y"] .. {"#ac-whiteball"}
+ti["1"] = ti["y"] .. {"#ac_marble_black"}
+ti["2"] = ti["y"] .. {"#ac_marble_white"}
 
 w, h = wo(ti, " ", {
 "                    ",

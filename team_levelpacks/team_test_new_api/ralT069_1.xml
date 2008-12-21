@@ -31,7 +31,7 @@ ti["S"] = {"st_puzzle_yellow", intensity=2/6}
 ti["M"] = {"st_puzzle_blue", algorithm="marked"}
 ti["C"] = {"st_puzzle_blue", algorithm="marked", intensity=10}
 
-ti["@@"] = {"#ac-blackball"}  ..ti({"it_magicwand"})
+ti["@@"] = {"#ac_marble"}  ..ti({"it_magicwand"})
 
 puzz = res.puzzle(ti, "P","H", "S", "M", "C")
 

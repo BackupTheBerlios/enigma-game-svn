@@ -21,7 +21,7 @@ ti["~"] = {"fl_water"}
 ti[" "] = {"fl-plank"}
 ti["c"] = {"it-crack3", brittleness=0}
 ti["^"] = {"st_oneway_n"}
-ti["1"] = {"ac-blackball", 0, 0.5}
+ti["1"] = {"ac_marble", 0, 0.5}
 
 ti["x"] = {"st_oxyd", "island#"}
 ti["y"] = {"st_oxyd", "left#"}

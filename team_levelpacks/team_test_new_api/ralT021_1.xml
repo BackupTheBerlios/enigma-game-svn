@@ -30,7 +30,7 @@ ti["R"] = {"st_rubberband"}
 ti["W"] = {"st_wood"}
 ti["S"] = {"st_switch", target="autoclose"}
 
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "   R                ",

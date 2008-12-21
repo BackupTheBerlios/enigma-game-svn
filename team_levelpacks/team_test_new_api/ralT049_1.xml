@@ -45,8 +45,8 @@ ti["X"] = {"st_switch", target="breakglasses"}
 
 ti["b"] = {"it-bag"}
 ti["y"] = {"it-yinyang"}
-ti["1"] = ti["y"] .. {"#ac-blackball"} 
-ti["2"] = ti["y"] .. {"#ac-whiteball"} 
+ti["1"] = ti["y"] .. {"#ac_marble_black"} 
+ti["2"] = ti["y"] .. {"#ac_marble_white"} 
 
 w, h = wo(ti, " ", {
 "!!!             HHHH",

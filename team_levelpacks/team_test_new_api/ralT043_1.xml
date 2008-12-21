@@ -33,7 +33,7 @@ ti["V"] = {"it_vortex", destination="@coin#*"}
 ti["v"] = {"it_vortex", destination="@@coin#*"}
 
 
-ti["1"] = ti["f"] .. {"#ac-blackball"} 
+ti["1"] = ti["f"] .. {"#ac_marble"} 
 
 ti["r"] = {"st_brake"}
 

@@ -26,7 +26,7 @@ ti["O"] = ti[" "] .. {"st_oxyd", name="o#", oxydcolor=1, noshuffle=false}
 ti["P"] = ti[" "] .. {"st_oxyd", name="p#"}
 ti["Q"] = ti[" "] .. {"st_oxyd", name="q1", oxydcolor=5, noshuffle=false}
 ti["q"] = ti[" "] .. {"st_oxyd", name="q2", oxydcolor=7, noshuffle=true}
-ti["1"] = ti[" "] .. {"#ac-blackball"}
+ti["1"] = ti[" "] .. {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "   O          O     ",

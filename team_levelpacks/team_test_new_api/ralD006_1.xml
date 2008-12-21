@@ -43,7 +43,7 @@ ti["N"] = ti["."] .. {"st_turnstilearm_n"}
 
 ti["+"] = {"fl-samba", checkerboard=0} .. ti({"fl_wood", checkerboard=1})
 
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 if wo["IsDifficult"] then
     ti["="] = ti["~"]

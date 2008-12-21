@@ -24,7 +24,7 @@ ti["."] = {"fl_ice"}
 ti["c"] = {"it_cross"}
 ti["v"] = {"it_cherry"}
 
-ti["A"] = {"#ac-blackball"}
+ti["A"] = {"#ac_marble"}
 
 ti["l"] = {"st_lightpassenger"}
 ti["L"] = {"st_lightpassenger", friction=1}

@@ -37,8 +37,8 @@ ti["|"] = {"it-spring1"}
 ti[";"] = {"it-spring2"}
 
 
-ti["1"] = {"#ac-blackball", "me"}
-ti["2"] = {"#ac-whiteball"}
+ti["1"] = {"#ac_marble_black", "me"}
+ti["2"] = {"#ac_marble_white"}
 
 w, h = wo(ti, " ", {
 "                    ",

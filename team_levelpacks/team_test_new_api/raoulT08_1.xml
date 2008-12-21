@@ -105,7 +105,7 @@ ti["yf"] = {"st_puzzle_yellow", connections="nesw", hollow=true}
 ti["LL"] = {"st_laser", orientation="w", state=ON}
 ti["PP"] = {"st_polarswitch", state=OFF}
 
-ti["@ "] = {"#ac-blackball"}  ..ti({"it_magicwand"})
+ti["@ "] = {"#ac_marble"}  ..ti({"it_magicwand"})
 
 w, h = wo(ti, "  ", {
 "                                                                              ",

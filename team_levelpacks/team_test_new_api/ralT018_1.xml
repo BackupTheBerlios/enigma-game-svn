@@ -28,7 +28,7 @@ ti["P"] = {"st_oxyd", name="p#"}
 ti["Q"] = {"st_oxyd", name="q1", oxydcolor=5}
 --ti["S"] = ti[" "] .. {"st_switch", action="shuffle", target="o#1"}
 ti["S"] = {"st_switch", action="callback", target="newflavor"}
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble_black"}
 ti["B"] = {"st_oxyd", oxydcolor=OXYD_BOLD, flavor="d", noshuffle=false}
 ti["F"] = {"st_oxyd", oxydcolor=OXYD_QUAKE, flavor="a", noshuffle=false}
 ti["K"] = {"st_oxyd", oxydcolor=OXYD_FAKE, flavor="c", noshuffle=false}

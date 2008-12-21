@@ -43,7 +43,7 @@ ti[";"] = ti["."] .. ti["g"]
 
 ti["b"] = {"st_brake"}
 
-ti["@"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
 "    S    S     S    ",

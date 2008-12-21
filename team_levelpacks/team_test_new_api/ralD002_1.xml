@@ -18,7 +18,7 @@
 ti["~"] = {"fl_water"}
 ti["s"] = {"fl-sahara"}
 ti["t"] = {"fl-tigris"}
-ti["1"] = {"ac-blackball", 0, 0.5}
+ti["1"] = {"ac_marble", 0, 0.5}
 
 ti["template_trigger"] = {"it_trigger", target="myoxyd%%", action="open"}
 ti["template_oxyd"]    = ti["~"] .. {"st_oxyd", "myoxyd%%"}

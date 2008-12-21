@@ -50,7 +50,7 @@ ti["t"] = {"st_switch", target="setstate"}
 ti["H"] = {"st_fourswitch", counterclock=true, name="anticlock"}
 
 
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "            f  s    ",

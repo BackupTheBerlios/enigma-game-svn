@@ -20,8 +20,8 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["."] = {"fl_space"}
 
-ti["0"] = {"#ac-blackball"}
-ti["'"] = {"#ac-whiteball"}
+ti["0"] = {"#ac_marble_black"}
+ti["'"] = {"#ac_marble_white"}
 
 ti["#"] = {"st-glass"}
 ti["+"] = {"st_window_nesw"}

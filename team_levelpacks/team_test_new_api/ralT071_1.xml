@@ -49,7 +49,7 @@ ti["1"] = {"st_stoneimpulse", "s3"}
 ti["2"] = {"st_stoneimpulse", "s4"}
 
 
-ti["@"] = {"#ac-blackball"} 
+ti["@"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
 "                    ",

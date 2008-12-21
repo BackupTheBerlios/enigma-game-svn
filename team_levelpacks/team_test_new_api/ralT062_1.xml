@@ -35,7 +35,7 @@ ti["S"] = {"st_switch", target="volcano"}
 ti["B"] = {"st_boulder_s"}
 ti["w"] = {"it_magicwand"}
 
-ti["@"] = {"#ac-blackball"} .. ti({"it_hammer"}) 
+ti["@"] = {"#ac_marble"} .. ti({"it_hammer"}) 
 
 w, h = wo(ti, " ", {
 "  v  #  V    #  u   ",

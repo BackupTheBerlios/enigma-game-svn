@@ -39,7 +39,7 @@ ti["#2 "] = {"it_sword"}
 ti["# ~"] = {"fl_hay"}
 ti[" 2~"] = {"fl-gray"}
 
-ti["xxx"] = {"#ac-blackball"} 
+ti["xxx"] = {"#ac_marble"} 
 
 local resolver = res.composer(ti)
 

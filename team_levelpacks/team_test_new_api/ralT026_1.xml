@@ -34,7 +34,7 @@ ti["l"] = {"fl_rock", name="i4"}
 ti["s"] = ti[" "] .. {"st_switch", target="innercircle"}
 
 
-ti["a"] = ti[" "] .. {"#ac-blackball"}
+ti["a"] = ti[" "] .. {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "                    ",

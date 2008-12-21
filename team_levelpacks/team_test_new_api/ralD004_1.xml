@@ -25,7 +25,7 @@ ti["w"] = {"fl-acwhite"}
 ti["c"] = {"it_coin_s"}
 ti["p"] = {"it_brush"}
 
-ti["1"] = {"ac-blackball", 0, 0.5}
+ti["1"] = {"ac_marble", 0, 0.5}
 
 simple_random = res.random(ti, " ", {"s", "t"})
 

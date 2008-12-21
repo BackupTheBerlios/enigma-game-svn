@@ -32,7 +32,7 @@ ti["L"] = {"st_laser", orientation=EAST, state=ON}
 ti["R"] = {"st_laser", orientation=WEST, state=ON}
 ti["C"] = {"it_cherry"}
 ti["U"] = {"it_umbrella"}
-ti["@"] = {"#ac-blackball"}
+ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "####################",

@@ -62,7 +62,7 @@ ti["*"] = {"st_fourswitch", target="doora"}
 
 ti["O"] = {"st-blackballs"}
 
-ti["@"] = {"#ac-blackball"}
+ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "                   e",

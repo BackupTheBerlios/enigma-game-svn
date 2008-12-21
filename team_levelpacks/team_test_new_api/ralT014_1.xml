@@ -26,7 +26,7 @@ ti["*"] = ti({"st_chess_black", checkerboard=0}) .. {"st_chess_white", checkerbo
 ti["c"] = {"it_cherry", name="cherry#"}
 ti["5"] = {"it_coin_m", name="money", target={"otto", "emil*"}}
 ti["S"] = {"st_coinslot"}
-ti["m"] = {"#ac-blackball"}
+ti["m"] = {"#ac_marble"}
 ti["x"] = {"fl-rough-blue"} .. {"it_banana"} .. ti({"ac-bug", 0.7})
 ti["y"] = (ti({"fl-rough-blue"}) .. {"it_banana"}) .. {"ac-bug", name="buggy"}
 ti["s"] = {"st_switch", action="callback", target="doit"}

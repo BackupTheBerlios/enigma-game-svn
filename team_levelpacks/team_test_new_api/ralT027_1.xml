@@ -21,7 +21,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
 ti["b"] = {"it_blocker"}
-ti["n"] = {"it_blocker_new"}
+ti["n"] = {"it_blocker_new"}                  
 ti["B"] = {"st_blocker"}
 ti["N"] = {"st_blocker_new"}
 
@@ -41,7 +41,7 @@ ti["t"] = {"it_trigger", target="blocker"} .. ti({"st_wood", "wood2"})
 
 
 
-ti["1"] = (ti[" "] .. {"#ac-blackball"}) .. {"it_magicwand"}
+ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it_magicwand"}
 
 w, h = wo(ti, " ", {
 "                    ",

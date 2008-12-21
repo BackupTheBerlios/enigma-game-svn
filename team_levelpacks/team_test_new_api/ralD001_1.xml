@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 ti["r"] = {"fl-rough-red"}
 ti["b"] = {"fl-rough-blue"}
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 ti["x"] = {"it_cross"}
 

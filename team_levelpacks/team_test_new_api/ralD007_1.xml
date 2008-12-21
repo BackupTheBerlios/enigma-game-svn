@@ -28,7 +28,7 @@ ti["Y"] = {"st_puzzle_yellow"}
 ti["I"] = {"st_puzzle_blue", intensity=2/6} 
 ti["M"] = {"st_puzzle_blue", algorithm="marked", intensity=10} 
 
-ti["xx"] = {"#ac-blackball"} .. ti({"it_magicwand"})
+ti["xx"] = {"#ac_marble"} .. ti({"it_magicwand"})
 
 local resolver = res.puzzle(ti, "B", "Y", "I", "M")
 

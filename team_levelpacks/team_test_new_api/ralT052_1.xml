@@ -58,7 +58,7 @@ ti["V"] = {"it_vortex_open", "vortex1", destination="vortex2"}
 ti["v"] = {"it_vortex_open", "vortex2", destination="vortex1"}
 
 ti["s"] = {"st_switch", target="doit"}
-ti["1"] = {"#ac-blackball"}
+ti["1"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "##########################################################",

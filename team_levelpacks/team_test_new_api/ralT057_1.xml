@@ -63,9 +63,9 @@ ti["h"] = {"it_meditation_dent"}
 ti["H"] = {"it_meditation"}
 
 
-ti["1"] = ti["y"] .. {"#ac-blackball"}
-ti["2"] = ti["y"] .. {"#ac-whiteball"}
-ti["3"] = {"#ac-whiteball-small", controllers=0}
+ti["1"] = ti["y"] .. {"#ac_marble_black"}
+ti["2"] = ti["y"] .. {"#ac_marble_white"}
+ti["3"] = {"#ac_pearl_white", controllers=0}
 
 w, h = wo(ti, " ", {
 "                    ",
