@@ -26,8 +26,8 @@ ti["p"] = {"it-puller-w"}
 ti["m"] = {"it_magicwand"}
 ti["t"] = {"it_wrench"}
 
-ti["w"] = {"st_wood"}
-ti["template_w"] = {"st_wood", "w%%"}
+ti["w"] = {"st_box"}
+ti["template_w"] = {"st_box", "w%%"}
 ti["template_b"] = {"st-brownie", "b%%"}
 ti["s"] = {"st_scissors"}
 ti["S"] = {"st_swap"}

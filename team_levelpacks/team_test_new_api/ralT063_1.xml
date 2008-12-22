@@ -20,7 +20,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl-sahara"}
 ti["~"] = {"fl_water"}
 ti["_"] = {"fl_abyss"}
-ti["w"] = {"st_wood"}
+ti["w"] = {"st_box"}
 ti["s"] = {"st_swap"}
 
 ti["1"] = {"st_puzzle_blue", cluster=1, hollow=false}
@@ -49,12 +49,12 @@ ti["h"] = {"st_puzzle_yellow", connections="n"}
 
 ti["'"] = {"st_puzzle", "puz1", connections="n"}
 ti["!"] = {"st_puzzle_yellow", "puz2", connections="w"}
-ti["W"] = {"st_wood", "wood1"}
-ti["V"] = {"st_wood", "wood2"}
+ti["W"] = {"st_box", "wood1"}
+ti["V"] = {"st_box", "wood2"}
 
 ti["n"] = {"st_puzzle_blue", "puz3", connections="n"}
 ti["m"] = {"st_puzzle_blue", "puz4", connections="s"}
-ti["v"] = {"st_wood", "wood3"}
+ti["v"] = {"st_box", "wood3"}
 
 ti["N"] = {"st_puzzle_blue", "puz5", connections="n"}
 ti["M"] = {"st_puzzle_blue", "puz6", connections="s"}
@@ -68,8 +68,8 @@ ti[":"] = {"st_polarswitch", state=ON}
 ti["."] = {"st_stoneimpulse_movable"}
 ti["*"] = {"it_cherry"}
 
-ti["x"] = {"st_wood", "wood4"}
-ti["X"] = {"st_wood", "wood5"}
+ti["x"] = {"st_box", "wood4"}
+ti["X"] = {"st_box", "wood5"}
 
 ti["@"] = {"#ac_marble"}  ..ti({"it_magicwand"})
 

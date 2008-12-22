@@ -41,9 +41,9 @@ ti["F"] = {"st_door_a", "door_l"}
 ti["X"] = {"st_door_a", "door_mx", state=OPEN}
 ti["Y"] = {"st_door_a", "door_ly"}
 
-ti["w"] = {"st_wood", "wood"}
-ti["v"] = {"st_wood", "wood2"}
-ti["u"] = {"st_wood", "wood3"}
+ti["w"] = {"st_box", "wood"}
+ti["v"] = {"st_box", "wood2"}
+ti["u"] = {"st_box", "wood3"}
 ti["r"] = {"st-rock1"}
 ti["s"] = {"st_swap"}
 ti["c"] = {"it_cherry"}

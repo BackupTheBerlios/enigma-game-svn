@@ -27,7 +27,7 @@ ti["B"] = {"it_vortex", name="v2", destination="v3"}
 ti["C"] = {"it_vortex", name="v3", destination={"v1","v2","v4"}}
 ti["D"] = {"it_vortex", name="v4", destination=po(3.1,7.7)}
 ti["R"] = {"st_rubberband"}
-ti["W"] = {"st_wood"}
+ti["W"] = {"st_box"}
 ti["S"] = {"st_switch", target="autoclose"}
 
 ti["1"] = {"#ac_marble"}

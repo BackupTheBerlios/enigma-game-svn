@@ -47,7 +47,7 @@ ti["o"] = ti[" "] .. {"st_laser_n", "lasero"}
 ti["p"] = ti[" "] .. {"st_laser_n", "laseroon"}
 
 
-ti["W"] = ti[" "] .. {"st_wood"}
+ti["W"] = ti[" "] .. {"st_box"}
 ti["U"] = ti[" "] .. {"st-block"}
 ti["V"] = ti[" "] .. {"st-brownie"}
 ti["u"] = ti[" "] .. {"it-spring1"}
@@ -67,7 +67,7 @@ ti["3"] = (ti[" "]  .. {"#ac_pearl", controllers=0})
 ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"toggle", "on"}})
                 .. {"#ac_pearl", controllers=0}
 ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"toggle", "on"}})
-                .. {"st_wood"}
+                .. {"st_box"}
 ti["6"] = (ti[" "]  .. {"it_trigger", "killtrigger", target="killstone"})
 
 

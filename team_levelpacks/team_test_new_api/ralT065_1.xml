@@ -30,7 +30,7 @@ ti["="] = {"it_meditation_bump", "bumpd#", essential=DISPENSIBLE}
 ti["("] = {"it_meditation_volcano", "vol#"}
 ti[")"] = {"it_meditation_caldera", "vol#"}
 
-ti["w"] = {"st_wood"}
+ti["w"] = {"st_box"}
 ti["d"] = {"it-dynamite"}
 ti["?"] = {"it-spade"}
 ti["S"] = {"st_switch", target="hilli#*", action="flip"}

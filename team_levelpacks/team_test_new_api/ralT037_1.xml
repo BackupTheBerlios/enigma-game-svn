@@ -21,7 +21,7 @@ wo["MagnetRange"] = 3
 ti[" "] = {"fl-sahara"}
 ti["~"] = {"fl_water"}
 ti["s"] = {"st_shogun", "him"}
-ti["w"] = {"st_wood", "you"}
+ti["w"] = {"st_box", "you"}
 ti["r"] = {"it_rubberband", anchor2="you", length=4}
 ti["S"] = {"st_switch", target="privat.callbacks.killwood"}
 ti["X"] = {"st_scissors"}

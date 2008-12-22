@@ -24,25 +24,25 @@ ti["."] = {"fl_abyss"}
 ti[","] = {"it_seed"}
 
 
-ti["w"] = {"st_wood"}
-ti["h"] = {"st_flhay"}
-ti["r"] = {"st_flrock"}
+ti["w"] = {"st_box_wood"}
+ti["h"] = {"st_box_hay"}
+ti["r"] = {"st_box_rock"}
 ti["b"] = {"st-block"}
 ti["f"] = {"st-firebreak_move"}
 ti["p"] = {"st-plain_move"}
 
 ti["s"] = {"st_switch", target="flood"}
 
-ti["W"] = ti["~"] .. {"st_wood"}
-ti["H"] = ti["~"] .. {"st_flhay"}
-ti["R"] = ti["~"] .. {"st_flrock"}
+ti["W"] = ti["~"] .. {"st_box_wood"}
+ti["H"] = ti["~"] .. {"st_box_hay"}
+ti["R"] = ti["~"] .. {"st_box_rock"}
 ti["B"] = ti["~"] .. {"st-block"}
 ti["F"] = ti["~"] .. {"st-firebreak_move"}
 ti["P"] = ti["~"] .. {"st-plain_move"}
 
 ti["S"] = ti["~"] .. {"st_swap"}
 
-ti["v"] = {"st_wood", "woody"}
+ti["v"] = {"st_box", "woody"}
 ti["V"] = {"st_swap", "buddy"}
 
 ti["i"] = {"st_stoneimpulse", "i2"}

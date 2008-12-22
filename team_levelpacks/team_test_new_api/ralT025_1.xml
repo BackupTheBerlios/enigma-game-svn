@@ -41,7 +41,7 @@ ti["U"] = {"st_switch", target="f#2", action="toggle"}
 
 -- the bolder on fourswitch trigger will work after the reengineering of boulder
 ti["B"] = {"st_boulder_w"}
-ti["W"] = {"st_wood"}
+ti["W"] = {"st_box"}
 
 
 -- 4 switches to set state of fourswitch that switches 4 others

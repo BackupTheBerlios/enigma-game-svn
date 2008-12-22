@@ -42,7 +42,7 @@ ti["e"] = {"st-turnstile-e"}
 
 ti["s"] = {"st_swap"}
 ti["i"] = {"st_stoneimpulse_movable"}
-ti["w"] = {"st_wood"}
+ti["w"] = {"st_box"}
 ti["h"] = {"it_hammer"}
 ti["m"] = {"it_magicwand"}
 ti["b"] = {"it_brush"}
