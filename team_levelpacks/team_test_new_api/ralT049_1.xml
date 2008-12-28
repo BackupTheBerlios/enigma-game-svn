@@ -43,6 +43,9 @@ ti["a"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 ti["x"] = {"it_glasses", "myglasses"}
 ti["X"] = {"st_switch", target="breakglasses"}
 
+ti["T"] = {"st-thief"}
+ti["t"] = {"fl-thief"}
+
 ti["b"] = {"it-bag"}
 ti["y"] = {"it-yinyang"}
 ti["1"] = ti["y"] .. {"#ac_marble_black"} 
@@ -57,8 +60,8 @@ w, h = wo(ti, " ", {
 "         G         x",
 "#    b  1  2  b    X",
 "                    ",
-"                    ",
-"                    ",
+"                   T",
+"                   t",
 "hh       s       a  ",
 "                    ",
 "LLL l   SSS      AAA"

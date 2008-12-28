@@ -26,7 +26,7 @@ ti["3"] = {"fl_rock", name="d3"}
 ti["4"] = {"fl_rock", name="d4"}
 ti["5"] = {"fl_rock", name="d5"}
 ti["6"] = {"fl_rock", name="d6"}
-ti["h"] = ti[" "] .. {"ac-horse", name="horse", destination={"d1","d2","d3","d4","d5","d6"}}
+ti["h"] = ti[" "] .. {"ac_horse", name="horse", destination={"d1","d2","d3","d4","d5","d6"}}
 ti["i"] = {"fl_rock", name="i1"}
 ti["j"] = {"fl_rock", name="i2"}
 ti["k"] = {"fl_rock", name="i3"}

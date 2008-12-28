@@ -35,16 +35,18 @@ ti["B"] = ti["~"] .. ti["b"]
 ti["."] = {"it-springboard"}
 ti["|"] = {"it-spring1"}
 ti[";"] = {"it-spring2"}
+ti["*"] = {"it_landmine"}
 
 
 ti["1"] = {"#ac_marble_black", "me"}
 ti["2"] = {"#ac_marble_white"}
+ti["3"] = {"#ac_pearl"}
 
 w, h = wo(ti, " ", {
 "                    ",
-"               t    ",
+"  *  3         t    ",
 "           R   T    ",
-"                    ",
+"  *   3             ",
 "     m  ~  2        ",
 "                    ",
 "       pw  s        ",

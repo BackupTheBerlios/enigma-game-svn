@@ -2,7 +2,7 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Test Oneway new API" el:subtitle="" el:id="20080802ral706"/>
+      <el:identity el:title="Test Actors new API" el:subtitle="" el:id="20081228ral537"/>
       <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
@@ -18,45 +18,35 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
-ti[">"] = {"st_oneway", orientation=EAST}
-ti["<"] = {"st_oneway_w"}
-ti["v"] = {"st_oneway_s"}
-ti["^"] = {"st_oneway_n"}
-ti["A"] = {"st_oneway_white_n"}
-ti["a"] = {"st_oneway_black", state=NORTH}
-
-ti["m"] = {"it_magicwand"}
-ti["s"] = {"it-spring1"}
-ti["S"] = {"it-springboard"}
+ti["."] = {"fl_space"}
 
 
-
-ti["@"] = {"#ac_marble_black"} 
-ti["2"] = {"#ac_marble_white"} 
-ti["3"] = {"#ac_rotor"} 
-ti["4"] = {"#ac_bug"} 
-ti["5"] = {"#ac_horse"} 
-ti["6"] = {"#ac_killer"} 
-ti["7"] = {"#ac_top"} 
-
+ti["@"] = {"#ac_marble"} 
+ti["k"] = ti["."] .. {"ac_killer", 0.5, 0 ,name="killer", velocity_x=7} 
+ti["K"] = {"st_rotator_ccw", "killerbox"}
+ti["t"] = ti["."] .. {"ac_top", 0.99, 0.5, name="top", velocity_y=40} 
+ti["T"] = {"st_rotator_ccw", "topbox"}
+ti["b"] = ti["."] .. {"#ac_bug", "bug", velocity_x=-6.5} 
+ti["B"] = {"it_magnet_on", range=4, strength=50} .. ti["."]
 
 w, h = wo(ti, " ", {
-"                    ",
-"   v<        <      ",
-"                    ",
-"             S      ",
-"                    ",
-"                    ",
-"   vvvvv            ",
-"                    ",
-"            @ m s   ",
-"   A   a    2       ",
-"            5       ",
-"            4       ",
-"            3     67"
+".......      .......",
+".......      .......",
+".......      .......",
+"...K...      t..T...",
+".......  @   .......",
+".......      .......",
+"...k.....b..........",
+"      .......       ",
+"      .......       ",
+"      ...B...       ",
+"      .......       ",
+"      .......       ",
+"      .......       "
 })
 
-
+wo:add({"ot_rubberband", anchor1="killer", anchor2="killerbox", length=2.5, max=2.55, min=2.45})
+wo:add({"ot_rubberband", anchor1="top", anchor2="topbox", length=2.5, max=2.55, min=2.45})
 
   ]]></el:luamain>
     <el:i18n>
