@@ -27,8 +27,8 @@ ti["c"] = {"it_cherry", name="cherry#"}
 ti["5"] = {"it_coin_m", name="money", target={"otto", "emil*"}}
 ti["S"] = {"st_coinslot"}
 ti["m"] = {"#ac_marble"}
-ti["x"] = {"fl-rough-blue"} .. {"it_banana"} .. ti({"ac-bug", 0.7})
-ti["y"] = (ti({"fl-rough-blue"}) .. {"it_banana"}) .. {"ac-bug", name="buggy"}
+ti["x"] = {"fl-rough-blue"} .. {"it_banana"} .. ti({"ac_bug", 0.7})
+ti["y"] = (ti({"fl-rough-blue"}) .. {"it_banana"}) .. {"ac_bug", name="buggy"}
 ti["s"] = {"st_switch", action="callback", target="doit"}
 ti["b"] = {"st_blocker", name="blocker"}
 ti["d"] = {"st_door_b", name="door#"}
@@ -61,7 +61,7 @@ w, h = wo(ti, " ", {
 wo[{w-2, h-2}] = {"it_magicwand"}
 p1 = po(12.3, 3.2)
 p2 = p1:grid()
-wo[p2] = {"ac-bug"}
+wo[p2] = {"ac_bug"}
 
 --no["money"]:set({value=12})
 no["money"]["action"] = {"anna#*","x",no["cherry#*"],no["blocker"]}

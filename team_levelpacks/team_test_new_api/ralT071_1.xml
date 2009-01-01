@@ -48,8 +48,23 @@ ti["-"] = {"st_stoneimpulse_movable","s2"}
 ti["1"] = {"st_stoneimpulse", "s3"}
 ti["2"] = {"st_stoneimpulse", "s4"}
 
+ti["+"] = {"st_stoneimpulse"}
+ti["G"] = {"st_stoneimpulse_hollow", "c1"}
+ti["H"] = {"st_stoneimpulse_hollow", "c2"}
+ti["I"] = {"st_stoneimpulse_hollow", "c3"}
+ti["J"] = {"st_stoneimpulse_hollow", "c4"}
+ti["K"] = {"st_stoneimpulse_hollow", "c5"}
+ti["L"] = {"st_stoneimpulse_hollow", "c6"}
+ti["M"] = {"st_stoneimpulse_hollow", "c7"}
+ti["N"] = {"st_stoneimpulse_hollow", "c8"}
+ti["<"] = {"st_stoneimpulse_new", orientation = NORTH, hollow=true}
+ti["!"] = {"st_stoneimpulse_new", orientation = SOUTH, hollow=true}
+ti["C"] = {"st_stoneimpulse_hollow", "t12"}
+ti["D"] = {"st_stoneimpulse_hollow", "t34"}
+ti["E"] = {"st_stoneimpulse_hollow", "t56"}
+ti["F"] = {"st_stoneimpulse_hollow", "t78"}
 
-ti["@"] = {"#ac_marble"} 
+ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "                    ",
@@ -76,8 +91,29 @@ w, h = wo(ti, " ", {
 "   b ^              ",
 " ^a A^ *           ;",
 " ^ B      p     pp  ",
-" ^^^   n  n     nn n"
+" ^^^   n  n     nn n",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+" !++ +++            ",
+" + G L +            ",
+" +N F M+            ",
+"   C E              ",
+" +I D J+            ",
+" + H K +            ",
+" +++ ++<            ",
+"                    "
 })
+
+wo:add({"ot_wire", anchor1="c1", anchor2="t12"})
+wo:add({"ot_wire", anchor1="t12", anchor2="c2"})
+wo:add({"ot_wire", anchor1="c3", anchor2="t34"})
+wo:add({"ot_wire", anchor1="t34", anchor2="c4"})
+wo:add({"ot_wire", anchor1="c5", anchor2="t56"})
+wo:add({"ot_wire", anchor1="t56", anchor2="c6"})
+wo:add({"ot_wire", anchor1="c7", anchor2="t78"})
+wo:add({"ot_wire", anchor1="t78", anchor2="c8"})
 
 wo:add({"ot_wire", anchor1="w1", anchor2="s1"})
 wo:add({"ot_wire", anchor1="w2", anchor2="s2"})

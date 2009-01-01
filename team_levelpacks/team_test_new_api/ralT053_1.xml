@@ -40,7 +40,7 @@ ti["b"] = {"it_wormhole", "wb", destination="wa", range=0.5,  scissor=false}
 
 ti["1"] = ti["y"] .. {"#ac_marble_black", "a1"} 
 ti["2"] = ti["y"] .. {"#ac_marble_white", "a2"} 
-ti["3"] = {"#ac-horse", "a3"} 
+ti["3"] = {"#ac_horse", "a3"} 
 ti["*"] = {"#ac_pearl_white", "s#", player=DEFAULT, controllers=0} 
 
 w, h = wo(ti, " ", {

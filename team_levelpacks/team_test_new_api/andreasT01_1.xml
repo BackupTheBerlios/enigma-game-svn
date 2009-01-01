@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Trap new API" el:subtitle="" el:id="testtrap_andreas"/>
-      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
       <el:author  el:name="Andreas Lochmann" el:email=""/>
       <el:copyright>Copyright © 2008 Andreas Lochmann</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -24,7 +24,7 @@ ti[" "] = {"fl-sahara"}
 ti["."] = {"it_trap"}
 
 ti["@"] = {"#ac_marble"}
-ti["0"] = {"#ac-bug"}
+ti["0"] = {"#ac_bug"}
 
 ti["l"] = {"st_laser", state = ON, orientation = SOUTH}
 ti["p"] = {"st_polarswitch", state = OFF}

@@ -31,7 +31,7 @@ ti["s"] = {"st_switch", target="rmfloor"}
 ti["i"] = {"st_switch", target="icefloor"}
 
 ti["1"] = ti["b"] .. {"#ac_marble"}
-ti["2"] = ti["b"] .. {"#ac-bug", "mybug"}
+ti["2"] = ti["b"] .. {"#ac_bug", "mybug"}
 
 function myresolver(key, x, y)
     if key == " " then

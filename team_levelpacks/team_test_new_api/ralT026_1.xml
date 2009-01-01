@@ -15,8 +15,6 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-
-
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl-sahara"}
@@ -32,8 +30,6 @@ ti["j"] = {"fl_rock", name="i2"}
 ti["k"] = {"fl_rock", name="i3"}
 ti["l"] = {"fl_rock", name="i4"}
 ti["s"] = ti[" "] .. {"st_switch", target="innercircle"}
-
-
 ti["a"] = ti[" "] .. {"#ac_marble"}
 
 w, h = wo(ti, " ", {
