@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 
 ti["f"] = {"it_floppy"}
 ti["template_a"] = {"st_floppy", target={"door%%#*","laser%%"}}

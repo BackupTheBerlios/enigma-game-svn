@@ -18,7 +18,7 @@
 
 wo["ConserveLevel"] = true
 
-ti["  "] = {"fl-sahara"}
+ti["  "] = {"fl_sahara"}
 ti["~~"] = {"fl_water"}
 ti["##"] = {"st-rock1"}
 ti["++"] = {"st_box"}

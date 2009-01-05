@@ -19,7 +19,7 @@
 
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 
 ti["A"] = {"#ac_marble"}
 

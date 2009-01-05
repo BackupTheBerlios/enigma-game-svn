@@ -18,10 +18,10 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti["  "] = {"fl-sahara"}
+ti["  "] = {"fl_sahara"}
 
-ti[".."] = {"fl-sahara", push_directions="nesw"}
-ti["++"] = {"fl-sahara", push_directions="w"} .. ti{"st_window_s", secure=true}
+ti[".."] = {"fl_sahara", push_directions="nesw"}
+ti["++"] = {"fl_sahara", push_directions="w"} .. ti{"st_window_s", secure=true}
 ti["##"] = {"st-rock1"}
 ti["S#"] = {"st_switch", target="newpuz"}
 

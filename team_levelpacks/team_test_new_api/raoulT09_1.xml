@@ -15,7 +15,7 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["#"] = {"st-glass"}
 ti["a"] = {"st-glass1"}
 ti["b"] = {"st-glass2"}

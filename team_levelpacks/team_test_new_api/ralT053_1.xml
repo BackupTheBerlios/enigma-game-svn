@@ -18,7 +18,7 @@
 wo["ConserveLevel"] = true
 wo["RubberViolationStrength"] = 50
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_water"}
 ti["#"] = {"st-rock1"}
 ti["y"] = {"it-yinyang"}

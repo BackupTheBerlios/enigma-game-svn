@@ -15,7 +15,7 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-ti[" "] = {"fl-plank"}
+ti[" "] = {"fl_plank"}
 ti["X"] = {"st_oxyd"}
 ti["B"] = {"st_passage_black", flavor="cross"}
 ti["W"] = {"st_passage_white", flavor="cross"}

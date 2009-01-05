@@ -19,7 +19,7 @@ wo["ConserveLevel"] = true
 wo["MeditationStrength"] = 2.0
 --wo["MeditationStrength"] = -2.0
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 
 ti["."] = {"it_meditation", essential=INDISPENSIBLE}
 ti[";"] = {"it_meditation", essential=DISPENSIBLE}

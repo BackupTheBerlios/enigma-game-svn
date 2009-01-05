@@ -17,8 +17,8 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
-ti["x"] = {"fl-sahara", "center"}
+ti[" "] = {"fl_sahara"}
+ti["x"] = {"fl_sahara", "center"}
 ti["L"] = {"st_laser_n", "laser"}
 ti["l"] = {"st_switch", target="laser"}
 ti["N"] = {"st_laser_n", "lasern"}

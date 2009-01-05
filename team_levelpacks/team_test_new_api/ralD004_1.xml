@@ -16,7 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 ti["~"] = {"fl_water"}
-ti["s"] = {"fl-sahara"}
+ti["s"] = {"fl_sahara"}
 ti["t"] = {"fl-tigris"}
 ti["i"] = {"fl-inverse2"}
 ti["b"] = {"fl-acblack"}

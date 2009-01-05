@@ -18,7 +18,7 @@
 wo["ConserveLevel"] = true
 wo["MagnetRange"] = 3
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_water"}
 ti["s"] = {"st_shogun", "him"}
 ti["w"] = {"st_box", "you"}

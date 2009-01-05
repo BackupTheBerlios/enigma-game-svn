@@ -19,7 +19,7 @@
 
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
 ti["O"] = ti[" "] .. {"st_oxyd", name="o#", oxydcolor=1, noshuffle=false}

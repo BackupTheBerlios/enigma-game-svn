@@ -19,7 +19,7 @@
 wo["ConserveLevel"] = true
 wo["ExtralifeGlasses"] = SPOT_DEATH + SPOT_TRAP
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 
 ti["."] = {"it_trap"}
 
@@ -48,7 +48,7 @@ ti["D"] = ti["."] .. {"fl-black"}
 ti["E"] = ti["."] .. {"fl-inverse"}
 ti["F"] = ti["."] .. {"fl-rough-blue"}
 ti["G"] = ti["."] .. {"fl_abyss"}
-ti["H"] = ti["."] .. {"fl-floor_001"}
+ti["H"] = ti["."] .. {"fl_bast"}
 
 w, h = wo(ti, " ", {
 "@                   ",

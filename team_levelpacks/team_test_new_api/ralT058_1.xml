@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti[">"] = {"st_oneway", orientation=EAST}
 ti["<"] = {"st_oneway_w"}
 ti["v"] = {"st_oneway_s"}

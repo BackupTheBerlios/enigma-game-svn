@@ -19,7 +19,7 @@
 
 wo["ConserveLevel"] = true
 
-ti["  "] = {"fl-sahara"}
+ti["  "] = {"fl_sahara"}
 ti["A "] = {"fl-leaves"}
 ti["B "] = {"fl_swamp"}
 ti["C "] = {"fl-metal"}
@@ -27,11 +27,11 @@ ti["D "] = {"fl-black"}
 ti["E "] = {"fl-inverse"}
 ti["F "] = {"fl-rough-blue"}
 ti["G "] = {"fl-rough"}
-ti["H "] = {"fl-floor_001"}
+ti["H "] = {"fl_bast"}
 ti["I "] = {"fl_abyss"}
 ti["J "] = {"fl_water"}
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["A"] = {"fl-leaves"}
 ti["B"] = {"fl_swamp"}
 ti["C"] = {"fl-metal"}
@@ -39,7 +39,7 @@ ti["D"] = {"fl-black"}
 ti["E"] = {"fl-inverse"}
 ti["F"] = {"fl-rough-blue"}
 ti["G"] = {"fl-rough"}
-ti["H"] = {"fl-floor_001"}
+ti["H"] = {"fl_bast"}
 ti["R"] = {"fl-red"}
 
 ti[" @"] = {"#ac_marble", "marble"}

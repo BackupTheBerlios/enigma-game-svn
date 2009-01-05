@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 
 ti["-"] = {"fl_bridge_bw", "bridge#"}
 ti["|"] = {"fl_bridge_bn", "bridge#"}

@@ -20,7 +20,7 @@
 wo["ConserveLevel"] = true
 wo["MaxOxydColor"] = OXYD_BROWN
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 
 ti["1"] = {"#ac_marble"}
 

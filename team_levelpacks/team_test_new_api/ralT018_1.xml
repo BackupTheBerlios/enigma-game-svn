@@ -20,7 +20,7 @@
 wo["ConserveLevel"] = true
 wo["AllowSingleOxyds"] = true
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["#"] = {"st-rock1"}
 
 ti["O"] = {"st_oxyd", name="o#", flavor="d"}

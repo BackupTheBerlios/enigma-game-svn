@@ -20,7 +20,7 @@ wo["ConserveLevel"] = true
 wo["ShowMoves"] = false
 
 
-ti[" "] = {"fl-sahara"}
+ti[" "] = {"fl_sahara"}
 ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
 ti["*"] = ti({"st_chess_black", checkerboard=0}) .. {"st_chess_white", checkerboard=1}
 ti["c"] = {"it_cherry", name="cherry#"}

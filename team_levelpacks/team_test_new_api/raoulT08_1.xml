@@ -17,7 +17,7 @@
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
 
-ti["  "] = {"fl-sahara"}
+ti["  "] = {"fl_sahara"}
 
 ti["B0"] = {"st_puzzle_blue"}
 ti["B1"] = {"st_puzzle_blue", connections="w"}

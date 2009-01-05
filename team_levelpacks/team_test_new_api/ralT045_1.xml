@@ -19,7 +19,7 @@
 
 wo["ConserveLevel"] = true
 
-ti["  "] = {"fl-sahara"}
+ti["  "] = {"fl_sahara"}
 
 ti["ff"] = {"it_floppy"}
 ti["template_a"] = {"st_floppy", target={"door%%#*","laser%%"}}
