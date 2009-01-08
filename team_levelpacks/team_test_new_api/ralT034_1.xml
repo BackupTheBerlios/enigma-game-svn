@@ -20,9 +20,9 @@
 wo["ConserveLevel"] = true
 
 ti["_"] = {"fl_sahara"}
-ti["r"] = {"fl-rough-red"}
-ti["b"] = {"fl-rough-blue"}
-ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
+ti["r"] = {"fl_redslab"}
+ti["b"] = {"fl_blueslab"}
+ti["."] = ti({"fl_blueslab", checkerboard=0}) .. {"fl_redslab", checkerboard=1}
 
 ti[" "] = ti["."] .. {"it_blocker"}
 ti["n"] = {}       -- just nothing

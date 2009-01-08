@@ -15,8 +15,8 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-ti["r"] = {"fl-rough-red"}
-ti["b"] = {"fl-rough-blue"}
+ti["r"] = {"fl_redslab"}
+ti["b"] = {"fl_blueslab"}
 ti["1"] = {"#ac_marble"}
 
 ti["x"] = {"it_cross"}

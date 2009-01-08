@@ -21,14 +21,14 @@ wo["ShowMoves"] = false
 
 
 ti[" "] = {"fl_sahara"}
-ti["."] = ti({"fl-rough-blue", checkerboard=0}) .. {"fl-rough-red", checkerboard=1}
+ti["."] = ti({"fl_blueslab", checkerboard=0}) .. {"fl_redslab", checkerboard=1}
 ti["*"] = ti({"st_chess_black", checkerboard=0}) .. {"st_chess_white", checkerboard=1}
 ti["c"] = {"it_cherry", name="cherry#"}
 ti["5"] = {"it_coin_m", name="money", target={"otto", "emil*"}}
 ti["S"] = {"st_coinslot"}
 ti["m"] = {"#ac_marble"}
-ti["x"] = {"fl-rough-blue"} .. {"it_banana"} .. ti({"ac_bug", 0.7})
-ti["y"] = (ti({"fl-rough-blue"}) .. {"it_banana"}) .. {"ac_bug", name="buggy"}
+ti["x"] = {"fl_blueslab"} .. {"it_banana"} .. ti({"ac_bug", 0.7})
+ti["y"] = (ti({"fl_blueslab"}) .. {"it_banana"}) .. {"ac_bug", name="buggy"}
 ti["s"] = {"st_switch", action="callback", target="doit"}
 ti["b"] = {"st_blocker", name="blocker"}
 ti["d"] = {"st_door_b", name="door#"}
@@ -72,7 +72,7 @@ if (tokens[4] == no["blocker"]) then
     wo[{1, 1}] = {"it_magicwand"}
 end
 --tokens[3]:kill()
-wo[tokens[3]] = {"fl-rough-blue"}
+wo[tokens[3]] = {"fl_blueslab"}
 
 blocker_pos = po(no["blocker"])
 

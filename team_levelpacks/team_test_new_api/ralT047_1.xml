@@ -18,10 +18,10 @@
 wo["ConserveLevel"] = true
 
 ti["   "] = {"fl_sahara"}
-ti["  ="] = {"fl-tigris"}
+ti["  ="] = {"fl_tigris"}
 ti["  ."] = {"fl_abyss"}
 ti["  ~"] = {"fl_water"}
-ti["  ;"] = {"fl-leaves"}
+ti["  ;"] = {"fl_lawn"}
 
 ti["#  "] = {"st-rock1"}
 ti["W  "] = {"st_box"}
@@ -37,7 +37,7 @@ ti[" k "] = {"it_key"}
 
 ti["#2 "] = {"it_sword"}
 ti["# ~"] = {"fl_hay"}
-ti[" 2~"] = {"fl-gray"}
+ti[" 2~"] = {"fl_gray"}
 
 ti["xxx"] = {"#ac_marble"} 
 

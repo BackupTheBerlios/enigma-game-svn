@@ -41,12 +41,12 @@ ti["t"] = {"it-spring1"}
 ti["m"] = {"it_landmine"}
 ti["s"] = {"it_sensor", invisible = true} --{"it-spring2"}
 
-ti["A"] = ti["."] .. {"fl-leaves"}
+ti["A"] = ti["."] .. {"fl_lawn"}
 ti["B"] = ti["."] .. {"fl_water"}
-ti["C"] = ti["."] .. {"fl-metal"}
-ti["D"] = ti["."] .. {"fl-black"}
-ti["E"] = ti["."] .. {"fl-inverse"}
-ti["F"] = ti["."] .. {"fl-rough-blue"}
+ti["C"] = ti["."] .. {"fl_metal"}
+ti["D"] = ti["."] .. {"fl_dark"}
+ti["E"] = ti["."] .. {"fl_inverse"}
+ti["F"] = ti["."] .. {"fl_blueslab"}
 ti["G"] = ti["."] .. {"fl_abyss"}
 ti["H"] = ti["."] .. {"fl_bast"}
 
