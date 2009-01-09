@@ -10,7 +10,7 @@ language_list = {"", "_de", "_ru", "_es"} -- "_fr"
 
 -- The newsfield declares the news (by number) to be shown on the main page.
 
-newsfield = {21, 22, 23, 24, 25}
+newsfield = {21, 22, 23, 24, 26}
 
 -- General $$mystring$$-macros. Strings are taken as-is, tables are
 -- constellations of html input files, functions are executed, with the
@@ -38,7 +38,7 @@ general = {
     manual = "manual/enigma.html",
     manual_de = "manual/enigma_de.html",
     manual_fr = "manual/enigma_fr.html",
-    manual_ru = "manual/enigma_ru.html", -- existing?
+    manual_ru = "manual/enigma_ru.html", -- existing? - yes, existing (03.11.08)
     wiki = "http://enigma.mal2.ch/index.php?title=Main_Page",
     wiki_de = "http://enigma.mal2.ch/index.php?title=Hauptseite",
     disclaimer = "http://www.disclaimer.de/disclaimer.htm#2",
@@ -59,6 +59,9 @@ general = {
       end,
     parse_news_2 = function(v,s,l0)
         return parse_text(v, parse_news(newsdir,l0), l0, "news2")
+      end,
+    parse_level_archive = function(v,s,l0)
+        return parse_text(v, parse_level_archive(l0), l0, "level_archive")
       end,
     parse_lotm_by_rating = function(v,s,l0)
         return parse_text(v, parse_lotm("current_rating", true, l0), l0,
@@ -108,7 +111,7 @@ general = {
     
     lotm_history = "History of LotM",
     lotm_history_de = "Geschichte des LdM",
-    --ru-- lotm_history_ru = "History of LotM",
+    lotm_history_ru = "Хронология УМ",
     lotm_history_es = "Historia de LotM",
 
     lotm_current = function(v,s,l0)
@@ -409,7 +412,7 @@ html.lotm = {
     body = {"lotm/lotm_core"},
     kind_of_order = "by <b>rating</b>",
     kind_of_order_de = "geordnet nach <b>Bewertung</b>",
-    kind_of_order_ru = "<b>рейтингу</b>",
+    kind_of_order_ru = "по <b>рейтингу</b>",
     kind_of_order_es = "por clasificaci&oacute;n:",
     parse_lotm = "$$parse_lotm_by_rating$$",
     lotm_anchor_rating = "<b>Rating</b>",
@@ -427,7 +430,7 @@ html.lotm_chronological = {
     body = {"lotm/lotm_core"},
     kind_of_order = "<b>chronologically</b>",
     kind_of_order_de = "<b>chronologisch</b> geordnet",
-    kind_of_order_ru = "<b>хронологии</b>",
+    kind_of_order_ru = "по <b>хронологии</b>",
     kind_of_order_es = "<b>cronologicamente</b>",
     parse_lotm = "$$parse_lotm_chronological$$",
     lotm_anchor_month = "<b>Month</b>",
@@ -440,12 +443,12 @@ html.lotm_by_position = {
     outfile = "lotm_by_position.html",
     title = "$$lotm_expansion$$ (by position)",
     title_de = "$$lotm_expansion$$ (nach Position)",
-    title_ru = "$$lotm_expansion$$ (по положению)",
+    title_ru = "$$lotm_expansion$$ (по размещению)",
     rightcolumn = {},
     body = {"lotm/lotm_core"},
     kind_of_order = "by <b>position</b>",
     kind_of_order_de = "geordnet nach <b>Position</b>",
-    kind_of_order_ru = "<b>размещению</b>",
+    kind_of_order_ru = "по <b>размещению</b>",
     kind_of_order_es = "<b>por posici&oacute;n</b>",
     parse_lotm = "$$parse_lotm_by_position$$",
     lotm_anchor_position = "<b>Position (1.01)</b>",
@@ -466,6 +469,15 @@ html.hp_archive = {
     title_ru = "Архив домашней страницы",
     --es-- title_es = "Homepage Archive",
     body = {"hp_archive", "top_news"}
+}
+
+html.level_archive = {
+    outfile = "level_archive.html",
+    title = "Level Archive",
+    title_de = "Level-Archiv",
+    title_ru = "Архив статей об уровнях",
+    --es-- title_es = "Level Archive",
+    body = {"level_archive"}
 }
 
 ----------------------------------------------------------------------
@@ -489,7 +501,7 @@ html.eoya_2007_statistics = {
     outfile = "eoya_2007_statistics.html",
     title = "End of Year Awards 2007 - Pure Statistics",
     title_de = "Jahresendauszeichnungen 2007 - Pure Statistiken",
-    title_ru = "Награды конца года 2007",
+    title_ru = "Награды конца года 2007 - Полная статистика",
     --es-- title_es = "End of Year Awards 2007",
     rightcolumn = {},
     body = {"articles/eoya_2007_statistics"}
@@ -507,3 +519,48 @@ html.april_2008 = {
     rightcolumn = {},
     body = {"articles/april_2008"},
 }    
+
+----------------------------------------------------------------------
+-- Marbleous!
+----------------------------------------------------------------------
+
+html.marbleous_1 = {
+    outfile = "marbleous_1.html",
+    title = "Marbleous! &mdash; The Novice, Part 1",
+    title_de = "Gemurmel! &mdash; Der Neuling, Teil 1",
+    title_ru = "Шарикология! &mdash; Новичкам на заметку, Часть 1",
+    rightcolumn = {"articles/infobox_marbleous"},
+    body = {"articles/marbleous_1"},
+}
+
+html.marbleous_2 = {
+    outfile = "marbleous_2.html",
+    title = "Marbleous! &mdash; The Novice, Part 2",
+    title_de = "Gemurmel! &mdash; Der Neuling, Teil 2",
+    title_ru = "Шарикология! &mdash; Новичкам на заметку, Часть 2",
+    rightcolumn = {"articles/infobox_marbleous"},
+    body = {"articles/marbleous_2"},
+}
+
+html.marbleous_3 = {
+    outfile = "marbleous_3.html",
+    title = "Marbleous! &mdash; The Novice, Part 3",
+    title_de = "Gemurmel! &mdash; Der Neuling, Teil 3",
+    title_ru = "Шарикология! &mdash; Новичкам на заметку, Часть 3",
+    rightcolumn = {"articles/infobox_marbleous"},
+    body = {"articles/marbleous_3"},
+}
+
+----------------------------------------------------------------------
+-- Independent Level Articles
+----------------------------------------------------------------------
+
+html.level_andreas11 = {
+    outfile = "level_andreas11.html",
+    title = "Patterns of Impulse",
+    title_de = "Patterns of Impulse",
+    title_ru = "Patterns of Impulse",
+    rightcolumn = {},
+    body = {"articles/level_andreas11"},
+}
+
