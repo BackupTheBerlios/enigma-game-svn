@@ -19,8 +19,8 @@ ti["~"] = {"fl_water"}
 ti["s"] = {"fl_sahara"}
 ti["t"] = {"fl_tigris"}
 ti["i"] = {"fl_inverse_gray"}
-ti["b"] = {"fl-acblack"}
-ti["w"] = {"fl-acwhite"}
+ti["b"] = {"fl_yinyang_yin"}
+ti["w"] = {"fl_yinyang_yang"}
 
 ti["c"] = {"it_coin_s"}
 ti["p"] = {"it_brush"}

@@ -22,40 +22,36 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl_sahara"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
-ti["O"] = ti[" "] .. {"st_oxyd", name="o#", oxydcolor=1, noshuffle=false}
-ti["P"] = ti[" "] .. {"st_oxyd", name="p#"}
-ti["Q"] = ti[" "] .. {"st_oxyd", name="q1", oxydcolor=5, noshuffle=false}
-ti["q"] = ti[" "] .. {"st_oxyd", name="q2", oxydcolor=7, noshuffle=true}
+ti["O"] = ti[" "] .. {"st_oxyd", name="o#"}
 ti["1"] = ti[" "] .. {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "   O          O     ",
 "                    ",
-"P                  P",
+"O                  O",
 "                    ",
 "                    ",
-"Q                  q",
+"O                  O",
 "                    ",
 "      1             ",
 "                    ",
 "                    ",
-"                    ",
+"   O           O    ",
 "                    ",
 "                    "
 })
 
---wo:shuffleOxyd({no["o#*"], max=0}, {no["o#*"], no["p#*"], max=0})
---wo:shuffleOxyd({no["o#*"], max=0}, {no["o#*"], no["p#*"] + no["o#2"], max=0})
+--wo:shuffleOxyd({no["o#*"] + no["p#*"] + no["q*"], circular = true, log="all"})
 
---wo:shuffleOxyd({no["o#*"], max=0}, {no["o#*"], no["o#1"], max=0})
---wo:shuffleOxyd({no["o#*"], max=0}, {grp(no["o#2"]), grp(no["p#1"]), max=0}, {no["p#*"], max=0}, {grp(no["p#2"]), grp(no["q1"]), max=0}, {grp(no["q2"]), grp(no["q1"]), max=0})
---wo:shuffleOxyd({no["o#*"], max=0}, {"o#2", "p#1", max=0}, {no["p#*"], max=0}, {grp(no["p#2"]), grp(no["q1"]), max=0}, {grp(no["q2"]), grp(no["q1"]), max=0})
---wo:shuffleOxyd({no["o#*"] + no["p#*"] + no["q*"], linear = true, log="solution"})
-wo:shuffleOxyd({no["o#*"] + no["p#*"] + no["q*"], circular = true, log="all"})
---wo:shuffleOxyd({"q1", "q2", max=2, log="count"})
 
---wo:shuffleOxyd({"o#1", grp(no["q1"], no["q2"]), max=0, log="solution"}, {"o#2", grp(no["p#2"],no["q1"],no["q2"]), max=0}, {"p#1", grp(no["p#2"],no["q1"],no["q2"]), max=0})
--- function door(value, sender)
+for obj in no["o#*"]:sort() do
+     print("sorted object by name: ".. obj["name"])
+end
+for obj in no["o#*"]:sort("circular") do
+     print("sorted object by pos: ".. obj.x .."/"..obj.y .." - ".. obj["name"])
+end
+
+wo:shuffleOxyd({no["o#*"]:sort("circular"), circular = true})
 
   ]]></el:luamain>
     <el:i18n>
