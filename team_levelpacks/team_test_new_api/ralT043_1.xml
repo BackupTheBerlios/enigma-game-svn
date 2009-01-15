@@ -20,7 +20,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["#"] = {"st-rock1"}
+ti["#"] = {"st_granite"}
 
 ti["f"] = {"it_floppy"}
 ti["F"] = {"st_floppy", target="@door#*", action="toggle"}

@@ -29,7 +29,7 @@ ti["H"] = {"st_door_d", "door#", faces="ns"}
 ti["V"] = {"st_door_d", "door#", faces="ew"}
 ti["b"] = {"st_door_b", "door#"}
 
-ti["#"] = {"st-rock1"}
+ti["#"] = {"st_granite"}
 ti["s"] = {"st_switch", target="@door#*"}
 
 ti["e"] = {"it-dynamite"}

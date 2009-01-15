@@ -37,9 +37,9 @@ ti["o"] = {"st_oxyd"}
 ti["B"] = {"it-bag"}
 ti["T"] = {"st-thief"}
 ti["t"] = {"fl-thief"}
-ti["1"] = {"it-coffee", "coffee1"}
-ti["2"] = {"it-coffee", "coffee2"}
-ti["3"] = {"it-coffee", "coffee3"}
+ti["1"] = {"it_coffee", "coffee1"}
+ti["2"] = {"it_coffee", "coffee2"}
+ti["3"] = {"it_coffee", "coffee3"}
 ti["4"] = {"st_switch", target="lesscoffee"}
 
 w, h = wo(ti, " ", {

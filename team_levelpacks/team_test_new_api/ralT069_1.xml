@@ -22,7 +22,7 @@ ti["  "] = {"fl_sahara"}
 
 ti[".."] = {"fl_sahara", push_directions="nesw"}
 ti["++"] = {"fl_sahara", push_directions="w"} .. ti{"st_window_s", secure=true}
-ti["##"] = {"st-rock1"}
+ti["##"] = {"st_granite"}
 ti["S#"] = {"st_switch", target="newpuz"}
 
 ti["P"] = {"st_puzzle_blue", intensity= 2/12}

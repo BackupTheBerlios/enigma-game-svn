@@ -32,7 +32,7 @@ ti[")"] = {"it_meditation_caldera", "vol#"}
 
 ti["w"] = {"st_box"}
 ti["d"] = {"it-dynamite"}
-ti["?"] = {"it-spade"}
+ti["?"] = {"it_spade"}
 ti["S"] = {"st_switch", target="hilli#*", action="flip"}
 ti["s"] = {"st_switch", target="bumpd#*", action="signal"}
 ti["T"] = {"st_switch", target="@vol#*", action="toggle"}

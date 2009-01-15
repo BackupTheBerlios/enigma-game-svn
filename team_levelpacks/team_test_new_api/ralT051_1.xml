@@ -18,7 +18,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["B"] = {"st-brownie"}
+ti["B"] = {"st_brownie"}
 ti["b"] = {"st_boulder_n"}
 ti["W"] = {"it_wrench"}
 ti["w"] = {"it_magicwand"}

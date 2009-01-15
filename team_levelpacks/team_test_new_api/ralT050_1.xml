@@ -48,8 +48,8 @@ ti["Q"] = {"st_switch", target="togglestrength"}
 
 ti["w"] = {"it_magicwand"}
 ti["c"] = {"st_chess_black"}
-ti["3"] = {"#ac_marble_black", player=DEFAULT, controllers=0}
-ti["4"] = {"#ac_marble_white", player=DEFAULT, controllers=0}
+ti["3"] = {"#ac_marble_black", owner=DEFAULT, controllers=0}
+ti["4"] = {"#ac_marble_white", owner=DEFAULT, controllers=0}
 
 
 w, h = wo(ti, " ", {

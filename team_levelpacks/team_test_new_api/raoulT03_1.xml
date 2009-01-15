@@ -50,9 +50,9 @@ ti["%"] = {"st_window", faces=""}
 
 ti["w"] = {"it_wrench"}
 ti["i"] = {"it_hammer"}
-ti["r"] = {"it-ring"}
+ti["r"] = {"it_ring"}
 ti["s"] = {"it_seed"}
-ti["k"] = {"it-coffee"}
+ti["k"] = {"it_coffee"}
 ti["K"] = {"it_cherry"}
 ti[":"] = {"it-dynamite"}
 ti["I"] = {"st_stoneimpulse"}

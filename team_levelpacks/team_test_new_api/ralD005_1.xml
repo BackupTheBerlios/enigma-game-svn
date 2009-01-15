@@ -20,7 +20,7 @@ ti["X"] = {"st_oxyd"}
 ti["B"] = {"st_passage_black", flavor="cross"}
 ti["W"] = {"st_passage_white", flavor="cross"}
 
-ti["y"] = {"it-yinyang"}
+ti["y"] = {"it_yinyang"}
 ti["1"] = ti["y"] .. {"#ac_marble_black"}
 ti["2"] = ti["y"] .. {"#ac_marble_white"}
 

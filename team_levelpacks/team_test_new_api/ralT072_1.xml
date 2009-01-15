@@ -24,7 +24,7 @@ ti["."] = {"fl_sand", floodable=true}
 ti["-"] = {"fl_hay_framed"}
 ti["o"] = {"st_box_hay"}
 ti["w"] = {"st_box"}
-ti["b"] = {"st-brownie"}
+ti["b"] = {"st_brownie"}
 ti["_"] = {"st_window_s"} .. ti["."]
 
 ti["s"] = {"fl_water", "source1", interval=0.2}

@@ -18,7 +18,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["y"] = {"it-yinyang"}
+ti["y"] = {"it_yinyang"}
 ti["m"] = {"it_wrench"}
 
 
@@ -29,7 +29,7 @@ ti["e"] = {"st_turnstilearm_e"}
 ti["s"] = {"st_turnstilearm_s"}
 ti["w"] = {"st_turnstilearm_w"}
 
-ti["B"] = {"st-brownie"}
+ti["B"] = {"st_brownie"}
 ti["O"] = {"st_rotator_cw", movable=true}
 ti["I"] = {"st_stoneimpulse_movable"}
 
@@ -38,7 +38,7 @@ ti["S"] = {"st_scissors"}
 ti["r"] = {"it_rubberband", anchor2="arm"}
 
 ti["E"] = {"st_turnstilearm_e","east"}
-ti["b"] = {"st-brownie", "brownie"}
+ti["b"] = {"st_brownie", "brownie"}
 
 ti["a"] = {"st_turnstilearm_n","couple1"}
 ti["A"] = {"st_turnstilearm_n","couple2"}

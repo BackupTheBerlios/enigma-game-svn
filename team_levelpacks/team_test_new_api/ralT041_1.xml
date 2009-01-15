@@ -20,7 +20,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["y"] = {"it-yinyang"}
+ti["y"] = {"it_yinyang"}
 ti["b"] = {"it_brush"}
 ti["w"] = {"it_wrench"}
 

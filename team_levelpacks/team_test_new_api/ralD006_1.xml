@@ -18,7 +18,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl_samba"}
 ti["."] = {"fl_abyss"}
 ti["~"] = {"fl_water"}
-ti["#"] = {"st-rock1"}
+ti["#"] = {"st_granite"}
 ti["X"] = {"st_oxyd"}
 
 ti["L"] = {"st_laser", orientation=EAST, state=ON}

@@ -19,7 +19,7 @@
 wo["ConserveLevel"] = true
 
 ti["  "] = {"fl_sahara"}
-ti["##"] = {"st-rock1"}
+ti["##"] = {"st_granite"}
 
 ti[".."] = {"fl_sahara", push_directions="nesw"}
 

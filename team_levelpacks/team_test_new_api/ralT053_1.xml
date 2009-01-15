@@ -20,8 +20,8 @@ wo["RubberViolationStrength"] = 50
 
 ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_water"}
-ti["#"] = {"st-rock1"}
-ti["y"] = {"it-yinyang"}
+ti["#"] = {"st_granite"}
+ti["y"] = {"it_yinyang"}
 ti["."] = {"st_box"}
 ti["w"] = {"st_box", "w"}
 ti["s"] = {"st_scissors"}
@@ -41,7 +41,7 @@ ti["b"] = {"it_wormhole", "wb", destination="wa", range=0.5,  scissor=false}
 ti["1"] = ti["y"] .. {"#ac_marble_black", "a1"} 
 ti["2"] = ti["y"] .. {"#ac_marble_white", "a2"} 
 ti["3"] = {"#ac_horse", "a3"} 
-ti["*"] = {"#ac_pearl_white", "s#", player=DEFAULT, controllers=0} 
+ti["*"] = {"#ac_pearl_white", "s#", owner=DEFAULT, controllers=0} 
 
 w, h = wo(ti, " ", {
 "*   #  r  r  r  a  *",

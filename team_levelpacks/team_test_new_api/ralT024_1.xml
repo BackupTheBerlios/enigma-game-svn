@@ -20,8 +20,8 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["#"] = {"st-rock1"}
-ti["y"] = {"it-yinyang"}
+ti["#"] = {"st_granite"}
+ti["y"] = {"it_yinyang"}
 
 ti["D"] = {"st_door_d", "door1", faces="ew"}
 ti["d"] = {"st_door_d", "door2", faces="ew"}

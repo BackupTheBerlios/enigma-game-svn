@@ -19,7 +19,7 @@ wo["ConserveLevel"] = true
 wo["ShowMoves"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["#"] = {"st-rock1"}
+ti["#"] = {"st_granite"}
 
 ti["P"] = {"st_pull"}
 ti["p"] = {"st_pull", "pull"}

@@ -23,7 +23,7 @@ ti[" "] = {"fl_sahara"}
 ti["."] = {"fl_water"}
 ti["~"] = {"fl_abyss"}
 ti["!"] = {"fl_wood", ignitable=true}
-ti["#"] = ti[" "] .. {"st-rock1"}
+ti["#"] = ti[" "] .. {"st_granite"}
 
 ti["A"] = ti[" "] .. {"it_trigger", target="lasera", action="toggle", "triggerA"}
 ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"toggle", "on"}}
@@ -49,7 +49,7 @@ ti["p"] = ti[" "] .. {"st_laser_n", "laseroon"}
 
 ti["W"] = ti[" "] .. {"st_box"}
 ti["U"] = ti[" "] .. {"st-block"}
-ti["V"] = ti[" "] .. {"st-brownie"}
+ti["V"] = ti[" "] .. {"st_brownie"}
 ti["u"] = ti[" "] .. {"it-spring1"}
 ti["v"] = ti[" "] .. {"st_brake"}
 ti["Y"] = ti[" "] .. {"st_death"}
@@ -59,8 +59,8 @@ ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}
 ti["m"] = ti[" "] .. {"st_switch", target="makeactor"}
 ti["X"] = ti[" "] .. {"it_wormhole", destination="triggerA", range=1}
 
-ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it-ring"}
-ti["2"] = ti[" "] .. {"#ac_pearl", player=DEFAULT, controllers=0}
+ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it_ring"}
+ti["2"] = ti[" "] .. {"#ac_pearl", owner=DEFAULT, controllers=0}
 
 ti["3"] = (ti[" "]  .. {"#ac_pearl", controllers=0})
                 .. {"it_trigger", target={"laserh","laserhon"}, action={"toggle", "on"}}
@@ -92,7 +92,7 @@ function maketrigger(value, sender)
 end
   
 function makeactor(value, sender)
-    wo[no["triggerA"]] = {"#ac-whiteball-small", player=nil, controllers=0}
+    wo[no["triggerA"]] = {"#ac_pearl", owner=nil, controllers=0}
 end
 
 function killstone(value, sender)

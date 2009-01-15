@@ -23,7 +23,7 @@ wo["SwampSinkSpeed"] = 2
 
 ti[" "] = {"fl_sahara"}
 ti["."] = {"fl_abyss"}
-ti["#"] = {"st-rock1"}
+ti["#"] = {"st_granite"}
 ti["l"] = {"st_lightpassenger_off"}
 ti["B"] = {"st_boulder_n"}
 ti["W"] = {"st_passage_white"}

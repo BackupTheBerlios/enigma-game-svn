@@ -23,7 +23,7 @@ ti[" ."] = {"fl_abyss"}
 ti[" ~"] = {"fl_water"}
 ti[" ;"] = {"fl_lawn"}
 
-ti["# "] = {"st-rock1"}
+ti["# "] = {"st_granite"}
 ti["W "] = {"st_box"}
 ti["X "] = {"st_oxyd"}
 ti["G "] = {"st-grate1"}
