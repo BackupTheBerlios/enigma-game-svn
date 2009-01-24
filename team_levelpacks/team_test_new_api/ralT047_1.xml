@@ -26,7 +26,7 @@ ti["  ;"] = {"fl_lawn"}
 ti["#  "] = {"st_granite"}
 ti["W  "] = {"st_box"}
 ti["X  "] = {"st_oxyd"}
-ti["G  "] = {"st-grate1"}
+ti["G  "] = {"st_grate"}
 
 ti[" 2 "] = {"it_coin_s"}
 ti[" s "] = {"it_seed"}

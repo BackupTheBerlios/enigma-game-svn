@@ -23,7 +23,7 @@ ti["."] = {"fl_space"}
 ti["0"] = {"#ac_marble_black"}
 ti["'"] = {"#ac_marble_white"}
 
-ti["#"] = {"st-glass"}
+ti["#"] = {"st_rawglass"}
 ti["+"] = {"st_window_nesw"}
 ti["-"] = {"st_window_nesw", secure=true}
 ti["a"] = {"st_window_nes"}

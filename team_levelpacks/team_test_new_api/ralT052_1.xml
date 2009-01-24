@@ -52,7 +52,7 @@ wo["FollowMethod"] = FOLLOW_SCROLL
 --wo["FollowThreshold"] = po(2.5, 1.5)
 
 ti[" "] = {"fl_sahara"}
-ti["#"] = {"st-grate1"}
+ti["#"] = {"st_grate"}
 
 ti["V"] = {"it_vortex_open", "vortex1", destination="vortex2"}
 ti["v"] = {"it_vortex_open", "vortex2", destination="vortex1"}

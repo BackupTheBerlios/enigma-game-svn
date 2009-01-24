@@ -46,7 +46,7 @@ ti["E"] = ti["."] .. {"it_strip_n"}
 
 
 ti["w"] = {"st_box"}
-ti["v"] = {"st-plain_move"}
+ti["v"] = {"st_flat_movable"}
 
 ti["A"] = {"#ac_marble"} .. ti["a"]
 

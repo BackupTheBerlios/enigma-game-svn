@@ -23,6 +23,7 @@ wo["ExtralifeGlasses"] = SPOT_DEATH + SPOT_LIGHTPASSENGER
 ti[" "] = {"fl_sahara"}
 ti["!"] = {"st_death_invisible"}
 ti["H"] = {"st_camouflage_hollow"}
+ti["F"] = {"st_flat_hollow"}
 ti["L"] = {"st_lightpassenger", state=OFF}
 ti["l"] = {"st_switch", target="newlp"}
 ti["A"] = {"st_actorimpulse_invisible"}
@@ -53,7 +54,7 @@ ti["2"] = ti["y"] .. {"#ac_marble_white"}
 
 w, h = wo(ti, " ", {
 "!!!             HHHH",
-"                    ",
+"                  FF",
 " f       Nn       g ",
 "                    ",
 "                    ",

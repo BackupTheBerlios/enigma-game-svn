@@ -33,7 +33,7 @@ ti["w"] = {"st_box", "wood1"}
 ti["W"] = {"st_box", "wood2"}
 ti["c"] = {"it_coin_s"}
 
-ti["g"] = {"st-grate1"}
+ti["g"] = {"st_grate"}
 
 ti["L"] = {"st_laser_e", state=ON}
 ti["l"] = {"st_polarswitch"}

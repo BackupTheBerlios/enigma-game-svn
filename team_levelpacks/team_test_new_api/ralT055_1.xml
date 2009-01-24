@@ -28,8 +28,8 @@ ti["w"] = {"st_box_wood"}
 ti["h"] = {"st_box_hay"}
 ti["r"] = {"st_box_rock"}
 ti["b"] = {"st-block"}
-ti["f"] = {"st-firebreak_move"}
-ti["p"] = {"st-plain_move"}
+ti["f"] = {"st_flat_moveburnable"}
+ti["p"] = {"st_flat_movable"}
 
 ti["s"] = {"st_switch", target="flood"}
 
@@ -37,8 +37,8 @@ ti["W"] = ti["~"] .. {"st_box_wood"}
 ti["H"] = ti["~"] .. {"st_box_hay"}
 ti["R"] = ti["~"] .. {"st_box_rock"}
 ti["B"] = ti["~"] .. {"st-block"}
-ti["F"] = ti["~"] .. {"st-firebreak_move"}
-ti["P"] = ti["~"] .. {"st-plain_move"}
+ti["F"] = ti["~"] .. {"st_flat_moveburnable"}
+ti["P"] = ti["~"] .. {"st_flat_movable"}
 
 ti["S"] = ti["~"] .. {"st_swap"}
 

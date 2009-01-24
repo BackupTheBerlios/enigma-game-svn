@@ -36,8 +36,8 @@ ti["D"] = {"st_switch", target="door"}
 ti["e"] = {"st_door_d", "doore", faces="ns"} .. ti["."]
 ti["E"] = {"st_switch", target="doore"}
 
-ti["g"] = {"st-glass_move"}
-ti["x"] = {"st-grate1"} .. ti["."]
+ti["g"] = {"st_rawglass_movable"}
+ti["x"] = {"st_grate"} .. ti["."]
 ti["^"] = {"st_oneway_n"} .. ti["."]
 
 ti["@"] = {"#ac_marble"} 

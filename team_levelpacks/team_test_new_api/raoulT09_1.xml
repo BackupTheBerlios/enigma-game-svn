@@ -16,16 +16,16 @@
     </el:info>
     <el:luamain><![CDATA[
 ti[" "] = {"fl_sahara"}
-ti["#"] = {"st-glass"}
-ti["a"] = {"st-glass1"}
-ti["b"] = {"st-glass2"}
-ti["c"] = {"st-glass3"}
-ti["M"] = {"st-glass_move"}
-ti["1"] = {"st-glass1_move"}
-ti["2"] = {"st-glass2_move"}
-ti["h"] = {"st-glass1_hole"}
-ti["H"] = {"st-glass2_hole"}
-ti["B"] = {"st-beads"}
+ti["#"] = {"st_rawglass"}
+ti["a"] = {"st_lightglass"}
+ti["b"] = {"st_darkglass"}
+ti["c"] = {"st_redfiber"}
+ti["M"] = {"st_rawglass_movable"}
+ti["1"] = {"st_lightglass_movable"}
+ti["2"] = {"st_darkglass_movable"}
+ti["h"] = {"st_lightglass_hollow"}
+ti["H"] = {"st_darkglass_hollow"}
+ti["B"] = {"st_beads"}
 ti["w"] = {"st_window", faces="nesw"}
 ti["P"] = {"st_polarswitch", state=ON}
 ti["L"] = {"st_laser", orientation=EAST, state=ON}

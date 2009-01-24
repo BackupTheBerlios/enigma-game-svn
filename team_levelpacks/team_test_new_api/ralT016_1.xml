@@ -27,7 +27,7 @@ ti["#"] = {"st_granite"}
 ti["l"] = {"st_lightpassenger_off"}
 ti["B"] = {"st_boulder_n"}
 ti["W"] = {"st_passage_white"}
-ti["P"] = {"st-plain"}
+ti["P"] = {"st_flat"}
 ti["p"] = {"st_polarswitch"}
 ti["E"] = {"st_laser_e", state = ON}
 ti["e"] = {"st_laser_n", state = ON}

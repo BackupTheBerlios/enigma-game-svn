@@ -31,7 +31,7 @@ ti["S"] = {"st_switch", target="@bridge#*"}
 ti["T"] = {"st_switch", target="closed", action_1="open", action_0="close"}
 
 ti["w"] = {"st_box"}
-ti["g"] = {"st-glass_move"}
+ti["g"] = {"st_rawglass_movable"}
 ti["c"] = {"it_cherry"}
 ti["s"] = {"it-spring1"}
 ti["p"] = {"st_pull"}

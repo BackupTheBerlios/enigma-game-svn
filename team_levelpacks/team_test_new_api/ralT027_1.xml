@@ -24,6 +24,7 @@ ti["b"] = {"it_blocker"}
 ti["n"] = {"it_blocker_new"}                  
 ti["B"] = {"st_blocker"}
 ti["N"] = {"st_blocker_new"}
+ti["c"] = {"st_break_boulder"}
 
 ti["W"] = {"st_boulder_w"}
 ti["w"] = ti["n"] .. {"st_boulder_w"}
@@ -44,10 +45,10 @@ ti["t"] = {"it_trigger", target="blocker"} .. ti({"st_box", "wood2"})
 ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it_magicwand"}
 
 w, h = wo(ti, " ", {
-"                    ",
+"         v          ",
 "    BBBBnwbbbbb     ",
 "    bbbbbvNBBBB     ",
-"                    ",
+"    cccc v        ",
 "                    ",
 "                    ",
 "        Ss         E",

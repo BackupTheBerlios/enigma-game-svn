@@ -18,21 +18,18 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["1"] = {"fl_rock", name="d1"}
-ti["2"] = {"fl_rock", name="d2"}
-ti["3"] = {"fl_rock", name="d3"}
-ti["4"] = {"fl_rock", name="d4"}
-ti["5"] = {"fl_rock", name="d5"}
-ti["6"] = {"fl_rock", name="d6"}
-ti["h"] = ti[" "] .. {"ac_horse", name="horse", destination={"d1","d2","d3","d4","d5","d6"}}
-ti["i"] = {"fl_rock", name="i1"}
-ti["j"] = {"fl_rock", name="i2"}
-ti["k"] = {"fl_rock", name="i3"}
-ti["l"] = {"fl_rock", name="i4"}
-ti["s"] = ti[" "] .. {"st_switch", target="innercircle"}
-ti["a"] = ti[" "] .. {"#ac_marble"}
+ti["outer"] = {"fl_rock", name="outer%%"}
+ti["inner"] = {"fl_rock", name="inner%%"}
+ti["h"] = {"#ac_horse", name="horse", destination={"outer%1","outer%2","outer%3","outer%4","outer%5","outer%6"}}
+ti["s"] = {"st_switch", target="innercircle"}
+ti["a"] = {"#ac_marble"}
+ti["water"] = {"fl_water", name="water%%"}
+ti["H"] = {"#ac_horse", destination={"water%1","water%2","water%3","water%4"}}
+ti["B"] = {"st_box"}
 
-w, h = wo(ti, " ", {
+resolver = res.autotile(ti, {"1", "6", "outer"}, {"i", "l", "inner"},
+        {"I", "L", "water"})
+w, h = wo(resolver, " ", {
 "                    ",
 "                    ",
 "     6        1     ",
@@ -45,12 +42,24 @@ w, h = wo(ti, " ", {
 "       j    k       ",
 "                    ",
 "     4        3     ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"  B  I      J B     ",
+"                    ",
+"        H           ",
+"                    ",
+"  B  L      K  B    ",
+"                    ",
+"                    ",
 "                    "
 })
 
 function innercircle(value, sender)
     -- demo mixture string tokens with a group
-    circle = grp(no["i1"],no["i2"],no["i3"],no["i4"])
+    circle = grp(no["inner%1"], no["inner%2"],no["inner%3"],no["inner%4"])
     horse = no["horse"]
     dest = horse["destination"]
     if value then

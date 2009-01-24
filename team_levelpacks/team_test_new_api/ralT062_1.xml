@@ -20,7 +20,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl_sahara"}
 ti["#"] = {"st_granite"}
 
-ti["-"] = {"st-grate1"}
+ti["-"] = {"st_grate"}
 ti["+"] = {"it_trigger", target="laser"}
 
 ti["."] = {"it_seed_volcano"}
