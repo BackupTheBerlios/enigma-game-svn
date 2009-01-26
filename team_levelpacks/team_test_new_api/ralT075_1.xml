@@ -38,6 +38,23 @@ ti["n"] = {"st_laser_n", state=ON}
 ti["N"] = {"st_polarswitch", state=OFF}
 ti["B"] = {"st_boulder_w"}
 
+ti["M"] = {"st_magic_brick"}
+ti["L"] = {"st_magic_oxydc"}
+ti["K"] = {"st_magic_oxyda"}
+ti["m"] = {"it_magicwand"}
+ti["f"] = {"it_brush"}
+
+ti["s"] = {"it_pencil", "pen"}
+ti["*"] = {"it_wormhole", destination="pen"}
+
+ti["5"] = {"it_puller_w"}
+ti["6"] = {"it_puller_s"}
+ti["7"] = {"it_puller_e"}
+ti["8"] = {"it_puller_n"}
+
+ti["E"] = {"st_ghost_purplemarble"}
+ti["F"] = {"st_ghost_greenbrown"}
+ti["G"] = {"st_ghost_break"}
 
 ti["@"] = {"#ac_marble"} .. ti{"it_hammer"}
 ti["1"] = {"#ac_marble_white"} .. ti{"it_hammer"}
@@ -45,17 +62,17 @@ ti["2"] = {"#ac_bug"}
 
 wo(ti, " ", {
    "####################",
-   "#                  #",
+   "#                 s#",
    "#   -    :     ~   #",
    "#                  #",
-   "#                  #",
-   "#                  #",
-   "#       @          #",
-   "#                  #",
-   "#                  #",
-   "#                  #",
-   "#OOO    #    .     #",
-   "#####              #",
+   "# E f              #",
+   "#             m    #",
+   "# F     @     M   5#",
+   "#                 6#",
+   "# G           L   7",
+   "#                 8#",
+   "#OOO    #     K    #",
+   "#####             *#",
    "########## #########",
    "#                  #",
    "# 1             2  #",
@@ -71,7 +88,7 @@ wo(ti, " ", {
    "####################",
 })
 
-
+wo:add(YIN, ti["f"] .. ti["5"] .. {"it_banana"} .. ti["m"])
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

@@ -22,7 +22,7 @@ ti["#"] = {"st_granite"}
 ti["+"] = {"st_granite", "rock"}
 ti["~"] = {"fl_water"}
 
-ti["p"] = {"it-puller-w"}
+ti["p"] = {"it_puller_w"}
 ti["m"] = {"it_magicwand"}
 ti["t"] = {"it_wrench"}
 

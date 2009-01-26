@@ -23,16 +23,18 @@ ti[" "] = {"fl_sahara"}
 ti["#"] = {"st-rock1"}
 ti["y"] = {"it_magicwand"}
 
-ti["s"] = {"st_switch", name="swo#", state=1}
-ti["S"] = {"st_switch", name="sw#"}
-ti["T"] = {"st_switch", name="swt#"}
-ti["D"] = {"st-door-v", name="do#"}
+ti["s"] = {"st_switch", name="swo", state=1}
+ti["S"] = {"st_switch", name="sw"}
+ti["1"] = {"st_switch", name="swt1"}
+ti["2"] = {"st_switch", name="swt2"}
+ti["3"] = {"st_switch", name="swt3"}
+ti["4"] = {"st_switch", name="swt4"}
 ti["R"] = {"st_boulder_n", name="boulder"}
 ti["L"] = {"st_laserswitch", target="door1", action="signal"}
 
-ti["f"] = {"st_fourswitch", target="swo#1", action="signal"}
-ti["F"] = {"st_fourswitch", target="sw#1", action="signal", inverse=true}
-ti["g"] = {"st_fourswitch", name="fourstate", target_3="swt#1", target_2="swt#2", target_1="swt#3", target_0="swt#4", action="signal"}
+ti["f"] = {"st_fourswitch", target="swo", action="signal"}
+ti["F"] = {"st_fourswitch", target="sw", action="signal", inverse=true}
+ti["g"] = {"st_fourswitch", name="fourstate", target_3="swt1", target_2="swt2", target_1="swt3", target_0="swt4", action="signal"}
 ti["G"] = {"st_fourswitch", target="boulder", action="orientate"}
 
 ti["h"] = {"st_fourswitch", name="f#"}
@@ -50,17 +52,17 @@ ti["t"] = {"st_switch", target="setstate"}
 ti["H"] = {"st_fourswitch", counterclock=true, name="anticlock"}
 
 
-ti["1"] = {"#ac_marble"}
+ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "            f  s    ",
 "            F  S    ",
-"        t   g  T    ",
-"H       t      T    ",
-"        t      T    ",
-"        t      T    ",
+"        t   g  1    ",
+"H       t      2    ",
+"        t      3    ",
+"        t      4    ",
 "            G  R    ",
-"        1           ",
+"        @           ",
 "        y           ",
 "h u                 ",
 "h U                 ",

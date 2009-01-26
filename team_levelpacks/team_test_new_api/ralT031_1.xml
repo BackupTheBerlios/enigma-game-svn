@@ -48,7 +48,7 @@ ti["p"] = ti[" "] .. {"st_laser_n", "laseroon"}
 
 
 ti["W"] = ti[" "] .. {"st_box"}
-ti["U"] = ti[" "] .. {"st-block"}
+ti["U"] = ti[" "] .. {"st_plop"}
 ti["V"] = ti[" "] .. {"st_brownie"}
 ti["u"] = ti[" "] .. {"it-spring1"}
 ti["v"] = ti[" "] .. {"st_brake"}

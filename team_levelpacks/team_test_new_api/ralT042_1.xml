@@ -46,7 +46,7 @@ ti["w"] = {"st_box"}
 ti["h"] = {"it_hammer"}
 ti["m"] = {"it_magicwand"}
 ti["b"] = {"it_brush"}
-ti["p"] = {"it-pencil"}
+ti["p"] = {"it_pencil"}
 
 ti["B"] = {"st_boulder_s"}
 

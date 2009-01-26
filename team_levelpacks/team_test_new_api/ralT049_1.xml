@@ -44,8 +44,8 @@ ti["a"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 ti["x"] = {"it_glasses", "myglasses"}
 ti["X"] = {"st_switch", target="breakglasses"}
 
-ti["T"] = {"st-thief"}
-ti["t"] = {"fl-thief"}
+ti["T"] = {"st_thief"}
+ti["t"] = {"fl_thief"}
 
 ti["b"] = {"it-bag"}
 ti["y"] = {"it_yinyang"}

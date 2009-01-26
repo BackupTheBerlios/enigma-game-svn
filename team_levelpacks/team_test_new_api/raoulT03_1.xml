@@ -57,8 +57,8 @@ ti["K"] = {"it_cherry"}
 ti[":"] = {"it-dynamite"}
 ti["I"] = {"st_stoneimpulse"}
 ti["&"] = {"st-bombs"}
-ti["W"] = {"it-puller-w"}
-ti["E"] = {"it-puller-e"}
+ti["W"] = {"it_puller_w"}
+ti["E"] = {"it_puller_e"}
 ti["F"] = {"st_fourswitch", target="pullwindow", action="inner_pull"}
 ti["G"] = {"st_window", faces="ws", "pullwindow"}
 ti["L"] = {"st_laser_w", "laser"}
