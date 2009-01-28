@@ -52,6 +52,8 @@ ti["6"] = {"it_puller_s"}
 ti["7"] = {"it_puller_e"}
 ti["8"] = {"it_puller_n"}
 
+ti["T"] = {"it-bag", "bag"}
+
 ti["E"] = {"st_ghost_purplemarble"}
 ti["F"] = {"st_ghost_greenbrown"}
 ti["G"] = {"st_ghost_break"}
@@ -69,10 +71,10 @@ wo(ti, " ", {
    "#             m    #",
    "# F     @     M   5#",
    "#                 6#",
-   "# G           L   7",
+   "# G           L   7#",
    "#                 8#",
    "#OOO    #     K    #",
-   "#####             *#",
+   "#####T            *#",
    "########## #########",
    "#                  #",
    "# 1             2  #",
@@ -88,7 +90,9 @@ wo(ti, " ", {
    "####################",
 })
 
-wo:add(YIN, ti["f"] .. ti["5"] .. {"it_banana"} .. ti["m"])
+wo:add(YIN, ti["f"] .. ti["5"] .. {"it_banana"} .. ti["m"] .. {"it-bag", "bag2"})
+wo:add(no["bag"], ti["7"] .. {"it_cherry"} .. ti["m"])
+wo:add(no["bag2"], ti["8"] .. {"it_coin_s"})
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

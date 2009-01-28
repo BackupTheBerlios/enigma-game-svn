@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Weigth, Pin new API" el:subtitle="" el:id="20090127ral637"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="true" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_sahara"}
+ti["."] = {"fl_ice"}
+
+if wo["IsDifficult"] then
+    ti["1"] = {"#ac_marble"}
+    ti["2"] = {"it_nil"}
+else
+    ti["2"] = {"#ac_pearl", controllers=CTRL_YIN}
+    ti["1"] = {"#ac_marble", owner=YANG, controllers=CTRL_YANG}
+end
+ti["M"] = {"st_mail_e"}
+ti["b"] = {"it_bag"}
+ti["B"] = {"it_bag", "heavybag"}
+ti["Y"] = {"it_yinyang"}
+
+ti["w"] = {"it_weight"}
+ti["x"] = {"it_weight", mass=1}
+ti["y"] = {"it_weight", mass=3}
+ti["z"] = {"it_weight", "varyweight", mass=4}
+
+ti["Z"] = {"st_switch", target="vary"}
+
+ti["p"] = {"it_pin"}
+ti["P"] = {"it_bag", "pinbag"}
+
+ti["d"] = {"it-booze"}
+
+
+w, h = wo(ti, " ", {
+"   ww  xx  yy  z  Z ",
+"                  M ",
+"b                 M ",
+"b        2        M ",
+"b      1    2     M ",
+"         2        M ",
+"B                   ",
+"                  Y ",
+"p                 Y ",
+"p                   ",
+"p                ddd",
+"       .......   ddd",
+"P      .......      "
+})
+
+function vary(value, sender)
+    if value then
+        no["varyweight"]["mass"] = 6.2
+    else
+        no["varyweight"]["mass"] = 4
+    end
+end
+
+wo:add(YIN, {"it_weight", mass=2.1})
+wo:add(no["heavybag"], {"it_weight", mass=7})
+wo:add(no["pinbag"], ti["p"])
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

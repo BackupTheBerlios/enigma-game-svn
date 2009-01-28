@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Thieves new API" el:subtitle="" el:id="20090124ral532"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_sahara"}
+ti["."] = {"fl_thief"}
+ti["T"] = {"st_thief"}
+ti["#"] = {"st_granite"}
+ti["c"] = {"it_cherry"}
+ti["x"] = {"it-springboard"}
+
+
+ti["@"] = {"#ac_marble"} 
+ti["o"] = {"#ac_killer", controllers=1, owner=YIN} 
+ti["O"] = {"#ac_horse", controllers=1, owner=YIN, adhesion=1} 
+
+w, h = wo(ti, " ", {
+"   #                ",
+"   #         ....   ",
+"   #        x....   ",
+"o  #        x....   ",
+"   #         ....   ",
+"O  #   @            ",
+"   #ccccccccc      T",
+"   #ccccccccc      T",
+"   #ccccccccc      T",
+"   #               T",
+"   #       ###      ",
+" ###       #        ",
+"                    "
+})
+
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
