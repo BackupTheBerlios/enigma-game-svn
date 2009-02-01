@@ -34,7 +34,7 @@ ti["b"] = {"st_blocker", name="blocker"}
 ti["d"] = {"st_door_b", name="door#"}
 ti["h"] = {"st_chess_black", name="chess#"}
 ti["o"] = {"st_oxyd"}
-ti["B"] = {"it-bag"}
+ti["B"] = {"it_bag"}
 ti["T"] = {"st_thief"}
 ti["t"] = {"fl_thief"}
 ti["1"] = {"it_coffee", "coffee1"}

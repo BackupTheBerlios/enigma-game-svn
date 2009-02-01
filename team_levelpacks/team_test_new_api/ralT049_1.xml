@@ -9,7 +9,7 @@
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
       <el:compatibility el:enigma="1.10">
       </el:compatibility>
-      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:modes el:easy="false" el:single="true" el:network="true"/>
       <el:comments>
       </el:comments>
       <el:score el:easy="-" el:difficult="-"/>
@@ -47,10 +47,9 @@ ti["X"] = {"st_switch", target="breakglasses"}
 ti["T"] = {"st_thief"}
 ti["t"] = {"fl_thief"}
 
-ti["b"] = {"it-bag"}
-ti["y"] = {"it_yinyang"}
-ti["1"] = ti["y"] .. {"#ac_marble_black"} 
-ti["2"] = ti["y"] .. {"#ac_marble_white"} 
+ti["b"] = {"it_bag"}
+ti["1"] = {"#ac_marble_black"} 
+ti["2"] = {"#ac_marble_white"} 
 
 w, h = wo(ti, " ", {
 "!!!             HHHH",

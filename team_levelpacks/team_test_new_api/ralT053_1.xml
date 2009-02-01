@@ -9,7 +9,7 @@
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
       <el:compatibility el:enigma="1.10">
       </el:compatibility>
-      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:modes el:easy="false" el:single="true" el:network="true"/>
       <el:comments>
       </el:comments>
       <el:score el:easy="-" el:difficult="-"/>
@@ -38,8 +38,8 @@ ti["u"] = {"it_rubberband", anchor2="a2", length=4, strength=10, threshold=2.5, 
 ti["a"] = {"it_wormhole", "wa", range=0.5, scissor=false}
 ti["b"] = {"it_wormhole", "wb", destination="wa", range=0.5,  scissor=false}
 
-ti["1"] = ti["y"] .. {"#ac_marble_black", "a1"} 
-ti["2"] = ti["y"] .. {"#ac_marble_white", "a2"} 
+ti["1"] = {"#ac_marble_black", "a1"} 
+ti["2"] = {"#ac_marble_white", "a2"} 
 ti["3"] = {"#ac_horse", "a3"} 
 ti["*"] = {"#ac_pearl_white", "s#", owner=DEFAULT, controllers=0} 
 

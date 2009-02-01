@@ -22,7 +22,7 @@ ti["."] = {"fl_thief"}
 ti["T"] = {"st_thief"}
 ti["#"] = {"st_granite"}
 ti["c"] = {"it_cherry"}
-ti["x"] = {"it-springboard"}
+ti["x"] = {"it_springboard"}
 
 
 ti["@"] = {"#ac_marble"} 

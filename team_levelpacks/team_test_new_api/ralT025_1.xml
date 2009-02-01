@@ -51,17 +51,20 @@ ti["t"] = {"st_switch", target="setstate"}
 
 ti["H"] = {"st_fourswitch", counterclock=true, name="anticlock"}
 
+--ti["c"] = {"st_fourswitch", target_1="crash", action="callback", safeaction=true}
+ti["c"] = {"st_fourswitch", target_1="crash", action="callback"}
+ti["C"] = {"st_switch", target={"@", "sw*"}, action={"kill", "kill"}, safeaction=true}
 
 ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
-"            f  s    ",
+"c    C      f  s    ",
 "            F  S    ",
 "        t   g  1    ",
 "H       t      2    ",
 "        t      3    ",
 "        t      4    ",
-"            G  R    ",
+"C           G  R    ",
 "        @           ",
 "        y           ",
 "h u                 ",
@@ -72,6 +75,15 @@ w, h = wo(ti, " ", {
 
 function setstate(value, sender)
     no["fourstate"]["state"] = sender.y - 2
+end
+
+function crash(value, sender)
+    if value then
+        print("fourswitch crash if not safe - value true")
+    else
+        print("fourswitch crash if not safe - value false")
+        sender:kill()
+    end
 end
 
   ]]></el:luamain>

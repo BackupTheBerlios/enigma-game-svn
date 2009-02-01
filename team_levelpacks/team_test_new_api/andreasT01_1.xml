@@ -37,7 +37,8 @@ ti["b"] = {"it-blackbomb"}
 ti["y"] = {"it-dynamite"}
 ti["w"] = ti["."] .. {"st_window", faces="e"}
 ti["r"] = {"it_wrench"}
-ti["t"] = {"it-spring1"}
+ti["t"] = {"it_spring"}
+ti["T"] = {"it_spring_drop"}
 ti["m"] = {"it_landmine"}
 ti["s"] = {"it_sensor", invisible = true} --{"it-spring2"}
 
@@ -55,7 +56,7 @@ w, h = wo(ti, " ", {
 "   uuuu  CCCC  DDDD ",
 "g  uuuu  CCCC  DDDD ",
 "h             0     ",
-"   AAAA  BBBB  EEEE ",
+"T  AAAA  BBBB  EEEE ",
 "t  AAAA  BBBB  EEEE ",
 "s                   ",
 "   FFFF  GGGG  HHHH ",

@@ -33,7 +33,11 @@ ti["#"] = {"st_granite"}
 ti["s"] = {"st_switch", target="@door#*"}
 
 ti["e"] = {"it-dynamite"}
-ti["E"] = {"it-extinguisher"}
+ti["E"] = {"it_extinguisher"}
+ti["F"] = {"it_extinguisher_medium"}
+ti["G"] = {"it_extinguisher_empty", "refill"}
+
+ti["L"] = {"st_switch", target="refill"}
 
 ti["@"] = {"#ac_marble"} 
 
@@ -42,10 +46,10 @@ w, h = wo(ti, " ", {
 "         V          ",
 "         s          ",
 "#sa###sH####sb######",
+"                   L",
+"                   G",
 "                    ",
-"                    ",
-"                    ",
-"##sa##    eee  EEE  ",
+"##sa##    eee  EEEF ",
 " #   #  ### @       ",
 " tttttttt       s###",
 "uv      ###     V   ",
