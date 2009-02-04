@@ -37,7 +37,9 @@ ti["k"] = {"it_surprise", selection={"=K","it_extralife"}}
 ti["l"] = {"it_surprise", target="changeitem"}
 ti["L"] = {"it_wormhole", destination=po(3,3)}
 
-
+ti["d"] = {"it_drop"}
+ti["y"] = {"it_yinyang"}
+ti["Y"] = {"it_yinyang"} .. ti{"fl_space"}
 
 w, h = wo(ti, " ", {
 "SSSSSSSSSSSSSSSSSSSS",
@@ -51,8 +53,8 @@ w, h = wo(ti, " ", {
 "V       iiiiii     T",
 "V                  T",
 "V         jjjjjj   T",
-"                    ",
-"   WWWWWW  kkk  lll "
+"y                   ",
+"d YWWWWWW  kkk  lll "
 })
 
 function changeselection(value, sender)

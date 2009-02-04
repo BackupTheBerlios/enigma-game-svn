@@ -2,7 +2,7 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Test Thieves new API" el:subtitle="" el:id="20090124ral532"/>
+      <el:identity el:title="Test Explosions new API" el:subtitle="" el:id="20090203ral168"/>
       <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
@@ -15,39 +15,45 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
+
+
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
-ti["."] = {"fl_thief"}
-ti["T"] = {"st_thief"}
-ti["#"] = {"st_granite"}
-ti["c"] = {"it_cherry"}
-ti["x"] = {"it_springboard"}
+ti["~"] = {"fl_ice"}
+ti["."] = {"fl_space"}
+ti["1"] = {"#ac_marble"}
+ti["2"] = {"#ac_marble_white"}
+ti["d"] = {"it_dynamite"}
+ti["b"] = {"it_bomb_black"}
+ti["w"] = {"it_bomb_white"}
 
+ti["e"] = {"it_extinguisher"}
+ti["t"] = {"it_document"}
+ti["c"] = {"it_banana"}
 
-ti["@"] = {"#ac_marble"} 
-ti["o"] = {"#ac_killer", controllers=1, owner=YIN} 
-ti["O"] = {"#ac_horse", controllers=1, owner=YIN, adhesion=1} 
+ti["y"] = {"st_yinyang"}
+ti["Y"] = {"st_yinyang_active"}
 
-ti["y"] = {"it_yinyang"}
-ti["Y"] = {"it_yinyang"} .. ti{"fl_space"}
+ti["4"] = {"st_dispenser_bombblack"}
+ti["5"] = {"st_dispenser_bombwhite"}
+ti["6"] = {"st_dispenser_dynamite"}
 
 w, h = wo(ti, " ", {
-"   # Y y            ",
-"   #         ....   ",
-"   #        x....   ",
-"o  #        x....   ",
-"   #         ....   ",
-"O  #   @            ",
-"   #ccccccccc      T",
-"   #ccccccccc      T",
-"   #ccccccccc      T",
-"   #               T",
-"   #       ###      ",
-" ###       #        ",
-"                    "
+"        ddd         ",
+"        ddd         ",
+"   b    ddd     w   ",
+"          e         ",
+"       1      2    4",
+"                    ",
+"                   5",
+"            t       ",
+"   b               6",
+"   w                ",
+"           c        ",
+"               .. ~~",
+"Y      y       .. ~~"
 })
-
 
   ]]></el:luamain>
     <el:i18n>
@@ -57,3 +63,4 @@ w, h = wo(ti, " ", {
    </el:i18n>
   </el:protected>
 </el:level>
+

@@ -32,7 +32,7 @@ ti["c"] = {"st_door_c", "door#", state=OPEN}
 
 ti["S"] = {"st_switch", target="@door#*"}
 
-ti["s"] = {"it-spring1"}
+ti["s"] = {"it_spring"}
 ti["L"] = {"st_laser_n", "laser#", state=ON}
 ti["P"] = {"st_polarswitch"}
 
@@ -42,7 +42,7 @@ ti["k"] = {"st_door_d", target="laser#*"}
 
 ti["K"] = {"st_door_d", target="bb", action="hit"}
 ti["j"] = {"st_door_d", target="bb", action="hit", faces="ew"}
-ti["J"] = {"st-blackballs", "bb"}
+ti["J"] = {"st_jamb_black", "bb"}
 
 ti["@"] = {"#ac_marble"} 
 
