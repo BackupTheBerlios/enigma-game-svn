@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Meditation new API" el:subtitle="" el:id="20080829ral370"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision: 1278 $" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1279 $" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -31,15 +31,15 @@ ti["("] = {"it_meditation_volcano", "vol#"}
 ti[")"] = {"it_meditation_caldera", "vol#"}
 
 ti["w"] = {"st_box"}
-ti["d"] = {"it-dynamite"}
+ti["d"] = {"it_dynamite"}
 ti["?"] = {"it_spade"}
 ti["S"] = {"st_switch", target="hilli#*", action="flip"}
 ti["s"] = {"st_switch", target="bumpd#*", action="signal"}
 ti["T"] = {"st_switch", target="@vol#*", action="toggle"}
 ti["F"] = {"st_fourswitch", target="@vol#*", action_0="flip", action_2="flip"}
 
-ti["@"] = {"#ac_pearl"} 
-ti["1"] = {"#ac_marble"} 
+ti["@"] = {"#ac_pearl"}
+ti["1"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "F             T    T",

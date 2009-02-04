@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Pull,Swap,Brake new API" el:subtitle="" el:id="20080818ral371"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision: 1267 $" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1268 $" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -44,12 +44,12 @@ ti["F"] = {"st_polarswitch", "pol2"}
 ti["t"] = {"it_trigger", target="pol1"}
 ti["T"] = {"it_trigger", target="pol2"}
 
-ti["d"] = {"it-dynamite"}
-ti["E"] = {"st-bombs"}
-ti["|"] = {"it-spring1"}
+ti["d"] = {"it_dynamite"}
+ti["E"] = {"st_dispenser"}
+ti["|"] = {"it_spring_keep"}
 
-ti["@"] = {"#ac_marble_black"} 
-ti["."] = {"#ac_marble_white", "white"} 
+ti["@"] = {"#ac_marble_black"}
+ti["."] = {"#ac_marble_white", "white"}
 
 
 w, h = wo(ti, " ", {

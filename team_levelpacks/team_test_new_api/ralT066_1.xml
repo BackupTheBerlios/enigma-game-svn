@@ -32,14 +32,14 @@ ti["b"] = {"st_door_b", "door#"}
 ti["#"] = {"st_granite"}
 ti["s"] = {"st_switch", target="@door#*"}
 
-ti["e"] = {"it-dynamite"}
+ti["e"] = {"it_dynamite"}
 ti["E"] = {"it_extinguisher"}
 ti["F"] = {"it_extinguisher_medium"}
 ti["G"] = {"it_extinguisher_empty", "refill"}
 
 ti["L"] = {"st_switch", target="refill"}
 
-ti["@"] = {"#ac_marble"} 
+ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "         #          ",

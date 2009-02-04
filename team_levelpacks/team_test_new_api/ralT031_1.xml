@@ -50,10 +50,10 @@ ti["p"] = ti[" "] .. {"st_laser_n", "laseroon"}
 ti["W"] = ti[" "] .. {"st_box"}
 ti["U"] = ti[" "] .. {"st_plop"}
 ti["V"] = ti[" "] .. {"st_brownie"}
-ti["u"] = ti[" "] .. {"it-spring1"}
+ti["u"] = ti[" "] .. {"it_spring_keep"}
 ti["v"] = ti[" "] .. {"st_brake"}
 ti["Y"] = ti[" "] .. {"st_death"}
-ti["z"] = ti[" "] .. {"it-dynamite"}
+ti["z"] = ti[" "] .. {"it_dynamite"}
 
 ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}
 ti["m"] = ti[" "] .. {"st_switch", target="makeactor"}
@@ -90,7 +90,7 @@ w, h = wo(ti, " ", {
 function maketrigger(value, sender)
     wo[sender + {1,0}] = {"it_trigger", target={"laserf","laserfon"}, action={"toggle", "on"}}
 end
-  
+
 function makeactor(value, sender)
     wo[no["triggerA"]] = {"#ac_pearl", owner=nil, controllers=0}
 end
@@ -98,7 +98,7 @@ end
 function killstone(value, sender)
     wo[sender] = {"st_nil"}
 end
-  
+
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

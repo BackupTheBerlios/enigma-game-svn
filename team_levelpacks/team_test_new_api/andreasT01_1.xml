@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Trap new API" el:subtitle="" el:id="testtrap_andreas"/>
-      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="3" el:status="experimental"/>
       <el:author  el:name="Andreas Lochmann" el:email=""/>
       <el:copyright>Copyright © 2008 Andreas Lochmann</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -33,8 +33,8 @@ ti["g"] = {"it_glasses", state = SPOT_TRAP}
 ti["h"] = {"it_glasses", state = SPOT_SENSOR}
 ti["u"] = {"it_umbrella"}
 ti["d"] = {"st_death_invisible"}
-ti["b"] = {"it-blackbomb"}
-ti["y"] = {"it-dynamite"}
+ti["b"] = {"it_bomb_black"}
+ti["y"] = {"it_dynamite"}
 ti["w"] = ti["."] .. {"st_window", faces="e"}
 ti["r"] = {"it_wrench"}
 ti["t"] = {"it_spring"}

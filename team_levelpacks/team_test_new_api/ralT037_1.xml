@@ -32,9 +32,9 @@ ti["p"] = {"st_swap", "you"}
 ti["m"] = {"it_magnet_on", strength=-40}
 ti["b"] = {"st_brake"}
 ti["B"] = ti["~"] .. ti["b"]
-ti["."] = {"it-springboard"}
-ti["|"] = {"it-spring1"}
-ti[";"] = {"it-spring2"}
+ti["."] = {"it_springboard"}
+ti["|"] = {"it_spring_keep"}
+ti[";"] = {"it_spring_drop"}
 ti["*"] = {"it_landmine"}
 
 

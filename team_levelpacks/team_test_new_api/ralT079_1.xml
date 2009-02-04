@@ -22,7 +22,7 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_ice"}
 ti["."] = {"fl_space"}
-ti["1"] = {"#ac_marble"}
+ti["1"] = {"#ac_marble", essential=DISPENSIBLE}
 ti["2"] = {"#ac_marble_white"}
 ti["d"] = {"it_dynamite"}
 ti["b"] = {"it_bomb_black"}

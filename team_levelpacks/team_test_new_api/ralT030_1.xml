@@ -21,7 +21,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
 ti["#"] = ti[" "] .. {"st_granite"}
-ti["~"] = ti({"fl_blueslab"}) .. {"st-chameleon"}
+ti["~"] = ti({"fl_blueslab"}) .. {"st_chameleon"}
 
 ti["s"] = ti[" "] .. {"st_swap"}
 
@@ -60,7 +60,7 @@ w, h = wo(ti, " ", {
 })
 
 
-  
+
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

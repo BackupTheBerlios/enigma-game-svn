@@ -26,18 +26,18 @@ ti["A"] = {"st_oneway_white_n"}
 ti["a"] = {"st_oneway_black", state=NORTH}
 
 ti["m"] = {"it_magicwand"}
-ti["s"] = {"it-spring1"}
-ti["S"] = {"it-springboard"}
+ti["s"] = {"it_spring_keep"}
+ti["S"] = {"it_springboard"}
 
 
 
-ti["@"] = {"#ac_marble_black"} 
-ti["2"] = {"#ac_marble_white"} 
-ti["3"] = {"#ac_rotor"} 
-ti["4"] = {"#ac_bug"} 
-ti["5"] = {"#ac_horse"} 
-ti["6"] = {"#ac_killer"} 
-ti["7"] = {"#ac_top"} 
+ti["@"] = {"#ac_marble_black"}
+ti["2"] = {"#ac_marble_white"}
+ti["3"] = {"#ac_rotor"}
+ti["4"] = {"#ac_bug"}
+ti["5"] = {"#ac_horse"}
+ti["6"] = {"#ac_killer"}
+ti["7"] = {"#ac_top"}
 
 
 w, h = wo(ti, " ", {

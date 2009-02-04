@@ -44,7 +44,7 @@ ti["Z"] = {"st_switch", target="vary"}
 ti["p"] = {"it_pin"}
 ti["P"] = {"it_bag", "pinbag"}
 
-ti["d"] = {"it-booze"}
+ti["d"] = {"it_bottle"}
 
 
 w, h = wo(ti, " ", {

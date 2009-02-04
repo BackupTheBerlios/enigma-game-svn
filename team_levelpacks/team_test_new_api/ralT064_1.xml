@@ -39,11 +39,11 @@ ti["W"] = {"st_mail_w"}
 ti["h"] = {"it_hammer"}
 ti["m"] = {"it_magicwand"}
 ti["b"] = {"st_brake"}
-ti["d"] = {"it-dynamite"}
-ti["B"] = {"st-bombs"}
+ti["d"] = {"it_dynamite"}
+ti["B"] = {"st_dispenser"}
 
-ti["@"] = {"#ac_marble_black"} 
-ti["."] = {"#ac_marble_white", "white"} 
+ti["@"] = {"#ac_marble_black"}
+ti["."] = {"#ac_marble_white", "white"}
 
 w, h = wo(ti, " ", {
 "B ddd           1234",

@@ -33,7 +33,7 @@ ti["T"] = {"st_switch", target="closed", action_1="open", action_0="close"}
 ti["w"] = {"st_box"}
 ti["g"] = {"st_rawglass_movable"}
 ti["c"] = {"it_cherry"}
-ti["s"] = {"it-spring1"}
+ti["s"] = {"it_spring_keep"}
 ti["p"] = {"st_pull"}
 ti["W"] = {"st_window_ew", secure=true}
 ti["h"] = {"st_puzzle", hollow=true, connections="nesw"}
@@ -43,7 +43,7 @@ ti[";"] = ti["."] .. ti["g"]
 
 ti["b"] = {"st_brake"}
 
-ti["@"] = {"#ac_marble"} 
+ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
 "    S    S     S    ",

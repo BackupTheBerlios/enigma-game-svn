@@ -54,9 +54,9 @@ ti["r"] = {"it_ring"}
 ti["s"] = {"it_seed"}
 ti["k"] = {"it_coffee"}
 ti["K"] = {"it_cherry"}
-ti[":"] = {"it-dynamite"}
+ti[":"] = {"it_dynamite"}
 ti["I"] = {"st_stoneimpulse"}
-ti["&"] = {"st-bombs"}
+ti["&"] = {"st_dispenser"}
 ti["W"] = {"it_puller_w"}
 ti["E"] = {"it_puller_e"}
 ti["F"] = {"st_fourswitch", target="pullwindow", action="inner_pull"}

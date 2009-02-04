@@ -44,8 +44,8 @@ ti["@"] = (ti[" "] .. {"it_magicwand"}) .. {"#ac_marble"}
 ti["w"] = {"st_switch", target="Laser%7", action="toggle"}
 ti["f"] = {"st_quake"}
 ti["h"] = {"it_hammer"}
-ti["d"] = {"it-dynamite"}
-ti["E"] = {"st-bombs"}
+ti["d"] = {"it_dynamite"}
+ti["E"] = {"st_dispenser"}
 
 ti["t"] = {"st_oxyd", "t#"}
 
@@ -96,7 +96,7 @@ end
 function enlighten(value, sender)
     -- the single opened oxyd
     no["Laser" .. string.sub(sender["name"],2)]:toggle()
-    
+
     -- all pair opened oxyds with the second laser
     for i=1,6 do
         if no["o%"..i]["state"] == 2 then
