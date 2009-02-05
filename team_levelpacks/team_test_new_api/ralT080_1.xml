@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Slope new API" el:subtitle="" el:id="20090205ral545"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_sahara"}
+ti["1"] = {"#ac_marble"}
+
+ti["_"] = {"fl_slope"}
+ti["a"] = {"fl_slope_pw"}
+ti["b"] = {"fl_slope_ps"}
+ti["c"] = {"fl_slope_pe"}
+ti["d"] = {"fl_slope_pn"}
+ti["e"] = {"fl_slope_inw"}
+ti["f"] = {"fl_slope_isw"}
+ti["g"] = {"fl_slope_ise"}
+ti["h"] = {"fl_slope_ine"}
+ti["i"] = {"fl_slope_onw"}
+ti["j"] = {"fl_slope_osw"}
+ti["k"] = {"fl_slope_ose"}
+ti["l"] = {"fl_slope_one"}
+ti["A"] = {"fl_slope_tw"}
+ti["B"] = {"fl_slope_ts"}
+ti["C"] = {"fl_slope_te"}
+ti["D"] = {"fl_slope_tn"}
+ti["E"] = {"fl_slope_twl"}
+ti["F"] = {"fl_slope_tsl"}
+ti["G"] = {"fl_slope_tel"}
+ti["H"] = {"fl_slope_tnl"}
+ti["I"] = {"fl_slope_twr"}
+ti["J"] = {"fl_slope_tsr"}
+ti["K"] = {"fl_slope_ter"}
+ti["L"] = {"fl_slope_tnr"}
+ti["."] = {"fl_gray"}
+
+w, h = wo(ti, " ", {
+"...  ___  1  aaaa   ",
+"...  ___     cccc   ",
+"                    ",
+"  eh  kj        db  ",
+"  fg  li        db  ",
+"                db  ",
+"kGGGGGj         db  ",
+"HCCCCBF             ",
+"HDeKhBF             ",
+"HDL JBF             ",
+"HDfIgBF             ",
+"HDAAAAF             ",
+"lEEEEEi             "
+})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

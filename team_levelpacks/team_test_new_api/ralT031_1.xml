@@ -25,7 +25,7 @@ ti["~"] = {"fl_abyss"}
 ti["!"] = {"fl_wood", ignitable=true}
 ti["#"] = ti[" "] .. {"st_granite"}
 
-ti["A"] = ti[" "] .. {"it_trigger", target="lasera", action="toggle", "triggerA"}
+ti["A"] = ti[" "] .. {"it_trigger", "triggerA", target="lasera", action="toggle", "triggerA"}
 ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"toggle", "on"}}
 ti["C"] = ti["."] .. {"it_trigger", target={"laserc","lasercon"}, action={"toggle", "on"}}
 ti["O"] = ti["!"] .. {"it_trigger", target={"lasero","laseroon"}, action={"toggle", "on"}}
@@ -57,6 +57,7 @@ ti["z"] = ti[" "] .. {"it_dynamite"}
 
 ti["M"] = ti[" "] .. {"st_switch", target="maketrigger"}
 ti["m"] = ti[" "] .. {"st_switch", target="makeactor"}
+ti["N"] = ti[" "] .. {"st_switch", target="freetrigger"}
 ti["X"] = ti[" "] .. {"it_wormhole", destination="triggerA", range=1}
 
 ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it_ring"}
@@ -83,7 +84,7 @@ w, h = wo(ti, " ", {
 "     W     W    W   ",
 "M    A     B    C   ",
 "    Y      ~    .   ",
-"fg   am    bd   ce  ",
+"fg   amN   bd   ce  ",
 "                    "
 })
 
@@ -97,6 +98,10 @@ end
 
 function killstone(value, sender)
     wo[sender] = {"st_nil"}
+end
+
+function freetrigger(value, sender)
+    wo[no["triggerA"]] = {"st_nil"}
 end
 
   ]]></el:luamain>
