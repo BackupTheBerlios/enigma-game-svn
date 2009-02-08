@@ -25,6 +25,9 @@ ti["^"] = {"st_oneway_n"}
 ti["A"] = {"st_oneway_white_n"}
 ti["a"] = {"st_oneway_black", state=NORTH}
 
+ti["b"] = {"st_oneway_black", "one", state=NORTH}
+ti["B"] = {"st_switch", target="recolor"}
+
 ti["m"] = {"it_magicwand"}
 ti["s"] = {"it_spring_keep"}
 ti["S"] = {"it_springboard"}
@@ -43,9 +46,9 @@ ti["7"] = {"#ac_top"}
 w, h = wo(ti, " ", {
 "                    ",
 "   v<        <      ",
-"                    ",
+"  b                  ",
 "             S      ",
-"                    ",
+"B                    ",
 "                    ",
 "   vvvvv            ",
 "                    ",
@@ -56,7 +59,9 @@ w, h = wo(ti, " ", {
 "            3     67"
 })
 
-
+function recolor(value, sender)
+    no["one"]["color"] = WHITE - no["one"]["color"]
+end
 
   ]]></el:luamain>
     <el:i18n>
