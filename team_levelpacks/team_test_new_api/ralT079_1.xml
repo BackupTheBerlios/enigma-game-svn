@@ -31,28 +31,55 @@ ti["w"] = {"it_bomb_white"}
 ti["e"] = {"it_extinguisher"}
 ti["t"] = {"it_document"}
 ti["c"] = {"it_banana"}
+ti["C"] = {"it_crack"}
+ti["x"] = {"it_cross"}
+ti["+"] = {"it_extralife"}
 
 ti["y"] = {"st_yinyang"}
 ti["Y"] = {"st_yinyang_active"}
+ti["z"] = {"st_yinyang_inactive"}
+ti["Z"] = {"st_yinyang", loop=false}
 
 ti["4"] = {"st_dispenser_bombblack"}
 ti["5"] = {"st_dispenser_bombwhite"}
 ti["6"] = {"st_dispenser_dynamite"}
 
+ti["L"] = {"st_laser_s", state=ON}
+ti["P"] = {"st_polarswitch"}
+ti["I"] = {"st_stoneimpulse"}
+
+ti["O"] = {"st_spitter"}
+ti["o"] = {"st_spitter", secure=true}
+ti["W"] = {"st_window_w"}
+ti["B"] = {"st_brownpyramide"}
+
+
 w, h = wo(ti, " ", {
-"        ddd         ",
-"        ddd         ",
-"   b    ddd     w   ",
+"L       ddd        C",
+"P       ddd         ",
+"   b    ddd     w  x",
 "          e         ",
-"       1      2    4",
-"                    ",
-"                   5",
+"I      1      2    4",
+"I                   ",
+"I                  5",
 "            t       ",
 "   b               6",
 "   w                ",
 "           c        ",
 "               .. ~~",
-"Y      y       .. ~~"
+"Y   y   z  Z   .. ~~",
+"                    ",
+"+++++++             ",
+"+++++++             ",
+"+++++++       L     ",
+"+++++++       P     ",
+"                    ",
+"                    ",
+"                  BB",
+"d dox  x      O   BB",
+"   C                ",
+"y     II          W  ",
+"y  C  II            "
 })
 
   ]]></el:luamain>

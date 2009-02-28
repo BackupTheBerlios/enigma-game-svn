@@ -32,6 +32,10 @@ ti["E"] = {"it_sensor", target="sensorlaser", action="signal"}
 ti["F"] = {"it_sensor", inverse=true, target="sensorlaser", action="signal"}
 ti["L"] = {"st_laser_n", "sensorlaser"}
 
+ti["G"] = {"it_sensor_exit", target="esensorlaser", action="signal"} .. ti{"fl_lawn"}
+ti["H"] = {"it_sensor_exit", inverse=true, target="esensorlaser", action="signal"}
+ti["K"] = {"st_laser_n", "esensorlaser"}
+
 ti["C"] = {"it_cross", target="crosslaser1"}
 ti["M"] = {"st_laser_n", "crosslaser1"}
 
@@ -62,10 +66,10 @@ ti["2"] = ti["y"] .. {"#ac_marble_white"}
 
 w, h = wo(ti, " ", {
 "                    ",
-" l   L     M   m    ",
+" l   L K   M   m    ",
 "                    ",
-"Ie   E     C   c    ",
-" f   F              ",
+"Ie   E G   C   c    ",
+" f   F H            ",
 "          1 2  b w  ",
 "S   X               ",
 "t         W         ",

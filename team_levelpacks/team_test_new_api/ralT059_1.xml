@@ -18,6 +18,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
+ti["#"] = {"st_tigris"}
 
 ti["="] = {"st_door_d", "door#", faces="ns"}
 ti["|"] = {"st_door_d", "door#", faces="ew"}
@@ -46,6 +47,12 @@ ti["J"] = {"st_jamb_black", "bb"}
 
 ti["@"] = {"#ac_marble"} 
 
+ti["M"] = {"st_door_d", target="ww", action="hit"}
+ti["N"] = {"st_door_d", target="ww", action="hit", faces="ew"}
+ti["O"] = {"st_jamb_white", "ww"}
+
+ti["2"] = {"#ac_killer"} 
+ti["X"] = {"st_passage"}
 
 w, h = wo(ti, " ", {
 "                    ",
@@ -60,7 +67,12 @@ w, h = wo(ti, " ", {
 "  KJK           L   ",
 "   j     @ s        ",
 "                k   ",
-"                    "
+"#######             ",
+"   N  #             ",
+"  MOM #             ",
+"   N  #             ",
+"2     #             ",
+"      X              "
 })
 
   ]]></el:luamain>
