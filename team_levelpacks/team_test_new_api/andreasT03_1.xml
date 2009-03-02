@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test drunken thieves" el:subtitle="" el:id="test_drunken_thieves"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Andreas Lochmann" el:email=""/>
+      <el:copyright>Copyright © 2009 Andreas Lochmann</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_sahara"}
+ti["."] = {"fl_thief"}
+ti["T"] = {"st_thief"}
+ti["C"] = {"st_chess"}
+ti["D"] = {"st_chess_white"}
+ti["b"] = {"it_bottle"}
+ti["@"] = {"#ac_marble"} .. ti{"it_yinyang"}
+ti["%"] = {"#ac_marble_white"} .. ti{"it_yinyang"}
+
+wo(ti,  " ",  {
+    "                    ",
+    " bbbbb   .......... ",
+    " bbbbb   .......... ",
+    " bbbbb   .......... ",
+    " bbbbb   .......... ",
+    " bbbbb@             ",
+    " bbbbb   C          ",
+    "           T T T T  ",
+    " % D       T T T T  ",
+    "    C      T T T T  ",
+    "     C     T T T T  ",
+    "                    ",
+    "                    "})
+  
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

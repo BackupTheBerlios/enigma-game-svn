@@ -19,6 +19,14 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_wood", burnable=true, ignitable=true, secure=true}
 
+ti["1"] = {"fl_bridge", "bridge#", flavor = "gc", state = OPEN, secure = true}
+ti["2"] = {"fl_bridge", "bridge#", flavor = "bn", state = OPEN, secure = true}
+ti["3"] = {"fl_bridge", "bridge#", flavor = "bw", state = OPEN, secure = true}
+ti["4"] = {"fl_bridge", "bridge#", flavor = "gc", state = CLOSED, secure = true}
+ti["5"] = {"fl_bridge", "bridge#", flavor = "bn", state = CLOSED, secure = true}
+ti["6"] = {"fl_bridge", "bridge#", flavor = "bw", state = CLOSED, secure = true}
+ti["7"] = {"st_switch", target = "bridge#*"}
+
 ti["w"] = {"st_window_nesw"}
 ti["v"] = {"st_window_ne"}
 ti["u"] = {"st_window_sw"}
@@ -42,10 +50,10 @@ ti["L"] = {"st_switch", target="refill"}
 ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
-"         #          ",
+"         #    123456",
 "         V          ",
 "         s          ",
-"#sa###sH####sb######",
+"#sa###sH####sb##7###",
 "                   L",
 "                   G",
 "                    ",
