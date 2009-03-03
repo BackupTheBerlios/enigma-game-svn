@@ -23,6 +23,8 @@ ti["T"] = {"st_thief"}
 ti["#"] = {"st_granite"}
 ti["c"] = {"it_cherry"}
 ti["x"] = {"it_springboard"}
+ti["b"] = {"it_bottle"}
+ti["C"] = {"st_chess"}
 
 
 ti["@"] = {"#ac_marble"} 
@@ -34,15 +36,15 @@ ti["Y"] = {"it_yinyang"} .. ti{"fl_space"}
 
 w, h = wo(ti, " ", {
 "   # Y y            ",
-"   #         ....   ",
-"   #        x....   ",
-"o  #        x....   ",
-"   #         ....   ",
+"   #         ....C  ",
+"   #bb      x....   ",
+"o  #bb      x....   ",
+"   #bb       ....   ",
 "O  #   @            ",
 "   #ccccccccc      T",
 "   #ccccccccc      T",
 "   #ccccccccc      T",
-"   #               T",
+"   #             C T",
 "   #       ###      ",
 " ###       #        ",
 "                    "
