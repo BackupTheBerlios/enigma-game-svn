@@ -43,6 +43,7 @@ ti["Z"] = {"st_yinyang", loop=false}
 ti["4"] = {"st_dispenser_bombblack"}
 ti["5"] = {"st_dispenser_bombwhite"}
 ti["6"] = {"st_dispenser_dynamite"}
+ti["8"] = {"st_dispenser_bombblack"} .. ti["b"]
 
 ti["L"] = {"st_laser_s", state=ON}
 ti["P"] = {"st_polarswitch"}
@@ -59,9 +60,16 @@ ti["V"] = {"st_spitter", "autospitter", destination="sdest#*", secure=true}
 ti["v"] = {"st_brownpyramide", "sdest#"}
 ti["s"] = {"st_switch", target="autospitter", action="spit"}
 
+ti["U"] = {"st_spitter", "autospitter2", destination={"slabi", "slabj", "slabk"}, secure=true}
+ti["i"] = {"fl_redslab", "slabi"}
+ti["j"] = {"fl_redslab", "slabj"}
+ti["k"] = {"fl_redslab", "slabk"}
+ti["T"] = {"st_switch", target="autospitter2", action="spit"}
+
+ti["p"] = {"st_puzzle", cluster=1}
 
 w, h = wo(ti, " ", {
-"L       ddd        C",
+"L       ddd  448   C",
 "P       ddd         ",
 "   b    ddd     w  x",
 "          e         ",
@@ -69,23 +77,23 @@ w, h = wo(ti, " ", {
 "I                   ",
 "I                  5",
 "            t       ",
-"   b               6",
-"   w                ",
-"           c        ",
-"               .. ~~",
-"Y   y   z  Z   .. ~~",
-"                    ",
+"4  b               6",
+"4  w                ",
+"4d         c        ",
+"b              .. ~~",
+"  Y y   z  Z   .. ~~",
+"      k             ",
 "+++++++       v     ",
 "+++++++             ",
 "v++++++       L    v",
 "+++++++       P     ",
-"v                v  ",
-"                    ",
+"v  j             v i",
+"                ppp ",
 "         vv       BB",
 "d dox  x      O   BB",
 "   C                ",
 "y     II          W ",
-"y  C  II v S    s  V"
+"y  C  II v S  s V TU"
 })
 
 local spitdest = po(13.5, 15.5)
