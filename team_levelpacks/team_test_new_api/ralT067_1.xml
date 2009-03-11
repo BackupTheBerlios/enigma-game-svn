@@ -34,6 +34,10 @@ ti["D"] = {"st_disco_light", "other#"}
 ti["A"] = {"st_disco_dark", "anchor"}
 ti["s"] = {"st_switch", target="anchor", action="lighten"}
 ti["S"] = {"st_switch", target="other#*", action="darken"}
+ti["t"] = {"st_switch", target="lightoff"}
+ti["u"] = {"st_switch", target="posconcat"}
+ti["v"] = {"st_switch", target="ploffset"}
+ti["x"] = {"st_switch", target="equality"}
 
 
 
@@ -44,16 +48,39 @@ w, h = wo(ti, " ", {
 "AD    ___     w     ",
 "                    ",
 "s   wwwwww          ",
-"                    ",
-"                    ",
-"       @            ",
-"                    ",
+"t                   ",
+"u                   ",
+"v      @            ",
+"x                   ",
 "                    ",
 "      wwwww         ",
 "                    ",
 "      .....         ",
 "    W .....  X      "
 })
+
+function lightoff()
+--    (no["other#*"] + no["anchor"]):kill()
+    (no["anchor"] + no["other#*"]):kill()
+end
+
+function posconcat()
+    wo[po(3,3) .. po(4,4)] = {"it_umbrella"}
+end
+
+function ploffset()
+--    newpl =  {1,4} + po["other#*"] + no["water"]
+    newpl =  {1,4} - po["other#*"] + no["water"]
+    wo[newpl] = {"it_squashed"}
+end
+
+function equality()
+    grp1 = no["other#*"]
+    grp2 = no["ab#*"]
+    if grp1 == grp1 then print("grp1 == grp1") else print("grp1 != grp1") end
+    if grp1 == grp2 then print("grp1 == grp2") else print("grp1 != grp2") end
+    if grp1 + grp2 == (grp2 + grp1) then print("grp1 + grp2 == grp2 + grp1") else print("grp1 + grp2 != grp2 + grp1") end
+end
 
 aby = no["ab#*"]
 abypos = po(aby)
