@@ -69,8 +69,8 @@ function posconcat()
 end
 
 function ploffset()
---    newpl =  {1,4} + po["other#*"] + no["water"]
-    newpl =  {1,4} - po["other#*"] + no["water"]
+    newpl =  {1,4} + 2 * po["other#*"] + no["water"]
+--    newpl =  {1,4} -  po["other#*"] + no["water"]
     wo[newpl] = {"it_squashed"}
 end
 

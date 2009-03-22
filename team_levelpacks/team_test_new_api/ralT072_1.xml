@@ -19,7 +19,7 @@ wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_hay"}
 ti["~"] = {"fl_water"}
-ti["*"] = {"fl_water_source"}
+ti["*"] = {"fl_water_source", "tsunami"}
 ti["."] = {"fl_sand", floodable=true}
 ti["-"] = {"fl_hay_framed"}
 ti["o"] = {"st_box_hay"}
@@ -63,8 +63,8 @@ w, h = wo(ti, " ", {
 "                  . ",
 "            ....x.. ",
 "            ...     ",
-"                    ",
-"                    "
+"        ~~~~~~~     ",
+"  ......~~~~~~~     "
 })
 
 
