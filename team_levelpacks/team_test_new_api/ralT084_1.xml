@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected >
+    <el:info el:type="level">
+      <el:identity el:title="New Maze" el:subtitle="" el:id="20090321ral560"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+        <el:dependency el:path="lib/libmaze" el:id="lib/libmaze" el:release="2" el:preload="true"/>
+      </el:compatibility>
+      <el:modes el:easy="true" el:single="true" el:network="false"/>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_samba"}
+ti["#"] = {"st_granite"}
+ti["+"] = {"st_lightglass"}
+ti["~"] = {"fl_water"}
+ti["-"] = {"fl_wood"}
+ti["."] = {"fl_hay"}
+ti[","] = {"fl_hay", "amaze#"}
+ti[";"] = {"it_puller"} .. ti[","]
+ti["!"] = {"fl_lawn"}
+
+ti["@"] = {"#ac_marble", "anchor1"}
+ti["A"] = {"fl_samba", "anchor2"}
+ti["c"] = {"it_cherry"}
+
+
+if not wo["IsDifficult"] then
+    mymaze1 = res.maze(ti, {area ={po(4,2), 8, 5}, render = {".", "~", "-"}})
+    mymaze2 = res.maze(mymaze1, {area ={po(2, 12), 5, 10}, render = {"-", "~", "."}, kernel={2,2}, offset_y={1, false}})
+    mymaze3 = res.maze(mymaze2, {area ={po(22, 2), 5, 5}, kernel={2,2}})
+    
+    w,h = wo(mymaze3, " ", 100, 100)
+    --wo:drawBorder(po(0,0), w, h, ti["#"])
+    wo[po(1,1)] = ti["@"]
+    
+    mymaze3:render("!", "~", "-")
+
+    mymaze4 = res.maze(ti, {area ={"."}, kernel={1,1}, render = {"!", "~", "-"}})
+    wo:drawMap(mymaze4, po(22, 18), " ", {
+        "    .....................",
+        "    .....................",
+        "    .......................",
+        "    .......................",
+        "...........................",
+        "...........     ...........",
+        "...........     ...........",
+        "...........     .......",
+        ".......................",
+        ".......................",
+        "......................."
+    })
+    
+
+else
+    mymaze1 = res.maze(ti, {area ={"anchor1", 4, 5}, render = {".", "~", "-"}})
+    mymaze2 = res.maze(mymaze1, {area ={"anchor2", 8, 4}, render = {{".","+"}, "~", "-"}})
+    mymaze3 = res.maze(mymaze2, {area ={po(2, 12), 5, 5}, kernel={3,2}, render = {".", wo:newMap(" ", {"!!!~","--!~","~~~~"})}})
+    mymaze4 = res.maze(mymaze3, {area ={"."}, kernel={1,1}, render = {"!", "~", "-"}})
+    mymaze5 = res.maze(mymaze4, {area ={"amaze#*"}, render = {"!", "~", "!"}})
+    mymaze6 = res.maze(mymaze5, {area ={po(24, 12), 15, 12}, spacing={0,0}})
+    mymaze7 = res.maze(mymaze6, {area ={po(40, 25), 15, 12}, kernel={0,0}})
+    
+    w,h = wo(mymaze7, " ", {
+        "                                                                   ",
+        "                      A                                            ",
+        "            @                          .............+.....         ",
+        "                                       .............+.....         ",
+        "                                       .............+.....         ",
+        "                                       .............+.....         ",
+        "                                       ...................         ",
+        "                                           ...............         ",
+        "                                           ...............         ",
+        "                                           .....  .  .....         ",
+        "                                           .....     .....         ",
+        "                                           ......   ......         ",
+        "                                           .....     .....         ",
+        "        c                                  .....  .  .....         ",
+        "                                           ...............         ",
+        "            c                              ...............         ",
+        "                                           ...............         ",
+        "                                                                   ",
+        "          c                                                        ",
+        "                                                                   ",
+        "               c                                                   ",
+        "                                                                   ",
+        "                                                                   ",
+        "                                                                   ",
+        "                                                                   ",
+        "                                                                   ",
+        "                                                                   ",
+        "       ,,;,,,,,,,,,,,,,,,,,,                                       ",
+        "       ,,,,,,,,,,,,,,,,;,,,,                                       ",
+        "       ,,,,,,,,;,,,,,,,,,,,,                                       ",
+        "       ,,,,,,,,,,,,,,,,,,,,,                                       ",
+        "       ,,,,,,,,,,,,,,;,,,,,,                                       ",
+        "       ,,,,,,,,,,,,,,,,,,,,,                                       ",
+        "       ,,,,,,;,,,,,;,,,,,,,,                                       ",
+        "       ,,,,,,,,,,,,,,,,,,,,,                                       ",
+        "       ,,,,,,,,,,,,,,,,,,;,,                                       ",
+        "       ,,,,,,,,,,,,,,,,,,,,,                                       ",
+        "       ,,;,,,,,,,,,,,,,,,,,,                                       ",
+        "                                                                   "
+    })
+    
+    mymaze6(0,0)[WEST] = true
+    mymaze6(14,11)[SOUTH] = true
+    mymaze6:render(lib.maze.renderer_window, "!", true)
+    
+    mymaze7(0,0)[WEST] = true
+    mymaze7(14,11)[SOUTH] = true
+    mymaze7:render(lib.maze.renderer_strip, "~")
+end
+
+    ]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>
