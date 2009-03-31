@@ -175,6 +175,15 @@ lotm_archive_data[19] = {
   position_num   = "6036"
 }
 
+lotm_archive_data[20] = {
+  date           = { month = 4, year = 2009 },
+  chronological  = 20,
+  name           = "Plan Ahead",
+  author         = "Jacob Scott",
+  position       = "V/21",
+  position_num   = "5021"
+}
+
 -- Further levels standing data
 -- (no need to change these)
 
@@ -351,7 +360,8 @@ lotm_rating(      "Block its way!",  7.85,  20,  "")
 lotm_rating(   "Gods of Enigma II",  8.42,  19,  "")
 lotm_rating( "River of Challenges",  8.36,  11,  "")
 lotm_rating(  "Industrial Puzzles",  8.55,  11,  "")
-lotm_rating(          "Procrustes",  7.71,  17,  "<b>(newcomer)</b>")
+lotm_rating(          "Procrustes",  7.71,  17,  "")
+lotm_rating(          "Plan Ahead", -1,     -1,  "<b>(newcomer)</b>")
 
 -- Don't forget to adjust the archive dates:
 
