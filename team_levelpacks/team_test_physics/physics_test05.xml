@@ -2,7 +2,7 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Collisiontest 1" el:subtitle="" el:id="physictest_collision1"/>
+      <el:identity el:title="Collisiontest 5" el:subtitle="" el:id="physictest_collision5"/>
       <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
       <el:author el:name="Raoul Bourquin" el:email="" el:homepage=""/>
       <el:copyright>Copyright © 2007 Raoul Bourquin</el:copyright>
@@ -13,32 +13,35 @@
     </el:info>
     <el:luamain><![CDATA[
 if wo["IsDifficult"] then
-    fri=0.0
+    forcex = -2
+    forcey = -2
+else
+    forcex = -3
+    forcey = -5
 end
 
 ti["  "] = {"fl_space"}
-ti["> "] = {"fl_slope", slope=EAST, shape="pe", friction=fri}
-ti["< "] = {"fl_slope", slope=WEST, shape="pw", friction=fri}
+ti["1 "] = {"fl_space", force_x=forcex, force_y=forcey}
+ti["2 "] = {"fl_space", force_x=-forcex, force_y=forcey}
+ti["3 "] = {"fl_space", force_x=-forcex, force_y=-forcey}
+ti["4 "] = {"fl_space", force_x=forcex, force_y=-forcey}
 ti[" #"] = {"st_rawglass"}
-ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE}
-ti[" *"] = {"ac_pearl", 0.0, 0.5, controllers=CTRL_NONE}
-ti[" o"] = {"#ac_marble_white"}
-ti[" O"] = {"ac_marble_white", 0.0, 0.5}
-ti[" @"] = ti[" #"] .. {"#ac_marble_black"}
+ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE, owner=DEFAULT}
+ti[" @"] = {"#ac_marble_black"}
 
 wo(res.composer(ti), "  ", {
-    " @ # # # # # # # # # # # # # # # # # # #",
-    " #>o                                <o #",
-    " #>o                 o                 #",
-    " #>o                 *              <  #",
-    " #>o              >.                   #",
-    " #>o  >o                               #",
-    " #>o                 O              <o #",
-    " #>o       o                        <o #",
-    " #>o> > > >                         <o #",
-    " #>o> >o   o  >o>  o   o  >o   o       #",
-    " #>o>                                  #",
-    " #>o>       > >             < <        #",
+    " # # # # # # # # # # # # # # # # # # # #",
+    " #1.1.1.1.1. #             #2.2.2.2.2. #",
+    " #1.1.1.1.1. #             #2.2.2.2.2. #",
+    " #1.1.1.1.1. #     @       #2.2.2.2.2. #",
+    " #1.1.1.1.1. #             #2.2.2.2.2. #",
+    " #1.1.1.1.1. #             #2.2.2.2.2. #",
+    " # # # # # # # # # # # # # # # # # # # #",
+    " #4.4.4.4.4. #             #3.3.3.3.3. #",
+    " #4.4.4.4.4. #             #3.3.3.3.3. #",
+    " #4.4.4.4.4. #             #3.3.3.3.3. #",
+    " #4.4.4.4.4. #             #3.3.3.3.3. #",
+    " #4.4.4.4.4. #             #3.3.3.3.3. #",
     " # # # # # # # # # # # # # # # # # # # #"})
  ]]></el:luamain>
     <el:i18n>

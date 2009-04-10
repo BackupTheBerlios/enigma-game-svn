@@ -21,7 +21,7 @@ end
 
 ti["  "] = {"fl_dark", friction=fri}
 ti[" #"] = {"st_granite"}
-ti[" ."] = {"#ac_marble_white"}
+ti[" ."] = {"#ac_marble_white", controllers=CTRL_NONE, owner=DEFAULT}
 ti[" @"] = {"#ac_marble_black"}
 
 wo(res.composer(ti), "  ", {

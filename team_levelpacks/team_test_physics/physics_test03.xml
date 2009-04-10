@@ -2,7 +2,7 @@
 <el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
   <el:protected>
     <el:info el:type="level">
-      <el:identity el:title="Collisiontest 2" el:subtitle="" el:id="physictest_collision2"/>
+      <el:identity el:title="Collisiontest 3" el:subtitle="" el:id="physictest_collision3"/>
       <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
       <el:author el:name="Raoul Bourquin" el:email="" el:homepage=""/>
       <el:copyright>Copyright © 2007 Raoul Bourquin</el:copyright>
@@ -13,7 +13,9 @@
     </el:info>
     <el:luamain><![CDATA[
 if wo["IsDifficult"] then
-    fri=0.0
+    fri=0
+else
+    fri=0.8
 end
 
 ti["  "] = {"fl_sahara"}
@@ -23,35 +25,34 @@ ti["> "] = {"fl_slope", slope=EAST, shape="pe", friction=fri}
 ti["v "] = {"fl_slope", slope=SOUTH, shape="ps", friction=fri}
 ti["< "] = {"fl_slope", slope=WEST, shape="pw", friction=fri}
 ti[" #"] = {"st_rawglass"}
-ti[" X"] = {"st_redfiber"}
-ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE}
+ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE, owner=DEFAULT}
 ti[" @"] = {"#ac_marble_black"}
 
 wo(res.composer(ti), "  ", {
-    " # # # # X # # # # # # # # # # X # # # #",
-    " #    v v.v                 v v.v      #",
-    " #    - - -                 - - -      #",
-    " #> - - - - - <         > - - - - - <  #",
-    " X>.- - - - - <         > - - - - - <. X",
-    " #> - - - - - <         > - - - - - <  #",
-    " #    - - -                 - - -      #",
-    " #    ^ ^ ^    @            ^ ^ ^      #",
-    " #                                     #",
-    " #                                     #",
-    " #                                     #",
-    " #                                     #",
-    " #                                     #",
-    " #    v v v                 v v v      #",
-    " #    - - -                 - - -      #",
-    " #> - - - - - <         > - - - - - <  #",
-    " X> - - - - - <         > - - - - - <. X",
-    " #> - - - - - <         > - - - - - <  #",
-    " #    - - -                 - - -      #",
-    " #    ^ ^.^                 ^ ^.^      #",
-    " #       X                     X       #",
-    " #                                     #",
-    " #                                     #",
-    " #                                     #",
+    " # # # # # # # # # # # # # # # # # # # #",
+    " #>.> > > > > > > > < < < < < < < < <. #",
+    " #>.> > > > > > > > < < < < < < < < <  #",
+    " #                              v.  v. #",
+    " #                              -.  -. #",
+    " #v   v   v  @  v               -.  -  #",
+    " #v   v   v     v               -.  -. #",
+    " #v   v   v     v               -.  -  #",
+    " #v   v   v     v.              -.  -. #",
+    " #v   v   v     v.              -.  -  #",
+    " #v   v   v     v.              -.  -. #",
+    " #v   v   v     v.              -.  -  #",
+    " #v   v   v     v.              -.  -. #",
+    " #v   v   v     v.              -.  -  #",
+    " #v   v   v     v.              -.  -. #",
+    " #v   v   v     v.              -.  -  #",
+    " #v   v   v.    v.              -.  -. #",
+    " #v   v   v.    v.              -.  -  #",
+    " #v   v   v.    v.              -.  -. #",
+    " #v   v   v.    v.              -.  -  #",
+    " #v   v.  v.    v.              -.  -. #",
+    " #v   v.  v.    v.              -.  -  #",
+    " #v.  v.  v.    v.              -.  -. #",
+    " #v.  v.  v.    v.              -.  ^  #",
     " # # # # # # # # # # # # # # # # # # # #"})
  ]]></el:luamain>
     <el:i18n>

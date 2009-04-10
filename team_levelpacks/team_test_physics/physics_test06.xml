@@ -26,13 +26,13 @@ ti["2 "] = {"fl_space", force_x=-forcex, force_y=forcey}
 ti["3 "] = {"fl_space", force_x=-forcex, force_y=-forcey}
 ti["4 "] = {"fl_space", force_x=forcex, force_y=-forcey}
 ti[" #"] = {"st_rawglass"}
-ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE}
+ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE, owner=DEFAULT}
 if wo["IsDifficult"] then
     ti[" 0"] = ti["- "]
 else
     ti[" 0"] = ti["- "] .. ti[" ."]
 end
-ti[" @"] = {"#ac_marble_black"}
+ti[" @"] = {"ac_marble_black", 0.0, 0.5}
 
 wo(res.composer(ti), "  ", {
     " # # # # # # # # # # # # # # # # # # # #",

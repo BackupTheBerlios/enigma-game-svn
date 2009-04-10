@@ -25,7 +25,7 @@ ti["> "] = {"fl_slope", slope=EAST, shape="pe", friction=fri}
 ti["v "] = {"fl_slope", slope=SOUTH, shape="ps", friction=fri}
 ti["< "] = {"fl_slope", slope=WEST, shape="pw", friction=fri}
 ti[" #"] = {"st_rawglass"}
-ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE}
+ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE, owner=DEFAULT}
 ti[" @"] = {"#ac_marble_black"}
 
 wo(res.composer(ti), "  ", {
