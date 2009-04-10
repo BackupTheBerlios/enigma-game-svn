@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Collisiontest 6" el:subtitle="" el:id="physictest_collision6"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author el:name="Raoul Bourquin" el:email="" el:homepage=""/>
+      <el:copyright>Copyright © 2007 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10"/>
+      <el:modes el:easy="true" el:single="true" el:network="false"/>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+forcex = 2
+forcey = 2
+
+ti["- "] = {"fl_space"}
+ti["  "] = {"fl_sahara"}
+ti["^ "] = {"fl_space", force_x=0, force_y=-forcey}
+ti["> "] = {"fl_space", force_x=forcex, force_y=0}
+ti["v "] = {"fl_space", force_x=0, force_y=forcey}
+ti["< "] = {"fl_space", force_x=-forcex, force_y=0}
+ti["1 "] = {"fl_space", force_x=forcex, force_y=forcey}
+ti["2 "] = {"fl_space", force_x=-forcex, force_y=forcey}
+ti["3 "] = {"fl_space", force_x=-forcex, force_y=-forcey}
+ti["4 "] = {"fl_space", force_x=forcex, force_y=-forcey}
+ti[" #"] = {"st_rawglass"}
+ti[" ."] = {"#ac_pearl", controllers=CTRL_NONE}
+if wo["IsDifficult"] then
+    ti[" 0"] = ti["- "]
+else
+    ti[" 0"] = ti["- "] .. ti[" ."]
+end
+ti[" @"] = {"#ac_marble_black"}
+
+wo(res.composer(ti), "  ", {
+    " # # # # # # # # # # # # # # # # # # # #",
+    " #1.- - - - - 2. #                     #",
+    " #- 1.- - - 2.-  #                     #",
+    " #- - 1.- 2.- -  #                     #",
+    " #- - - -0- - -  # # # # # # # # # # # #",
+    " #- - 4.- 3.- -  #     #- - - v.- - -  #",
+    " #- 4.- - - 3.-  #   @ #- - - v.- - -  #",
+    " #4.- - - - - 3. #     #- - - v.- - -  #",
+    " # # # # # # # # # # # #>.>.>.-0<.<.<. #",
+    " #                     #- - - ^.- - -  #",
+    " #                     #- - - ^.- - -  #",
+    " #                     #- - - ^.- - -  #",
+    " # # # # # # # # # # # # # # # # # # # #"})
+ ]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>
