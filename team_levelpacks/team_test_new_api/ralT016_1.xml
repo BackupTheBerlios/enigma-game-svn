@@ -19,7 +19,7 @@
 
 wo["ConserveLevel"] = true
 wo["ShowMoves"] = false
-wo["SwampSinkSpeed"] = 2
+wo["SwampSinkTime"] = 2
 
 ti[" "] = {"fl_sahara"}
 ti["."] = {"fl_abyss"}

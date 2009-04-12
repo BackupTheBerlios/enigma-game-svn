@@ -16,7 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
-wo["ActorImpulseStrength"] = 150
+wo["ActorimpulseStrength"] = 150
 
 ti[" "] = {"fl_sahara"}
 ti["A"] = {"st_actorimpulse"}
@@ -30,7 +30,7 @@ ti["b"] = {"it_brush"}
 ti["G"] = {"it_glasses"}
 ti["g"] = {"it_glasses", state=SPOT_ACTORIMPULSE}
 
-ti["1"] = {"#ac_marble_black"} 
+ti["1"] = {"#ac_marble_black"}
 
 ti["s"] = {"it_sword"}
 ti["K"] = {"st_knight"}
