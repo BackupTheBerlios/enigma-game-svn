@@ -16,12 +16,14 @@
     </el:info>
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
+wo["WaterSinkTime"] = 2
 
 ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_water"}
 ti["."] = {"fl_abyss"}
 
 ti[","] = {"it_seed"}
+ti["*"] = {"it_springboard"} .. ti["~"]
 
 
 ti["w"] = {"st_box_wood"}
@@ -52,7 +54,7 @@ ti["K"] = {"st_stoneimpulse", "k1"}
 ti["J"] = {"st_switch", target="push"}
 
 ti["1"] = {"#ac_marble"} 
-
+ti["c"] = {"it_cherry"}
 
 w, h = wo(ti, " ", {
 " h ~~~ h  ,,   h .  ",
@@ -60,12 +62,12 @@ w, h = wo(ti, " ", {
 " b ~~~ b 1     b .  ",
 " f ~~~ f       f .  ",
 " p ~~~ p       p .  ",
-" r ~~~ r       r .  ",
+" r *~~ r       r .  ",
 " s ~~H              ",
 "   ~~W         Sh   ",
-"   ~~B         Sw   ",
-"   ~~F         Sb   ",
-"   ~~P         Sf   ",
+"   ~~B    c    Sw   ",
+"   ~~F    c    Sb   ",
+"   ~~P    c    Sf   ",
 "   ~~R         Sp   ",
 "               Sr   ",
 " ~~~~  v V          ",

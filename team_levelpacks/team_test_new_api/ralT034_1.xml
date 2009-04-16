@@ -86,7 +86,7 @@ w, h = wo(resolver, " ", {
 })
 
 function icefloor(value, sender)
-    wo[no["mybug"]] = {"fl-ice"}
+    wo[no["mybug"]] = {"fl_ice"}
 end
 
 function rmfloor(value, sender)

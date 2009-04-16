@@ -40,6 +40,20 @@ ti["g"] = {"st_rawglass_movable"}
 ti["x"] = {"st_grate"} .. ti["."]
 ti["^"] = {"st_oneway_n"} .. ti["."]
 
+ti["W"] = {"it_wormhole", destination="wdest", range=1} .. ti["."]
+ti[";"] = {"fl_sand", "wdest", floodable=true} .. ti["b"]
+
+ti["V"] = {"it_vortex_closed", "vortex", destination={"vdest1", "vdest2", "vdest3"}} .. ti["."]
+ti["v"] = {"st_switch", target="vortex"}
+
+ti["U"] = {"it_vortex_closed", "vdest1"} .. ti["."]
+ti["u"] = {"st_switch", target="vdest1"}
+
+ti["T"] = {"it_vortex_closed", "vdest2"} .. ti["."]
+ti["t"] = {"st_switch", target="vdest2"}
+
+ti["X"] = {"fl_sand", "vdest3", floodable=true}
+
 ti["@"] = {"#ac_marble"} 
 
 w, h = wo(ti, " ", {
@@ -63,8 +77,16 @@ w, h = wo(ti, " ", {
 "                  . ",
 "            ....x.. ",
 "            ...     ",
-"        ~~~~~~~     ",
-"  ......~~~~~~~     "
+"        ~~~~~~~  ...",
+"....W.-.~~~~~~~  ;..",
+".                   ",
+".                   ",
+".                   ",
+"Vv                  ",
+"                    ",
+"..Uu  ..Tt  ..X     ",
+"...   ...   ...     ",
+"...   ...   ...     "
 })
 
 

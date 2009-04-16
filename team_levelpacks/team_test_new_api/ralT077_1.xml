@@ -45,6 +45,8 @@ ti["p"] = {"it_pin"}
 ti["P"] = {"it_bag", "pinbag"}
 
 ti["d"] = {"it_bottle"}
+ti["D"] = {"it_bottle", interval=10}
+ti["m"] = {"it_bottle", text="Flaschenpost"}
 
 
 w, h = wo(ti, " ", {
@@ -60,7 +62,7 @@ w, h = wo(ti, " ", {
 "p                   ",
 "p                ddd",
 "       .......   ddd",
-"P      .......      "
+"P   m  .......    D "
 })
 
 function vary(value, sender)

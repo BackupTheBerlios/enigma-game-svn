@@ -61,12 +61,12 @@ ti["N"] = ti[" "] .. {"st_switch", target="freetrigger"}
 ti["X"] = ti[" "] .. {"it_wormhole", destination="triggerA", range=1}
 
 ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it_ring"}
-ti["2"] = ti[" "] .. {"#ac_pearl", owner=DEFAULT, controllers=0}
+ti["2"] = ti[" "] .. {"#ac_pearl", owner=DEFAULT, controllers=2}
 
-ti["3"] = (ti[" "]  .. {"#ac_pearl", controllers=0})
+ti["3"] = (ti[" "]  .. {"#ac_pearl", owner=DEFAULT, controllers=0})
                 .. {"it_trigger", target={"laserh","laserhon"}, action={"toggle", "on"}}
 ti["4"] = (ti[" "]  .. {"it_trigger", target={"laserj","laserjon"}, action={"toggle", "on"}})
-                .. {"#ac_pearl", controllers=0}
+                .. {"#ac_pearl", owner=DEFAULT, controllers=0}
 ti["5"] = (ti[" "]  .. {"it_trigger", target={"laserl","laserlon"}, action={"toggle", "on"}})
                 .. {"st_box"}
 ti["6"] = (ti[" "]  .. {"it_trigger", "killtrigger", target="killstone"})

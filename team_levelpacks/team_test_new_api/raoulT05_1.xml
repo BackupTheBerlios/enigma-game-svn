@@ -47,6 +47,7 @@ ti["E"] = ti["."] .. {"it_strip_n"}
 
 ti["w"] = {"st_box"}
 ti["v"] = {"st_flat_movable"}
+ti["V"] = {"it_vortex", state=CLOSED}
 
 ti["A"] = {"#ac_marble"} .. ti["a"]
 
@@ -55,7 +56,7 @@ w, h = wo(ti, " ", {
 "j c   wcw   vcv  wAw",
 "jdqb wdqbw vdqbv www",
 "j e   wew   vev    j",
-"j    wwwww vvvvv   j",
+"j    wwwww vvvvv V j",
 "jhgf whgfw vhgfv   j",
 "jjaj wjajw vjajv   j",
 "jkgi wkgiw vkgiv   j",
