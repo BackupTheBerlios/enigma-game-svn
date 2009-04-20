@@ -6,7 +6,7 @@ directory = "input/"
 newsdir = "input/news/"
 suffix = ".html"
 
-language_list = {"", "_de", "_ru", "_es"} -- "_fr"
+language_list = {"", "_de", "_ru"} -- "_es", "_fr"
 
 -- The newsfield declares the news (by number) to be shown on the main page.
 
@@ -38,9 +38,10 @@ general = {
     manual = "manual/enigma.html",
     manual_de = "manual/enigma_de.html",
     manual_fr = "manual/enigma_fr.html",
-    manual_ru = "manual/enigma_ru.html", -- existing? - yes, existing (03.11.08)
+    manual_ru = "manual/enigma_ru.html", -- existing? - yes, existing (03.11.08)    
     wiki = "http://enigma.mal2.ch/index.php?title=Main_Page",
     wiki_de = "http://enigma.mal2.ch/index.php?title=Hauptseite",
+    trailer_1 = "http://download.berlios.de/enigma-game/EnigmaTrailer1.flv",
     disclaimer = "http://www.disclaimer.de/disclaimer.htm#2",
     disclaimer_de = "http://www.disclaimer.de/disclaimer.htm#1",
     gpl = "http://www.gnu.org/licenses/licenses.html#GPL",
@@ -55,24 +56,24 @@ general = {
     body = {},
     bottombar = {"bottombar"},
     parse_news_1 = function(v,s,l0)
-        return parse_text(v, parse_news(newsdir,l0,newsfield), l0, "news1")
+        return parse_text_quots(v, parse_news(newsdir,l0,newsfield), l0, "news1")
       end,
     parse_news_2 = function(v,s,l0)
-        return parse_text(v, parse_news(newsdir,l0), l0, "news2")
+        return parse_text_quots(v, parse_news(newsdir,l0), l0, "news2")
       end,
     parse_level_archive = function(v,s,l0)
-        return parse_text(v, parse_level_archive(l0), l0, "level_archive")
+        return parse_text_quots(v, parse_level_archive(l0), l0, "level_archive")
       end,
     parse_lotm_by_rating = function(v,s,l0)
-        return parse_text(v, parse_lotm("current_rating", true, l0), l0,
+        return parse_text_quots(v, parse_lotm("current_rating", true, l0), l0,
           add_lang_to_filename(v.outfile, l0))
       end,
     parse_lotm_chronological = function(v,s,l0)
-        return parse_text(v, parse_lotm("chronological", false, l0), l0,
+        return parse_text_quots(v, parse_lotm("chronological", false, l0), l0,
           add_lang_to_filename(v.outfile, l0))
       end,
     parse_lotm_by_position = function(v,s,l0)
-        return parse_text(v, parse_lotm("position_num", false, l0), l0,
+        return parse_text_quots(v, parse_lotm("position_num", false, l0), l0,
           add_lang_to_filename(v.outfile, l0))
     end,
     lotm_archive_data_from = function(v,s,l0)
@@ -115,15 +116,15 @@ general = {
     lotm_history_es = "Historia de LotM",
 
     lotm_current = function(v,s,l0)
-        return parse_text(v, "$$"..lotm_macro_name(lotm_current).."$$", l0,
+        return parse_text_quots(v, "$$"..lotm_macro_name(lotm_current).."$$", l0,
           "lotm_current")
       end,
     lotm_current_image = function(v,s,l0)
-        return parse_text(v, "$$imagedir$$/lotm/"
+        return parse_text_quots(v, "$$imagedir$$/lotm/"
           ..lotm_macro_name(lotm_current)..".png", l0, "lotm_current_image")
       end,
     lotm_current_name = function(v,s,l0)
-        return parse_text(v, lotm_current.name, l0, "lotm_current_name")
+        return parse_text_quots(v, lotm_current.name, l0, "lotm_current_name")
       end,
 
     January   = function(v,s,l0)  return  translate_month(l0, {month=1})  end,
@@ -138,6 +139,14 @@ general = {
     October   = function(v,s,l0)  return  translate_month(l0, {month=10})  end,
     November  = function(v,s,l0)  return  translate_month(l0, {month=11})  end,
     December  = function(v,s,l0)  return  translate_month(l0, {month=12})  end,
+
+    left_quot     = "&ldquo;",
+    right_quot    = "&rdquo;",
+    left_quot_de  = "&bdquo;",
+    right_quot_de = "&ldquo;",
+    left_quot_ru  = "&laquo;",
+    right_quot_ru = "&raquo;",
+
     imagedir    = "images",
     imagedir_de = "images",
     imagedir_fr = "images",
@@ -289,7 +298,7 @@ html.statistics = {
     user_es = "Usuario",
     solved_hcp = "solved hcp",
     solved_hcp_de = "gel&ouml;stes hcp",
-    solved_hcp_ru = "Решенный гандикап",
+    solved_hcp_ru = "Гандикап решённых",
     solved_hcp_es = "hcp resuelto",
     difficult = "difficult",
     difficult_de = "schwer",
@@ -321,7 +330,7 @@ html.statistics = {
     Rating_Statistics_es = "Estad&iacute;sticas de clasificaci&oacute;n de",    
     Solved_Level_Statistics = "Solved Level Statistics of",
     Solved_Level_Statistics_de = "Statistik der gel&ouml;sten Levels vom",
-    Solved_Level_Statistics_ru = "Статистика решенных уровней за",
+    Solved_Level_Statistics_ru = "Статистика решённых уровней за",
     Solved_Level_Statistics_es = "Estad&iacute;sticas de niveles resueltos de",
     Worldrecord_Statistics = "Worldrecord Statistics of",
     Worldrecord_Statistics_de = "Weltrekord-Statistik vom",
@@ -572,6 +581,15 @@ html.marbleous_3 = {
     title_ru = "Шарикология! &mdash; Новичкам на заметку, Часть 3",
     rightcolumn = {"articles/infobox_marbleous"},
     body = {"articles/marbleous_3"},
+}
+
+html.marbleous_4 = {
+    outfile = "marbleous_4.html",
+    title = "Marbleous! &mdash; The Novice, Part 4",
+    title_de = "Gemurmel! &mdash; Der Neuling, Teil 4",
+    title_ru = "Шарикология! &mdash; Новичкам на заметку, Часть 4",
+    rightcolumn = {"articles/infobox_marbleous"},
+    body = {"articles/marbleous_4"},
 }
 
 ----------------------------------------------------------------------
