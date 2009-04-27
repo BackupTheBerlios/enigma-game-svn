@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Ice Block" el:subtitle="" el:id="20090427ral263"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_sahara"}
+ti["_"] = {"fl_abyss"}
+ti["~"] = {"fl_water"}
+ti["*"] = {"st_ice"}
+
+ti["c"] = {"it_coffee"}
+ti["."] = {"it_seed"}
+ti[":"] = {"it_cherry"}
+ti["j"] = {"it_springboard"}
+ti["m"] = {"it_magnet"}
+ti["o"] = {"it_meditation"}
+ti["x"] = {"it_cross"}
+ti["t"] = {"it_trigger"}
+ti["e"] = {"it_extinguisher"}
+ti["%"] = {"it_crack"}
+ti["b"] = {"it_bottle"}
+ti["B"] = {"it_bottle_broken"} .. ti["~"]
+ti["'"] = {"it_squashed"}
+ti["d"] = {"it_dynamite"}
+ti["i"] = {"it_burnable_oil"}
+ti["D"] = {"st_dispenser"}
+ti["E"] = {"st_dispenser_dynamite"}
+ti["W"] = {"st_swap"}
+
+ti["s"] = {"it_shogun_s", target="shogun"}
+ti["S"] = {"st_shogun_s"}
+ti["L"] = {"st_laser_n", "shogun"}
+
+ti["@"] = {"#ac_marble"}
+
+ti["z"] = {"st_ice", "wireice"}
+ti["Z"] = {"st_swap", "wireswap"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"     j    m    o    ",
+"                  _ ",
+" L   x    .    c  _ ",
+"                    ",
+" s   t    *    :  b ",
+"                    ",
+" S   ' @  e    i   D",
+"                    ",
+"     %    d    W   E",
+"   z                ",
+" Z       ~~~~~~~B   ",
+"            ~~~     "
+})
+wo:add({"ot_wire", anchor1="wireice", anchor2="wireswap"})
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

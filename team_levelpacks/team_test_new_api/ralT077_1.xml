@@ -74,6 +74,7 @@ function vary(value, sender)
 end
 
 wo:add(YIN, {"it_weight", mass=2.1})
+wo:add(YIN, {"it_bomb"} .. ti{"it_springboard"})
 wo:add(no["heavybag"], {"it_weight", mass=7})
 wo:add(no["pinbag"], ti["p"])
   ]]></el:luamain>

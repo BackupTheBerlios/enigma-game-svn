@@ -25,6 +25,7 @@ ti["-"] = {"fl_hay_framed"}
 ti["o"] = {"st_box_hay"}
 ti["w"] = {"st_box"}
 ti["b"] = {"st_brownie"}
+ti["p"] = {"st_puzzle"}
 ti["_"] = {"st_window_s"} .. ti["."]
 
 ti["s"] = {"fl_water", "source1", interval=0.2}
@@ -46,7 +47,7 @@ ti[";"] = {"fl_sand", "wdest", floodable=true} .. ti["b"]
 ti["V"] = {"it_vortex_closed", "vortex", destination={"vdest1", "vdest2", "vdest3"}} .. ti["."]
 ti["v"] = {"st_switch", target="vortex"}
 
-ti["U"] = {"it_vortex_closed", "vdest1"} .. ti["."]
+ti["U"] = {"it_vortex_closed", "vdest1"} .. ti["."] .. {"st_portal"}
 ti["u"] = {"st_switch", target="vdest1"}
 
 ti["T"] = {"it_vortex_closed", "vdest2"} .. ti["."]
@@ -82,7 +83,7 @@ w, h = wo(ti, " ", {
 ".                   ",
 ".                   ",
 ".                   ",
-"Vv                  ",
+"Vv      p  p  p     ",
 "                    ",
 "..Uu  ..Tt  ..X     ",
 "...   ...   ...     ",
