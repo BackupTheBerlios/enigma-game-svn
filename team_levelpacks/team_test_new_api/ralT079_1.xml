@@ -47,10 +47,13 @@ ti["8"] = {"st_dispenser_bombblack"} .. ti["b"]
 
 ti["L"] = {"st_laser_s", state=ON}
 ti["P"] = {"st_polarswitch"}
+ti["r"] = {"st_swap"}
 ti["I"] = {"st_stoneimpulse"}
 
 ti["O"] = {"st_spitter", range=4}
 ti["o"] = {"st_spitter", "spitter", secure=true}
+ti["q"] = {"st_spitter", "idlespitter", state=IDLE}
+ti["Q"] = {"st_switch", target="idlespitter"}
 ti["W"] = {"st_window_w"}
 ti["B"] = {"st_brownpyramide"}
 
@@ -82,8 +85,8 @@ w, h = wo(ti, " ", {
 "4d         c        ",
 "b              .. ~~",
 "  Y y   z  Z   .. ~~",
-"      k             ",
-"+++++++       v     ",
+"      k            Q",
+"+++++++     v  rq   ",
 "+++++++             ",
 "v++++++       L    v",
 "+++++++       P     ",

@@ -21,6 +21,7 @@ ti[" "] = {"fl_sahara"}
 ti["_"] = {"fl_abyss"}
 ti["~"] = {"fl_water"}
 ti["*"] = {"st_ice"}
+ti["#"] = {"st_rawglass_movable"}
 
 ti["c"] = {"it_coffee"}
 ti["."] = {"it_seed"}
@@ -59,7 +60,7 @@ w, h = wo(ti, " ", {
 " s   t    *    :  b ",
 "                    ",
 " S   ' @  e    i   D",
-"                    ",
+"  #                 ",
 "     %    d    W   E",
 "   z                ",
 " Z       ~~~~~~~B   ",

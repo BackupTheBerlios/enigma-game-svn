@@ -17,6 +17,7 @@
     <el:luamain><![CDATA[
 ti[" "] = {"fl_sahara"}
 ti["#"] = {"st_rawglass"}
+ti["4"] = {"st_rawglass_quad"}
 ti["a"] = {"st_lightglass"}
 ti["b"] = {"st_darkglass"}
 ti["c"] = {"st_redfiber"}
@@ -35,7 +36,7 @@ ti["U"] = {"it_umbrella"}
 ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
-"####################",
+"#####44##44##4#4####",
 "#                  #",
 "LP BBB hhh HHH wwwPR",
 "#                  #",
@@ -43,11 +44,11 @@ w, h = wo(ti, " ", {
 "LP MMM 111 222 PPPPR",
 "#                  #",
 "#                  #",
-"LP ### aaa bbb cccPR",
+"LP ##4 aaa bbb cccPR",
 "#                  #",
-"#@CCCCCCCCCCCCCCCC #",
+"4@CCCCCCCCCCCCCCCC #",
 "# UUUUUUUUUUUUUUUU #",
-"####################"
+"###4################"
 })
 
 wo:shuffleOxyd()
