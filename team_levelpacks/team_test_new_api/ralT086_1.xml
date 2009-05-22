@@ -68,6 +68,7 @@ w, h = wo(ti, " ", {
 })
 wo:add({"ot_wire", anchor1="wireice", anchor2="wireswap"})
 
+print("Default = "..etype(DEFAULT))
   ]]></el:luamain>
     <el:i18n>
 	 <el:string el:key="title">

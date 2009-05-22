@@ -54,7 +54,7 @@ w,h = wo(mymaze, "  ", {
     "                                                                "
 })
 
-
+print("mymaze of type - "..etype(mymaze))
 
     ]]></el:luamain>
     <el:i18n>
