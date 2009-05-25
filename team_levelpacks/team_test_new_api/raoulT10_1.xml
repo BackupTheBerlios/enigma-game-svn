@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test sort actors circular" el:subtitle="" el:id="raoult10"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email=""/>
+      <el:copyright>Copyright © 2009 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10"/>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+ti[" "] = {"fl_dark"}
+ti["#"] = {"st_panel"}
+
+ti["a"] = {"ac_killer", name="killer1#"}
+ti["b"] = {"ac_killer", name="killer2#"}
+ti["c"] = {"ac_killer", name="killer3#"}
+
+ti["1"] = {"ac_marble_black", 0.0, 0.5, name="blackball1"}
+ti["2"] = {"ac_marble_black", 0.0, 0.5, name="blackball2"}
+ti["3"] = {"ac_marble_black", 0.0, 0.5, name="blackball3"}
+
+wo(ti, " ", {
+    "####################",
+    "#                  #",
+    "#                  #",
+    "#    1             #",
+    "#                  #",
+    "#                  #",
+    "#         2        #",
+    "#                  #",
+    "#                  #",
+    "#              3   #",
+    "#                  #",
+    "#                  #",
+    "####################"})
+
+local number = 10
+local radius = cond(wo["IsDifficult"], 1.5, 2.5)
+local theta = 2.0*math.pi/number
+local segment = 2.0*radius*math.sin(theta/2.0)
+
+
+for i=0, number-1 do
+    wo[no["blackball1"] + po(0.0, 0.5) + po(radius*math.cos(i*theta), radius*math.sin(i*theta))] = ti["a"]
+end
+print(no["killer1#*"])
+actors = no["killer1#*"]:sort()
+print(#actors)
+for i=0, #actors-1 do
+    wo:add({"ot_rubberband", anchor1=actors[i+1], anchor2=actors[(i+1)%number+1], length=segment})
+end
+
+
+
+for i=0, number-1 do
+    wo[no["blackball2"] + po(0.0, 0.5) + po(radius*math.cos(i*theta), radius*math.sin(i*theta))] = ti["b"]
+end
+print(no["killer2#*"])
+actors = no["killer2#*"]:sort("linear")
+print(#actors)
+for i=0, #actors-1 do
+    wo:add({"ot_rubberband", anchor1=actors[i+1], anchor2=actors[(i+1)%number+1], length=segment})
+end
+
+
+
+for i=0, number-1 do
+    wo[no["blackball3"] + po(0.0, 0.5) + po(radius*math.cos(i*theta), radius*math.sin(i*theta))] = ti["c"]
+end
+print(no["killer3#*"])
+actors = no["killer3#*"]:sort("circular")
+print(#actors)
+for i=0, #actors-1 do
+    wo:add({"ot_rubberband", anchor1=actors[i+1], anchor2=actors[(i+1)%number+1], length=segment})
+end
+
+ ]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>
