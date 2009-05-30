@@ -29,12 +29,18 @@ ti[":"] = {"it_cherry"}
 ti["j"] = {"it_springboard"}
 ti["m"] = {"it_magnet"}
 ti["o"] = {"it_meditation"}
-ti["x"] = {"it_cross"}
+ti["x"] = {"it_cross", "cross"}
+ti["w"] = {"it_wormhole", destination="cross", range=0.5}
 ti["t"] = {"it_trigger"}
 ti["e"] = {"it_extinguisher"}
 ti["%"] = {"it_crack"}
 ti["b"] = {"it_bottle"}
 ti["B"] = {"it_bottle_broken"} .. ti["~"]
+ti["h"] = {"it_hammer"}
+ti["u"] = {"it_umbrella"}
+ti["n"] = {"it_banana"}
+ti["a"] = {"it_coin_s"}
+ti["A"] = {"it_coin_s"} .. ti{"st_ice"}
 ti["'"] = {"it_squashed"}
 ti["d"] = {"it_dynamite"}
 ti["i"] = {"it_burnable_oil"}
@@ -45,6 +51,8 @@ ti["W"] = {"st_swap"}
 ti["s"] = {"it_shogun_s", target="shogun"}
 ti["S"] = {"st_shogun_s"}
 ti["L"] = {"st_laser_n", "shogun"}
+ti["M"] = {"st_laser_w", state=ON}
+ti["P"] = {"st_polarswitch"}
 
 ti["@"] = {"#ac_marble"}
 
@@ -52,9 +60,9 @@ ti["z"] = {"st_ice", "wireice"}
 ti["Z"] = {"st_swap", "wireswap"}
 
 w, h = wo(ti, " ", {
-"                    ",
-"     j    m    o    ",
-"                  _ ",
+"     h    a    n  PM",
+"     j    m    o  i ",
+"     u            _ ",
 " L   x    .    c  _ ",
 "                    ",
 " s   t    *    :  b ",
@@ -63,7 +71,7 @@ w, h = wo(ti, " ", {
 "  #                 ",
 "     %    d    W   E",
 "   z                ",
-" Z       ~~~~~~~B   ",
+" Z       ~~~~~~~B  w",
 "            ~~~     "
 })
 wo:add({"ot_wire", anchor1="wireice", anchor2="wireswap"})

@@ -60,7 +60,7 @@ if not wo["IsDifficult"] then
 
 else
     mymaze1 = res.maze(ti, {area ={"anchor1", 4, 5}, render = {".", "~", "-"}})
-    mymaze2 = res.maze(mymaze1, {area ={"anchor2", 8, 4}, render = {{".","+"}, "~", "-"}})
+    mymaze2 = res.maze(mymaze1, {area ={"anchor2", 8, 4}, render = {{".","+"}, "~", "-"}})    
     mymaze3 = res.maze(mymaze2, {area ={po(2, 12), 5, 5}, kernel={3,2}, render = {".", wo:newMap(" ", {"!!!~","--!~","~~~~"})}})
     mymaze4 = res.maze(mymaze3, {area ={"."}, kernel={1,1}, render = {"!", "~", "-"}})
     mymaze5 = res.maze(mymaze4, {area ={"amaze#*"}, render = {"!", "~", "!"}})

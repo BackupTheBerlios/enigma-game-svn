@@ -20,6 +20,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
+ti["~"] = {"fl_water"}
 ti["#"] = ti[" "] .. {"st-rock1"}
 
 ti["A"] = {"it_vortex", name="v1", destination="v2", scissor=true}
@@ -29,6 +30,8 @@ ti["D"] = {"it_vortex", name="v4", destination=po(3.1,7.7)}
 ti["R"] = {"st_rubberband"}
 ti["W"] = {"st_box"}
 ti["S"] = {"st_switch", target="autoclose"}
+ti["r"] = {"it_ring"}
+ti["f"] = {"it_flag"}
 
 ti["1"] = {"#ac_marble"}
 
@@ -40,11 +43,11 @@ w, h = wo(ti, " ", {
 "                    ",
 "  W       W    W    ",
 "                    ",
-"      1             ",
+"      1   r    f    ",
 "   S                ",
 "                    ",
 "                    ",
-"                    ",
+"                ~   ",
 "                    "
 })
 
