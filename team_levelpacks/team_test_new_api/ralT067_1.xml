@@ -38,6 +38,7 @@ ti["t"] = {"st_switch", target="lightoff"}
 ti["u"] = {"st_switch", target="posconcat"}
 ti["v"] = {"st_switch", target="ploffset"}
 ti["x"] = {"st_switch", target="equality"}
+ti["y"] = {"st_switch", target="equalitypl"}
 
 
 
@@ -52,12 +53,15 @@ w, h = wo(ti, " ", {
 "u                   ",
 "v      @            ",
 "x                   ",
-"                    ",
+"y                   ",
 "      wwwww         ",
 "                    ",
 "      .....         ",
 "    W .....  X      "
 })
+
+aby = no["ab#*"]
+abypos = po(aby)
 
 function lightoff()
 --    (no["other#*"] + no["anchor"]):kill()
@@ -82,8 +86,11 @@ function equality()
     if grp1 + grp2 == (grp2 + grp1) then print("grp1 + grp2 == grp2 + grp1") else print("grp1 + grp2 != grp2 + grp1") end
 end
 
-aby = no["ab#*"]
-abypos = po(aby)
+function equalitypl()
+    pl2 = abypos .. po(1,4)
+    if abypos == abypos then print("abypos == abypos") else print("abypos != abypos") end
+    if abypos == pl2 then print("abypos == pl2") else print("abypos != pl2") end
+end
 
 function doabyss()
     for i = 1, #abypos do
