@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test map transformations" el:subtitle="" el:id="test_maptransformations"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author  el:name="Andreas Lochmann" el:email=""/>
+      <el:copyright>Copyright © 2009 Andreas Lochmann</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+        <el:dependency el:path="lib/libmap" el:id="lib/libmap" el:release="1" el:preload="true"/>
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+wo["ConserveLevel"] = true
+
+ti[" "] = {"fl_sahara"}
+ti["@"] = {"#ac_marble", "marble"}
+ti["B"] = {"st_brick", cluster = 1}
+ti["S"] = {"st_switch", target = "turn_trafo"}
+ti["R"] = {"st_switch", target = "random_trafo"}
+ti["T"] = {"st_switch", target = "cycle_trafos"}
+ti["-"] = {"st_nil"} .. ti{"fl_red"}
+ti["a"] = {"fl_sahara", "anchor1"}
+ti["b"] = {"fl_sahara", "anchor2"}
+ti["c"] = {"fl_sahara", "anchor3"}
+ti["d"] = {"fl_sahara", "anchor4"}
+ti["e"] = {"fl_sahara", "anchor5"}
+
+wo(ti, " ", {
+" S R T              ",
+"                    ",
+"  @     d     e     ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"  a     b     c     ",
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    "})
+
+empty = wo:newMap(" ", {"----", "----", "----", "----"})
+complex = wo:newMap(" ", {"    ", "BBBB", "B   ", "    "})
+current_complex = complex ^ MAP_IDENT
+total_transformations = MAP_IDENT
+cycle_state = 1
+
+function do_trafo(op)
+    wo:drawMap(ti, po["anchor1"], empty)
+    wo:drawMap(ti, po["anchor2"], empty)
+    wo:drawMap(ti, po["anchor3"], empty)
+    old_trafo = total_transformations
+    total_transformations = total_transformations ^ op
+    current_complex = current_complex ^ op
+    wo:drawMap(ti, po["anchor1"], current_complex)
+    wo:drawMap(ti, po["anchor2"], complex ^ total_transformations)
+    wo:drawMap(ti, po["anchor3"], complex, total_transformations)
+end
+
+function turn_trafo()
+    do_trafo(MAP_ROT_CW)
+end
+
+function random_trafo()
+    do_trafo(lib.map.random_transformation())
+end
+
+function cycle_trafos()
+    wo:drawMap(ti, po["anchor4"], empty)
+    wo:drawMap(ti, po["anchor4"], complex, MAP_ALL[cycle_state])
+    wo:drawMap(ti, po["anchor5"], empty)
+    wo:drawMap(ti, po["anchor5"], complex)
+    cycle_state = cond(cycle_state == MAP_COUNT, 1, cycle_state + 1)
+end
+
+function postinit()
+    -- Check associativity.
+    wo:drawMap(ti, po["anchor4"], (complex ^ MAP_ROT_CW) ^ MAP_FLIP_SLASH)
+    wo:drawMap(ti, po["anchor5"], complex ^ (MAP_ROT_CW ^ MAP_FLIP_SLASH))
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+     <el:string el:key="title">
+       <el:english el:translate="false"/>
+     </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

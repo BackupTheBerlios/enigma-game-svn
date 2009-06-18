@@ -30,6 +30,7 @@ ti["G "] = {"fl_rough"}
 ti["H "] = {"fl_bast"}
 ti["I "] = {"fl_abyss"}
 ti["J "] = {"fl_water"}
+ti["v "] = {"it_banana"}
 
 ti[" "] = {"fl_sahara"}
 ti["A"] = {"fl_lawn"}
@@ -41,6 +42,7 @@ ti["F"] = {"fl_blueslab"}
 ti["G"] = {"fl_rough"}
 ti["H"] = {"fl_bast"}
 ti["R"] = {"fl_red"}
+ti["v"] = {"it_banana"}
 
 ti[" @"] = {"#ac_marble", "marble"}
 ti[" d"] = {"st_death", "death#"}
@@ -48,6 +50,7 @@ ti[" 1"] = {"it_wrench"}
 ti[" S"] = {"st_switch", target = "call_switch1"}
 ti[" T"] = {"st_switch", target = "call_switch2"}
 ti[" U"] = {"st_switch", target = "call_switch3"}
+ti[" V"] = {"st_switch", target = "call_switch4"}
 
 ti["@"] = {"#ac_marble", "marble"}
 ti["d"] = {"st_death", "death#"}
@@ -65,7 +68,7 @@ map1 = wo:newMap(" ", {
 "   FFFF  GGGG  HHHH ",
 "                    ",
 "                    ",
-"                    ",
+"    v               ",
 "                    "})
 
 map2a = wo:newMap(" ", {
@@ -98,6 +101,7 @@ map3 = map1 * map2
 map3[{0,0}] = "BS"
 map3[{0, map3.height-1}] = "BT"
 map3[{map3.width-1, 0}] = "BU"
+map3:replace("v ", " V")
 
 with_bars = map3 * "|"
 with_bars:print(true, "|")
@@ -132,6 +136,29 @@ end
 function call_switch3()
   map1:replace("G", "A")
   wo:drawMap(res.composer(ti), {0,0}, map1)
+end
+
+switch4_counter = 0
+function call_switch4()
+  switch4_counter = switch4_counter + 1
+      if switch4_counter == 1 then
+    wo[map1:match("C")] = {"it_cherry"}
+  elseif switch4_counter == 2 then
+    wo[map1:match({NEIGHBORS_4, " ", "G", "B"})] = {"it_banana"}
+  elseif switch4_counter == 3 then
+    wo[map1:match({po(0,1), "G"}, {po(0,-1), "B"})] = {"it_extralife"}
+  elseif switch4_counter == 4 then
+    wo[map1:match({po(0,1), "G"})] = {"it_sword"}
+  elseif switch4_counter == 5 then
+    wo[map1:match({po(0,1), "G"})] = {"it_hammer"}
+  elseif switch4_counter == 6 then
+    wo[map1:match({po(0,1), "G"}, {NEIGHBORS_4, " ", "G"})] = {"it_sword"}
+  elseif switch4_counter == 7 then
+    wo[map1:match({{po(0,1), "G"}, {NEIGHBORS_4, " ", "G"}})] = {"it_hammer"}
+  elseif switch4_counter == 8 then
+    wo[map1:match()] = {"it_nil"}
+    switch4_counter = 0
+  end
 end
   
   ]]></el:luamain>
