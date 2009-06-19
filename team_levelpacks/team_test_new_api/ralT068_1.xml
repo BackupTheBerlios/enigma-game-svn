@@ -20,6 +20,8 @@ wo["ConserveLevel"] = true
 ti[" "] = {"fl_sahara"}
 
 ti["-"] = {"fl_bridge_bw", "bridge#"}
+ti[","] = {"fl_bridge_bs", "bridge#"}
+ti["~"] = {"fl_bridge_be", "bridge#"}
 ti["|"] = {"fl_bridge_bn", "bridge#"}
 ti["."] = {"fl_bridge_gc", "bridge#"}
 
@@ -46,9 +48,9 @@ ti["b"] = {"st_brake"}
 ti["@"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
-"    S    S     S    ",
+"  S S S S      S    ",
 "                    ",
-"    -    |     .    ",
+"  - , ~ |      .    ",
 "                    ",
 "    p  w   hhH      ",
 "    W    g     g    ",
