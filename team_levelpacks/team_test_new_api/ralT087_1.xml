@@ -18,6 +18,7 @@
 
 wo["ConserveLevel"] = true
 wo["ExtralifeGlasses"] = SPOT_DEATH + SPOT_LIGHTPASSENGER
+wo["InfiniteReincarnation"] = true
 
 ti[" "] = {"fl_sahara"}
 ti["D"] = {"st_death"}
@@ -30,6 +31,8 @@ ti["W"] = {"st_box"}
 ti["B"] = {"st_boulder_w"}
 
 ti["G"] = {"it_glasses"}
+ti["r"] = {"it_ring"}
+ti["u"] = {"it_umbrella"}
 
 
 ti["b"] = {"it_bag"}
@@ -44,9 +47,9 @@ w, h = wo(ti, " ", {
 "  D      o       R  ",
 "  D                 ",
 "  M  b   @  G       ",
-"  D                 ",
-"      m             ",
-"          S         ",
+"  D               r ",
+"      m           u ",
+"          S       u ",
 "                    ",
 "B             W     ",
 "                    "

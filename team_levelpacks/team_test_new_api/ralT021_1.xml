@@ -32,6 +32,8 @@ ti["W"] = {"st_box"}
 ti["S"] = {"st_switch", target="autoclose"}
 ti["r"] = {"it_ring"}
 ti["f"] = {"it_flag"}
+ti["w"] = {"it_wormhole", range=2, destination=po(15, 7)}
+ti["v"] = {"it_wormhole", state=OFF, range=2, destination=po(15, 7)}
 
 ti["1"] = {"#ac_marble"}
 
@@ -47,7 +49,7 @@ w, h = wo(ti, " ", {
 "   S                ",
 "                    ",
 "                    ",
-"                ~   ",
+" v    w         ~   ",
 "                    "
 })
 
