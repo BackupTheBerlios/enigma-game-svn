@@ -7,16 +7,13 @@
       <el:author  el:name="Raoul Bourquin" el:email="raoul@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Raoul Bourquin</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
-      <el:compatibility el:enigma="1.10">
-      </el:compatibility>
+      <el:compatibility el:enigma="1.10"/>
       <el:modes el:easy="false" el:single="true" el:network="false"/>
       <el:comments>
       </el:comments>
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-wo["ConserveLevel"] = true
-
 ti["  "] = {"fl_sahara"}
 
 ti["B0"] = {"st_puzzle_blue"}
@@ -39,7 +36,6 @@ ti["Bd"] = {"st_puzzle_blue", connections="new"}
 ti["Be"] = {"st_puzzle_blue", connections="nes"}
 ti["Bf"] = {"st_puzzle_blue", connections="nesw"}
 
-
 ti["b0"] = {"st_puzzle_blue", hollow=true}
 ti["b1"] = {"st_puzzle_blue", connections="w", hollow=true}
 ti["b2"] = {"st_puzzle_blue", connections="s", hollow=true}
@@ -59,7 +55,6 @@ ti["bc"] = {"st_puzzle_blue", connections="ne", hollow=true}
 ti["bd"] = {"st_puzzle_blue", connections="new", hollow=true}
 ti["be"] = {"st_puzzle_blue", connections="nes", hollow=true}
 ti["bf"] = {"st_puzzle_blue", connections="nesw", hollow=true}
-
 
 ti["Y0"] = {"st_puzzle_yellow"}
 ti["Y1"] = {"st_puzzle_yellow", connections="w"}
@@ -81,7 +76,6 @@ ti["Yd"] = {"st_puzzle_yellow", connections="new"}
 ti["Ye"] = {"st_puzzle_yellow", connections="nes"}
 ti["Yf"] = {"st_puzzle_yellow", connections="nesw"}
 
-
 ti["y0"] = {"st_puzzle_yellow", hollow=true}
 ti["y1"] = {"st_puzzle_yellow", connections="w", hollow=true}
 ti["y2"] = {"st_puzzle_yellow", connections="s", hollow=true}
@@ -102,41 +96,39 @@ ti["yd"] = {"st_puzzle_yellow", connections="new", hollow=true}
 ti["ye"] = {"st_puzzle_yellow", connections="nes", hollow=true}
 ti["yf"] = {"st_puzzle_yellow", connections="nesw", hollow=true}
 
-ti["LL"] = {"st_laser", orientation="w", state=ON}
+ti["LL"] = {"st_laser", orientation=WEST, state=ON}
 ti["PP"] = {"st_polarswitch", state=OFF}
 
 ti["@ "] = {"#ac_marble"}  ..ti({"it_magicwand"})
 
-w, h = wo(ti, "  ", {
-"                                                                              ",
-"  @                                                                           ",
-"                                                                              ",
-"  B0      Y0      b0      y0        PPLL                                      ",
-"  B1      Y1      b1      y1        PPLL                                      ",
-"  B2      Y2      b2      y2        PPLL                                      ",
-"  B3      Y3      b3      y3        PPLL                                      ",
-"  B4      Y4      b4      y4        PPLL                                      ",
-"  B5      Y5      b5      y5        PPLL                                      ",
-"  B6      Y6      b6      y6        PPLL                                      ",
-"  B7      Y7      b7      y7        PPLL                                      ",
-"  B8      Y8      b8      y8        PPLL                                      ",
-"  B9      Y9      b9      y9        PPLL                                      ",
-"  Ba      Ya      ba      ya        PPLL                                      ",
-"  Bb      Yb      bb      yb        PPLL                                      ",
-"  Bc      Yc      bc      yc        PPLL                                      ",
-"  Bd      Yd      bd      yd        PPLL                                      ",
-"  Be      Ye      be      ye        PPLL                                      ",
-"  Bf      Yf      bf      yf        PPLL                                      ",
-"                                                                              ",
-"                                                                              ",
-"                                                                              "
-})
-
-  ]]></el:luamain>
+wo(ti, "  ", {
+    "                                                                              ",
+    "  @                                                                           ",
+    "                                                                              ",
+    "  B0      Y0      b0      y0        PPLL                                      ",
+    "  B1      Y1      b1      y1        PPLL                                      ",
+    "  B2      Y2      b2      y2        PPLL                                      ",
+    "  B3      Y3      b3      y3        PPLL                                      ",
+    "  B4      Y4      b4      y4        PPLL                                      ",
+    "  B5      Y5      b5      y5        PPLL                                      ",
+    "  B6      Y6      b6      y6        PPLL                                      ",
+    "  B7      Y7      b7      y7        PPLL                                      ",
+    "  B8      Y8      b8      y8        PPLL                                      ",
+    "  B9      Y9      b9      y9        PPLL                                      ",
+    "  Ba      Ya      ba      ya        PPLL                                      ",
+    "  Bb      Yb      bb      yb        PPLL                                      ",
+    "  Bc      Yc      bc      yc        PPLL                                      ",
+    "  Bd      Yd      bd      yd        PPLL                                      ",
+    "  Be      Ye      be      ye        PPLL                                      ",
+    "  Bf      Yf      bf      yf        PPLL                                      ",
+    "                                                                              ",
+    "                                                                              ",
+    "                                                                              "})
+ ]]></el:luamain>
     <el:i18n>
-	 <el:string el:key="title">
-	   <el:english el:translate="false"/>
-	 </el:string>
-   </el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
   </el:protected>
 </el:level>
