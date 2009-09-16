@@ -20,12 +20,13 @@ wo["MagnetRange"] = 3
 
 ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_water"}
-ti["s"] = {"st_shogun", "him"}
+--ti["s"] = {"st_shogun", "him"}
+ti["G"] = {"st_ghost", "ghost"}
 ti["w"] = {"st_box", "you"}
 ti["r"] = {"it_rubberband", anchor2="you", length=4}
 ti["S"] = {"st_switch", target="privat.callbacks.killwood"}
 ti["X"] = {"st_scissors"}
-ti["T"] = {"st_turnstile"}
+ti["T"] = {"st_turnstile", "turn"}
 ti["t"] = {"st_turnstilearm_n","it"}
 ti["R"] = {"it_rubberband", anchor2="it", length=4}
 ti["p"] = {"st_swap", "you"}
@@ -38,9 +39,10 @@ ti[";"] = {"it_spring_drop"}
 ti["*"] = {"it_landmine"}
 
 
-ti["1"] = {"#ac_marble_black", "me"}
+ti["1"] = {"#ac_marble_black", "me"} .. ti{"it_brush"}
 ti["2"] = {"#ac_marble_white"}
 ti["3"] = {"#ac_pearl"}
+ti["s"] = {"#ac_bug", "him"}
 
 w, h = wo(ti, " ", {
 "                    ",
@@ -51,14 +53,23 @@ w, h = wo(ti, " ", {
 "                    ",
 "       pw  s        ",
 "     S              ",
-"        r  1       X",
+"        r  1   G    X",
 "                    ",
 "  b  |  ;   .  B    ",
 "                    ",
 "                    "
 })
 
-enigma.AddRubberBand(no["me"], no["him"], 5, 4)
+wo:add({"ot_rubberband", "firstrubber", anchor1="him", anchor2="me", length=5, strength=4})
+--wo[po{15,5}] = {"ac_bug", "him"}
+--wo:add({"ot_rubberband", anchor1="him", anchor2="me", length=5, strength=4})
+wo:add({"ot_rubberband", anchor1="me", anchor2="ghost", length=5, strength=4})
+wo:add({"ot_wire", anchor1="turn", anchor2="ghost"})
+wo:add({"ot_wire", anchor2="you", anchor1="ghost"})
+
+--no["ghost"]["name"] = "Geist"
+no["him"]["name"] = "ghost"
+--no["firstrubber"]:kill()
 
 privat = {}
 privat.callbacks = {}

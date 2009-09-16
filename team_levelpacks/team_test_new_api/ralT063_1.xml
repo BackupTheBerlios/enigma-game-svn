@@ -73,13 +73,22 @@ ti["X"] = {"st_box", "wood5"}
 
 ti["@"] = {"#ac_marble"}  ..ti({"it_magicwand"})
 
+ti["i"] = {"st_switch", target="fl_samba"}
+ti["j"] = {"st_switch", target="it_strip"}
+ti["k"] = {"st_switch", target="it_pipe"}
+ti["g"] = {"st_switch", target="fl_red"}
+ti["S"] = {"fl_red", friction=4.0}
+ti["p"] = {"it_pipe_ew"} ..ti["~"]
+ti["q"] = {"it_strip_n"} ..ti["_"]
+
+
 w, h = wo(ti, " ", {
-"                                       ",
+"                         ijkg          ",
 "                               ~~~33   ",
-"                               ~~~~~   ",
+"                               p~~~~   ",
 "  111       888        111     ~~~~~   ",
 "  2|2      18-9         21             ",
-"  222       999   8     222    _____   ",
+"  222       999   8     222    q____   ",
 "                               _____   ",
 "   +         o          |      _____   ",
 "1               988-    |              ",
@@ -122,6 +131,11 @@ wo:add({"ot_wire", anchor1="puz5", anchor2="puz6"})
 
 wo:add({"ot_wire", anchor1="wood4", anchor2="wood5"})
 wo:add({"ot_wire", anchor1="wood4", anchor2="wood5"})
+
+function fl_samba() wo["FallenPuzzle"] = "fl_samba" end
+function it_strip() wo["FallenPuzzle"] = "it_strip" end
+function it_pipe() wo["FallenPuzzle"] = "it_pipe" end
+function fl_red() wo["FallenPuzzle"] = "=S" end
 
   ]]></el:luamain>
     <el:i18n>

@@ -16,7 +16,7 @@
     </el:info>
     <el:luamain><![CDATA[
 
-wo["ConserveLevel"] = true
+wo["ConserveLevel"] = false
 
 ti["  "] = {"fl_sahara"}
 ti["~~"] = {"fl_water"}

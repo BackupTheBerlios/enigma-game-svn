@@ -18,9 +18,11 @@
 
 
 wo["ConserveLevel"] = true
+wo["SubSoil"] = SUBSOIL_AUTO
 
 ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_ice"}
+ti["&"] = {"fl_water"}
 ti["."] = {"fl_space"}
 ti["1"] = {"#ac_marble", essential=DISPENSIBLE}
 ti["2"] = {"#ac_marble_white"}
@@ -72,8 +74,8 @@ ti["T"] = {"st_switch", target="autospitter2", action="spit"}
 ti["p"] = {"st_puzzle", cluster=1}
 
 w, h = wo(ti, " ", {
-"L       ddd  448   C",
-"P       ddd         ",
+"L   &   ddd  448   C",
+"P   b   ddd         ",
 "   b    ddd     w  x",
 "          e         ",
 "I      1      2    4",

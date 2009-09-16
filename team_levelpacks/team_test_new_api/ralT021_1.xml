@@ -27,10 +27,13 @@ ti["A"] = {"it_vortex", name="v1", destination="v2", scissor=true}
 ti["B"] = {"it_vortex", name="v2", destination="v3"}
 ti["C"] = {"it_vortex", name="v3", destination={"v1","v2","v4"}}
 ti["D"] = {"it_vortex", name="v4", destination=po(3.1,7.7)}
+ti["E"] = {"it_vortex_closed", name="v5", destination="v6"}
+ti["F"] = {"it_vortex_closed", name="v6", destination="v5", autoclose=true, autoopen=true}
 ti["R"] = {"st_rubberband"}
 ti["W"] = {"st_box"}
 ti["S"] = {"st_switch", target="autoclose"}
 ti["r"] = {"it_ring"}
+ti["b"] = {"st_brake"}
 ti["f"] = {"it_flag"}
 ti["w"] = {"it_wormhole", range=2, destination=po(15, 7)}
 ti["v"] = {"it_wormhole", state=OFF, range=2, destination=po(15, 7)}
@@ -38,7 +41,7 @@ ti["v"] = {"it_wormhole", state=OFF, range=2, destination=po(15, 7)}
 ti["1"] = {"#ac_marble"}
 
 w, h = wo(ti, " ", {
-"   R                ",
+"   R        E   F   ",
 "                    ",
 "                    ",
 "   A  B  C  D       ",
@@ -47,7 +50,7 @@ w, h = wo(ti, " ", {
 "                    ",
 "      1   r    f    ",
 "   S                ",
-"                    ",
+"          b         ",
 "                    ",
 " v    w         ~   ",
 "                    "
