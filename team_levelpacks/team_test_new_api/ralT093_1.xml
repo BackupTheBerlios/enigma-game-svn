@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Train new API" el:subtitle="" el:id="20090926ral539"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+        <el:dependency el:path="lib/libtrain" el:id="lib/libtrain" el:release="1" el:preload="true"/>
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+ti["  "] = {"fl_sahara"}
+ti[" ~"] = {"fl_water"}
+ti[" w"] = {"fl_wood"}
+ti[" s"] = {"fl_samba"}
+ti["# "] = {"st_lightglass_hollow"}
+ti["S1"] = {"st_switch", target="enlarge"}
+ti["S2"] = {"st_switch", target="shrink"}
+
+ti["@ "] = {"#ac_marble_black"}
+
+randresolver = res.random(ti, " r", {" w", " s"})
+railway1 = res.train(randresolver, ".", {"#-", " ~"}, {" ^", train={" w", orientation=NORTH, interval=0.2}}, 
+              {" <", train={" ~", orientation=WEST, interval=0.2}})
+railway2 = res.train(railway1, {"&&", edge=true}, {"&>", train={" r", orientation=EAST, interval=0.3}}, 
+              {"&<", train={" ~", orientation=WEST, interval=0.3}})
+railway3 = res.train(railway2, {"%%", edge=true}, {"%>", train={" ~", " w", name="loco3", orientation=EAST, length=10}})
+railway4 = res.train(railway3, {"$$", edge=true}, {"$>", train={" s", orientation=EAST, interval=0.3}}, 
+              {"$<", train={" ~", orientation=EAST, interval=0.3}})
+railway5 = res.train(railway4, {"!!", edge=true}, {"!>", train={" s", orientation=EAST, interval=0.3}}, 
+              {"!<", train={" ~", orientation=WEST, interval=0.2}})
+railway6 = res.train(railway5, {"??", edge=true}, {"?>", train={" ~", " w", orientation=EAST, length=10}})
+railway7 = res.train(railway6, {"::", edge=true}, {":>", train={" ~", " w", orientation=EAST, length=10}})
+
+w, h = wo(railway7, "  ", {
+"           ~                            ",
+"   . .    #-  #.    &&  &<              ",
+"   .             .                      ",
+"      @                 %%  %>          ",
+"               .                        ",
+"             .              S1          ",
+" ~ ^                                #   ",
+"               .            S2          ",
+"                 .                      ",
+"   .                            %%      ",
+"       <  #    .                        ",
+"                      &>            &&  ",
+"                                        ",
+"  $$    $>                      :>  ::  ",
+"                                        ",
+"      !!!>                              ",
+"                                        ",
+"                                ??      ",
+"                                        ",
+"                                        ",
+"                        ::              ",
+"        !<!!                            ",
+"                                        ",
+"        $<    $$    ??  ?>              ",
+"                                        "
+})
+
+function enlarge()
+    for i, loco in ipairs(railway3.trains) do
+        if loco.name == "loco3_front" then
+            loco:tick()
+        end
+    end
+end
+
+function shrink()
+    for i, loco in ipairs(railway3.trains) do
+        if loco.name == "loco3" then
+            loco:tick()
+        end
+    end
+end
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
