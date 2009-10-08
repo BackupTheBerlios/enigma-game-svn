@@ -15,8 +15,6 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-
-
 wo["ConserveLevel"] = true
 wo["SubSoil"] = SUBSOIL_AUTO
 
@@ -24,7 +22,7 @@ ti[" "] = {"fl_sahara"}
 ti["~"] = {"fl_ice"}
 ti["&"] = {"fl_water"}
 ti["."] = {"fl_space"}
-ti["1"] = {"#ac_marble", essential=DISPENSIBLE}
+ti["1"] = {"#ac_marble", essential=DISPENSABLE}
 ti["2"] = {"#ac_marble_white"}
 ti["d"] = {"it_dynamite"}
 ti["b"] = {"it_bomb_black"}

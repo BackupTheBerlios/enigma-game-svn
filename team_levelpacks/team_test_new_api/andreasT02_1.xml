@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test libmap" el:subtitle="" el:id="test_libmap"/>
-      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="3" el:status="experimental"/>
       <el:author  el:name="Andreas Lochmann" el:email=""/>
       <el:copyright>Copyright © 2008 Andreas Lochmann</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -122,8 +122,8 @@ end
 
 count = 0
 decomap = wo:newMap("-", {"I--J", "I--J", "I--I"}) * " "
-alldirs = {MAP_IDENT,MAP_ROT_CW,MAP_ROT_180,MAP_ROT_CCW,MAP_MIRROR_BACKSLASH,
-           MAP_MIRROR_HORIZONTAL,MAP_MIRROR_SLASH,MAP_MIRROR_VERTICAL}
+alldirs = {MAP_IDENT, MAP_ROT_CW, MAP_ROT_180, MAP_ROT_CCW, MAP_FLIP_BACKSLASH,
+           MAP_FLIP_HORIZONTAL, MAP_FLIP_SLASH, MAP_FLIP_VERTICAL}
 function call_switch2()
   dir = alldirs[count % #alldirs + 1]
   wo:drawMap(res.composer(ti), {0, 0}, "-", map1)
@@ -160,7 +160,7 @@ function call_switch4()
     switch4_counter = 0
   end
 end
-  
+
   ]]></el:luamain>
     <el:i18n>
      <el:string el:key="title">
@@ -169,4 +169,3 @@ end
    </el:i18n>
   </el:protected>
 </el:level>
-

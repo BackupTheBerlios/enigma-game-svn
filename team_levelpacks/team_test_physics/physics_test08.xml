@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Wolf Among Sheep" el:subtitle="" el:id="wolfamongsheep"/>
-      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
       <el:author  el:name="illmind" el:email="support@mag-heut.net" el:homepage="http://www.mag-heut.net/"/>
       <el:copyright>Copyright © 2005 illmind</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -15,9 +15,7 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-if not wo["IsDifficult"] then
-    fri=0.0
-end
+fri = cond(wo["IsDifficult"], 4.0, 0.0)
 
 ti["  "] = {"fl_dark", friction=fri}
 ti[" #"] = {"st_granite"}

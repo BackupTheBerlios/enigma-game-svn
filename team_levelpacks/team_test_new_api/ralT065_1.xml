@@ -3,7 +3,7 @@
   <el:protected>
     <el:info el:type="level">
       <el:identity el:title="Test Meditation new API" el:subtitle="" el:id="20080829ral370"/>
-      <el:version el:score="1" el:release="1" el:revision="$Revision: 1279 $" el:status="experimental"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1280 $" el:status="experimental"/>
       <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
       <el:copyright>Copyright © 2008 Ronald Lamprecht</el:copyright>
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
@@ -21,11 +21,11 @@ wo["MeditationStrength"] = 2.0
 
 ti[" "] = {"fl_sahara"}
 
-ti["."] = {"it_meditation", essential=INDISPENSIBLE}
-ti[";"] = {"it_meditation", essential=DISPENSIBLE}
+ti["."] = {"it_meditation", essential=INDISPENSABLE}
+ti[";"] = {"it_meditation", essential=DISPENSABLE}
 
-ti["-"] = {"it_meditation_hill", "hilli#", essential=INDISPENSIBLE}
-ti["="] = {"it_meditation_bump", "bumpd#", essential=DISPENSIBLE}
+ti["-"] = {"it_meditation_hill", "hilli#", essential=INDISPENSABLE}
+ti["="] = {"it_meditation_bump", "bumpd#", essential=DISPENSABLE}
 
 ti["("] = {"it_meditation_volcano", "vol#"}
 ti[")"] = {"it_meditation_caldera", "vol#"}
