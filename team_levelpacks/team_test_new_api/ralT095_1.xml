@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Scales new API" el:subtitle="" el:id="20091102ral431"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision$" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+ti[" "] = {"fl_sahara"}
+
+ti["."] = {"fl_scales", target="laser1"}
+ti["_"] = {"fl_scales_brick", target="laser2"} 
+ti["="] = {"fl_scales_gray", target="laser3"}
+
+ti["x"] = ti{"it_weight", mass=1.9} ..{"fl_scales_brick"} 
+ti["y"] = ti{"it_bag", "mybag"} ..{"fl_scales_brick"} 
+
+
+ti["1"] = {"st_laser_e", "laser1"}
+ti["2"] = {"st_laser_e", "laser2"}
+ti["3"] = {"st_laser_e", "laser3"}
+
+ti["*"] = {"st_rawglass_movable"}
+ti["$"] = {"st_lightglass_movable"}
+ti["E"] = {"st_puzzle", connections="w"}
+ti["W"] = {"st_puzzle", connections="e", hollow=true}
+
+ti["m"] = {"it_weight", mass=1.9}
+ti["w"] = {"it_weight", mass=0.4}
+ti["M"] = {"st_mail", orientation=SOUTH}
+ti["b"] = {"it_bag"}
+
+ti["@"] = {"#ac_marble_black"}
+ti["&"] = {"#ac_marble_white"}
+ti["%"] = {"#ac_pearl", owner=YANG, controllers=CTRL_YANG}
+
+w, h = wo(ti, " ", {
+"                    ",
+"                 x  ",
+"                 y  ",
+"          M         ",
+"      *   .        1",
+"                    ",
+"  @   $   _    WE  2",
+"                    ",
+"      *   =      b 3",
+"  &       M      b  ",
+"                   m",
+"  %%%           ww  ",
+"                    "
+})
+
+wo:add(no["mybag"], ti["m"])
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+

@@ -40,8 +40,6 @@ ti["s"] = {"it_blocker", "blocker"}
 ti["H"] = {"st_box", "wood1"}
 ti["t"] = {"it_trigger", target="blocker"} .. ti({"st_box", "wood2"})
 
-
-
 ti["1"] = (ti[" "] .. {"#ac_marble"}) .. {"it_magicwand"}
 
 w, h = wo(ti, " ", {
