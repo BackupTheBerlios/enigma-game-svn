@@ -45,9 +45,9 @@ ti["&"] = {"#ac_marble_white"}
 ti["%"] = {"#ac_pearl", owner=YANG, controllers=CTRL_YANG}
 
 w, h = wo(ti, " ", {
-"                    ",
-"                 x  ",
-"                 y  ",
+"...___===           ",
+"...___===        x  ",
+"...___===        y  ",
 "          M         ",
 "      *   .        1",
 "                    ",
