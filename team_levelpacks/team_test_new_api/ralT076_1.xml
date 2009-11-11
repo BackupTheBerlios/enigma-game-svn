@@ -29,6 +29,7 @@ ti["C"] = {"st_chess"}
 
 ti["@"] = {"#ac_marble"} 
 ti["o"] = {"#ac_killer", controllers=1, owner=YIN} 
+ti["p"] = {"#ac_killer_black", controllers=1, owner=YIN} 
 ti["O"] = {"#ac_horse", controllers=1, owner=YIN, adhesion=1} 
 
 ti["y"] = {"it_yinyang"}
@@ -37,7 +38,7 @@ ti["Y"] = {"it_yinyang"} .. ti{"fl_space"}
 w, h = wo(ti, " ", {
 "   # Y y            ",
 "   #         ....C  ",
-"   #bb      x....   ",
+"p  #bb      x....   ",
 "o  #bb      x....   ",
 "   #bb       ....   ",
 "O  #   @            ",

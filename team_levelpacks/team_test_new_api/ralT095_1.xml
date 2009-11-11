@@ -17,10 +17,14 @@
     <el:luamain><![CDATA[
 
 ti[" "] = {"fl_sahara"}
+ti["h"] = {"fl_wood", ignitable=true}
 
 ti["."] = {"fl_scales", target="laser1"}
 ti["_"] = {"fl_scales_brick", target="laser2"} 
 ti["="] = {"fl_scales_gray", target="laser3"}
+ti["?"] = {"fl_scales_concrete", target="laser4"}
+ti[":"] = {"fl_scales_bridgewood", target="laser5"}
+ti["+"] = {"fl_scales_platinum", target="laser6"}
 
 ti["x"] = ti{"it_weight", mass=1.9} ..{"fl_scales_brick"} 
 ti["y"] = ti{"it_bag", "mybag"} ..{"fl_scales_brick"} 
@@ -29,6 +33,9 @@ ti["y"] = ti{"it_bag", "mybag"} ..{"fl_scales_brick"}
 ti["1"] = {"st_laser_e", "laser1"}
 ti["2"] = {"st_laser_e", "laser2"}
 ti["3"] = {"st_laser_e", "laser3"}
+ti["4"] = {"st_laser_e", "laser4"}
+ti["5"] = {"st_laser_e", "laser5"}
+ti["6"] = {"st_laser_e", "laser6"}
 
 ti["*"] = {"st_rawglass_movable"}
 ti["$"] = {"st_lightglass_movable"}
@@ -40,27 +47,27 @@ ti["w"] = {"it_weight", mass=0.4}
 ti["M"] = {"st_mail", orientation=SOUTH}
 ti["b"] = {"it_bag"}
 
-ti["@"] = {"#ac_marble_black"}
+ti["@"] = {"#ac_marble_black"} .. ti{"it_dynamite"}
 ti["&"] = {"#ac_marble_white"}
 ti["%"] = {"#ac_pearl", owner=YANG, controllers=CTRL_YANG}
 
 w, h = wo(ti, " ", {
-"...___===           ",
-"...___===        x  ",
-"...___===        y  ",
-"          M         ",
+"hhhhhhhhhhhhhhhhhh  ",
+"...___===+++???:::  ",
+"...___===+++???::: x",
+"...___===+++???::: y",
 "      *   .        1",
-"                    ",
+"          M        4",
 "  @   $   _    WE  2",
-"                    ",
+"                   5",
 "      *   =      b 3",
-"  &       M      b  ",
+"  &       M      b 6",
 "                   m",
 "  %%%           ww  ",
 "                    "
 })
 
-wo:add(no["mybag"], ti["m"])
+wo:add(no["mybag"], ti["m"] .. {"it_bomb"})
 
   ]]></el:luamain>
     <el:i18n>
