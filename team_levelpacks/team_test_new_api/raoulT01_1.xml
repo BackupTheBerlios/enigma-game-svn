@@ -45,6 +45,18 @@ ti["K"] = ti[" "] .. {"st_floppy", name="stfl6", target="da6", action="signal", 
 ti["L"] = ti[" "] .. {"st_floppy", name="stfl7", target="da7", action="on", inverse=true}
 ti["M"] = ti[" "] .. {"st_floppy", name="stfl8", target="da8", action="off", inverse=true}
 
+ti["N"] = {"st_floppy", target="doorN"}
+ti["n"] = {"st_door_a", "doorN"}
+ti["O"] = {"st_floppy", target="doorO"}
+ti["o"] = {"st_door_a", "doorO"}
+ti["P"] = {"st_floppy", target="doorP#*"}
+ti["p"] = {"st_door_a", "doorP#"}
+ti["Q"] = {"st_floppy", target={"@doorQ#*", "otto", "doorR"}}
+ti["q"] = {"st_door_a", "doorQ#"}
+ti["r"] = {"st_door_a", "doorR"}
+ti["S"] = {"st_floppy", target="doorS", secure=false}
+ti["s"] = {"st_door_a", "doorS"}
+
 ti["f"] = ti[" "] .. {"it_floppy"}
 
 w, h = wo(ti, " ", {
@@ -52,11 +64,11 @@ w, h = wo(ti, " ", {
 "   f   G      B    6",
 "   f   H      C    7",
 "   f   I      D    8",
-"                    ",
-"                    ",
-"                    ",
-"                    ",
-"                    ",
+"            o    r  ",
+"       Nn  O   qQ   ",
+"                  q ",
+"       Pp     Ss    ",
+"       p            ",
 "   f   J      W     ",
 "   f   K      X     ",
 "   f   L      Y     ",
@@ -71,4 +83,5 @@ w, h = wo(ti, " ", {
    </el:i18n>
   </el:protected>
 </el:level>
+
 
