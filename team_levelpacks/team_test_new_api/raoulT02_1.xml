@@ -31,11 +31,14 @@ ti["G"] = ti[" "] .. {"st_key", name="stk2", target="da2", action="signal"}
 ti["H"] = ti[" "] .. {"st_key", name="stk3", target="da3", action="on"}
 ti["I"] = ti[" "] .. {"st_key", name="stk4", target="da4", action="off"}
 
-ti["1"] = ti[" "] .. {"st_key", code=1}
-ti["2"] = ti[" "] .. {"st_key", code=2}
-ti["3"] = ti[" "] .. {"st_key", code=3}
-ti["4"] = ti[" "] .. {"st_key", code=4}
-ti["5"] = ti[" "] .. {"st_key", code=5}
+ti["1"] = ti[" "] .. {"st_key", code=1, invisible=false}
+ti["2"] = ti[" "] .. {"st_key", code=2, invisible=false}
+ti["3"] = ti[" "] .. {"st_key", code=3, invisible=false}
+ti["4"] = ti[" "] .. {"st_key", code=4, invisible=false}
+ti["5"] = ti[" "] .. {"st_key", code=5, invisible=false}
+ti["6"] = ti[" "] .. {"st_key", code=6, invisible=false}
+ti["7"] = ti[" "] .. {"st_key", code=7, invisible=false}
+ti["8"] = ti[" "] .. {"st_key", code=8, invisible=false}
 
 ti["W"] = ti[" "] .. {"st_laser_e", name="la5"}
 ti["X"] = ti[" "] .. {"st_laser_e", name="la6"}
@@ -48,11 +51,14 @@ ti["L"] = ti[" "] .. {"st_key", name="la7", target="da7", action="on", inverse=t
 ti["M"] = ti[" "] .. {"st_key", name="la8", target="da8", action="off", inverse=true}
 
 ti["a"] = ti[" "] .. {"it_key"}
-ti["b"] = ti[" "] .. {"it_key", code=1}
-ti["c"] = ti[" "] .. {"it_key", code=2}
-ti["d"] = ti[" "] .. {"it_key", code=3}
-ti["e"] = ti[" "] .. {"it_key", code=4}
-ti["f"] = ti[" "] .. {"it_key", code=5}
+ti["b"] = ti[" "] .. {"it_key", code=1, invisible=false}
+ti["c"] = ti[" "] .. {"it_key", code=2, invisible=false}
+ti["d"] = ti[" "] .. {"it_key", code=3, invisible=false}
+ti["e"] = ti[" "] .. {"it_key", code=4, invisible=false}
+ti["f"] = ti[" "] .. {"it_key", code=5, invisible=false}
+ti["g"] = ti[" "] .. {"it_key", code=6, invisible=false}
+ti["h"] = ti[" "] .. {"it_key", code=7, invisible=false}
+ti["i"] = ti[" "] .. {"it_key", code=8, invisible=false}
 
 ti["N"] = {"st_key", target="doorN"}
 ti["n"] = {"st_door_a", "doorN"}
@@ -66,9 +72,13 @@ ti["r"] = {"st_door_a", "doorR"}
 ti["S"] = {"st_key", target="doorS", secure=false}
 ti["s"] = {"st_door_a", "doorS"}
 
-ti["7"] = {"it_key", code=7, invisible=false}
+ti["9"] = {"it_key", code=7, invisible=false}
 ti["T"] = {"st_key", target="doorT", code=7}
 ti["t"] = {"st_door_a", "doorT"}
+
+ti["?"] = {"st_key", code=1, invisible=false, name="recode"}
+ti["+"] = {"st_switch", target="inc_code"}
+ti["-"] = {"st_switch", target="dec_code"}
 
 w, h = wo(ti, " ", {
 "0  a   F  A       o ",
@@ -76,15 +86,24 @@ w, h = wo(ti, " ", {
 "   a   H  C        r",
 "   a   I  D  Pp  qQ ",
 "             p      ",
-"                 S q",
-"   bcdef  12345  s  ",
+"bcdefghi         S q",
+"12345678         s  ",
 "                    ",
-"            7  Tt   ",
+"            9  Tt   ",
 "   a   J      W     ",
-"   a   K      X     ",
-"   a   L      Y     ",
-"   a   M      Z     "
-})
+"   a   K      X    -",
+"   a   L      Y    +",
+"   a   M      Z    ?"})
+
+function inc_code(value, sender)
+    no["recode"]["code"] = no["recode"]["code"] + 1
+end
+
+function dec_code(value, sender)
+    no["recode"]["code"] = no["recode"]["code"] - 1
+end
+
+
   ]]></el:luamain>
     <el:i18n>
      <el:string el:key="title">
