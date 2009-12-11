@@ -20,6 +20,7 @@
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
+ti["."] = {"fl_space"}
 ti["1"] = {"#ac_marble"}
 ti["S"] = {"st_surprise"}
 ti["T"] = {"st_surprise", selection={"st_mail","st_mirror","st_pull"}}
@@ -43,9 +44,9 @@ ti["Y"] = {"it_yinyang"} .. ti{"fl_space"}
 
 w, h = wo(ti, " ", {
 "SSSSSSSSSSSSSSSSSSSS",
-"                    ",
-"U                  T",
-"U                  T",
+"   ..............   ",
+"U  ..............  T",
+"U  ..............  T",
 "U      1           T",
 "U                  T",
 "                   T",
