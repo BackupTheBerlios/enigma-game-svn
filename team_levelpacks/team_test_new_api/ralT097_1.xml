@@ -30,6 +30,9 @@ ti["L"] = {"st_laser_n", state=ON}
 ti["M"] = {"st_mirror_slab", movable=true}
 ti["P"] = {"st_polarswitch"}
 ti["s"] = {"it_spoon"}
+ti["j"] = {"it_spring_keep"}
+ti["V"] = {"it_vortex"}
+ti["%"] = {"fl_wood", initfire=true, eternal=true}
 
 ti["-"] = {"it_strip_ew"} .. ti["_"]
 
@@ -41,15 +44,15 @@ w, h = wo(ti, " ", {
 "~~   __ ... ...... _",
 "~~   --  _________ _",
 "~    __             ",
-"~.   fw             ",
-"~.   s     oo       ",
+"~.   fw            V",
+"~.   sj    oo       ",
 "~.               M  ",
 "E                   ",
 "! !               # ",
 "! !               # ",
 "! !                 ",
 "!           P    P  ",
-"!!!         L    L  "
+"!!!  %      L    L  "
 })
 
   ]]></el:luamain>
