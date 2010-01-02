@@ -31,9 +31,11 @@ ti["M"] = {"st_mirror_slab", movable=true}
 ti["P"] = {"st_polarswitch"}
 ti["s"] = {"it_spoon"}
 ti["j"] = {"it_spring_keep"}
+ti["t"] = {"it_trigger"}
 ti["V"] = {"it_vortex"}
+ti["x"] = {"it_weight"}
 ti["%"] = {"fl_wood", initfire=true, eternal=true}
-
+ti["u"] = {"fl_scales"}
 ti["-"] = {"it_strip_ew"} .. ti["_"]
 
 ti["@"] = {"#ac_marble"} .. ti{"it_yinyang"}
@@ -43,13 +45,13 @@ w, h = wo(ti, " ", {
 "~~ @ _______________",
 "~~   __ ... ...... _",
 "~~   --  _________ _",
-"~    __             ",
+"~    __       u t   ",
 "~.   fw            V",
 "~.   sj    oo       ",
 "~.               M  ",
 "E                   ",
 "! !               # ",
-"! !               # ",
+"! !           x   # ",
 "! !                 ",
 "!           P    P  ",
 "!!!  %      L    L  "

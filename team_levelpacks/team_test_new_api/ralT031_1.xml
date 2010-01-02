@@ -9,7 +9,7 @@
       <el:license el:type="GPL v2.0 or above" el:open="true"/>
       <el:compatibility el:enigma="1.10">
       </el:compatibility>
-      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:modes el:easy="true" el:single="true" el:network="false"/>
       <el:comments>
       </el:comments>
       <el:score el:easy="-" el:difficult="-"/>
@@ -25,10 +25,18 @@ ti["~"] = {"fl_abyss"}
 ti["!"] = {"fl_wood", ignitable=true}
 ti["#"] = ti[" "] .. {"st_granite"}
 
-ti["A"] = ti[" "] .. {"it_trigger", "triggerA", target="lasera", action="toggle", "triggerA"}
-ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"toggle", "on"}}
-ti["C"] = ti["."] .. {"it_trigger", target={"laserc","lasercon"}, action={"toggle", "on"}}
-ti["O"] = ti["!"] .. {"it_trigger", target={"lasero","laseroon"}, action={"toggle", "on"}}
+if wo["IsDifficult"] then
+    ti["A"] = ti[" "] .. {"it_trigger", "triggerA", target="lasera", action="toggle", "triggerA"}
+    ti["B"] = ti["~"] .. {"it_trigger", target={"laserb","laserbon"}, action={"toggle", "on"}}
+    ti["C"] = ti["."] .. {"it_trigger", target={"laserc","lasercon"}, action={"toggle", "on"}}
+    ti["O"] = ti["!"] .. {"it_trigger", target={"lasero","laseroon"}, action={"toggle", "on"}}
+else
+    ti["A"] = ti[" "] .. {"fl_scales", "triggerA", target="lasera", action="toggle", "triggerA"}
+    ti["B"] = ti["~"] .. {"fl_scales", target={"laserb","laserbon"}, action={"toggle", "on"}}
+    ti["C"] = ti["."] .. {"fl_scales", target={"laserc","lasercon"}, action={"toggle", "on"}}
+    ti["O"] = ti["!"] .. {"fl_scales", target={"lasero","laseroon"}, action={"toggle", "on"}}
+end
+ti[":"] = {"it_weight"}
 
 ti["a"] = ti[" "] .. {"st_laser_s", "lasera"}
 ti["b"] = ti[" "] .. {"st_laser_s", "laserb"}
@@ -81,7 +89,7 @@ w, h = wo(ti, " ", {
 "     2 2 2      6W  ",
 "X                   ",
 "     1uvz  U    V   ",
-"     W     W    W   ",
+":    W     W    W   ",
 "M    A     B    C   ",
 "    Y      ~    .   ",
 "fg   amN   bd   ce  ",
