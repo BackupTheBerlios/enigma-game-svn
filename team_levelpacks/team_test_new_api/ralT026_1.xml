@@ -26,6 +26,19 @@ ti["a"] = {"#ac_marble"}
 ti["water"] = {"fl_water", name="water%%"}
 ti["H"] = {"#ac_horse", destination={"water%1","water%2","water%3","water%4"}}
 ti["B"] = {"st_box"}
+ti["."] = {"fl_lawn", "lawn#"}
+ti["p"] = {"#ac_horse", "lawnhorse", strength=10, steady=false}
+ti["C"] = {"st_switch", "c3c"}
+ti["D"] = {"fl_water", "c3d"}
+ti["E"] = {"st_box"} .. ti{"it_cross", "c3e"}
+ti["F"] = {"st_stoneimpulse", "c3f"}
+ti["f"] = {"st_stoneimpulse"}
+ti["c"] = {"#ac_horse", "c3horse", strength=20, steady=false, loop=false,
+            destination={"c3c","c3d","c3e","c3f"}}
+ti["d"] = {"st_switch", target="c3start"}
+ti["+"] = {"fl_bluegray", "blue#"}
+ti["W"] = {"st_brownie", "brownie"}
+ti["q"] = {"#ac_horse", "horse5", strength=20, steady=false, target="h5redir"}
 
 resolver = res.autotile(ti, {"1", "6", "outer"}, {"i", "l", "inner"},
         {"I", "L", "water"})
@@ -37,7 +50,7 @@ w, h = wo(resolver, " ", {
 "       i    l       ",
 "                    ",
 " 5       sh      2  ",
-"         a          ",
+"                    ",
 "                    ",
 "       j    k       ",
 "                    ",
@@ -54,8 +67,29 @@ w, h = wo(resolver, " ", {
 "  B  L      K  B    ",
 "                    ",
 "                    ",
-"                    "
+"                    ",
+"           B        ",
+"     .......BBBB    ",
+"  ....    B.  .B    ",
+"  .        BBB..B   ",
+"  .     p     B.B   ",
+"  .            .    ",
+"  ..............    ",
+"                    ",
+"         Fff        ",
+" C c       f        ",
+"           f        ",
+"           f d      ",
+" D       E f        ",
+"                    ",
+"     BB  B          ",
+"     qW  B          ",
+"       B            ",
+"     B           a  ",
+"     B  BB          "
 })
+
+no["lawnhorse"]["destination"] = no["lawn#*"]:sort("circular")
 
 function innercircle(value, sender)
     -- demo mixture string tokens with a group
@@ -68,6 +102,23 @@ function innercircle(value, sender)
         dest[#dest]=nil
     end
     horse["destination"] = dest
+end
+
+function c3start(value, sender)
+    no["c3horse"]["destidx"] = 0
+end
+
+no["horse5"]["destination"] = #po["brownie"]
+dirs = {E, E, N, E, S, S, E, S, W, W, S, W, N, N, W, N}
+cdir = 1
+function h5redir(value, sender)
+    if #sender == sender["destination"] then
+         cdir = cdir + 1
+         if cdir > #dirs then
+             cdir = 1
+         end
+         sender["destination"] = sender["destination"] + dirs[cdir]
+    end
 end
 
   ]]></el:luamain>

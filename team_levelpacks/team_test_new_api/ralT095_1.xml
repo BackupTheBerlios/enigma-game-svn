@@ -15,7 +15,7 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-
+wo["ShowMoves"] = true
 ti[" "] = {"fl_sahara"}
 ti["h"] = {"fl_wood", ignitable=true}
 
