@@ -43,6 +43,11 @@ ti["w"] = {"it_hammer"}
 ti["1"] = ti["y"] .. {"#ac_marble_black"}
 ti["2"] = ti["y"] .. {"#ac_marble_white"}
 
+ti["3"] = ti["y"] .. {"#ac_pearl_black"}
+ti["4"] = ti["y"] .. {"#ac_pearl_white"}
+
+
+
 w, h = wo(ti, " ", {
 "                    ",
 "            D  L    ",
@@ -53,7 +58,7 @@ w, h = wo(ti, " ", {
 "s                   ",
 "       1 2   g  h   ",
 "             G  H   ",
-"f                   ",
+"f      3 4          ",
 "F         w         ",
 "                    ",
 "                    "
