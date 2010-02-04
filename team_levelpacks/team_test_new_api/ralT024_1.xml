@@ -15,8 +15,6 @@
       <el:score el:easy="-" el:difficult="-"/>
     </el:info>
     <el:luamain><![CDATA[
-
-
 wo["ConserveLevel"] = true
 
 ti[" "] = {"fl_sahara"}
@@ -46,8 +44,6 @@ ti["2"] = ti["y"] .. {"#ac_marble_white"}
 ti["3"] = ti["y"] .. {"#ac_pearl_black"}
 ti["4"] = ti["y"] .. {"#ac_pearl_white"}
 
-
-
 w, h = wo(ti, " ", {
 "                    ",
 "            D  L    ",
@@ -65,15 +61,18 @@ w, h = wo(ti, " ", {
 })
 
 function recolor(value, sender)
-    no["colorswitch"]["color"] = value
+    if value then
+        no["colorswitch"]["color"] = BLACK
+    else
+        no["colorswitch"]["color"] = WHITE
+    end
 end
-
-  ]]></el:luamain>
+ ]]></el:luamain>
     <el:i18n>
-	 <el:string el:key="title">
-	   <el:english el:translate="false"/>
-	 </el:string>
-   </el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
   </el:protected>
 </el:level>
 
