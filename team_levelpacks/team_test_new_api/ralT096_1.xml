@@ -31,7 +31,13 @@ ti["u"] = {"it_umbrella"}
 ti["U"] = {"st_barrier", flavor="it_umbrella"}
 ti["d"] = {"it_drop"}
 ti["D"] = {"st_barrier", flavor="it_drop"}
-
+ti["1"] = {"it_coin_s"}
+ti["2"] = {"it_coin_m"}
+ti["3"] = {"it_coin_l"}
+ti["9"] = {"st_barrier", flavor="it_coin"}
+ti["6"] = {"st_barrier", flavor="it_coin_s"}
+ti["7"] = {"st_barrier", flavor="it_coin_m"}
+ti["8"] = {"st_barrier", flavor="it_coin_l"}
 ti["A"] = {"st_barrier", flavor="all"}
 ti["S"] = {"st_swap"}
 
@@ -47,19 +53,19 @@ w, h = wo(ti, " ", {
 "    bbB     fF  wW  ",
 "  @                 ",
 "             A      ",
-"             S      ",
-"    uuU             ",
-"                    ",
+"             S  16  ",
+"    uuU         27  ",
+"                38  ",
 "    ddD             ",
-"                    "
+"              1239  "
 })
 
-  ]]></el:luamain>
+ ]]></el:luamain>
     <el:i18n>
-	 <el:string el:key="title">
-	   <el:english el:translate="false"/>
-	 </el:string>
-   </el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
   </el:protected>
 </el:level>
 
