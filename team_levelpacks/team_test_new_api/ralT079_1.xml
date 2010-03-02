@@ -55,12 +55,12 @@ ti["o"] = {"st_spitter", "spitter", secure=true}
 ti["q"] = {"st_spitter", "idlespitter", state=IDLE}
 ti["Q"] = {"st_switch", target="idlespitter"}
 ti["W"] = {"st_window_w"}
-ti["B"] = {"st_brownpyramide"}
+ti["B"] = {"st_brownpyramid"}
 
 ti["S"] = {"st_switch", target="dospit"}
 
 ti["V"] = {"st_spitter", "autospitter", destination="sdest#*", secure=true}
-ti["v"] = {"st_brownpyramide", "sdest#"}
+ti["v"] = {"st_brownpyramid", "sdest#"}
 ti["s"] = {"st_switch", target="autospitter", action="spit"}
 
 ti["U"] = {"st_spitter", "autospitter2", destination={"slabi", "slabj", "slabk"}, secure=true}
