@@ -53,26 +53,47 @@ ti["o"] = {"it_puller_e"}
 ti["q"] = {"it_puller_s"}
 ti["r"] = {"it_puller_w"}
 
+ti["X"] = {"st_barrier", flavor="it_pipe_n"}
+ti["E"] = {"st_barrier", flavor="it_pipe_e"}
+ti["G"] = {"st_barrier", flavor="it_pipe_s"}
+ti["H"] = {"st_barrier", flavor="it_pipe_w"}
+ti["I"] = {"st_barrier", flavor="it_pipe_ne"}
+ti["J"] = {"st_barrier", flavor="it_pipe_es"}
+ti["K"] = {"st_barrier", flavor="it_pipe_sw"}
+ti["L"] = {"st_barrier", flavor="it_pipe_nw"}
+ti["T"] = {"st_barrier", flavor="it_pipe_ns"}
+ti["Y"] = {"st_barrier", flavor="it_pipe_ew"}
+ti["Z"] = {"st_barrier", flavor="it_pipe"}
+
+ti["x"] = {"it_pipe_n"}
+ti["e"] = {"it_pipe_e"}
+ti["g"] = {"it_pipe_s"}
+ti["h"] = {"it_pipe_w"}
+ti["i"] = {"it_pipe_ne"}
+ti["j"] = {"it_pipe_es"}
+ti["k"] = {"it_pipe_sw"}
+ti["l"] = {"it_pipe_nw"}
+ti["t"] = {"it_pipe_ns"}
+ti["y"] = {"it_pipe_ew"}
+
 
 ti["*"] = {"st_brownie"}
 
 ti["@"] = {"#ac_marble"} 
-w, h = wo(ti, " ", {
-"                 P  ",
-"            mM  nN  ",
-"    ccC         oO  ",
-"             F  qQ  ",
-"            fV  rR  ",
-"    bbB     wW      ",
-"  @                 ",
-"             A      ",
-"             S  16  ",
-"    uuU         27  ",
-"                38  ",
-"    ddD             ",
-"              1239  "
-})
-
+wo(ti, " ", {
+    "                 P  ",
+    " ccC  @     mM  nN  ",
+    "                oO  ",
+    " bbB   A     F  qQ  ",
+    "       S    fV  rR  ",
+    " uuU        wW      ",
+    "                16  ",
+    " ddD            27  ",
+    "                38  ",
+    " xeghijklty         ",
+    " XEGHIJKLTY Z 1239  ",
+    "                    ",
+    "                    "})
  ]]></el:luamain>
     <el:i18n>
       <el:string el:key="title">
