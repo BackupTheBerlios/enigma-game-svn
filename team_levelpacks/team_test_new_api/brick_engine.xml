@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Brick engine" el:subtitle="" el:id="moving_bricks"/>
+      <el:version el:score="1" el:release="1" el:revision="2" el:status="experimental"/>
+      <el:author  el:name="Raoul Bourquin" el:email=""/>
+      <el:copyright>Copyright © 2010 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+        <el:dependency el:path="lib/libmap" el:id="lib/libmap" el:release="1" el:preload="true"/>
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+ti[" "] = {"fl_brick"}
+ti["#"] = {"st_brick"}
+
+ti["%"] = {"st_brick", name="wall#"}
+ti["="] = {"fl_brick", name="top#"} .. ti["%"]
+
+ti["S"] = {"st_switch", target="set_figure"}
+ti["s"] = {"st_switch", target="end_check"}
+
+ti["Q"] = {"st_switch", target="test_lines"}
+
+ti["T"] = {"st_timer", target="step", interval=2.0, name="timer", state=OFF}
+ti["t"] = {"st_switch", target="timer", action="on"}
+
+ti["^"] = {"it_trigger", target="move", _direction=N}
+ti[">"] = {"it_trigger", target="move", _direction=E}
+ti["V"] = {"it_trigger", name="south", target="move", _direction=S}
+ti["<"] = {"it_trigger", target="move", _direction=W}
+
+ti["1"] = {"it_trigger", target="transform", _kind=1}
+ti["2"] = {"it_trigger", target="transform", _kind=2}
+
+ti["3"] = {"it_trigger", target="transform", _kind=3}
+ti["4"] = {"it_trigger", target="transform", _kind=4}
+
+ti["O"] = {"st_oxyd"}
+ti["@"] = {"#ac_marble_black", name="blackball"}
+
+wo(ti, " ", {
+    "%==========%%%%%%%%%",
+    "%          %@  S   %",
+    "%          %       %",
+    "%          %       %",
+    "%          %1     2%",
+    "%          %   ^   %",
+    "%          %  < >  %",
+    "%          %   V   %",
+    "%          %3     4%",
+    "%          %       %",
+    "%          %       %",
+    "%          %   Q   %",
+    "%%%%%%%%%%%%%%%%%%%%"})
+
+local tra = {MAP_ROT_CW, MAP_ROT_CCW, MAP_FLIP_HORIZONTAL, MAP_FLIP_VERTICAL}
+
+local solid_walls = po(no["wall#*"])
+local filled_area = po(grp())
+local lines = {}
+for i=1,11 do
+   lines[i] = po(no["top#*"]) + i*S
+end
+
+local cur_pos
+local next_pos
+
+-- The tiles the figures can have
+ti["A"] = {"st_brownie", name="figure#"}
+ti["B"] = {"st_tigris", name="figure#"}
+ti["C"] = {"st_rawglass", name="figure#"}
+ti["D"] = {"st_bluegray", name="figure#"}
+ti["E"] = {"st_panel", name="figure#"}
+ti["F"] = {"st_metal", name="figure#"}
+ti["G"] = {"st_break_oxydc", name="figure#"}
+ti["H"] = {"st_fake_quake", name="figure#"}
+
+ti["-"] = {"st_nil"}
+ti["?"] = {"it_cherry", name="tester#"}
+
+stonekind = {"A", "B", "C", "D", "E", "F", "G", "H"}
+
+-- The available figures
+local figures = {}
+figures[1] = {"XX ",
+	      "XX"}
+
+figures[2] = {" X ",
+	      "XXX"}
+
+figures[3] = {" XX",
+	      "XX "}
+
+figures[4] = {"XX ",
+	      " XX"}
+
+figures[5] = {"X  ",
+	      "XXX"}
+
+figures[6] = {"  X",
+	      "XXX"}
+
+figures[7] = {"XXXX"}
+
+
+-- Set a new figure
+function set_figure(value, sender)
+   -- save old figure
+   stuck()
+
+   -- The maps for the new piece
+   r = math.random(1,7)
+   figure = figures[r]
+
+   cur_figuremap = wo:newMap(" ", figure)
+   cur_figuremap:replace("X", stonekind[math.random(1,8)])
+   next_figuremap = cur_figuremap ^ MAP_IDENT
+   cur_clearmap = wo:newMap(" ", figure)
+   cur_clearmap:replace("X", "-")
+   next_clearmap = cur_clearmap ^ MAP_IDENT
+   cur_testmap = wo:newMap(" ", figure)
+   cur_testmap:replace("X", "?")
+
+   -- Defaults for new figure
+   cur_pos = po(4,1)
+   next_pos = cur_pos
+   redraw()
+end
+
+-- Redraw the figure after some transformations/moves
+function redraw()
+    wo:drawMap(ti, cur_pos, cur_clearmap)
+    wo:drawMap(ti, next_pos, next_figuremap)
+    cur_clearmap = next_clearmap
+    cur_figuremap = next_figuremap
+end
+
+-- Can we do a given transform?
+function can_transform(transformation)
+    local testmap = cur_testmap ^ transformation
+    wo:drawMap(ti, cur_pos, testmap)
+
+    local test_area = po(no["tester#*"])
+    local intersection = fl(filled_area .. solid_walls) * fl(test_area)
+
+    wo[no["tester#*"]] = {"it_nil"}
+    return cond(#intersection == 0, true, false)
+end
+
+-- transform all maps if we can transform
+function transform(value, sender)
+   if value == false then return end
+   
+   if can_transform(tra[sender["_kind"]]) then
+      next_clearmap = cur_clearmap ^ tra[sender["_kind"]]
+      next_figuremap = cur_figuremap ^ tra[sender["_kind"]]
+      cur_testmap = cur_testmap ^ tra[sender["_kind"]]
+      redraw()
+   end
+end
+
+-- Can we move into a given direction?
+function can_move(direction)
+    cur_fig_area = po(no["figure#*"])
+    next_fig_area = cur_fig_area + direction
+    intersection = fl(filled_area .. solid_walls) * fl(next_fig_area)
+    return cond(#intersection == 0, true, false)
+end
+
+-- Move the figure iff we can move
+function move(value, sender)
+    if value == false then return false end
+
+    if can_move(sender["_direction"]) then
+        next_pos = cur_pos + sender["_direction"]
+        redraw()
+        cur_pos = next_pos
+        return true
+    end
+    return false
+end
+
+-- fix a figure at current position
+function stuck()
+   filled_area = filled_area .. po(no["figure#*"])
+   no["figure#*"]["name"] = "fixed_ones#"   
+end
+
+-- test for full lines
+function test_lines(value, sender)
+   for ind,line in ipairs(lines) do
+      data = fl(filled_area) * fl(line)
+      -- is the line full
+      if #data == 10 then
+	 collapse(ind)
+      end
+   end
+end
+
+-- move all lines above a full one down
+function collapse(above)
+   for i = above, 1, -1 do
+      wo[lines[i]] = {"st_nil"}    
+      for curpos in fl(lines[i]) do
+	 stone = st(curpos + N):kind()
+       	 if stone ~= "" and stone ~= "st_brick" then
+       	    wo[curpos] = {stone, name="fixed_ones#"}
+       	 end
+      end
+   end
+   -- finally update the filled area
+   filled_area = po(no["fixed_ones#*"])
+end
+
+ ]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>

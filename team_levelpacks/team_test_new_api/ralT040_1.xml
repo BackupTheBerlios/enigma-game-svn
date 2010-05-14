@@ -34,30 +34,32 @@ ti["e"] = {"st_turnstilearm_e"}
 ti["G"] = {"st_turnstile_green"}
 ti["w"] = {"it_wrench"}
 
+ti["K"] = {"st_knight"}
+ti["s"] = {"it_sword"}
 
 
 w, h = wo(ti, " ", {
+"     K              ",
 "                    ",
-"                    ",
-"     L              ",
-"               Te   ",
+" K K L              ",
+"             Te     ",
 "        F           ",
 "        t A         ",
 "        b           ",
 "                    ",
 "                    ",
 "    Ge  w           ",
-"                    ",
+"              s     ",
 "                    ",
 "                    "
 })
 
   ]]></el:luamain>
     <el:i18n>
-	 <el:string el:key="title">
-	   <el:english el:translate="false"/>
-	 </el:string>
-   </el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
   </el:protected>
 </el:level>
 
