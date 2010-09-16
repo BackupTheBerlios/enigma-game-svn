@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Fire new API" el:subtitle="" el:id="20090812ral619"/>
+      <el:version el:score="1" el:release="1" el:revision="$Revision: 1738 $" el:status="experimental"/>
+      <el:author  el:name="Ronald Lamprecht" el:email="ral@users.berlios.de"/>
+      <el:copyright>Copyright © 2009 Ronald Lamprecht</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10">
+      </el:compatibility>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:comments>
+      </el:comments>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+
+s = "otto"
+print(s..#s)
+t=s[2]
+--print("char 2 "..s[2])
+--s[4] = t
+print(s)
+
+ti[" "] = {"fl_sahara"}
+ti["i"] = {"fl_ice", "f#", noash=true}
+ti["b"] = {"fl_bluegreen", "f#", burnable=false, noash=true}
+
+ti["S"] = {"st_switch", target="fire"}
+ti["N"] = {"st_switch", target="noash"}
+ti["T"] = {"st_switch", target="stop"}
+ti["p"] = {"it_pencil"}
+ti["P"] = ti["p"] .. {"st_passage_black", flavor="slash"}
+ti["C"] = ti["p"] .. {"st_passage_black", flavor="cross"}
+ti["G"] = ti["p"] .. {"st_grate"}
+
+ti["I"] = {"fl_ice"}
+ti["_"] = {"fl_swamp"}
+ti["o"] = {"it_burnable_oil"} .. ti["I"] 
+ti["="] = {"it_burnable_oil"} .. ti["_"] 
+ti["d"] = {"it_dynamite"}
+ti["D"] = ti["d"] .. ti["I"] 
+ti["O"] = {"it_burnable_oil"} .. ti{"st_ice"}
+
+ti["@"] = {"#ac_marble_black", "me"}
+
+w, h = wo(ti, " ", {
+"                    ",
+"    i   iii   b     ",
+"                    ",
+"         @       p  ",
+"                 P  ",
+"       S N T     C  ",
+"                 G  ",
+"                    ",
+" ___  III           ",
+" _=_  DoD    dOd    ",
+" ___  III      d    ",
+"                    ",
+})
+
+print("Floor kind "..fl(po{0,0}):kind())
+print("Floor is sahara "..cond(fl(po{0,0}):is("fl_sahara"), "true", "false"))
+
+floors = no["f#*"]
+
+function fire()
+    floors["burnable"] = true
+    floors["eternal"] = true
+    floors:setfire()
+    print ("me at "..po["me"].x .. ", "..po["me"].y)
+end
+
+function noash()
+    floors["noash"] = true
+end
+
+function stop()
+    floors:stopfire()
+end
+
+list = {po(2,2), po(3,3), po(3,4), po(4,4)}
+polist = po(list)
+wo[polist] = {"fl_space"}
+
+  ]]></el:luamain>
+    <el:i18n>
+	 <el:string el:key="title">
+	   <el:english el:translate="false"/>
+	 </el:string>
+   </el:i18n>
+  </el:protected>
+</el:level>
+
