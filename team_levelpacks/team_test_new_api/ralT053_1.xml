@@ -23,16 +23,16 @@ ti["~"] = {"fl_water"}
 ti["#"] = {"st_granite"}
 ti["y"] = {"it_yinyang"}
 ti["."] = {"st_box"}
-ti["w"] = {"st_box", "w"}
+ti["w"] = {"st_box", "w#"}
 ti["s"] = {"st_scissors"}
 ti["S"] = {"st_swap"}
 ti["r"] = {"st_rubberband"}
 ti["R"] = {"it_rubberband", anchor2="a3", length=3, strength=50, threshold=1.5}
 ti["p"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=4, min=4}
 ti["P"] = {"it_rubberband", anchor2="a2", length=3, strength=10, threshold=2.5, max=5, min=2}
-ti["Q"] = {"it_rubberband", anchor2="w", length=3, strength=10, threshold=2.5, max=5, min=2}
+ti["Q"] = {"it_rubberband", anchor2="@w#*", length=3, strength=10, threshold=2.5, max=5, min=2}
 ti["q"] = {"it_rubberband", anchor2="@@s#*", length=3, strength=10, threshold=2.5}
-ti["U"] = {"it_rubberband", anchor2="w", length=3, strength=10, threshold=2.5, max=9, min=3, target="cutme"}
+ti["U"] = {"it_rubberband", anchor2="@w#*", length=3, strength=10, threshold=2.5, max=9, min=3, target="cutme"}
 ti["u"] = {"it_rubberband", anchor2="a2", length=4, strength=10, threshold=2.5, max=6, min=3, target="shatter"}
 
 ti["a"] = {"it_wormhole", "wa", range=0.5, scissor=false}
@@ -46,7 +46,7 @@ ti["*"] = {"#ac_pearl_white", "s#", owner=DEFAULT, controllers=0}
 w, h = wo(ti, " ", {
 "*   #  r  r  r  a  *",
 "   ##               ",
-"qq  1               ",
+"qq  1             w ",
 "                    ",
 "             2      ",
 "R                  U",
@@ -63,7 +63,7 @@ w, h = wo(ti, " ", {
 --wo:add({"ot_rubberband", anchor1="a1", anchor2="a2", length=4, strength=10, threshold=2})
 --wo:add({"ot_rubberband", anchor1="a1", anchor2="a2", length=3, strength=10, threshold=2, max=5, min=5})
 --wo:add({"ot_rubberband", anchor1="a3", anchor2="w", length=3, strength=20})
-wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=3, strength=10, threshold=2, max=4, min=4})
+--wo:add({"ot_rubberband", anchor1="a1", anchor2="w", length=3, strength=10, threshold=2, max=4, min=4})
 
 function cutme(value, sender)
     if not value then

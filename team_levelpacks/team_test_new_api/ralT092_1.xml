@@ -36,9 +36,7 @@ ti["C"] = ti["p"] .. {"st_passage_black", flavor="cross"}
 ti["G"] = ti["p"] .. {"st_grate"}
 
 ti["I"] = {"fl_ice"}
-ti["_"] = {"fl_swamp"}
 ti["o"] = {"it_burnable_oil"} .. ti["I"] 
-ti["="] = {"it_burnable_oil"} .. ti["_"] 
 ti["d"] = {"it_dynamite"}
 ti["D"] = ti["d"] .. ti["I"] 
 ti["O"] = {"it_burnable_oil"} .. ti{"st_ice"}
@@ -54,9 +52,9 @@ w, h = wo(ti, " ", {
 "       S N T     C  ",
 "                 G  ",
 "                    ",
-" ___  III           ",
-" _=_  DoD    dOd    ",
-" ___  III      d    ",
+"      III           ",
+"      DoD    dOd    ",
+"      III      d    ",
 "                    ",
 })
 

@@ -16,13 +16,12 @@
     </el:info>
     <el:luamain><![CDATA[
 wo["ConserveLevel"] = true
-
+wo["FollowThreshold"] = po(0, 0)
 ti[" "] = {"fl_sahara"}
 ti["1"] = ti[" "] .. {"#ac_marble"}
 
 w, h = wo(ti, " ", {
-"  ",
-" 1"
+"1"
 })
 
   ]]></el:luamain>

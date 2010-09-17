@@ -34,6 +34,7 @@ ti["c"] = {"it_banana"}
 ti["C"] = {"it_crack"}
 ti["x"] = {"it_cross"}
 ti["+"] = {"it_extralife"}
+ti["#"] = {"st_brake"}
 
 ti["y"] = {"st_yinyang"}
 ti["Y"] = {"st_yinyang_active"}
@@ -72,7 +73,7 @@ ti["T"] = {"st_switch", target="autospitter2", action="spit"}
 ti["p"] = {"st_puzzle", cluster=1}
 
 w, h = wo(ti, " ", {
-"L   &   ddd  448   C",
+"L   & # ddd  448   C",
 "P   b   ddd         ",
 "   b    ddd     w  x",
 "          e         ",

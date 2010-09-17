@@ -66,6 +66,7 @@ ti["H"] = {"it_meditation"}
 ti["1"] = ti["y"] .. {"#ac_marble_black"}
 ti["2"] = ti["y"] .. {"#ac_marble_white"}
 ti["3"] = {"#ac_pearl_white", controllers=0}
+ti["4"] = {"#ac_bug"}
 
 w, h = wo(ti, " ", {
 "                    ",
@@ -74,9 +75,9 @@ w, h = wo(ti, " ", {
 "          r       O ",
 "     R    S   G     ",
 "                  I ",
-"  b  E    B         ",
-"          m    333  ",
-"       1   2        ",
+"  b  E    B     4   ",
+"          m 12 333  ",
+"                    ",
 "   a           n    ",
 "   Re    A    wTe t ",
 "   s    wGe         ",

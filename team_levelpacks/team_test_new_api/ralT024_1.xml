@@ -45,7 +45,7 @@ ti["3"] = ti["y"] .. {"#ac_pearl_black"}
 ti["4"] = ti["y"] .. {"#ac_pearl_white"}
 
 w, h = wo(ti, " ", {
-"                    ",
+"                     ",
 "            D  L    ",
 "                    ",
 "E              M    ",

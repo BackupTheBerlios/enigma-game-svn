@@ -64,6 +64,7 @@ wo(res.composer(ti), "  ", {
       <el:string el:key="title">
         <el:english el:translate="false"/>
       </el:string>
-    </el:i18n>
+   </el:i18n>
   </el:protected>
 </el:level>
+

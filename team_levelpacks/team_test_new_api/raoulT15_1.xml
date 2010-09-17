@@ -18,11 +18,16 @@ ti["#"] = {"st_rawglass"}
 ti["d"] = {"it_drop"}
 ti["w"] = {"it_weight"}
 ti["p"] = {"it_pin"}
+ti["j"] = {"it_spring_drop"}
+ti["e"] = {"it_sensor_exit"}
+ti["t"] = {"it_sensor"}
 
-ti["S"] = {"fl_scales", target="light"}
+ti["S"] = {"fl_scales", target="light", min=11}
 ti[">"] = {"st_laser", name="light"}
 
 ti["T"] = {"fl_thief"}
+ti["V"] = {"it_vortex", "v1", destination="v2"}
+ti["W"] = {"it_vortex", "v2", destination="v1"}
 
 ti["+"] = {"st_charge_plus"}
 ti["-"] = {"st_charge_minus"}
@@ -41,10 +46,10 @@ wo(ti, " ", {
     "#                  #",
     "# z      @      A  #",
     "# -             A  #",
-    "# +      ppp    A  #",
+    "# +      pppj   A  #",
     "#                  #",
     "# dddddddddddddddd #",
-    "#                  O",
+    "#   V   t  e   W   O",
     "####################"})
 
 wo:shuffleOxyd()
