@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<el:level xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enigma-game.org/schema/level/1 level.xsd" xmlns:el="http://enigma-game.org/schema/level/1">
+  <el:protected>
+    <el:info el:type="level">
+      <el:identity el:title="Test Slope 2 new API" el:subtitle="" el:id="raoult17"/>
+      <el:version el:score="1" el:release="1" el:revision="1" el:status="experimental"/>
+      <el:author el:name="Raoul Bourquin" el:email=""/>
+      <el:copyright>Copyright © 2011 Raoul Bourquin</el:copyright>
+      <el:license el:type="GPL v2.0 or above" el:open="true"/>
+      <el:compatibility el:enigma="1.10"/>
+      <el:modes el:easy="false" el:single="true" el:network="false"/>
+      <el:score el:easy="-" el:difficult="-"/>
+    </el:info>
+    <el:luamain><![CDATA[
+wo["SlopeStrength"] = 10
+
+ti[" "] = {"fl_sahara"}
+ti["#"] = {"st_rawglass"}
+ti["@"] = {"#ac_marble_black"}
+
+ti["*"] = {"#ac_pearl"}
+
+ti["a"] = ti["*"] .. {"fl_slope_pn"}
+ti["b"] = ti["*"] .. {"fl_slope_pe"}
+ti["c"] = ti["*"] .. {"fl_slope_ps"}
+ti["d"] = ti["*"] .. {"fl_slope_pw"}
+
+ti["e"] = ti["*"] .. {"fl_slope_inw"}
+ti["f"] = ti["*"] .. {"fl_slope_ise"}
+ti["g"] = ti["*"] .. {"fl_slope_ine"}
+ti["h"] = ti["*"] .. {"fl_slope_isw"}
+
+ti["j"] = ti["*"] .. {"fl_slope_onw"}
+ti["k"] = ti["*"] .. {"fl_slope_osw"}
+ti["l"] = ti["*"] .. {"fl_slope_one"}
+ti["m"] = ti["*"] .. {"fl_slope_ose"}
+
+ti["n"] = ti["*"] .. {"fl_slope_tn"}
+ti["o"] = ti["*"] .. {"fl_slope_te"}
+ti["p"] = ti["*"] .. {"fl_slope_ts"}
+ti["q"] = ti["*"] .. {"fl_slope_tw"}
+
+ti["r"] = ti["*"] .. {"fl_slope_twl"}
+ti["s"] = ti["*"] .. {"fl_slope_tsl"}
+ti["t"] = ti["*"] .. {"fl_slope_tel"}
+ti["u"] = ti["*"] .. {"fl_slope_tnl"}
+
+ti["v"] = ti["*"] .. {"fl_slope_twr"}
+ti["w"] = ti["*"] .. {"fl_slope_tsr"}
+ti["x"] = ti["*"] .. {"fl_slope_ter"}
+ti["y"] = ti["*"] .. {"fl_slope_tnr"}
+
+-- Tunnel slopes:
+-- 1st char  t               for "tunnel", a piece suitable for tunnel like slope combinations
+-- 2nd char  n | e | s | w   for the acceleration direction perpendicular to "optical" gradient
+-- 3rd char  r | l           for "left"/"right" side of tunnel when looking into the direction specified by second char
+
+ti["z"] = ti["*"] .. {"fl_slope"}
+
+wo(ti, " ", {
+    "####################",
+    "#                  #",
+    "# a b  e g  j l    #",
+    "#                  #",
+    "# c d  h f  k m    #",
+    "#                  #",
+    "# z             @  #",
+    "#                  #",
+    "# n o   r u   y x  #",
+    "#                  #",
+    "# p q   s t   v w  #",
+    "#                  #",
+    "####################"})
+ ]]></el:luamain>
+    <el:i18n>
+      <el:string el:key="title">
+        <el:english el:translate="false"/>
+      </el:string>
+    </el:i18n>
+  </el:protected>
+</el:level>
