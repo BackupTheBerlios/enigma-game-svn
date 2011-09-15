@@ -91,7 +91,7 @@ wo(ti, " ", {
    "####################",
 })
 
-wo:add(YIN, ti["f"] .. ti["5"] .. {"it_banana"} .. ti["m"] .. {"it_bag", "bag2"})
+wo:add(YIN, ti["f"] .. ti["5"] .. {"it_banana"} .. ti["m"] .. {"it_bag", "bag2"} .. ti({"it_dynamite"}))
 wo:add(no["bag"], ti["7"] .. {"it_cherry"} .. ti["m"])
 wo:add(no["bag2"], ti["8"] .. {"it_coin_s"})
 
